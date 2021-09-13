@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "template",
+  "version": "1.0.0-alpha",
+  "description": "placeholder",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf coverage lib",
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "files": [
+    "lib"
+  ]
+}

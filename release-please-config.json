@@ -1,0 +1,8 @@
+{
+  "bootstrap-sha": "36884a5cb2739890df2f7a455b0cccec4b2c3d3c",
+  "plugins": ["node-workspace"],
+  "release-type": "node",
+  "packages": {
+    "packages/storybook": {}
+  }
+}

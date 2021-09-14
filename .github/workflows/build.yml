@@ -4,7 +4,6 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
 
     steps:
       - name: Checkout repository
@@ -38,3 +37,6 @@ jobs:
 
       - name: Test packages
         run: yarn test
+
+      - name: Codecov
+        uses: codecov/codecov-action@v2

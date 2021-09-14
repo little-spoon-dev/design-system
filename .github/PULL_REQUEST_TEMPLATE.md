@@ -1,3 +1,8 @@
+<!--
+Filling out the information below can facilitate the review/merge of the pull request (PR)
+All fields are optional
+-->
+
 ## Jira
 
 <!--
@@ -10,11 +15,11 @@
 
 ## Current Behavior
 
-<!-- Please link to the issue (if applicable). -->
+<!-- Please link to the issue (if applicable) -->
 
 ## New Behavior
 
-<!-- If this is a feature change or bug fix. -->
+<!-- If this is a feature change or bug fix -->
 
 ## Test Plan
 
@@ -38,11 +43,11 @@ What questions do you still have?
 
 ## Linked Issues
 
-<!-- Related tickets or PRs. -->
+<!-- Related tickets or PRs -->
 
 ## Screenshot
 
-<!-- For user facing changes. -->
+<!-- For user facing changes -->
 
 ## Checklist
 
@@ -55,3 +60,7 @@ To check an item, place an "x" in the box like so: `- [x] Tests`
 - [ ] Tests
 - [ ] Documentation
 - [ ] Storybook
+
+<!--
+Any other comments? Thanks for contributing!
+-->

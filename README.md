@@ -1,5 +1,7 @@
 # design-system
 
+[![build](https://github.com/little-spoon-dev/design-system/actions/workflows/build.yml/badge.svg)](https://github.com/little-spoon-dev/design-system/actions/workflows/build.yml)
+
 Little Spoon Design System
 
 ## Prerequisites

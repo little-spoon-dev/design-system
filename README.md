@@ -1,6 +1,7 @@
 # design-system
 
 [![build](https://github.com/little-spoon-dev/design-system/actions/workflows/build.yml/badge.svg)](https://github.com/little-spoon-dev/design-system/actions/workflows/build.yml)
+[![codecov](https://codecov.io/gh/little-spoon-dev/design-system/branch/master/graph/badge.svg?token=5BRD6U9NFW)](https://codecov.io/gh/little-spoon-dev/design-system)
 
 Little Spoon Design System
 

@@ -44,6 +44,10 @@ Creates new package from template.
 
 Lints all packages.
 
+### `yarn storybook`
+
+Runs Storybook.
+
 ### `yarn test`
 
 Runs tests for all packages.

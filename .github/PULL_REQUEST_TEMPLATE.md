@@ -5,9 +5,7 @@ All fields are optional
 
 ## Jira
 
-<!--
 [](https://littlespoon.atlassian.net/browse/LS-)
--->
 
 ## Motivation
 

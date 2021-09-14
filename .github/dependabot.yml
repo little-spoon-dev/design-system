@@ -9,19 +9,8 @@ updates:
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
-      interval: 'weekly'
-      # Check for npm updates at 9am ET
-      time: '14:00'
+      interval: 'daily'
 
     # Optional
-    assignees:
-      - 'adamVass'
-      - 'bnikom'
-      - 'eddkmm'
-      - 'fjallkraken'
-      - 'hewbahrami'
-      - 'r0mille'
-      - 'remarkablemark'
-      - 'eeeeean'
     labels:
       - 'dependencies'

@@ -3,6 +3,7 @@
   "plugins": ["node-workspace"],
   "release-type": "node",
   "packages": {
-    "packages/storybook": {}
+    "packages/storybook": {},
+    "packages/theme": {}
   }
 }

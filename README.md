@@ -45,6 +45,10 @@ Creates new package from template.
 
 Lints all packages.
 
+### `yarn lint:fix`
+
+Fixes lint errors for all packages.
+
 ### `yarn storybook`
 
 Runs Storybook.

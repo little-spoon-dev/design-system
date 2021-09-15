@@ -1,3 +1,7 @@
-export default function placeholder(): string {
-  return 'placeholder'
+import colors from './colors'
+
+export { colors }
+
+export default {
+  colors,
 }

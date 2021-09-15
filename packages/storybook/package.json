@@ -1,7 +1,7 @@
 {
   "name": "storybook",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Little Spoon Storybook",
   "scripts": {
     "build": "build-storybook",
@@ -11,7 +11,7 @@
     "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
-    "@littlespoon/theme": "1.0.0-alpha"
+    "@littlespoon/theme": "1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",

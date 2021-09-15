@@ -1,6 +1,5 @@
 {
-  "private": true,
-  "name": "template",
+  "name": "@littlespoon/theme",
   "version": "1.0.0-alpha",
   "description": "placeholder",
   "main": "lib/index.js",

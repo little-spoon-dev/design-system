@@ -57,6 +57,9 @@ jobs:
       - name: Test packages
         run: yarn test
 
+      - name: Generate flowtype definitions
+        run: yarn build:flowtypes
+
       - name: Publish (dry run)
         if: |
           github.ref == 'refs/heads/master'

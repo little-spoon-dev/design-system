@@ -3,8 +3,9 @@
   "private": true,
   "scripts": {
     "build": "lerna run build",
+    "build:flowtypes": "find packages -type f -not -path './node_modules/*' -name '*.d.ts' -exec bash -c 'yarn flowgen --add-flow-header $1 -o ${1%.*.*}.js.flow' _ '{}' \\;",
     "clean": "lerna run clean",
-    "create-package": "yarn ts-node scripts/create-package",
+    "create-package": "ts-node scripts/create-package",
     "lint": "lerna run lint",
     "lint:fix": "lerna run lint:fix",
     "postinstall": "husky install",

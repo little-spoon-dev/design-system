@@ -1,7 +1,7 @@
 {
   "name": "@littlespoon/theme",
   "version": "1.0.0",
-  "description": "placeholder",
+  "description": "Little Spoon theme",
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
@@ -11,10 +11,24 @@
     "test": "jest",
     "test:watch": "jest --watch"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/little-spoon-dev/design-system.git",
+    "directory": "packages/theme"
+  },
+  "bugs": {
+    "url": "https://github.com/little-spoon-dev/design-system/issues"
+  },
+  "keywords": [
+    "littlespoon",
+    "theme",
+    "colors"
+  ],
   "files": [
     "lib"
   ],
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "license": "UNLICENSED"
 }

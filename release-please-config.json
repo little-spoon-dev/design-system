@@ -5,6 +5,8 @@
   "release-type": "node",
   "packages": {
     "packages/storybook": {},
-    "packages/theme": {}
+    "packages/theme": {
+      "release-as": "1.0.1"
+    }
   }
 }

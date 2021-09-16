@@ -1,0 +1,40 @@
+{
+  "name": "@littlespoon/button",
+  "version": "1.0.0-alpha",
+  "description": "Little Spoon button",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf coverage lib",
+    "lint": "eslint .",
+    "lint:fix": "yarn lint --fix",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@littlespoon/theme": "1.1.0"
+  },
+  "peerDependencies": {
+    "react": "16 || 17",
+    "styled-components": "4 || 5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/little-spoon-dev/design-system.git",
+    "directory": "packages/button"
+  },
+  "bugs": {
+    "url": "https://github.com/little-spoon-dev/design-system/issues"
+  },
+  "keywords": [
+    "littlespoon",
+    "button"
+  ],
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "UNLICENSED"
+}

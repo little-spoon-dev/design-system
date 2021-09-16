@@ -179,5 +179,22 @@ Object {
       "surfaceStrong": "#14625A",
     },
   },
+  "fonts": Object {
+    "primary": Object {
+      "family": "Lato, sans-serif",
+      "weight": Object {
+        "bold": 700,
+        "normal": 400,
+      },
+    },
+    "secondary": Object {
+      "family": "Mulish, sans-serif",
+      "weight": Object {
+        "black": 900,
+        "bold": 700,
+        "extraBold": 800,
+      },
+    },
+  },
 }
 `;

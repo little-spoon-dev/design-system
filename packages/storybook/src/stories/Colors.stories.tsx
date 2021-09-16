@@ -4,7 +4,7 @@ import Colors from './Colors'
 import theme from '@littlespoon/theme'
 
 export default {
-  title: 'Example/Theme',
+  title: 'Example/Colors',
   component: Colors,
 } as ComponentMeta<typeof Colors>
 

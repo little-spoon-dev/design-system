@@ -43,3 +43,12 @@ import { blue60 } from '@littlespoon/theme/lib/colors/primary'
 
 blue60(0.5) // 'rgba(44,213,196,0.5)'
 ```
+
+Import fonts:
+
+```ts
+import { primary, secondary } from '@littlespoon/theme/lib/fonts'
+
+primary.family // 'Lato, sans-serif'
+primary.weight.bold // 700
+```

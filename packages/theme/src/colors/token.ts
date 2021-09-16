@@ -31,7 +31,7 @@ export const shadeWhite = '#FFFFFF'
  *
  * {@link https://zeroheight.com/3ddd0f892/p/028ae9-colors/t/13b601}
  */
-export const surfacePrimary = '#FFFFFF'
+export const surfacePrimary = shadeWhite
 export const surfaceSecondary = grey10()
 export const surfaceStrong = '#14625A'
 export const surfaceContrast = grey80()

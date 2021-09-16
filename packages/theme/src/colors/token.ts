@@ -19,6 +19,14 @@ import { grey10, grey20, grey30, grey40, grey60, grey80 } from './secondary'
 export const brand = blue60()
 
 /**
+ * Shade
+ *
+ * {@link https://zeroheight.com/3ddd0f892/p/028ae9-colors/b/036155/t/492c47}
+ */
+export const shadeBlack = '#000000'
+export const shadeWhite = '#FFFFFF'
+
+/**
  * Surface
  *
  * {@link https://zeroheight.com/3ddd0f892/p/028ae9-colors/t/13b601}
@@ -56,6 +64,8 @@ export const borderWarning = warning20()
 
 export default {
   brand,
+  shadeBlack,
+  shadeWhite,
   surfacePrimary,
   surfaceSecondary,
   surfaceStrong,

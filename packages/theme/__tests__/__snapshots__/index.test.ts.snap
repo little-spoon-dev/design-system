@@ -168,6 +168,8 @@ Object {
       "borderSuccess": "rgba(153,199,187,1)",
       "borderWarning": "rgba(252,208,168,1)",
       "brand": "rgba(44,213,196,1)",
+      "shadeBlack": "#000000",
+      "shadeWhite": "#FFFFFF",
       "subSurfaceCritical": "rgba(250,233,231,1)",
       "subSurfaceInformative": "rgba(233,239,249,1)",
       "subSurfaceSuccess": "rgba(230,241,238,1)",

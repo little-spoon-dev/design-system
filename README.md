@@ -4,7 +4,10 @@
 [![codecov](https://codecov.io/gh/little-spoon-dev/design-system/branch/master/graph/badge.svg?token=5BRD6U9NFW)](https://codecov.io/gh/little-spoon-dev/design-system)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/73b0e1a1-3d16-4987-a05b-cac84e07acfa/deploy-status)](https://app.netlify.com/sites/littlespoon/deploys)
 
-[Little Spoon](https://www.littlespoon.com/) [Design System](https://littlespoon.netlify.app/).
+[Little Spoon](https://www.littlespoon.com/) Design System:
+
+- [Storybook](https://littlespoon.netlify.app/)
+- [ZeroHeight](https://zeroheight.com/3ddd0f892/p/59ea90-little-spoon-design-system/b/3370f7)
 
 To get started, check out [contributing](docs/CONTRIBUTING.md).
 

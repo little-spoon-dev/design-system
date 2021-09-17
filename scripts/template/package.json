@@ -15,7 +15,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/little-spoon-dev/design-system.git",
-    "directory": "packages/template"
+    "directory": "packages/placeholder"
   },
   "bugs": {
     "url": "https://github.com/little-spoon-dev/design-system/issues"

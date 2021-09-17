@@ -59,7 +59,6 @@ function getVariantCss(props: ButtonProps): string {
       return `
         background-color: ${props.disabled ? grey20() : shadeBlack};
         color: ${props.disabled ? grey40() : shadeWhite};
-        disabled: ${props.disabled}
         &:focus {
           outline: 0.2rem solid ${informative50()};
           outline-offset: 0.2rem;
@@ -90,7 +89,6 @@ function getVariantCss(props: ButtonProps): string {
       return `
         background-color: ${props.disabled ? grey20() : blue60()};
         color: ${props.disabled ? grey40() : shadeBlack};
-        disabled: ${props.disabled}
         &:focus {
           outline: 0.2rem solid ${informative50()};
           outline-offset: 0.2rem;
@@ -98,16 +96,16 @@ function getVariantCss(props: ButtonProps): string {
         ${
           props.disabled
             ? `
-        &:hover {
-          background-color: ${grey20()};
-          cursor: default;
-        }
-        `
+            &:hover {
+              background-color: ${grey20()};
+              cursor: default;
+            }
+            `
             : `
-        &:hover {
-          background-color: ${blue70()};
-        }
-        `
+            &:hover {
+              background-color: ${blue70()};
+            }
+            `
         }
 
         &:active {

@@ -27,8 +27,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 export default function Button({
   size = 'medium',
   variant = 'primary',
-  disabled = false,
   ...props
 }: ButtonProps): React.ReactElement<ButtonProps> {
-  return <ButtonBase type="button" {...props} size={size} variant={variant} disabled={disabled} />
+  return <ButtonBase type="button" {...props} size={size} variant={variant} />
 }

@@ -14,8 +14,8 @@ To get started, check out [contributing](docs/CONTRIBUTING.md).
 
 | Package | Version | Description |
 | --- | --- | --- |
-| [@littlespoon/button](packages/button) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/theme.svg)](https://www.npmjs.com/package/@littlespoon/button) | Button |
-| [@littlespoon/theme](packages/theme) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/theme.svg)](https://www.npmjs.com/package/@littlespoon/theme) | Theme |
-| [storybook](packages/storybook) | Private | Design System Storybook |
+| [@littlespoon/button](packages/button) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/button.svg)](https://www.npmjs.com/package/@littlespoon/button) | Button |
+| [@littlespoon/theme](packages/theme) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/theme.svg)](https://www.npmjs.com/package/@littlespoon/theme) | Theme (colors, fonts) |
+| [storybook](packages/storybook) | Private | [Storybook](https://littlespoon.netlify.app/) |
 
 <!-- prettier-ignore-end -->

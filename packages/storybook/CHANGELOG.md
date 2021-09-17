@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://www.github.com/little-spoon-dev/design-system/compare/storybook-v1.2.0...storybook-v1.3.0) (2021-09-17)
+
+
+### Features
+
+* **storybook:** add primary button stories LS-1722 ([7c9cf0e](https://www.github.com/little-spoon-dev/design-system/commit/7c9cf0eab17baf98e831651b6c69c68d6db8541a))
+
 ## [1.2.0](https://www.github.com/little-spoon-dev/design-system/compare/storybook-v1.1.0...storybook-v1.2.0) (2021-09-16)
 
 

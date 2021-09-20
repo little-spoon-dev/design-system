@@ -18,5 +18,5 @@ it('matches color primary', () => {
 
 it('matches color primary blue60', () => {
   expect(theme.colors.primary.primaryBlue.blue60).toBe(blue60)
-  expect(blue60()).toBe('rgba(44,213,196,1)')
+  expect(blue60()).toBe('rgba(0,227,205,1)')
 })

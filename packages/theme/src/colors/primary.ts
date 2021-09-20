@@ -5,16 +5,16 @@ import { rgb } from '../utils'
  *
  * {@link https://zeroheight.com/3ddd0f892/p/028ae9-colors/t/190120}
  */
-export const blue10 = rgb(234, 251, 249)
-export const blue20 = rgb(196, 243, 238)
-export const blue30 = rgb(158, 236, 228)
-export const blue40 = rgb(120, 228, 217)
-export const blue50 = rgb(82, 221, 207)
-export const blue60 = rgb(44, 213, 196)
-export const blue70 = rgb(36, 175, 161)
-export const blue80 = rgb(28, 136, 125)
-export const blue90 = rgb(20, 98, 90)
-export const blue100 = rgb(12, 60, 55)
+export const blue10 = rgb(230, 252, 250)
+export const blue20 = rgb(184, 247, 241)
+export const blue30 = rgb(138, 242, 232)
+export const blue40 = rgb(92, 237, 223)
+export const blue50 = rgb(46, 232, 214)
+export const blue60 = rgb(0, 227, 205)
+export const blue70 = rgb(0, 186, 168)
+export const blue80 = rgb(0, 145, 131)
+export const blue90 = rgb(0, 104, 94)
+export const blue100 = rgb(0, 64, 57)
 
 export const primaryBlue = {
   blue10,

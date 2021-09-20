@@ -5,16 +5,16 @@ import { rgb } from '../utils'
  *
  * {@link https://zeroheight.com/3ddd0f892/p/028ae9-colors/t/06560c}
  */
-export const deepGreen10 = rgb(230, 247, 243)
-export const deepGreen20 = rgb(185, 233, 222)
-export const deepGreen30 = rgb(140, 219, 200)
-export const deepGreen40 = rgb(94, 204, 179)
-export const deepGreen50 = rgb(49, 190, 157)
-export const deepGreen60 = rgb(4, 176, 136)
-export const deepGreen70 = rgb(3, 144, 112)
-export const deepGreen80 = rgb(3, 113, 87)
-export const deepGreen90 = rgb(2, 81, 63)
-export const deepGreen100 = rgb(1, 49, 38)
+export const deepGreen10 = rgb(232, 249, 244)
+export const deepGreen20 = rgb(192, 237, 224)
+export const deepGreen30 = rgb(151, 225, 205)
+export const deepGreen40 = rgb(110, 213, 185)
+export const deepGreen50 = rgb(70, 202, 166)
+export const deepGreen60 = rgb(29, 190, 146)
+export const deepGreen70 = rgb(24, 156, 120)
+export const deepGreen80 = rgb(19, 122, 93)
+export const deepGreen90 = rgb(13, 87, 67)
+export const deepGreen100 = rgb(8, 53, 41)
 
 export const secondaryDeepGreen = {
   deepGreen10,
@@ -88,32 +88,32 @@ export const secondaryGold = {
 }
 
 /**
- * Secondary Royal Blue
+ * Secondary Blue
  *
  * {@link https://zeroheight.com/3ddd0f892/p/028ae9-colors/t/41aa9a}
  */
-export const royalBlue10 = rgb(234, 238, 245)
-export const royalBlue20 = rgb(196, 208, 226)
-export const royalBlue30 = rgb(158, 177, 207)
-export const royalBlue40 = rgb(120, 147, 188)
-export const royalBlue50 = rgb(82, 116, 170)
-export const royalBlue60 = rgb(44, 86, 151)
-export const royalBlue70 = rgb(36, 71, 124)
-export const royalBlue80 = rgb(28, 55, 97)
-export const royalBlue90 = rgb(20, 40, 69)
-export const royalBlue100 = rgb(12, 24, 42)
+export const blue10 = rgb(236, 244, 255)
+export const blue20 = rgb(203, 223, 254)
+export const blue30 = rgb(169, 202, 253)
+export const blue40 = rgb(135, 181, 252)
+export const blue50 = rgb(102, 161, 252)
+export const blue60 = rgb(68, 140, 251)
+export const blue70 = rgb(56, 115, 206)
+export const blue80 = rgb(44, 90, 161)
+export const blue90 = rgb(31, 64, 115)
+export const blue100 = rgb(19, 39, 70)
 
-export const secondaryRoyalBlue = {
-  royalBlue10,
-  royalBlue20,
-  royalBlue30,
-  royalBlue40,
-  royalBlue50,
-  royalBlue60,
-  royalBlue70,
-  royalBlue80,
-  royalBlue90,
-  royalBlue100,
+export const secondaryBlue = {
+  blue10,
+  blue20,
+  blue30,
+  blue40,
+  blue50,
+  blue60,
+  blue70,
+  blue80,
+  blue90,
+  blue100,
 }
 
 /**
@@ -265,7 +265,7 @@ export default {
   secondaryDeepGreen,
   secondaryPurple,
   secondaryGold,
-  secondaryRoyalBlue,
+  secondaryBlue,
   secondaryPeach,
   secondaryPink,
   secondaryLimeGreen,

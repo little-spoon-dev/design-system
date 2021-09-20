@@ -8,7 +8,7 @@ import {
   warning10,
   warning20,
 } from './alert'
-import { blue60 } from './primary'
+import { blue60, blue90 } from './primary'
 import { grey10, grey20, grey30, grey40, grey60, grey80 } from './secondary'
 
 /**
@@ -33,7 +33,7 @@ export const shadeWhite = '#FFFFFF'
  */
 export const surfacePrimary = shadeWhite
 export const surfaceSecondary = grey10()
-export const surfaceStrong = '#14625A'
+export const surfaceStrong = blue90()
 export const surfaceContrast = grey80()
 export const surfaceOverlay = grey80(0.8)
 

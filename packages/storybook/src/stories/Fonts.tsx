@@ -2,8 +2,10 @@ import { Fragment } from 'react'
 
 interface Props {
   [style: string]: {
-    [family: string]: string
-    [fontWeight: string]: string
+    family: string
+    weight: {
+      [weight: string]: number
+    }
   }
 }
 
@@ -12,7 +14,7 @@ const headingText = 'Display 01'
 const bodyFontSize = '1.25rem'
 const bodyText = 'The quick brown fox jumps over the lazy dog'
 
-function fontFormat(font) {
+function fontFormat(font: string) {
   return font.replace(', sans-serif', '').replace(/'/g, '')
 }
 

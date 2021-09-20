@@ -4,8 +4,9 @@
   "version": "1.3.0",
   "description": "Little Spoon Storybook",
   "scripts": {
-    "build": "build-storybook",
-    "clean": "rm -rf storybook-static",
+    "build": "yarn copy-changelog && build-storybook",
+    "clean": "rm -rf storybook-static src/stories/changelog",
+    "copy-changelog": "mkdir -p src/stories/changelog && ts-node scripts/copy-changelog",
     "lint": "eslint .",
     "lint:fix": "yarn lint --fix",
     "storybook": "start-storybook -p 6006"

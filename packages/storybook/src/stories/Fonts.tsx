@@ -7,13 +7,19 @@ interface Props {
   }
 }
 
-const headingFontSize = '3.25rem'
-const headingText = 'Display 01'
-const bodyFontSize = '1.25rem'
 const bodyText = 'The quick brown fox jumps over the lazy dog'
 
 function fontFormat(font) {
   return font.replace(', sans-serif', '').replace(/'/g, '')
+}
+
+function displayText(style, variant) {
+  const buttonVariants = ['button1', 'button2', 'button3', 'button4']
+  if ((style === 'Body' && buttonVariants.includes(variant)) || style === 'Heading') {
+    return variant
+  } else {
+    return bodyText
+  }
 }
 
 export default function Fonts(props: Props) {
@@ -30,20 +36,24 @@ export default function Fonts(props: Props) {
               <h2 style={{ marginLeft: '12px' }}>{'Font: ' + fontFormat(styles.family)}</h2>
             </div>
             <ul style={{ listStyle: 'none' }}>
-              {Object.entries(styles.weight).map(([weightKey, weightValue]) => (
-                <li key={weightKey}>
-                  <div
-                    style={{
-                      display: 'inline-block',
-                      fontFamily: styles.family,
-                      fontWeight: weightValue,
-                      fontSize: styleKey === 'Body' ? bodyFontSize : headingFontSize,
-                      margin: '1rem',
-                    }}
-                  >
-                    <span>{styleKey === 'Body' ? bodyText : headingText}</span>
-                  </div>
-                </li>
+              {Object.entries(styles.variant).map(([variantKey, variantValue]) => (
+                <div style={{ margin: '3rem 0 3rem 0' }}>
+                  {Object.entries(styles.weight).map(([weightKey, weightValue]) => (
+                    <li key={weightKey}>
+                      <div
+                        style={{
+                          display: 'inline-block',
+                          fontFamily: styles.family,
+                          fontWeight: weightValue,
+                          fontSize: variantValue,
+                          margin: '.75rem',
+                        }}
+                      >
+                        <span>{displayText(styleKey, variantKey)}</span>
+                      </div>
+                    </li>
+                  ))}
+                </div>
               ))}
             </ul>
           </section>

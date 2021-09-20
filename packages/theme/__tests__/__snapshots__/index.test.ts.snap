@@ -184,6 +184,17 @@ Object {
   "fonts": Object {
     "primary": Object {
       "family": "Lato, sans-serif",
+      "variant": Object {
+        "button1": "1.25rem",
+        "button2": "1.125rem",
+        "button3": "1rem",
+        "button4": "0.875rem",
+        "caption1": "0.75rem",
+        "p1": "1.25rem",
+        "p2": "1.125rem",
+        "p3": "1rem",
+        "p4": "0.875rem",
+      },
       "weight": Object {
         "bold": 700,
         "normal": 400,
@@ -191,6 +202,16 @@ Object {
     },
     "secondary": Object {
       "family": "Mulish, sans-serif",
+      "variant": Object {
+        "display1": "4.625rem",
+        "display2": "4.125rem",
+        "h1": "3.25rem",
+        "h2": "2.875rem",
+        "h3": "2.25rem",
+        "h4": "1.8125rem",
+        "h5": "1.625rem",
+        "h6": "1.25rem",
+      },
       "weight": Object {
         "black": 900,
         "bold": 700,

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://www.github.com/little-spoon-dev/design-system/compare/storybook-v1.3.0...storybook-v1.4.0) (2021-09-20)
+
+
+### Features
+
+* **storybook:** render changelog for all packages LS-1731 ([2bff3e2](https://www.github.com/little-spoon-dev/design-system/commit/2bff3e2eea9ec2bf12d747f27f5cf32cab5fd704))
+
 ## [1.3.0](https://www.github.com/little-spoon-dev/design-system/compare/storybook-v1.2.0...storybook-v1.3.0) (2021-09-17)
 
 

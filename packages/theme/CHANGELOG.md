@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://www.github.com/little-spoon-dev/design-system/compare/theme-v1.2.0...theme-v1.3.0) (2021-09-20)
+
+
+### Features
+
+* **theme:** update primary and secondary colors LS-1776 ([60681c5](https://www.github.com/little-spoon-dev/design-system/commit/60681c564e533bf6852eb995d30b04b4cc7b0d4c))
+
 ## [1.2.0](https://www.github.com/little-spoon-dev/design-system/compare/theme-v1.1.0...theme-v1.2.0) (2021-09-17)
 
 ### Features

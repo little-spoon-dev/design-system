@@ -4,7 +4,7 @@ import Fonts from './Fonts'
 import theme from '@littlespoon/theme'
 
 export default {
-  title: 'Example/Fonts',
+  title: 'Design System/Fonts',
   component: Fonts,
 } as ComponentMeta<typeof Fonts>
 

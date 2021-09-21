@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.5.0](https://www.github.com/little-spoon-dev/design-system/compare/storybook-v1.4.0...storybook-v1.5.0) (2021-09-21)
+
+
+### Features
+
+* **button:** remove disabled prop, bump theme version to 1.3.0 ([04b1b4c](https://www.github.com/little-spoon-dev/design-system/commit/04b1b4c3cc53db0da2daf5e9b960712da78a8a58))
+* **storybook:** bump @littlespoon/theme from 1.2.0 to 1.3.0 LS-1782 ([f825f95](https://www.github.com/little-spoon-dev/design-system/commit/f825f9580de6a1430344473b0e90b1a55d893c4f))
+* **storybook:** display color rgba or hexadecimal code LS-1782 ([29897ec](https://www.github.com/little-spoon-dev/design-system/commit/29897ec5af6216846daea371efd5f770f03360b0))
+
 ## [1.4.0](https://www.github.com/little-spoon-dev/design-system/compare/storybook-v1.3.0...storybook-v1.4.0) (2021-09-20)
 
 

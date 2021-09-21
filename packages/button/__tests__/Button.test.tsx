@@ -31,7 +31,7 @@ it.each<ButtonProps['size']>(['small', 'medium', 'large', 'xlarge'])(
 )
 
 it.each<ButtonProps['variant']>(['primary', 'secondary', 'ghost', 'overlay', 'critical'])(
-  'renders button with size=%j',
+  'renders button with variant=%j',
   (variant) => {
     render(<Button variant={variant}>{variant}</Button>)
     expect(screen.getByText(variant as string)).toBeInTheDocument()
@@ -47,3 +47,15 @@ it('does not throw for invalid prop variant', () => {
   render(<Button variant={'' as ButtonProps['variant']}>text</Button>)
   expect(screen.getByText('text')).toBeInTheDocument()
 })
+
+it.each<ButtonProps['variant']>(['primary', 'secondary'])(
+  'renders disabled button with variant=%j',
+  (variant) => {
+    render(
+      <Button disabled={true} variant={variant}>
+        {variant}
+      </Button>,
+    )
+    expect(screen.getByText(variant as string)).toBeDisabled()
+  },
+)

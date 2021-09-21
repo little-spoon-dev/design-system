@@ -1,7 +1,8 @@
 {
-  "name": "@littlespoon/theme",
-  "version": "1.3.0",
-  "description": "Little Spoon theme",
+  "private": true,
+  "name": "typescript-template",
+  "version": "1.0.0-alpha",
+  "description": "placeholder",
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
@@ -15,16 +16,13 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/little-spoon-dev/design-system.git",
-    "directory": "packages/theme"
+    "directory": "packages/placeholder"
   },
   "bugs": {
     "url": "https://github.com/little-spoon-dev/design-system/issues"
   },
   "keywords": [
-    "littlespoon",
-    "theme",
-    "colors",
-    "fonts"
+    "littlespoon"
   ],
   "files": [
     "lib"

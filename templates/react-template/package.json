@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "template",
+  "name": "react-template",
   "version": "1.0.0-alpha",
   "description": "placeholder",
   "main": "lib/index.js",
@@ -12,6 +12,10 @@
     "lint:fix": "yarn lint --fix",
     "test": "jest",
     "test:watch": "jest --watch"
+  },
+  "peerDependencies": {
+    "react": "16 || 17",
+    "styled-components": "4 || 5"
   },
   "repository": {
     "type": "git",

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { informative50 } from '@littlespoon/theme/lib/colors/alert'
 import { grey70, grey80, grey20, grey40 } from '@littlespoon/theme/lib/colors/secondary'
-import { blue60, blue70, blue80 } from '@littlespoon/theme/lib/colors/primary'
+import { blue60, blue30, blue80 } from '@littlespoon/theme/lib/colors/primary'
 import { shadeBlack, shadeWhite } from '@littlespoon/theme/lib/colors/token'
 import { primary } from '@littlespoon/theme/lib/fonts'
 
@@ -103,7 +103,7 @@ function getVariantCss(props: ButtonProps): string {
             `
             : `
             &:hover {
-              background-color: ${blue70()};
+              background-color: ${blue30()};
             }
             `
         }

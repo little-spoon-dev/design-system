@@ -1,4 +1,5 @@
 import { Fragment } from 'react'
+import { secondary } from '@littlespoon/theme/lib/fonts'
 
 interface Props {
   [style: string]: {
@@ -32,10 +33,14 @@ export default function Fonts(props: Props) {
           {index > 0 && <hr />}
           <section>
             <div>
-              <h1 style={{ fontFamily: styles.family, fontSize: '4.125rem' }}>{styleKey}</h1>
+              <h1 style={{ fontFamily: styles.family, fontSize: secondary.variant.h2 }}>
+                {styleKey}
+              </h1>
             </div>
             <div>
-              <h2 style={{ marginLeft: '12px' }}>{'Font: ' + fontFormat(styles.family)}</h2>
+              <h2 style={{ marginLeft: '12px', fontFamily: styles.family }}>
+                {'Font: ' + fontFormat(styles.family)}
+              </h2>
             </div>
             <ul style={{ listStyle: 'none' }}>
               {Object.entries(styles.variant).map(([variantKey, variantValue]) => (

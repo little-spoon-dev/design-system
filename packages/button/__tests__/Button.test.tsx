@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 
-import Button from '../src/'
 import type { ButtonProps } from '../src/'
+import Button from '../src/'
 
 it('renders button with no props', () => {
   render(<Button />)

@@ -1,7 +1,7 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import theme from '@littlespoon/theme'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import Fonts from './Fonts'
-import theme from '@littlespoon/theme'
 
 export default {
   title: 'Design System/Fonts',

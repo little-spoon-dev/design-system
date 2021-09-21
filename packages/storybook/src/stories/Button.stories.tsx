@@ -13,4 +13,5 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
 export const Children = Template.bind({})
 Children.args = {
   children: 'Text',
+  disabled: false,
 }

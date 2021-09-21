@@ -20,8 +20,6 @@ npm install react-template --save
 
 ## Usage
 
-```ts
+```tsx
 import Component from 'react-template'
-
-;<Component />
 ```

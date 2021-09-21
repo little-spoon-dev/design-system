@@ -1,7 +1,6 @@
-import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-
 import Button from '@littlespoon/button/src/Button'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
+import React from 'react'
 
 export default {
   title: 'Design System/Button',

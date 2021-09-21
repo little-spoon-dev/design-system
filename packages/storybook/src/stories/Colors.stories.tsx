@@ -1,7 +1,7 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import theme from '@littlespoon/theme'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import Colors from './Colors'
-import theme from '@littlespoon/theme'
 
 export default {
   title: 'Design System/Colors',

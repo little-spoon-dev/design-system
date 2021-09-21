@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
-    "clean": "rm -rf coverage lib",
+    "build:flowtypes": "flowgen lib && rm -rf lib && mv exports lib && yarn build",
+    "clean": "rm -rf coverage exports lib",
     "lint": "eslint .",
     "lint:fix": "yarn lint --fix",
     "test": "jest",

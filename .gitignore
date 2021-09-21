@@ -9,8 +9,8 @@ node_modules
 coverage
 
 # build
+exports
 lib
-storybook-static
 
 # misc
 .DS_Store

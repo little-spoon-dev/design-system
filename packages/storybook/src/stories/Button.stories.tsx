@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import Button from '@littlespoon/button/src/Button'
 
 export default {
-  title: 'Example/Button',
+  title: 'Design System/Button',
   component: Button,
 } as ComponentMeta<typeof Button>
 

@@ -17,11 +17,6 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
    * The variant to use. Defaults to "primary".
    */
   variant?: 'primary' | 'secondary' | 'ghost' | 'overlay' | 'critical'
-
-  /**
-   * Whether the button is interactive or not. Defaults to false.
-   */
-  disabled?: boolean
 }
 
 export default function Button({

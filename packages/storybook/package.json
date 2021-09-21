@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@littlespoon/button": "1.0.0",
-    "@littlespoon/theme": "1.2.0"
+    "@littlespoon/theme": "1.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",

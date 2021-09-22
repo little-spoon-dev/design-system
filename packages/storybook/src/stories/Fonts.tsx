@@ -1,5 +1,5 @@
-import { Fragment } from 'react'
 import { secondary } from '@littlespoon/theme/lib/fonts'
+import { Fragment } from 'react'
 
 interface Props {
   [style: string]: {

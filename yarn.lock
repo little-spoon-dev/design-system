@@ -2306,11 +2306,6 @@
     npmlog "^4.1.2"
     write-file-atomic "^3.0.3"
 
-"@littlespoon/theme@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@littlespoon/theme/-/theme-1.2.0.tgz#fe4714a8f72ae3fd87b9c5c78ca715342ad28089"
-  integrity sha512-7G6sl5oQszx+cUZDgCt1J5ssHzPCBRoLHu2oT51iUWLM6DOAzZh3riQ2zWUJlh7xIEgoF9Fhh6QRVQnI/8emJg==
-
 "@mdx-js/loader@^1.6.22":
   version "1.6.22"
   resolved "https://registry.yarnpkg.com/@mdx-js/loader/-/loader-1.6.22.tgz#d9e8fe7f8185ff13c9c8639c048b123e30d322c4"
@@ -3740,9 +3735,9 @@
     "@types/yargs-parser" "*"
 
 "@types/yargs@^17.0.2":
-  version "17.0.2"
-  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-17.0.2.tgz#8fb2e0f4cdc7ab2a1a570106e56533f31225b584"
-  integrity sha512-JhZ+pNdKMfB0rXauaDlrIvm+U7V4m03PPOSVoPS66z8gf+G4Z/UW8UlrVIj2MRQOBzuoEvYtjS0bqYwnpZaS9Q==
+  version "17.0.3"
+  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-17.0.3.tgz#e6c552aa3277b21a8e802019d03ee5e77894cf27"
+  integrity sha512-K7rm3Ke3ag/pAniBe80A6J6fjoqRibvCrl3dRmtXV9eCEt9h/pZwmHX9MzjQVUc/elneQTL4Ky7XKorC71Lmxw==
   dependencies:
     "@types/yargs-parser" "*"
 
@@ -6576,6 +6571,11 @@ eslint-plugin-prettier@^4.0.0:
   integrity sha512-98MqmCJ7vJodoQK359bqQWaxOE0CS8paAz/GgjaZLyex4TTk3g9HugoO89EqWCrFiOqn9EVvcoo7gZzONCWVwQ==
   dependencies:
     prettier-linter-helpers "^1.0.0"
+
+eslint-plugin-simple-import-sort@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-simple-import-sort/-/eslint-plugin-simple-import-sort-7.0.0.tgz#a1dad262f46d2184a90095a60c66fef74727f0f8"
+  integrity sha512-U3vEDB5zhYPNfxT5TYR7u01dboFZp+HNpnGhkDB2g/2E4wZ/g1Q9Ton8UwCLfRV9yAKyYqDh62oHOamvkFxsvw==
 
 eslint-scope@^4.0.3:
   version "4.0.3"

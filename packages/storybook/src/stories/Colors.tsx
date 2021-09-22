@@ -1,5 +1,5 @@
-import { Fragment } from 'react'
 import { grey10, grey20 } from '@littlespoon/theme/lib/colors/secondary'
+import { Fragment } from 'react'
 
 interface Props {
   color: {

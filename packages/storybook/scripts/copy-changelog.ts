@@ -4,7 +4,7 @@
 
 // Copy `packages/*/CHANGELOG.md` to `packages/storybook/src/stories/changelog/*.stories.mdx`.
 
-import { readFileSync, readdirSync, writeFileSync } from 'fs'
+import { readdirSync, readFileSync, writeFileSync } from 'fs'
 import { resolve } from 'path'
 
 const changelogStoriesDirectory = resolve(__dirname, '../src/stories/changelog')

@@ -183,33 +183,52 @@ Object {
   },
   "fonts": Object {
     "primary": Object {
-      "button1": Object {
-        "fontSize": "2rem",
+      "button": Object {
+        "large": Object {
+          "fontSize": "1.8rem",
+          "letterSpacing": "0.15rem",
+          "lineHeight": "2.6rem",
+        },
+        "medium": Object {
+          "fontSize": "1.6rem",
+          "letterSpacing": "0.15rem",
+          "lineHeight": "2.4rem",
+        },
+        "small": Object {
+          "fontSize": "1.4rem",
+          "letterSpacing": "0.15rem",
+          "lineHeight": "2rem",
+        },
+        "xlarge": Object {
+          "fontSize": "2rem",
+          "letterSpacing": "0.15rem",
+          "lineHeight": "3rem",
+        },
       },
-      "button2": Object {
-        "fontSize": "1.8rem",
-      },
-      "button3": Object {
-        "fontSize": "1.6rem",
-      },
-      "button4": Object {
-        "fontSize": "1.4rem",
-      },
-      "caption1": Object {
-        "fontSize": "1.2rem",
+      "caption": Object {
+        "medium": Object {
+          "fontSize": "1.2rem",
+          "lineHeight": "1.8rem",
+        },
       },
       "family": "Lato, sans-serif",
-      "p1": Object {
-        "fontSize": "2rem",
-      },
-      "p2": Object {
-        "fontSize": "1.8rem",
-      },
-      "p3": Object {
-        "fontSize": "1.6rem",
-      },
-      "p4": Object {
-        "fontSize": "1.4rem",
+      "paragraph": Object {
+        "large": Object {
+          "fontSize": "1.8rem",
+          "lineHeight": "2.6rem",
+        },
+        "medium": Object {
+          "fontSize": "1.6rem",
+          "lineHeight": "2.4rem",
+        },
+        "small": Object {
+          "fontSize": "1.4rem",
+          "lineHeight": "2rem",
+        },
+        "xlarge": Object {
+          "fontSize": "2rem",
+          "lineHeight": "3rem",
+        },
       },
       "weight": Object {
         "bold": 700,
@@ -217,30 +236,42 @@ Object {
       },
     },
     "secondary": Object {
-      "display1": Object {
-        "fontSize": "7.4rem",
-      },
-      "display2": Object {
-        "fontSize": "6.6rem",
+      "display": Object {
+        "large": Object {
+          "fontSize": "7.4rem",
+          "lineHeight": "9.2rem",
+        },
+        "medium": Object {
+          "fontSize": "6.6rem",
+          "lineHeight": "8.2rem",
+        },
       },
       "family": "Mulish, sans-serif",
-      "h1": Object {
-        "fontSize": "5.2rem",
-      },
-      "h2": Object {
-        "fontSize": "4.6rem",
-      },
-      "h3": Object {
-        "fontSize": "3.6rem",
-      },
-      "h4": Object {
-        "fontSize": "2.9rem",
-      },
-      "h5": Object {
-        "fontSize": "2.6rem",
-      },
-      "h6": Object {
-        "fontSize": "2rem",
+      "heading": Object {
+        "large": Object {
+          "fontSize": "5.2rem",
+          "lineHeight": "6.5rem",
+        },
+        "medium": Object {
+          "fontSize": "4.6rem",
+          "lineHeight": "5.8rem",
+        },
+        "small": Object {
+          "fontSize": "3.6rem",
+          "lineHeight": "4.5rem",
+        },
+        "xsmall": Object {
+          "fontSize": "2.9rem",
+          "lineHeight": "3.6rem",
+        },
+        "xxsmall": Object {
+          "fontSize": "2.6rem",
+          "lineHeight": "3.2rem",
+        },
+        "xxxsmall": Object {
+          "fontSize": "2rem",
+          "lineHeight": "2.5rem",
+        },
       },
       "weight": Object {
         "black": 900,

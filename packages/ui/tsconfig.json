@@ -1,8 +1,17 @@
 {
   "extends": "../../tsconfig",
   "compilerOptions": {
-    "outDir": "lib",
+    "rootDir": ".",
+    "outDir": ".",
     "noEmit": false
   },
-  "include": ["src"]
+  "exclude": [
+    "jest.config.ts",
+    "node_modules",
+    "__tests__",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.test.ts",
+    "**/*.test.tsx"
+  ]
 }

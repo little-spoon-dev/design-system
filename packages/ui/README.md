@@ -20,6 +20,15 @@ npm install @littlespoon/ui --save
 
 ## Usage
 
+Import Button and theme:
+
 ```ts
-import main from '@littlespoon/ui'
+import { Button, theme } from '@littlespoon/ui'
+```
+
+Or use path imports:
+
+```ts
+import Button from '@littlespoon/ui/Button'
+import theme from '@littlespoon/ui/theme'
 ```

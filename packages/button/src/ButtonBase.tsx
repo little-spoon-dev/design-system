@@ -11,7 +11,7 @@ function getSizeCss(props: ButtonProps): string {
   switch (props.size) {
     case 'small':
       return `
-        font-size: ${primary.variant.button4};
+        font-size: ${primary.button4.fontSize};
         height: 3.2rem;
         line-height: 2rem;
         padding: 0.6rem 1.6rem;
@@ -19,7 +19,7 @@ function getSizeCss(props: ButtonProps): string {
 
     case 'medium':
       return `
-        font-size: ${primary.variant.button3};
+        font-size: ${primary.button3.fontSize};
         height: 4rem;
         line-height: 2.4rem;
         padding: 0.8rem 1.8rem;
@@ -27,7 +27,7 @@ function getSizeCss(props: ButtonProps): string {
 
     case 'large':
       return `
-        font-size: ${primary.variant.button2};
+        font-size: ${primary.button2.fontSize};
         height: 5rem;
         line-height: 2.6rem;
         padding: 1.2rem 2.2rem;
@@ -35,7 +35,7 @@ function getSizeCss(props: ButtonProps): string {
 
     case 'xlarge':
       return `
-        font-size: ${primary.variant.button1};
+        font-size: ${primary.button1.fontSize};
         height: 5.8rem;
         line-height: 3rem;
         padding: 1.4rem 2.4rem;

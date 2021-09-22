@@ -5,16 +5,32 @@
  */
 export const primary = {
   family: 'Lato, sans-serif',
-  variant: {
-    p1: '2rem',
-    p2: '1.8rem',
-    p3: '1.6rem',
-    p4: '1.4rem',
-    caption1: '1.2rem',
-    button1: '2rem',
-    button2: '1.8rem',
-    button3: '1.6rem',
-    button4: '1.4rem',
+  p1: {
+    fontSize: '2rem',
+  },
+  p2: {
+    fontSize: '1.8rem',
+  },
+  p3: {
+    fontSize: '1.6rem',
+  },
+  p4: {
+    fontSize: '1.4rem',
+  },
+  caption1: {
+    fontSize: '1.2rem',
+  },
+  button1: {
+    fontSize: '2rem',
+  },
+  button2: {
+    fontSize: '1.8rem',
+  },
+  button3: {
+    fontSize: '1.6rem',
+  },
+  button4: {
+    fontSize: '1.4rem',
   },
   weight: {
     normal: 400,
@@ -24,15 +40,29 @@ export const primary = {
 
 export const secondary = {
   family: 'Mulish, sans-serif',
-  variant: {
-    display1: '7.4rem',
-    display2: '6.6rem',
-    h1: '5.2rem',
-    h2: '4.6rem',
-    h3: '3.6rem',
-    h4: '2.9rem',
-    h5: '2.6rem',
-    h6: '2rem',
+  display1: {
+    fontSize: '7.4rem',
+  },
+  display2: {
+    fontSize: '6.6rem',
+  },
+  h1: {
+    fontSize: '5.2rem',
+  },
+  h2: {
+    fontSize: '4.6rem',
+  },
+  h3: {
+    fontSize: '3.6rem',
+  },
+  h4: {
+    fontSize: '2.9rem',
+  },
+  h5: {
+    fontSize: '2.6rem',
+  },
+  h6: {
+    fontSize: '2rem',
   },
   weight: {
     bold: 700,

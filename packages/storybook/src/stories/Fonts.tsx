@@ -33,35 +33,39 @@ export default function Fonts(props: Props) {
           {index > 0 && <hr />}
           <section>
             <div>
-              <h1 style={{ fontFamily: styles.family, fontSize: secondary.variant.h2 }}>
+              <h1 style={{ fontFamily: styles.family, fontSize: secondary.h2.fontSize }}>
                 {styleKey}
               </h1>
             </div>
             <div>
-              <h2 style={{ marginLeft: '12px', fontFamily: styles.family }}>
+              <h2 style={{ marginLeft: '1.2rem', fontFamily: styles.family }}>
                 {'Font: ' + fontFormat(styles.family)}
               </h2>
             </div>
             <ul style={{ listStyle: 'none' }}>
-              {Object.entries(styles.variant).map(([variantKey, variantValue]) => (
-                <div style={{ margin: '3rem 0 3rem 0' }}>
-                  {Object.entries(styles.weight).map(([weightKey, weightValue]) => (
-                    <li key={weightKey}>
-                      <div
-                        style={{
-                          display: 'inline-block',
-                          fontFamily: styles.family,
-                          fontWeight: weightValue,
-                          fontSize: variantValue,
-                          margin: '.75rem',
-                        }}
-                      >
-                        <span>{displayText(styleKey, variantKey)}</span>
-                      </div>
-                    </li>
-                  ))}
-                </div>
-              ))}
+              {Object.entries(styles).map(([variantKey, variantValue]) => {
+                if (!(variantKey === 'weight' || variantKey === 'family')) {
+                  return (
+                    <div style={{ margin: '3rem 0 3rem 0' }}>
+                      {Object.entries(styles.weight).map(([weightKey, weightValue]) => (
+                        <li key={weightKey}>
+                          <div
+                            style={{
+                              display: 'inline-block',
+                              fontFamily: styles.family,
+                              fontWeight: weightValue,
+                              fontSize: variantValue.fontSize,
+                              margin: '.75rem',
+                            }}
+                          >
+                            <span>{displayText(styleKey, variantKey)}</span>
+                          </div>
+                        </li>
+                      ))}
+                    </div>
+                  )
+                }
+              })}
             </ul>
           </section>
         </Fragment>

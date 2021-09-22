@@ -3,10 +3,13 @@ import { blue30, blue60, blue80 } from '@littlespoon/theme/lib/colors/primary'
 import { grey20, grey40, grey70, grey80 } from '@littlespoon/theme/lib/colors/secondary'
 import { shadeBlack, shadeWhite } from '@littlespoon/theme/lib/colors/token'
 import { primary } from '@littlespoon/theme/lib/fonts'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import type { ButtonProps } from './Button'
 
+/**
+ * Gets size styles.
+ */
 function getSizeCss(props: ButtonProps): string {
   switch (props.size) {
     case 'small':
@@ -50,68 +53,65 @@ function getSizeCss(props: ButtonProps): string {
   }
 }
 
-const sizeCss = css<ButtonProps>`
-  ${getSizeCss}
-`
-
+/**
+ * Gets variant styles.
+ */
 function getVariantCss(props: ButtonProps): string {
+  /**
+   * {@link https://zeroheight.com/3ddd0f892/p/01a397-buttons/t/190120}
+   */
+  if (props.disabled) {
+    return `
+      background-color: ${grey20()};
+      color: ${grey40()};
+      &:focus {
+        outline: 0.2rem solid ${informative50()};
+        outline-offset: 0.2rem;
+      }
+      &:hover {
+        background-color: ${grey20()};
+        cursor: default;
+      }
+      &:active {
+        background-color: ${grey80()};
+      }
+    `
+  }
+
   switch (props.variant) {
     /**
      * {@link https://zeroheight.com/3ddd0f892/p/01a397-buttons/t/190120}
      */
     case 'primary':
       return `
-        background-color: ${props.disabled ? grey20() : shadeBlack};
-        color: ${props.disabled ? grey40() : shadeWhite};
+        background-color: ${shadeBlack};
+        color: ${shadeWhite};
         &:focus {
           outline: 0.2rem solid ${informative50()};
           outline-offset: 0.2rem;
         }
-        ${
-          props.disabled
-            ? `
-        &:hover {
-          background-color: ${grey20()};
-          cursor: default;
-        }
-        `
-            : `
         &:hover {
           background-color: ${grey70()};
         }
-        `
-        }
-
         &:active {
           background-color: ${grey80()};
         }
       `
+
     /**
      * {@link https://zeroheight.com/3ddd0f892/p/01a397-buttons/t/06560c}
      */
     case 'secondary':
       return `
-        background-color: ${props.disabled ? grey20() : blue60()};
-        color: ${props.disabled ? grey40() : shadeBlack};
+        background-color: ${blue60()};
+        color: ${shadeBlack};
         &:focus {
           outline: 0.2rem solid ${informative50()};
           outline-offset: 0.2rem;
         }
-        ${
-          props.disabled
-            ? `
-            &:hover {
-              background-color: ${grey20()};
-              cursor: default;
-            }
-            `
-            : `
-            &:hover {
-              background-color: ${blue30()};
-            }
-            `
+        &:hover {
+          background-color: ${blue30()};
         }
-
         &:active {
           background-color: ${blue80()};
         }
@@ -122,18 +122,16 @@ function getVariantCss(props: ButtonProps): string {
   }
 }
 
-const variantCss = css<ButtonProps>`
-  ${getVariantCss}
-`
-
 export const ButtonBase = styled.button<ButtonProps>`
   border: 0;
   border-radius: 0.5rem;
+  box-sizing: border-box;
   cursor: pointer;
-  font-family: ${primary.family};
-  font-weight: ${primary.weight.bold};
+  display: inline-block;
+  font: ${primary.weight.bold} 1.6rem ${primary.family};
   letter-spacing: 0.15rem;
   text-transform: uppercase;
-  ${sizeCss}
-  ${variantCss}
+  text-decoration: none;
+  ${getSizeCss}
+  ${getVariantCss}
 `

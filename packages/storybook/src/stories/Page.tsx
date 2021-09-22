@@ -1,10 +1,8 @@
 import './page.css'
 
-import React from 'react'
-
 import { Header } from './Header'
 
-interface PageProps {
+export interface PageProps {
   user?: Record<string, never>
   onLogin: () => void
   onLogout: () => void

@@ -4,6 +4,7 @@ import { Fragment } from 'react'
 interface Props {
   [style: string]: {
     family: string
+    [variant: string]: string
     weight: {
       [weight: string]: number
     }

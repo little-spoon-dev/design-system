@@ -2,8 +2,8 @@
   "plugins": ["node-workspace"],
   "release-type": "node",
   "packages": {
+    "packages/button": {},
     "packages/storybook": {},
-    "packages/theme": {},
-    "packages/button": {}
+    "packages/theme": {}
   }
 }

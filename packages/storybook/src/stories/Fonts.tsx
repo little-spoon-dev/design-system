@@ -4,7 +4,13 @@ import { Fragment } from 'react'
 interface Props {
   [style: string]: {
     family: string
-    [variant: string]: string
+    [variantGroup: string]: {
+      [variant: string]: {
+        fontSize: string
+        lineHeight: string
+        letterSpacing?: string
+      }
+    }
     weight: {
       [weight: string]: number
     }
@@ -17,10 +23,9 @@ function fontFormat(font: string) {
   return font.replace(', sans-serif', '').replace(/'/g, '')
 }
 
-function displayText(style, variant) {
-  const buttonVariants = ['button1', 'button2', 'button3', 'button4']
-  if ((style === 'Body' && buttonVariants.includes(variant)) || style === 'Heading') {
-    return variant
+function displayText(style, variantGroup, variant) {
+  if (variantGroup === 'button' || style === 'Heading') {
+    return variant + ' ' + variantGroup
   } else {
     return bodyText
   }
@@ -34,7 +39,9 @@ export default function Fonts(props: Props) {
           {index > 0 && <hr />}
           <section>
             <div>
-              <h1 style={{ fontFamily: styles.family, fontSize: secondary.h2.fontSize }}>
+              <h1
+                style={{ fontFamily: styles.family, fontSize: secondary.heading.medium.fontSize }}
+              >
                 {styleKey}
               </h1>
             </div>
@@ -44,27 +51,28 @@ export default function Fonts(props: Props) {
               </h2>
             </div>
             <ul style={{ listStyle: 'none' }}>
-              {Object.entries(styles).map(([variantKey, variantValue]) => {
-                if (!(variantKey === 'weight' || variantKey === 'family')) {
-                  return (
-                    <div style={{ margin: '3rem 0 3rem 0' }}>
-                      {Object.entries(styles.weight).map(([weightKey, weightValue]) => (
-                        <li key={weightKey}>
-                          <div
-                            style={{
-                              display: 'inline-block',
-                              fontFamily: styles.family,
-                              fontWeight: weightValue,
-                              fontSize: variantValue.fontSize,
-                              margin: '.75rem',
-                            }}
-                          >
-                            <span>{displayText(styleKey, variantKey)}</span>
-                          </div>
-                        </li>
-                      ))}
-                    </div>
-                  )
+              {Object.entries(styles).map(([variantGroupKey, variantGroup]) => {
+                if (!(variantGroupKey === 'weight' || variantGroupKey === 'family')) {
+                  return Object.entries(variantGroup).map(([variant, variantValues]) => {
+                    return (
+                      <div style={{ margin: '3em 0 3rem 0' }}>
+                        {Object.entries(styles.weight).map(([weightKey, weightValue]) => (
+                          <li key={weightKey}>
+                            <div
+                              style={{
+                                ...variantValues,
+                                display: 'inline-block',
+                                fontFamily: styles.family,
+                                fontWeight: weightValue,
+                              }}
+                            >
+                              <span>{displayText(styleKey, variantGroupKey, variant)}</span>
+                            </div>
+                          </li>
+                        ))}
+                      </div>
+                    )
+                  })
                 }
               })}
             </ul>

@@ -10,6 +10,7 @@
     - [`yarn lint`](#yarn-lint)
     - [`yarn lint:fix`](#yarn-lintfix)
     - [`yarn storybook`](#yarn-storybook)
+    - [`yarn sync-modules`](#yarn-sync-modules)
     - [`yarn test`](#yarn-test)
 - [Release](#release)
   - [Canary](#canary)
@@ -152,7 +153,21 @@ yarn lint:fix --scope=@littlespoon/button
 
 #### `yarn storybook`
 
-Runs Storybook.
+Runs Storybook:
+
+```sh
+yarn storybook
+```
+
+#### `yarn sync-modules`
+
+[Syncs dependencies for modules](https://github.com/wix/lerna-script/tree/master/tasks/modules):
+
+```sh
+yarn sync-modules
+```
+
+Running this step after release is necessary because we're versioning with [Release Please](https://github.com/googleapis/release-please) instead of [Lerna](https://github.com/lerna/lerna) and [Release Please does not update dependent modules](https://github.com/googleapis/release-please/issues/1032).
 
 #### `yarn test`
 

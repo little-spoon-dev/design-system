@@ -1,7 +1,13 @@
 import { render, screen } from '@testing-library/react'
+import { axe } from 'jest-axe'
 
 import type { ButtonProps } from '../src/'
 import Button from '../src/'
+
+it('is accessible', async () => {
+  const { container } = render(<Button>text</Button>)
+  expect(await axe(container)).toHaveNoViolations()
+})
 
 it('renders button with no props', () => {
   render(<Button />)
@@ -52,7 +58,7 @@ it.each<ButtonProps['variant']>(['primary', 'secondary'])(
   'renders disabled button with variant=%j',
   (variant) => {
     render(
-      <Button disabled={true} variant={variant}>
+      <Button disabled variant={variant}>
         {variant}
       </Button>,
     )

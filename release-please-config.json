@@ -4,6 +4,7 @@
   "packages": {
     "packages/button": {},
     "packages/storybook": {},
-    "packages/theme": {}
+    "packages/theme": {},
+    "packages/ui": {}
   }
 }

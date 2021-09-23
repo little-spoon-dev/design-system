@@ -1,0 +1,8 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# build
+*.js
+*.js.flow
+*.js.map
+*.d.ts
+*.d.ts.map

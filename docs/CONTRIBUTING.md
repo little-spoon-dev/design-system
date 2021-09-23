@@ -183,7 +183,14 @@ yarn test --scope=@littlespoon/button
 
 Release is automated with [Lerna](https://lerna.js.org/).
 
-If npm publish failed, run the [publish](https://github.com/little-spoon-dev/design-system/actions/workflows/publish.yml) workflow manually.
+If npm publish failed:
+
+1. Delete the Git tags on remote
+2. Rerun the [publish](https://github.com/little-spoon-dev/design-system/actions/workflows/publish.yml) workflow
+
+Because Lerna commits and pushes the release to the remote repository, branch protection rules have been disabled.
+
+To prevent race conditions with Lerna release, don't merge PRs until after the publish workflow is done.
 
 ### Canary
 

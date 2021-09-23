@@ -4,24 +4,28 @@
  * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/b/655ccf}
  */
 
+const rems: Record<string, string> = {}
+
+const rem = (value: number): string => rems[value] || (rems[value] = `${value}rem`)
+
 const xLargeParagraph = {
-  fontSize: '2rem',
-  lineHeight: '3rem',
+  fontSize: rem(2),
+  lineHeight: rem(3),
 }
 
 const largeParagraph = {
-  fontSize: '1.8rem',
-  lineHeight: '2.6rem',
+  fontSize: rem(1.8),
+  lineHeight: rem(2.6),
 }
 
 const mediumParagraph = {
-  fontSize: '1.6rem',
-  lineHeight: '2.4rem',
+  fontSize: rem(1.6),
+  lineHeight: rem(2.4),
 }
 
 const smallParagraph = {
-  fontSize: '1.4rem',
-  lineHeight: '2rem',
+  fontSize: rem(1.4),
+  lineHeight: rem(2),
 }
 
 export const primary = {
@@ -34,30 +38,30 @@ export const primary = {
   },
   caption: {
     medium: {
-      fontSize: '1.2rem',
-      lineHeight: '1.8rem',
+      fontSize: rem(1.2),
+      lineHeight: rem(1.8),
     },
   },
   button: {
     xlarge: {
       fontSize: xLargeParagraph.fontSize,
       lineHeight: xLargeParagraph.lineHeight,
-      letterSpacing: '0.15rem',
+      letterSpacing: rem(0.15),
     },
     large: {
       fontSize: largeParagraph.fontSize,
       lineHeight: largeParagraph.lineHeight,
-      letterSpacing: '0.15rem',
+      letterSpacing: rem(0.15),
     },
     medium: {
       fontSize: mediumParagraph.fontSize,
       lineHeight: mediumParagraph.lineHeight,
-      letterSpacing: '0.15rem',
+      letterSpacing: rem(0.15),
     },
     small: {
       fontSize: smallParagraph.fontSize,
       lineHeight: smallParagraph.lineHeight,
-      letterSpacing: '0.15rem',
+      letterSpacing: rem(0.15),
     },
   },
   weight: {
@@ -70,38 +74,38 @@ export const secondary = {
   family: 'Mulish, sans-serif',
   display: {
     large: {
-      fontSize: '7.4rem',
-      lineHeight: '9.2rem',
+      fontSize: rem(7.4),
+      lineHeight: rem(9.2),
     },
     medium: {
-      fontSize: '6.6rem',
-      lineHeight: '8.2rem',
+      fontSize: rem(6.6),
+      lineHeight: rem(8.2),
     },
   },
   heading: {
-    large: {
-      fontSize: '5.2rem',
-      lineHeight: '6.5rem',
+    h1: {
+      fontSize: rem(5.2),
+      lineHeight: rem(6.5),
     },
-    medium: {
-      fontSize: '4.6rem',
-      lineHeight: '5.8rem',
+    h2: {
+      fontSize: rem(4.6),
+      lineHeight: rem(5.8),
     },
-    small: {
-      fontSize: '3.6rem',
-      lineHeight: '4.5rem',
+    h3: {
+      fontSize: rem(3.6),
+      lineHeight: rem(4.5),
     },
-    xsmall: {
-      fontSize: '2.9rem',
-      lineHeight: '3.6rem',
+    h4: {
+      fontSize: rem(2.9),
+      lineHeight: rem(3.6),
     },
-    xxsmall: {
-      fontSize: '2.6rem',
-      lineHeight: '3.2rem',
+    h5: {
+      fontSize: rem(2.6),
+      lineHeight: rem(3.2),
     },
-    xxxsmall: {
-      fontSize: '2rem',
-      lineHeight: '2.5rem',
+    h6: {
+      fontSize: rem(2),
+      lineHeight: rem(2.5),
     },
   },
   weight: {

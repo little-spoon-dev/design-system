@@ -39,9 +39,7 @@ export default function Fonts(props: Props) {
           {index > 0 && <hr />}
           <section>
             <div>
-              <h1
-                style={{ fontFamily: styles.family, fontSize: secondary.heading.medium.fontSize }}
-              >
+              <h1 style={{ fontFamily: styles.family, fontSize: secondary.heading.h2.fontSize }}>
                 {styleKey}
               </h1>
             </div>
@@ -55,7 +53,7 @@ export default function Fonts(props: Props) {
                 if (!(variantGroupKey === 'weight' || variantGroupKey === 'family')) {
                   return Object.entries(variantGroup).map(([variant, variantValues]) => {
                     return (
-                      <div style={{ margin: '3em 0 3rem 0' }}>
+                      <div style={{ margin: '3em 0' }}>
                         {Object.entries(styles.weight).map(([weightKey, weightValue]) => (
                           <li key={weightKey}>
                             <div

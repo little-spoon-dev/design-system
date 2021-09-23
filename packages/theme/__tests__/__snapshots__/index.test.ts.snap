@@ -248,27 +248,27 @@ Object {
       },
       "family": "Mulish, sans-serif",
       "heading": Object {
-        "large": Object {
+        "h1": Object {
           "fontSize": "5.2rem",
           "lineHeight": "6.5rem",
         },
-        "medium": Object {
+        "h2": Object {
           "fontSize": "4.6rem",
           "lineHeight": "5.8rem",
         },
-        "small": Object {
+        "h3": Object {
           "fontSize": "3.6rem",
           "lineHeight": "4.5rem",
         },
-        "xsmall": Object {
+        "h4": Object {
           "fontSize": "2.9rem",
           "lineHeight": "3.6rem",
         },
-        "xxsmall": Object {
+        "h5": Object {
           "fontSize": "2.6rem",
           "lineHeight": "3.2rem",
         },
-        "xxxsmall": Object {
+        "h6": Object {
           "fontSize": "2rem",
           "lineHeight": "2.5rem",
         },

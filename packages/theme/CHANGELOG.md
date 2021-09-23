@@ -3,27 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# 1.4.0 (2021-09-23)
-
-### Bug Fixes
-
-- **theme:** update snapshot, export fonts ([1594f54](https://github.com/little-spoon-dev/design-system/commit/1594f5452fa282082ca08a9d2441146951d34f45))
+## [1.4.0](https://www.github.com/little-spoon-dev/design-system/compare/theme-v1.3.1...%40littlespoon%2Ftheme%401.4.0) (2021-09-23)
 
 ### Features
 
 - **theme:** add additional font sizes LS-1757 ([2229b83](https://github.com/little-spoon-dev/design-system/commit/2229b838601d0bcd4c6dc3173690460cb37e9f42))
-- **theme:** add colors (primary, secondary, alert, token) LS-1710 ([8a195a5](https://github.com/little-spoon-dev/design-system/commit/8a195a5243e69baf1e751caf1f634071537e2efd))
-- **theme:** add fonts to theme & storybook LS-1721 ([6f04f27](https://github.com/little-spoon-dev/design-system/commit/6f04f272b2006c4c46522af6a186db4b7162475d))
-- **theme:** add shade tokens to theme ([ce16bac](https://github.com/little-spoon-dev/design-system/commit/ce16bacb53d5653e99abcd5ebea14ca7503f9666))
-- **theme:** create package `@littlespoon/theme` LS-1710 ([72b2efd](https://github.com/little-spoon-dev/design-system/commit/72b2efd7f71c5e2533c0c63c15441675a655d6b4))
 - **theme:** update font variants to be objects ([e775d3f](https://github.com/little-spoon-dev/design-system/commit/e775d3f33dd4c30258149f6e905f1f5ff177233f))
-- **theme:** update primary and secondary colors LS-1776 ([60681c5](https://github.com/little-spoon-dev/design-system/commit/60681c564e533bf6852eb995d30b04b4cc7b0d4c))
-
-### Performance Improvements
-
-- **theme:** memoize rgb util LS-1802 ([048f397](https://github.com/little-spoon-dev/design-system/commit/048f3975f7692038b284fb1b6790804ba2e2a0a9))
-
-# Changelog
+- **theme:** update stories with font variants ([af382d7](https://github.com/little-spoon-dev/design-system/commit/af382d726928565a2274f90e5e210d14e63f9037))
 
 ### [1.3.1](https://www.github.com/little-spoon-dev/design-system/compare/theme-v1.3.0...theme-v1.3.1) (2021-09-23)
 

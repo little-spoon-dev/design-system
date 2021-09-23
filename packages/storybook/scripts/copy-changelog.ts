@@ -18,12 +18,17 @@ packageDirectoryNames.forEach((packageDirectoryName) => {
 
   try {
     let changelog = readFileSync(changelogFile, { encoding: 'utf8' })
-    changelog = changelog.replace(
-      '# Changelog',
-      `import { Meta } from '@storybook/addon-docs'
+    const pattern = /^# Change Log[\s\S]+ for commit guidelines./
+    const replacement = `import { Meta } from '@storybook/addon-docs'
 
-<Meta title="Changelog/${packageDirectoryName}" />`,
-    )
+<Meta title="Changelog/${packageDirectoryName}" />
+
+<style>{\`
+  h1, h2, h3, h4, h5, h6 {
+    display: block;
+  }
+\`}</style>`
+    changelog = changelog.replace(pattern, replacement)
     const changelogStoriesFile = resolve(
       changelogStoriesDirectory,
       `${packageDirectoryName}.stories.mdx`,

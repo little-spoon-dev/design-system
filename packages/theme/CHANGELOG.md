@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.3.1](https://www.github.com/little-spoon-dev/design-system/compare/theme-v1.3.0...theme-v1.3.1) (2021-09-23)
+
+
+### Performance Improvements
+
+* **theme:** memoize rgb util LS-1802 ([048f397](https://www.github.com/little-spoon-dev/design-system/commit/048f3975f7692038b284fb1b6790804ba2e2a0a9))
+
 ## [1.3.0](https://www.github.com/little-spoon-dev/design-system/compare/theme-v1.2.0...theme-v1.3.0) (2021-09-20)
 
 

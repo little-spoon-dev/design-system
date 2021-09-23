@@ -1,21 +1,34 @@
+import { secondary } from '@littlespoon/theme/lib/fonts'
 import { Fragment } from 'react'
 
 interface Props {
   [style: string]: {
     family: string
+    [variantGroup: string]: {
+      [variant: string]: {
+        fontSize: string
+        lineHeight: string
+        letterSpacing?: string
+      }
+    }
     weight: {
       [weight: string]: number
     }
   }
 }
 
-const headingFontSize = '3.25rem'
-const headingText = 'Display 01'
-const bodyFontSize = '1.25rem'
 const bodyText = 'The quick brown fox jumps over the lazy dog'
 
 function fontFormat(font: string) {
   return font.replace(', sans-serif', '').replace(/'/g, '')
+}
+
+function displayText(style, variantGroup, variant) {
+  if (variantGroup === 'button' || style === 'Heading') {
+    return variant + ' ' + variantGroup
+  } else {
+    return bodyText
+  }
 }
 
 export default function Fonts(props: Props) {
@@ -26,27 +39,40 @@ export default function Fonts(props: Props) {
           {index > 0 && <hr />}
           <section>
             <div>
-              <h1 style={{ fontFamily: styles.family, fontSize: '4.125rem' }}>{styleKey}</h1>
+              <h1 style={{ fontFamily: styles.family, fontSize: secondary.heading.h2.fontSize }}>
+                {styleKey}
+              </h1>
             </div>
             <div>
-              <h2 style={{ marginLeft: '12px' }}>{'Font: ' + fontFormat(styles.family)}</h2>
+              <h2 style={{ marginLeft: '1.2rem', fontFamily: styles.family }}>
+                {'Font: ' + fontFormat(styles.family)}
+              </h2>
             </div>
             <ul style={{ listStyle: 'none' }}>
-              {Object.entries(styles.weight).map(([weightKey, weightValue]) => (
-                <li key={weightKey}>
-                  <div
-                    style={{
-                      display: 'inline-block',
-                      fontFamily: styles.family,
-                      fontWeight: weightValue,
-                      fontSize: styleKey === 'Body' ? bodyFontSize : headingFontSize,
-                      margin: '1rem',
-                    }}
-                  >
-                    <span>{styleKey === 'Body' ? bodyText : headingText}</span>
-                  </div>
-                </li>
-              ))}
+              {Object.entries(styles).map(([variantGroupKey, variantGroup]) => {
+                if (!(variantGroupKey === 'weight' || variantGroupKey === 'family')) {
+                  return Object.entries(variantGroup).map(([variant, variantValues]) => {
+                    return (
+                      <div style={{ margin: '3em 0' }}>
+                        {Object.entries(styles.weight).map(([weightKey, weightValue]) => (
+                          <li key={weightKey}>
+                            <div
+                              style={{
+                                ...variantValues,
+                                display: 'inline-block',
+                                fontFamily: styles.family,
+                                fontWeight: weightValue,
+                              }}
+                            >
+                              <span>{displayText(styleKey, variantGroupKey, variant)}</span>
+                            </div>
+                          </li>
+                        ))}
+                      </div>
+                    )
+                  })
+                }
+              })}
             </ul>
           </section>
         </Fragment>

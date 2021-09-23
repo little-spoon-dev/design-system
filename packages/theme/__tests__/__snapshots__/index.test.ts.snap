@@ -183,14 +183,96 @@ Object {
   },
   "fonts": Object {
     "primary": Object {
+      "button": Object {
+        "large": Object {
+          "fontSize": "1.8rem",
+          "letterSpacing": "0.15rem",
+          "lineHeight": "2.6rem",
+        },
+        "medium": Object {
+          "fontSize": "1.6rem",
+          "letterSpacing": "0.15rem",
+          "lineHeight": "2.4rem",
+        },
+        "small": Object {
+          "fontSize": "1.4rem",
+          "letterSpacing": "0.15rem",
+          "lineHeight": "2rem",
+        },
+        "xlarge": Object {
+          "fontSize": "2rem",
+          "letterSpacing": "0.15rem",
+          "lineHeight": "3rem",
+        },
+      },
+      "caption": Object {
+        "medium": Object {
+          "fontSize": "1.2rem",
+          "lineHeight": "1.8rem",
+        },
+      },
       "family": "Lato, sans-serif",
+      "paragraph": Object {
+        "large": Object {
+          "fontSize": "1.8rem",
+          "lineHeight": "2.6rem",
+        },
+        "medium": Object {
+          "fontSize": "1.6rem",
+          "lineHeight": "2.4rem",
+        },
+        "small": Object {
+          "fontSize": "1.4rem",
+          "lineHeight": "2rem",
+        },
+        "xlarge": Object {
+          "fontSize": "2rem",
+          "lineHeight": "3rem",
+        },
+      },
       "weight": Object {
         "bold": 700,
         "normal": 400,
       },
     },
     "secondary": Object {
+      "display": Object {
+        "large": Object {
+          "fontSize": "7.4rem",
+          "lineHeight": "9.2rem",
+        },
+        "medium": Object {
+          "fontSize": "6.6rem",
+          "lineHeight": "8.2rem",
+        },
+      },
       "family": "Mulish, sans-serif",
+      "heading": Object {
+        "h1": Object {
+          "fontSize": "5.2rem",
+          "lineHeight": "6.5rem",
+        },
+        "h2": Object {
+          "fontSize": "4.6rem",
+          "lineHeight": "5.8rem",
+        },
+        "h3": Object {
+          "fontSize": "3.6rem",
+          "lineHeight": "4.5rem",
+        },
+        "h4": Object {
+          "fontSize": "2.9rem",
+          "lineHeight": "3.6rem",
+        },
+        "h5": Object {
+          "fontSize": "2.6rem",
+          "lineHeight": "3.2rem",
+        },
+        "h6": Object {
+          "fontSize": "2rem",
+          "lineHeight": "2.5rem",
+        },
+      },
       "weight": Object {
         "black": 900,
         "bold": 700,

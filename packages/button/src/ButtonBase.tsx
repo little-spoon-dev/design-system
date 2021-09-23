@@ -14,33 +14,37 @@ function getSizeCss(props: ButtonProps): string {
   switch (props.size) {
     case 'small':
       return `
-        font-size: 1.4rem;
+        font-size: ${primary.button.small.fontSize};
         height: 3.2rem;
-        line-height: 2rem;
+        line-height: ${primary.button.small.lineHeight};
+        letter-spacing: ${primary.button.small.letterSpacing};
         padding: 0.6rem 1.6rem;
       `
 
     case 'medium':
       return `
-        font-size: 1.6rem;
+        font-size: ${primary.button.medium.fontSize};
         height: 4rem;
-        line-height: 2.4rem;
+        line-height: ${primary.button.small.lineHeight};
+        letter-spacing: ${primary.button.medium.letterSpacing};
         padding: 0.8rem 1.8rem;
       `
 
     case 'large':
       return `
-        font-size: 1.8rem;
+        font-size: ${primary.button.large.fontSize};
         height: 5rem;
-        line-height: 2.6rem;
+        line-height: ${primary.button.small.lineHeight};
+        letter-spacing: ${primary.button.large.letterSpacing};
         padding: 1.2rem 2.2rem;
       `
 
     case 'xlarge':
       return `
-        font-size: 2rem;
+        font-size: ${primary.button.xlarge.fontSize};
         height: 5.8rem;
-        line-height: 3rem;
+        line-height: ${primary.button.small.lineHeight};
+        letter-spacing: ${primary.button.xlarge.letterSpacing};
         padding: 1.4rem 2.4rem;
       `
 

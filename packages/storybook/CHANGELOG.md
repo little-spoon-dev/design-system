@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.1](https://github.com/little-spoon-dev/design-system/compare/storybook@1.6.0...storybook@1.6.1) (2021-09-23)
+
+### Bug Fixes
+
+- **storybook:** fix script copy-changelog LS-1808 ([7338384](https://github.com/little-spoon-dev/design-system/commit/7338384d516e8e32f7e885040b72c02f77918d40))
+
 ## [1.6.0](https://www.github.com/little-spoon-dev/design-system/compare/storybook-v1.5.0...storybook%401.6.0) (2021-09-23)
 
 ### Features

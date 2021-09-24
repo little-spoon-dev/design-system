@@ -108,7 +108,7 @@ yarn create-package @littlespoon/foo --template=typescript
 Create package `@littlespoon/bar` using React template:
 
 ```sh
-yarn create-package @littlespoon/bar --react
+yarn create-package @littlespoon/bar --template=react
 ```
 
 #### `yarn lint`

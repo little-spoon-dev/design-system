@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@littlespoon/button": "1.2.0",
+    "@littlespoon/icons": "1.0.0",
     "@littlespoon/theme": "1.4.0"
   },
   "devDependencies": {

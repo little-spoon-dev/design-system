@@ -10,7 +10,6 @@
     - [`yarn lint`](#yarn-lint)
     - [`yarn lint:fix`](#yarn-lintfix)
     - [`yarn storybook`](#yarn-storybook)
-    - [`yarn sync-modules`](#yarn-sync-modules)
     - [`yarn test`](#yarn-test)
 - [Release](#release)
   - [Canary](#canary)

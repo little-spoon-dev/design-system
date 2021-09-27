@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/button@1.2.0...@littlespoon/button@1.3.0) (2021-09-27)
+
+### Features
+
+- **button:** enable polymorphism LS-1777 ([a08d203](https://github.com/little-spoon-dev/design-system/commit/a08d203375c017131ab2598374d8551bc2bac7ec))
+
 ## [1.2.0](https://www.github.com/little-spoon-dev/design-system/compare/button-v1.1.0...%40littlespoon%2Fbutton%401.2.0) (2021-09-23)
 
 ## [1.1.0](https://www.github.com/little-spoon-dev/design-system/compare/button-v1.0.0...button-v1.1.0) (2021-09-21)

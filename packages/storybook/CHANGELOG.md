@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.7.0...storybook@1.8.0) (2021-09-27)
+
+### Features
+
+- **storybook:** add button stories for link and click LS-1777 ([f219ed7](https://github.com/little-spoon-dev/design-system/commit/f219ed7856e39cf8cb8a6035eea876cb240e79c6))
+
 # [1.7.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.6.2...storybook@1.7.0) (2021-09-27)
 
 ### Features

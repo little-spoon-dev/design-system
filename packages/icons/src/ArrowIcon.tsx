@@ -7,6 +7,7 @@ export interface ArrowIconProps extends React.SVGAttributes<SVGElement> {
    * The fill of the component. Defaults to "black".
    */
   fill?: string
+
   /**
    * The size of the component. Defaults to "small".
    */

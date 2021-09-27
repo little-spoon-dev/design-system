@@ -7,14 +7,32 @@ import Button from '../src/'
 const children = 'children'
 
 describe('accessibility', () => {
-  it('is accessible with text', async () => {
-    const { container } = render(<Button>{children}</Button>)
-    expect(await axe(container)).toHaveNoViolations()
+  describe('button', () => {
+    it('is accessible with text', async () => {
+      const { container } = render(<Button>{children}</Button>)
+      expect(await axe(container)).toHaveNoViolations()
+    })
+
+    it('is not accessible without text', async () => {
+      const { container } = render(<Button />)
+      expect(await axe(container)).not.toHaveNoViolations()
+    })
   })
 
-  it('is not accessible without text', async () => {
-    const { container } = render(<Button />)
-    expect(await axe(container)).not.toHaveNoViolations()
+  describe('link', () => {
+    it('is accessible with text and href', async () => {
+      const { container } = render(
+        <Button as="a" href="#">
+          {children}
+        </Button>,
+      )
+      expect(await axe(container)).toHaveNoViolations()
+    })
+
+    it('is not accessible without text and href', async () => {
+      const { container } = render(<Button as="a" href="" />)
+      expect(await axe(container)).not.toHaveNoViolations()
+    })
   })
 })
 

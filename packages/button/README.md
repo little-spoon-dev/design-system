@@ -39,3 +39,9 @@ Render button with props:
   Hello, world!
 </Button>
 ```
+
+Render button as a link:
+
+```tsx
+<Button as="a">This is a link</Button>
+```

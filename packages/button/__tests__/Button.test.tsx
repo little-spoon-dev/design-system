@@ -4,15 +4,35 @@ import { axe } from 'jest-axe'
 import type { ButtonProps } from '../src/'
 import Button from '../src/'
 
+const children = 'children'
+
 describe('accessibility', () => {
-  it('is accessible with text', async () => {
-    const { container } = render(<Button>text</Button>)
-    expect(await axe(container)).toHaveNoViolations()
+  describe('button', () => {
+    it('is accessible with text', async () => {
+      const { container } = render(<Button>{children}</Button>)
+      expect(await axe(container)).toHaveNoViolations()
+    })
+
+    it('is not accessible without text', async () => {
+      const { container } = render(<Button />)
+      expect(await axe(container)).not.toHaveNoViolations()
+    })
   })
 
-  it('is not accessible without text', async () => {
-    const { container } = render(<Button />)
-    expect(await axe(container)).not.toHaveNoViolations()
+  describe('link', () => {
+    it('is accessible with text and href', async () => {
+      const { container } = render(
+        <Button as="a" href="#">
+          {children}
+        </Button>,
+      )
+      expect(await axe(container)).toHaveNoViolations()
+    })
+
+    it('is not accessible without text and href', async () => {
+      const { container } = render(<Button as="a" href="" />)
+      expect(await axe(container)).not.toHaveNoViolations()
+    })
   })
 })
 
@@ -20,24 +40,24 @@ describe('no props', () => {
   it('renders button', () => {
     render(<Button />)
     // @ts-ignore
-    expect(screen.getByRole('button')).toBeInTheDocument()
+    expect(screen.getByRole('button')).toHaveAttribute('type', 'button')
   })
 })
 
 describe('with props.children', () => {
   it('renders text', () => {
-    render(<Button>text</Button>)
+    render(<Button>{children}</Button>)
     // @ts-ignore
-    expect(screen.getByRole('button', { name: 'text' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: children })).toBeInTheDocument()
   })
 
   it('renders span with text', () => {
     render(
       <Button>
-        <span>text</span>
+        <span>{children}</span>
       </Button>,
     )
-    expect(screen.getByText('text')).toBeInTheDocument()
+    expect(screen.getByText(children)).toBeInTheDocument()
   })
 })
 
@@ -49,7 +69,7 @@ describe('with props.aria-label', () => {
 })
 
 describe('with props.size', () => {
-  it.each<ButtonProps['size']>(['small', 'medium', 'large', 'xlarge'])(
+  it.each<ButtonProps<'button'>['size']>(['small', 'medium', 'large', 'xlarge'])(
     'renders button with size=%j',
     (size) => {
       render(<Button size={size}>{size}</Button>)
@@ -59,27 +79,30 @@ describe('with props.size', () => {
 })
 
 describe('with props.variant', () => {
-  it.each<ButtonProps['variant']>(['primary', 'secondary', 'ghost', 'overlay', 'critical'])(
-    'renders button with variant=%j',
-    (variant) => {
-      render(<Button variant={variant}>{variant}</Button>)
-      expect(screen.getByText(variant!)).toBeInTheDocument()
-    },
-  )
+  it.each<ButtonProps<'button'>['variant']>([
+    'primary',
+    'secondary',
+    'ghost',
+    'overlay',
+    'critical',
+  ])('renders button with variant=%j', (variant) => {
+    render(<Button variant={variant}>{variant}</Button>)
+    expect(screen.getByText(variant!)).toBeInTheDocument()
+  })
 
   it('does not throw for invalid size', () => {
-    render(<Button size={'' as ButtonProps['size']}>text</Button>)
-    expect(screen.getByText('text')).toBeInTheDocument()
+    render(<Button size={'' as ButtonProps<'button'>['size']}>{children}</Button>)
+    expect(screen.getByText(children)).toBeInTheDocument()
   })
 })
 
 describe('with props.variant', () => {
   it('does not throw for invalid variant', () => {
-    render(<Button variant={'' as ButtonProps['variant']}>text</Button>)
-    expect(screen.getByText('text')).toBeInTheDocument()
+    render(<Button variant={'' as ButtonProps<'button'>['variant']}>{children}</Button>)
+    expect(screen.getByText(children)).toBeInTheDocument()
   })
 
-  it.each<ButtonProps['variant']>(['primary', 'secondary'])(
+  it.each<ButtonProps<'button'>['variant']>(['primary', 'secondary'])(
     'renders button with variant=%j',
     (variant) => {
       render(<Button variant={variant}>{variant}</Button>)
@@ -90,13 +113,12 @@ describe('with props.variant', () => {
 
 describe('with props.disabled', () => {
   it('renders disabled button not throw for invalid variant', () => {
-    const text = 'text'
     // @ts-ignore
-    render(<Button disabled>{text}</Button>)
-    expect(screen.getByText(text)).toBeDisabled()
+    render(<Button disabled>{children}</Button>)
+    expect(screen.getByText(children)).toBeDisabled()
   })
 
-  it.each<ButtonProps['variant']>(['primary', 'secondary'])(
+  it.each<ButtonProps<'button'>['variant']>(['primary', 'secondary'])(
     'renders disabled button with variant=%j',
     (variant) => {
       render(
@@ -108,4 +130,23 @@ describe('with props.disabled', () => {
       expect(screen.getByText(variant!)).toBeDisabled()
     },
   )
+})
+
+describe('with props.as', () => {
+  it('renders link', () => {
+    const href = 'https://example.com/'
+    render(
+      <Button as="a" href={href}>
+        {children}
+      </Button>,
+    )
+    // @ts-ignore
+    expect(screen.getByRole('link', { name: children })).toHaveAttribute('href', href)
+  })
+
+  it('renders component', () => {
+    const Component = () => <>{children}</>
+    render(<Button as={Component} />)
+    expect(screen.getByText(children)).toBeInTheDocument()
+  })
 })

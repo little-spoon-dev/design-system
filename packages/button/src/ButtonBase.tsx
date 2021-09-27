@@ -10,7 +10,7 @@ import type { ButtonProps } from './Button'
 /**
  * Gets size styles.
  */
-function getSizeCss(props: ButtonProps): string {
+function getSizeCss(props: ButtonProps<'button'>): string {
   switch (props.size) {
     case 'small':
       return `
@@ -56,7 +56,7 @@ function getSizeCss(props: ButtonProps): string {
 /**
  * Gets variant styles.
  */
-function getVariantCss(props: ButtonProps): string {
+function getVariantCss(props: ButtonProps<'button'>): string {
   /**
    * {@link https://zeroheight.com/3ddd0f892/p/01a397-buttons/t/190120}
    */
@@ -122,12 +122,13 @@ function getVariantCss(props: ButtonProps): string {
   }
 }
 
-export const ButtonBase = styled.button<ButtonProps>`
+export const ButtonBase = styled.button<ButtonProps<'button'>>`
+  align-items: center;
   border: 0;
   border-radius: 0.5rem;
   box-sizing: border-box;
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
   font: ${primary.weight.bold} 1.6rem ${primary.family};
   letter-spacing: 0.15rem;
   text-transform: uppercase;

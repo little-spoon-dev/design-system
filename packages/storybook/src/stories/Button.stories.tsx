@@ -15,8 +15,8 @@ Default.args = {
 
 export const Primary = Template.bind({})
 Primary.args = {
+  as: 'button',
   children: 'primary',
-  component: 'button',
   disabled: false,
   size: 'medium',
   variant: 'primary',
@@ -24,8 +24,8 @@ Primary.args = {
 
 export const Secondary = Template.bind({})
 Secondary.args = {
+  as: 'button',
   children: 'secondary',
-  component: 'button',
   disabled: false,
   size: 'medium',
   variant: 'secondary',
@@ -33,8 +33,8 @@ Secondary.args = {
 
 export const Disabled = Template.bind({})
 Disabled.args = {
+  as: 'button',
   children: 'disabled',
-  component: 'button',
   disabled: true,
   size: 'medium',
   variant: 'primary',
@@ -42,8 +42,8 @@ Disabled.args = {
 
 export const Small = Template.bind({})
 Small.args = {
-  children: 'primary',
-  component: 'button',
+  as: 'button',
+  children: 'small',
   disabled: false,
   size: 'small',
   variant: 'primary',
@@ -51,8 +51,8 @@ Small.args = {
 
 export const Medium = Template.bind({})
 Medium.args = {
-  children: 'primary',
-  component: 'button',
+  as: 'button',
+  children: 'medium',
   disabled: false,
   size: 'medium',
   variant: 'primary',
@@ -60,8 +60,8 @@ Medium.args = {
 
 export const Large = Template.bind({})
 Large.args = {
-  children: 'primary',
-  component: 'button',
+  as: 'button',
+  children: 'large',
   disabled: false,
   size: 'large',
   variant: 'primary',
@@ -69,9 +69,25 @@ Large.args = {
 
 export const ExtraLarge = Template.bind({})
 ExtraLarge.args = {
-  children: 'primary',
-  component: 'button',
+  as: 'button',
+  children: 'xlarge',
   disabled: false,
   size: 'xlarge',
   variant: 'primary',
+}
+
+export const Link = Template.bind({})
+Link.args = {
+  as: 'a',
+  children: 'link',
+  disabled: false,
+  href: '#',
+  size: 'medium',
+  variant: 'primary',
+}
+
+export const Click = Template.bind({})
+Click.args = {
+  children: 'click',
+  onClick: () => alert('Clicked!'),
 }

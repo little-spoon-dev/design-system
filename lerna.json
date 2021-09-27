@@ -5,7 +5,6 @@
       "createRelease": "github",
       "exact": true,
       "ignoreChanges": [
-        "**/*.json",
         "**/*.md",
         "**/*.test.*",
         "**/*.test.*",

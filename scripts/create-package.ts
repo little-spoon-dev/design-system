@@ -32,7 +32,7 @@ const path = {
 let scope = ''
 let directory = ''
 let packageName = ''
-let template = 'typescript-template'
+let template = 'react-template'
 
 const templateChoices = ['react', 'typescript'] as const
 
@@ -49,7 +49,7 @@ yargs(hideBin(process.argv))
     choices: templateChoices,
     describe: 'Template type',
     type: 'string',
-    default: 'typescript',
+    default: 'react',
   })
   .check((argv) => {
     packageName = (argv._ as string[])[0]
@@ -72,10 +72,11 @@ yargs(hideBin(process.argv))
       throw new Error(`Package directory exists: ${directory}`)
     }
 
-    if (argv.template === 'react') {
-      template = 'react-template'
+    if (argv.template === 'typescript') {
+      template = 'typescript-template'
     }
 
+    console.log(`Creating a package using the '${template}'...`)
     path.directory = resolve(path.packages, directory)
     path.template = resolve(path.templates, template)
     return true

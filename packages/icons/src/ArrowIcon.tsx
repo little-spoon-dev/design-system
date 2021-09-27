@@ -12,10 +12,16 @@ export interface ArrowIconProps extends React.SVGAttributes<SVGElement> {
    * The size of the component. Defaults to "small".
    */
   size?: 'xsmall' | 'small' | 'medium' | 'large'
+
+  /**
+   * The direction of the component. Defaults to "down".
+   */
+  direction?: 'up' | 'down' | 'left' | 'right'
 }
 
 export default function ArrowIcon({
   size = 'small',
+  direction = 'down',
   fill = shadeBlack,
   ...other
 }: ArrowIconProps): React.ReactElement {
@@ -26,6 +32,7 @@ export default function ArrowIcon({
       height="10"
       viewBox="0 0 15 10"
       size={size}
+      direction={direction}
       {...other}
     >
       <title>Arrow icon</title>

@@ -15,6 +15,19 @@ function getSvgSizeCss(props: ArrowIconProps): string {
   }
 }
 
+function getSvgDirectionCss(props: ArrowIconProps): string {
+  switch (props.direction) {
+    case 'up':
+      return 'transform: rotate(180deg);'
+    case 'left':
+      return 'transform: rotate(90deg);'
+    case 'right':
+      return 'transform: rotate(-90deg);'
+    default:
+      return 'transform: rotate(0deg);'
+  }
+}
+
 export const ArrowBase = styled.svg<ArrowIconProps>`
   display: flex;
   justify-content: center;
@@ -23,4 +36,5 @@ export const ArrowBase = styled.svg<ArrowIconProps>`
   cursor: pointer;
   transition: transform 0.4s;
   ${getSvgSizeCss}
+  ${getSvgDirectionCss}
 `

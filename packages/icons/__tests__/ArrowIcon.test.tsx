@@ -15,7 +15,7 @@ describe('with props.size', () => {
   it.each<ArrowIconProps['size']>(['xsmall', 'small', 'medium', 'large'])(
     'renders arrow icon with size=%j',
     (size) => {
-      render(<ArrowIcon size={size}>{size}</ArrowIcon>)
+      render(<ArrowIcon size={size} />)
       expect(screen.getByTitle('Arrow icon')).toBeInTheDocument()
     },
   )
@@ -29,4 +29,19 @@ describe('with props.size', () => {
 describe('with props.fill', () => {
   render(<ArrowIcon fill={'black'} />)
   expect(screen.getByTitle('Arrow icon')).toBeInTheDocument()
+})
+
+describe('with props.direction', () => {
+  it.each<ArrowIconProps['direction']>(['up', 'down', 'left', 'right'])(
+    'renders arrow icon with direction=%j',
+    (direction) => {
+      render(<ArrowIcon direction={direction} />)
+      expect(screen.getByTitle('Arrow icon')).toBeInTheDocument()
+    },
+  )
+
+  it('does not throw for invalid dierction', () => {
+    render(<ArrowIcon direction={'' as ArrowIconProps['direction']} />)
+    expect(screen.getByTitle('Arrow icon')).toBeInTheDocument()
+  })
 })

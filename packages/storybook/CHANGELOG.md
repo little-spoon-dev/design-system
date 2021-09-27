@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.6.2...storybook@1.7.0) (2021-09-27)
+
+### Features
+
+- **icons:** add arrow icon package LS-1817 ([2bca572](https://github.com/little-spoon-dev/design-system/commit/2bca57204c63d5b0392499c3e396dd8314c96565))
+
 ## [1.6.2](https://github.com/little-spoon-dev/design-system/compare/storybook@1.6.1...storybook@1.6.2) (2021-09-24)
 
 **Note:** Version bump only for package storybook

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.1.2...@littlespoon/ui@1.1.3) (2021-09-27)
+
+### Bug Fixes
+
+- **ui:** add icons to ui dependencies LS-1837 ([def5b87](https://github.com/little-spoon-dev/design-system/commit/def5b8757694be9ffe90d6ce167c3b222bc4c853))
+
 ## [1.1.2](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.1.1...@littlespoon/ui@1.1.2) (2021-09-27)
 
 **Note:** Version bump only for package @littlespoon/ui

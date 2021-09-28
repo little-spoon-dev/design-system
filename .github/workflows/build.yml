@@ -1,7 +1,7 @@
 name: build
 on:
   - push
-  - pull_request
+  - pull_request_target
 
 jobs:
   build:
@@ -81,7 +81,8 @@ jobs:
         run: yarn lerna run test --scope="${PACKAGE_NAME}*"
 
   auto-approve:
-    needs: build
+    if: github.event_name == 'pull_request_target'
+    needs: [build, scripts]
     runs-on: ubuntu-latest
     steps:
       - name: Auto Approve

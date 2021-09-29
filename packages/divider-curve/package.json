@@ -1,0 +1,37 @@
+{
+  "name": "@littlespoon/divider-curve",
+  "version": "1.0.0",
+  "description": "placeholder",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:flowtypes": "flowgen lib && rm -rf lib && mv exports lib && yarn build",
+    "clean": "rm -rf coverage exports lib",
+    "lint": "eslint .",
+    "lint:fix": "yarn lint --fix",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "peerDependencies": {
+    "react": "17",
+    "styled-components": "4 || 5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/little-spoon-dev/design-system.git",
+    "directory": "packages/placeholder"
+  },
+  "bugs": {
+    "url": "https://github.com/little-spoon-dev/design-system/issues"
+  },
+  "keywords": [
+    "littlespoon"
+  ],
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "UNLICENSED"
+}

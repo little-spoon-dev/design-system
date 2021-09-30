@@ -3,6 +3,7 @@
 exports[`exports ui 1`] = `
 Object {
   "Button": [Function],
+  "Divider": [Function],
   "theme": Object {
     "colors": Object {
       "alert": Object {

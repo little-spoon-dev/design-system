@@ -21,5 +21,5 @@ npm install @littlespoon/divider --save
 ## Usage
 
 ```tsx
-import Component from '@littlespoon/divider'
+import Divider from '@littlespoon/divider'
 ```

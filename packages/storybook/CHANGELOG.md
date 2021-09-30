@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.8.0...storybook@1.9.0) (2021-09-30)
+
+### Features
+
+- **divider-curve:** add divider curve variants to design system LS-1842 ([b78d397](https://github.com/little-spoon-dev/design-system/commit/b78d397b586aa55145f310c42bb7992426f69e61))
+- **divider:** update package name to divider, refactor SVG file & variant prop ([3155d97](https://github.com/little-spoon-dev/design-system/commit/3155d979764e142cf8cf22da775d1be94a50a27a))
+
 # [1.8.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.7.0...storybook@1.8.0) (2021-09-27)
 
 ### Features

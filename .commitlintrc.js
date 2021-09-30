@@ -11,7 +11,6 @@ module.exports = {
         'all',
         'deps',
         'deps-dev',
-        'divider-curve',
         'packages',
         'release',
         'root',

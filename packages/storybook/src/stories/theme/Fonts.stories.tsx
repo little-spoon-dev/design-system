@@ -1,10 +1,10 @@
-import theme from '@littlespoon/theme'
+import theme from '@littlespoon/theme/src'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import Fonts from './Fonts'
 
 export default {
-  title: 'Design System/Fonts',
+  title: 'Design System/Theme/Fonts',
   component: Fonts,
 } as ComponentMeta<typeof Fonts>
 

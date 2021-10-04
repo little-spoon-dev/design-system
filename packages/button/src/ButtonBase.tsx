@@ -130,6 +130,7 @@ export const ButtonBase = styled.button<ButtonProps<'button'>>`
   cursor: pointer;
   display: inline-flex;
   font: ${primary.weight.bold} 1.6rem ${primary.family};
+  width: fit-content;
   letter-spacing: 0.15rem;
   text-transform: uppercase;
   text-decoration: none;

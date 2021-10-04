@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.9.0...storybook@1.10.0) (2021-10-04)
+
+### Features
+
+- **storybook:** default font-family to Mulish LS-1868 ([5bc994a](https://github.com/little-spoon-dev/design-system/commit/5bc994a08e9829e81bd36c56818a31859955c855))
+- **storybook:** group theme stories and render color hex LS-1868 ([0573bd0](https://github.com/little-spoon-dev/design-system/commit/0573bd0cd24770aae8def787bcfa20d825d0d510))
+- **storybook:** improve Divider stories LS-1868 ([8d4d572](https://github.com/little-spoon-dev/design-system/commit/8d4d572192b42dc55841d85917faa1bf58c4e284))
+
 # [1.9.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.8.0...storybook@1.9.0) (2021-09-30)
 
 ### Features

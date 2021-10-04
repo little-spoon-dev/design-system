@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.2.2...@littlespoon/ui@1.3.0) (2021-10-04)
+
+### Features
+
+- **theme:** add sub surface dull color LS-1890 ([dd65e72](https://github.com/little-spoon-dev/design-system/commit/dd65e72dec0d91bfb2b1d054dcc7ae55da447324))
+
 ## [1.2.2](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.2.1...@littlespoon/ui@1.2.2) (2021-10-04)
 
 **Note:** Version bump only for package @littlespoon/ui

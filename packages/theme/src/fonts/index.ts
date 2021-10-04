@@ -8,28 +8,30 @@ const rems: Record<string, string> = {}
 
 const rem = (value: number): string => rems[value] || (rems[value] = `${value}rem`)
 
+const fontFamily = (name: string): string => `${name}, sans-serif`
+
 const xLargeParagraph = {
   fontSize: rem(2),
   lineHeight: rem(3),
-}
+} as const
 
 const largeParagraph = {
   fontSize: rem(1.8),
   lineHeight: rem(2.6),
-}
+} as const
 
 const mediumParagraph = {
   fontSize: rem(1.6),
   lineHeight: rem(2.4),
-}
+} as const
 
 const smallParagraph = {
   fontSize: rem(1.4),
   lineHeight: rem(2),
-}
+} as const
 
 export const primary = {
-  family: 'Lato, sans-serif',
+  family: fontFamily('Lato'),
   paragraph: {
     xlarge: xLargeParagraph,
     large: largeParagraph,
@@ -68,10 +70,10 @@ export const primary = {
     normal: 400,
     bold: 700,
   },
-}
+} as const
 
 export const secondary = {
-  family: 'Mulish, sans-serif',
+  family: fontFamily('Mulish'),
   display: {
     large: {
       fontSize: rem(7.4),
@@ -113,6 +115,6 @@ export const secondary = {
     extraBold: 800,
     black: 900,
   },
-}
+} as const
 
 export default { primary, secondary }

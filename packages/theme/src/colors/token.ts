@@ -1,3 +1,4 @@
+import { rgb } from '../utils'
 import {
   critical10,
   critical20,
@@ -46,6 +47,7 @@ export const subSurfaceSuccess = success10()
 export const subSurfaceInformative = informative10()
 export const subSurfaceCritical = critical10()
 export const subSurfaceWarning = warning10()
+export const subSurfaceDull = rgb(251, 251, 251)
 
 /**
  * Border
@@ -75,6 +77,7 @@ export default {
   subSurfaceInformative,
   subSurfaceCritical,
   subSurfaceWarning,
+  subSurfaceDull,
   borderMinimal,
   borderSubtle,
   borderModerate,

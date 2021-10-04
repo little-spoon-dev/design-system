@@ -1,9 +1,9 @@
 import ArrowIcon from '@littlespoon/icons/src/ArrowIcon'
-import theme from '@littlespoon/theme'
+import theme from '@littlespoon/theme/src'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
-  title: 'Design System/ArrowIcon',
+  title: 'Design System/Icons/ArrowIcon',
   component: ArrowIcon,
 } as ComponentMeta<typeof ArrowIcon>
 

@@ -13,13 +13,11 @@ const Template: ComponentStory<typeof Divider> = (args) => (
   </DividerWrapper>
 )
 
-export const DividerOne = Template.bind({})
-DividerOne.args = {
-  inverted: false,
-}
+export const DividerDefault = Template.bind({})
+DividerDefault.args = {}
 
-export const DividerTwo = Template.bind({})
-DividerTwo.args = {
+export const DividerInverted = Template.bind({})
+DividerInverted.args = {
   inverted: true,
 }
 

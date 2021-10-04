@@ -7,8 +7,8 @@
     "build": "yarn copy-changelog && build-storybook",
     "clean": "rm -rf storybook-static src/stories/changelog",
     "copy-changelog": "mkdir -p src/stories/changelog && ts-node scripts/copy-changelog",
-    "lint": "eslint .",
-    "lint:fix": "yarn lint --fix",
+    "lint": "eslint . && tsc --noEmit",
+    "lint:fix": "eslint . --fix",
     "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
@@ -23,6 +23,7 @@
     "@storybook/addon-essentials": "^6.3.8",
     "@storybook/addon-links": "^6.3.8",
     "@storybook/react": "^6.3.8",
-    "babel-loader": "^8.2.2"
+    "babel-loader": "^8.2.2",
+    "rgb2hex": "^0.2.5"
   }
 }

@@ -171,6 +171,7 @@ Object {
       "shadeBlack": "#000000",
       "shadeWhite": "#FFFFFF",
       "subSurfaceCritical": "rgba(250,233,231,1)",
+      "subSurfaceDull": [Function],
       "subSurfaceInformative": "rgba(233,239,249,1)",
       "subSurfaceSuccess": "rgba(230,241,238,1)",
       "subSurfaceWarning": "rgba(254,243,233,1)",

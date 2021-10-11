@@ -44,6 +44,7 @@ export const purple70 = rgb(174, 144, 197)
 export const purple80 = rgb(136, 113, 154)
 export const purple90 = rgb(98, 81, 110)
 export const purple100 = rgb(59, 49, 67)
+export const visitedLinkPurple = rgb(85, 26, 139)
 
 export const secondaryPurple = {
   purple10,
@@ -56,6 +57,7 @@ export const secondaryPurple = {
   purple80,
   purple90,
   purple100,
+  visitedLinkPurple,
 }
 
 /**

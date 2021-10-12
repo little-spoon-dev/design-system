@@ -1,7 +1,7 @@
 import { fontFamily, rem } from '../utils'
 import p from './paragraph'
 
-const letterSpacing = rem(0.15)
+const buttonLetterSpacing = rem(0.15)
 
 /**
  * Buttons
@@ -11,19 +11,19 @@ const letterSpacing = rem(0.15)
 export const button = {
   xlarge: {
     ...p.xlarge,
-    letterSpacing,
+    letterSpacing: buttonLetterSpacing,
   },
   large: {
     ...p.large,
-    letterSpacing,
+    letterSpacing: buttonLetterSpacing,
   },
   medium: {
     ...p.medium,
-    letterSpacing,
+    letterSpacing: buttonLetterSpacing,
   },
   small: {
     ...p.small,
-    letterSpacing,
+    letterSpacing: buttonLetterSpacing,
   },
 } as const
 

@@ -14,15 +14,27 @@ export default {
 } as ComponentMeta<typeof Breadcrumbs>
 
 const Template: ComponentStory<typeof Breadcrumbs> = (args) => (
-  <Breadcrumbs {...args}>
-    <Breadcrumb>
-      <a href={window.location.href}>Breadcrumb</a>
-    </Breadcrumb>
-    <Breadcrumb>
-      <a href={window.location.href}>Breadcrumb</a>
-    </Breadcrumb>
-    <Breadcrumb active>Active</Breadcrumb>
-  </Breadcrumbs>
+  <Breadcrumbs size={args.size}>{args.children}</Breadcrumbs>
 )
 
-export const Default = Template.bind({})
+export const WithoutBreadcrumbs = Template.bind({})
+WithoutBreadcrumbs.args = {
+  children: <></>,
+}
+
+export const OneBreadcrumb = Template.bind({})
+OneBreadcrumb.args = {
+  children: <Breadcrumb active>Active</Breadcrumb>,
+}
+
+export const TwoBreadcrumbs = Template.bind({})
+TwoBreadcrumbs.args = {
+  children: (
+    <>
+      <Breadcrumb>
+        <a href={window.location.href}>Breadcrumb</a>
+      </Breadcrumb>
+      <Breadcrumb active>Active</Breadcrumb>
+    </>
+  ),
+}

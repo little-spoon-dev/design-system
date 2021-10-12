@@ -14,7 +14,7 @@ const componentsWithoutProps = (
     <Breadcrumb>
       <a href={'url.com'}>Breadcrumb</a>
     </Breadcrumb>
-    <Breadcrumb active>Active</Breadcrumb>
+    <Breadcrumb isActive>Active</Breadcrumb>
   </Breadcrumbs>
 )
 
@@ -53,7 +53,7 @@ describe('rendering sizes', () => {
         <Breadcrumb>
           <a href={'url.com'}>Breadcrumb</a>
         </Breadcrumb>
-        <Breadcrumb active>Active</Breadcrumb>
+        <Breadcrumb isActive>Active</Breadcrumb>
       </Breadcrumbs>,
     )
     // @ts-ignore
@@ -69,7 +69,7 @@ describe('rendering sizes', () => {
         <Breadcrumb>
           <a href={'url.com'}>Breadcrumb</a>
         </Breadcrumb>
-        <Breadcrumb active>Active</Breadcrumb>
+        <Breadcrumb isActive>Active</Breadcrumb>
       </Breadcrumbs>,
     )
     const breadcrumbs = screen.getAllByText('Breadcrumb')

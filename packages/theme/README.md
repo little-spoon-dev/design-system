@@ -52,3 +52,12 @@ import { primary, secondary } from '@littlespoon/theme/lib/fonts'
 primary.family // 'Lato, sans-serif'
 primary.weight.bold // 700
 ```
+
+Import primary font-family and font-weight:
+
+```ts
+import { family, weight } from '@littlespoon/theme/lib/fonts/primary'
+
+family // 'Lato, sans-serif'
+weight.bold // 700
+```

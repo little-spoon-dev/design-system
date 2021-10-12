@@ -4,7 +4,7 @@ import { shadeBlack } from '@littlespoon/theme/lib/colors/token'
 import { primary } from '@littlespoon/theme/lib/fonts'
 import styled from 'styled-components'
 
-import type { BreadcrumbProps } from './Breadcrumbs'
+import type { BreadcrumbsProps } from './Breadcrumbs'
 
 const defaultStyles = `
   font-family: ${primary.family};
@@ -14,7 +14,7 @@ const defaultStyles = `
 /**
  * Gets size styles.
  */
-function getSizeCss(props: BreadcrumbProps<'a'>): string {
+function getSizeCss(props: BreadcrumbsProps): string {
   switch (props.size) {
     case 'small':
       return `
@@ -44,29 +44,35 @@ export const BreadcrumbsWrapper = styled.nav`
   width: 100%;
 `
 
-export const Crumb = styled.a<BreadcrumbProps<'a'>>`
-  ${defaultStyles}
+export const BreadcrumbsList = styled.ol`
+  display: flex;
+  width: 100%;
+  list-style: none;
   ${getSizeCss}
-  text-decoration: none;
+`
 
-  &:focus {
-    outline: 0.2rem solid ${informative50()};
-    outline-offset: 0.2rem;
-  }
-  &:visited {
-    color: ${visitedLinkPurple()};
+export const Crumb = styled.li`
+  > * {
+    ${defaultStyles}
+    text-decoration: none;
+
+    &:focus {
+      outline: 0.2rem solid ${informative50()};
+      outline-offset: 0.2rem;
+    }
+    &:visited {
+      color: ${visitedLinkPurple()};
+    }
   }
 `
 
-export const CurrentPage = styled.p`
+export const ActiveBreadcrumb = styled.li`
   margin: 0;
   ${defaultStyles}
-  ${getSizeCss}
   font-weight: ${primary.weight.bold};
 `
 
 export const Separator = styled.p`
   margin: 0 1rem;
   ${defaultStyles}
-  ${getSizeCss}
 `

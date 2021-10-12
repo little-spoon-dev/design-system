@@ -1,7 +1,7 @@
 {
   "name": "@littlespoon/breadcrumbs",
   "version": "1.0.0",
-  "description": "placeholder",
+  "description": "Little Spoon breadcrumbs",
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
@@ -22,13 +22,14 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/little-spoon-dev/design-system.git",
-    "directory": "packages/placeholder"
+    "directory": "packages/breadcrumbs"
   },
   "bugs": {
     "url": "https://github.com/little-spoon-dev/design-system/issues"
   },
   "keywords": [
-    "littlespoon"
+    "littlespoon",
+    "breadcrumb"
   ],
   "files": [
     "lib"

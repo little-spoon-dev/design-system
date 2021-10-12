@@ -28,14 +28,14 @@ export interface BreadcrumbProps {
   /**
    * Determines if breadcrumb is active page
    */
-  active?: boolean
+  isActive?: boolean
 }
 
 export const Breadcrumb = ({
   children,
-  active = false,
+  isActive = false,
 }: BreadcrumbProps): React.ReactElement<BreadcrumbProps> =>
-  active ? (
+  isActive ? (
     <ActiveBreadcrumb aria-current="page">{children}</ActiveBreadcrumb>
   ) : (
     <>

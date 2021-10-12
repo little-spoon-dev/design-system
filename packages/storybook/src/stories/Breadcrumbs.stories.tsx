@@ -20,25 +20,25 @@ NoBreadcrumbs.args = {}
 
 export const OneBreadcrumb = Template.bind({})
 OneBreadcrumb.args = {
-  children: <Breadcrumb active>Active</Breadcrumb>,
+  children: <Breadcrumb isActive>Active</Breadcrumb>,
 }
 
 export const Small = Template.bind({})
 Small.args = {
   size: 'small',
-  children: <Breadcrumb active>Active</Breadcrumb>,
+  children: <Breadcrumb isActive>Active</Breadcrumb>,
 }
 
 export const Medium = Template.bind({})
 Medium.args = {
   size: 'medium',
-  children: <Breadcrumb active>Active</Breadcrumb>,
+  children: <Breadcrumb isActive>Active</Breadcrumb>,
 }
 
 export const Large = Template.bind({})
 Large.args = {
   size: 'large',
-  children: <Breadcrumb active>Active</Breadcrumb>,
+  children: <Breadcrumb isActive>Active</Breadcrumb>,
 }
 
 export const TwoBreadcrumbs = Template.bind({})
@@ -47,6 +47,6 @@ TwoBreadcrumbs.args = {
     <Breadcrumb>
       <a href={window.location.href}>Breadcrumb</a>
     </Breadcrumb>,
-    <Breadcrumb active>Active</Breadcrumb>,
+    <Breadcrumb isActive>Active</Breadcrumb>,
   ],
 }

@@ -25,6 +25,9 @@ export const Breadcrumbs = ({
 export interface BreadcrumbProps {
   children?: React.ReactNode
 
+  /**
+   * Determines if breadcrumb is active page
+   */
   active?: boolean
 }
 

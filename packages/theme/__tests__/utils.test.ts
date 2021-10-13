@@ -1,4 +1,25 @@
-import { rgb, rgbaMap } from '../src/utils'
+import { fontFamily, rem, remMap, rgb, rgbaMap } from '../src/utils'
+
+describe('fontFamily', () => {
+  it('returns font-family', () => {
+    expect(fontFamily('Mulish')).toBe('Mulish, sans-serif')
+    expect(fontFamily('Lato')).toBe('Lato, sans-serif')
+  })
+})
+
+describe('rem', () => {
+  it('memoizes rem', () => {
+    expect(rem(3.14)).toBe('3.14rem')
+    expect(remMap).toEqual({
+      '3.14': '3.14rem',
+    })
+  })
+
+  it('returns rem', () => {
+    expect(rem(1)).toBe('1rem')
+    expect(rem(0.5)).toBe('0.5rem')
+  })
+})
 
 describe('rgb', () => {
   it('memoizes RGBA', () => {

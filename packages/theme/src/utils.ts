@@ -1,3 +1,9 @@
+export const fontFamily = (name: string): string => `${name}, sans-serif`
+
+export const remMap: Record<string, string> = {}
+
+export const rem = (value: number): string => remMap[value] || (remMap[value] = `${value}rem`)
+
 export const rgbaMap: Record<string, string> = {}
 
 /**

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.6.0...@littlespoon/theme@1.7.0) (2021-10-13)
+
+### Features
+
+- **theme:** modularize theme fonts primary and secondary LS-2000 ([8591915](https://github.com/little-spoon-dev/design-system/commit/8591915f51584b0fd4870f247b51a6abc4425c96))
+
 # [1.6.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.5.0...@littlespoon/theme@1.6.0) (2021-10-13)
 
 ### Features

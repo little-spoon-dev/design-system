@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.4.1...@littlespoon/ui@1.5.0) (2021-10-13)
+
+### Features
+
+- **ui:** modularize theme fonts primary and secondary LS-2000 ([03d2a6d](https://github.com/little-spoon-dev/design-system/commit/03d2a6d9585a708e725db0113e56ef1444642096))
+
 ## [1.4.1](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.4.0...@littlespoon/ui@1.4.1) (2021-10-13)
 
 **Note:** Version bump only for package @littlespoon/ui

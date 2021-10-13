@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.7.0...@littlespoon/theme@1.8.0) (2021-10-13)
+
+### Features
+
+- **theme:** export p1, p2, p3, p4 from fonts paragraph LS-2014 ([58279a9](https://github.com/little-spoon-dev/design-system/commit/58279a9ef752f39dea9120a7101b6f7ee5b45365))
+
 # [1.7.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.6.0...@littlespoon/theme@1.7.0) (2021-10-13)
 
 ### Features

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.11.2...storybook@1.12.0) (2021-10-13)
+
+### Features
+
+- **breadcrumbs:** rename prop isActive to active LS-2012 ([f22c2af](https://github.com/little-spoon-dev/design-system/commit/f22c2af9dd45a8220ba244ef572344c623ae89d6))
+
 ## [1.11.2](https://github.com/little-spoon-dev/design-system/compare/storybook@1.11.1...storybook@1.11.2) (2021-10-13)
 
 **Note:** Version bump only for package storybook

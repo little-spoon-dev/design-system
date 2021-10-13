@@ -1,6 +1,6 @@
 {
   "name": "@littlespoon/breadcrumbs",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Little Spoon breadcrumbs",
   "main": "lib/index.js",
   "scripts": {

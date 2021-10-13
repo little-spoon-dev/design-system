@@ -1,13 +1,13 @@
 import { informative50 } from '@littlespoon/theme/lib/colors/alert'
 import { visitedLinkPurple } from '@littlespoon/theme/lib/colors/secondary'
 import { shadeBlack } from '@littlespoon/theme/lib/colors/token'
-import { primary } from '@littlespoon/theme/lib/fonts'
+import { family, paragraph, weight } from '@littlespoon/theme/lib/fonts/primary'
 import styled from 'styled-components'
 
 import type { BreadcrumbsProps } from './Breadcrumbs'
 
 const defaultStyles = `
-  font-family: ${primary.family};
+  font-family: ${family};
   color: ${shadeBlack};
 `
 
@@ -18,20 +18,20 @@ function getSizeCss(props: BreadcrumbsProps): string {
   switch (props.size) {
     case 'small':
       return `
-        font-size: ${primary.paragraph.small.fontSize};
-        line-height: ${primary.paragraph.small.lineHeight};
+        font-size: ${paragraph.small.fontSize};
+        line-height: ${paragraph.small.lineHeight};
       `
 
     case 'medium':
       return `
-        font-size: ${primary.paragraph.medium.fontSize};
-        line-height: ${primary.paragraph.medium.lineHeight};
+        font-size: ${paragraph.medium.fontSize};
+        line-height: ${paragraph.medium.lineHeight};
       `
 
     case 'large':
       return `
-        font-size: ${primary.paragraph.large.fontSize};
-        line-height: ${primary.paragraph.large.lineHeight};
+        font-size: ${paragraph.large.fontSize};
+        line-height: ${paragraph.large.lineHeight};
       `
 
     default:
@@ -51,8 +51,8 @@ export const BreadcrumbsList = styled.ol`
   ${getSizeCss}
 `
 
-export const Crumb = styled.li`
-  > * {
+export const BreadcrumbItem = styled.li`
+  > a {
     ${defaultStyles}
     text-decoration: none;
 
@@ -60,19 +60,20 @@ export const Crumb = styled.li`
       outline: 0.2rem solid ${informative50()};
       outline-offset: 0.2rem;
     }
+
     &:visited {
       color: ${visitedLinkPurple()};
     }
   }
 `
 
-export const ActiveBreadcrumb = styled.li`
-  margin: 0;
+export const BreadcrumbActive = styled.li`
   ${defaultStyles}
-  font-weight: ${primary.weight.bold};
+  margin: 0;
+  font-weight: ${weight.bold};
 `
 
-export const Separator = styled.p`
-  margin: 0 1rem;
+export const Separator = styled.li`
   ${defaultStyles}
+  margin: 0 1rem;
 `

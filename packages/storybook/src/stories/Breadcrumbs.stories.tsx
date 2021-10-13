@@ -4,49 +4,70 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 export default {
   title: 'Design System/Breadcrumbs',
   component: Breadcrumbs,
-  subComponents: { Breadcrumb },
-  argTypes: {
-    size: {
-      options: ['small', 'medium', 'large'],
-      control: { type: 'radio' },
-    },
-  },
 } as ComponentMeta<typeof Breadcrumbs>
 
 const Template: ComponentStory<typeof Breadcrumbs> = (args) => <Breadcrumbs {...args} />
 
-export const NoBreadcrumbs = Template.bind({})
-NoBreadcrumbs.args = {}
+const url = 'https://example.com/'
 
-export const OneBreadcrumb = Template.bind({})
-OneBreadcrumb.args = {
-  children: <Breadcrumb isActive>Active</Breadcrumb>,
+export const Default = Template.bind({})
+Default.args = {
+  children: [
+    <Breadcrumb>
+      <a href={url}>Little</a>
+    </Breadcrumb>,
+    <Breadcrumb>
+      <a href={url}>Spoon</a>
+    </Breadcrumb>,
+    <Breadcrumb active>Breadcrumbs</Breadcrumb>,
+  ],
+}
+
+export const Empty = Template.bind({})
+Empty.args = {}
+
+export const Active = Template.bind({})
+Active.args = {
+  children: <Breadcrumb active>Active Breadcrumb</Breadcrumb>,
+}
+
+export const Two = Template.bind({})
+Two.args = {
+  children: [
+    <Breadcrumb>
+      <a href={url}>One</a>
+    </Breadcrumb>,
+    <Breadcrumb active>Two</Breadcrumb>,
+  ],
+}
+
+export const Three = Template.bind({})
+Three.args = {
+  children: [
+    <Breadcrumb>
+      <a href={url}>One</a>
+    </Breadcrumb>,
+    <Breadcrumb>
+      <a href={url}>Two</a>
+    </Breadcrumb>,
+    <Breadcrumb active>Three</Breadcrumb>,
+  ],
 }
 
 export const Small = Template.bind({})
 Small.args = {
+  children: [<Breadcrumb>Small</Breadcrumb>, <Breadcrumb active>Small Active</Breadcrumb>],
   size: 'small',
-  children: <Breadcrumb isActive>Active</Breadcrumb>,
 }
 
 export const Medium = Template.bind({})
 Medium.args = {
+  children: [<Breadcrumb>Medium</Breadcrumb>, <Breadcrumb active>Medium Active</Breadcrumb>],
   size: 'medium',
-  children: <Breadcrumb isActive>Active</Breadcrumb>,
 }
 
 export const Large = Template.bind({})
 Large.args = {
+  children: [<Breadcrumb>Large</Breadcrumb>, <Breadcrumb active>Large Active</Breadcrumb>],
   size: 'large',
-  children: <Breadcrumb isActive>Active</Breadcrumb>,
-}
-
-export const TwoBreadcrumbs = Template.bind({})
-TwoBreadcrumbs.args = {
-  children: [
-    <Breadcrumb>
-      <a href={window.location.href}>Breadcrumb</a>
-    </Breadcrumb>,
-    <Breadcrumb isActive>Active</Breadcrumb>,
-  ],
 }

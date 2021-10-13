@@ -1,6 +1,12 @@
 import type React from 'react'
 
-import { ActiveBreadcrumb, BreadcrumbsList, BreadcrumbsWrapper, Crumb, Separator } from './styled'
+import {
+  BreadcrumbActive,
+  BreadcrumbItem,
+  BreadcrumbsList,
+  BreadcrumbsWrapper,
+  Separator,
+} from './styled'
 
 export interface BreadcrumbsProps extends React.HTMLAttributes<HTMLElement> {
   /**
@@ -11,12 +17,12 @@ export interface BreadcrumbsProps extends React.HTMLAttributes<HTMLElement> {
   children?: React.ReactNode
 }
 
-export const Breadcrumbs = ({
+export function Breadcrumbs({
   size = 'small',
   children,
-}: BreadcrumbsProps): React.ReactElement<BreadcrumbsProps> => {
+}: BreadcrumbsProps): React.ReactElement<BreadcrumbsProps> {
   return (
-    <BreadcrumbsWrapper aria-label="breadcrumbs">
+    <BreadcrumbsWrapper aria-label="breadcrumb">
       <BreadcrumbsList size={size}>{children}</BreadcrumbsList>
     </BreadcrumbsWrapper>
   )
@@ -26,24 +32,27 @@ export interface BreadcrumbProps {
   children?: React.ReactNode
 
   /**
-   * Determines if breadcrumb is active page
+   * Determines if breadcrumb is active. Defaults to false.
    */
-  isActive?: boolean
+  active?: boolean
 }
 
-export const Breadcrumb = ({
+export function Breadcrumb({
   children,
-  isActive = false,
-}: BreadcrumbProps): React.ReactElement<BreadcrumbProps> =>
-  isActive ? (
-    <ActiveBreadcrumb aria-current="page">{children}</ActiveBreadcrumb>
-  ) : (
+  active = false,
+}: BreadcrumbProps): React.ReactElement<BreadcrumbProps> {
+  if (active) {
+    return <BreadcrumbActive aria-current="page">{children}</BreadcrumbActive>
+  }
+
+  return (
     <>
-      <Crumb>{children}</Crumb>
+      <BreadcrumbItem>{children}</BreadcrumbItem>
       <Separator aria-hidden="true" role="separator">
         /
       </Separator>
     </>
   )
+}
 
 export default { Breadcrumbs, Breadcrumb }

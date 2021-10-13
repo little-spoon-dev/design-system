@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.3.0...@littlespoon/ui@1.4.0) (2021-10-13)
+
+### Features
+
+- **breadcrumbs:** add breadcrumbs to design system, add visited link color LS-1919 ([6a5a2c1](https://github.com/little-spoon-dev/design-system/commit/6a5a2c1cf6849b7897f465d8cb75eb3b29a789a0))
+
 # [1.3.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.2.2...@littlespoon/ui@1.3.0) (2021-10-04)
 
 ### Features

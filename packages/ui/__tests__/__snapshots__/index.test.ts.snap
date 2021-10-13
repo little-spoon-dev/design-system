@@ -228,6 +228,22 @@ Object {
             "fontSize": "1.6rem",
             "lineHeight": "2.4rem",
           },
+          "p1": Object {
+            "fontSize": "2rem",
+            "lineHeight": "3rem",
+          },
+          "p2": Object {
+            "fontSize": "1.8rem",
+            "lineHeight": "2.6rem",
+          },
+          "p3": Object {
+            "fontSize": "1.6rem",
+            "lineHeight": "2.4rem",
+          },
+          "p4": Object {
+            "fontSize": "1.4rem",
+            "lineHeight": "2rem",
+          },
           "small": Object {
             "fontSize": "1.4rem",
             "lineHeight": "2rem",

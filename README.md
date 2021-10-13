@@ -17,6 +17,7 @@ To get started, check out [contributing](docs/CONTRIBUTING.md).
 
 | Package | Version | Description |
 | --- | --- | --- |
+| [@littlespoon/breadcrumbs](packages/breadcrumbs) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/breadcrumbs.svg)](https://www.npmjs.com/package/@littlespoon/breadcrumbs) | Breadcrumbs |
 | [@littlespoon/button](packages/button) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/button.svg)](https://www.npmjs.com/package/@littlespoon/button) | Button |
 | [@littlespoon/divider](packages/divider) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/divider.svg)](https://www.npmjs.com/package/@littlespoon/divider) | Divider |
 | [@littlespoon/icons](packages/icons) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/icons.svg)](https://www.npmjs.com/package/@littlespoon/icons) | Icons |

@@ -155,6 +155,7 @@ Object {
         "purple70": [Function],
         "purple80": [Function],
         "purple90": [Function],
+        "visitedLinkPurple": [Function],
       },
     },
     "token": Object {

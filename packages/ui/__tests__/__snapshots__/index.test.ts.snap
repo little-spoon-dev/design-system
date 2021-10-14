@@ -6,6 +6,7 @@ Object {
   "Breadcrumbs": [Function],
   "Button": [Function],
   "Divider": [Function],
+  "Typography": [Function],
   "theme": Object {
     "colors": Object {
       "alert": Object {

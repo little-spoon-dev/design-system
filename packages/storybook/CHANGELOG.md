@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.12.1...storybook@1.13.0) (2021-10-14)
+
+### Features
+
+- **storybook:** add Typography stories LS-1883 ([904f3c9](https://github.com/little-spoon-dev/design-system/commit/904f3c98b512b91037d860553da08c1221fccfa6))
+
 ## [1.12.1](https://github.com/little-spoon-dev/design-system/compare/storybook@1.12.0...storybook@1.12.1) (2021-10-13)
 
 **Note:** Version bump only for package storybook

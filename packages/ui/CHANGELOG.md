@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.6.0...@littlespoon/ui@1.7.0) (2021-10-14)
+
+### Features
+
+- **ui:** export Typography LS-1883 ([3c66208](https://github.com/little-spoon-dev/design-system/commit/3c6620890ecb58dfe5ae721ad7573634f0b12cdd))
+
 # [1.6.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.5.1...@littlespoon/ui@1.6.0) (2021-10-13)
 
 ### Features

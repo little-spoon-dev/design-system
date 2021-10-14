@@ -92,22 +92,16 @@ yarn clean --scope=@littlespoon/button
 
 #### `yarn create-package`
 
-Creates new package from template:
+You can create a package using the prompt:
 
 ```sh
 yarn create-package
 ```
 
-Create package `@littlespoon/foo` using TypeScript template (default):
+Or create a package using the CLI:
 
 ```sh
-yarn create-package @littlespoon/foo --template=typescript
-```
-
-Create package `@littlespoon/bar` using React template:
-
-```sh
-yarn create-package @littlespoon/bar --template=react
+yarn create-package --help
 ```
 
 #### `yarn lint`

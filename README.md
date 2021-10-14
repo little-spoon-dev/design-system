@@ -14,7 +14,6 @@ To get started, check out [contributing](docs/CONTRIBUTING.md).
 ## Packages
 
 <!-- prettier-ignore-start -->
-
 | Package | Version | Description |
 | --- | --- | --- |
 | [@littlespoon/breadcrumbs](packages/breadcrumbs) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/breadcrumbs.svg)](https://www.npmjs.com/package/@littlespoon/breadcrumbs) | Breadcrumbs |
@@ -25,5 +24,4 @@ To get started, check out [contributing](docs/CONTRIBUTING.md).
 | [@littlespoon/typography](packages/typography) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/typography.svg)](https://www.npmjs.com/package/@littlespoon/typography) | Typography |
 | [@littlespoon/ui](packages/ui) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/ui.svg)](https://www.npmjs.com/package/@littlespoon/ui) | UI (collection of modules) |
 | [storybook](packages/storybook) | Private | [Storybook](https://littlespoon.netlify.app/) |
-
 <!-- prettier-ignore-end -->

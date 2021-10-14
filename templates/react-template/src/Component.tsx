@@ -13,9 +13,6 @@ export interface ComponentProps extends React.HTMLAttributes<HTMLElement> {
 /**
  * Component
  */
-export default function Component({
-  children,
-  ...props
-}: ComponentProps): React.ReactElement<ComponentProps> {
-  return <StyledComponent {...props}>{children}</StyledComponent>
+export default function Component(props: ComponentProps): React.ReactElement<ComponentProps> {
+  return <StyledComponent {...props} />
 }

@@ -1,7 +1,4 @@
 {
   "extends": "../../tsconfig",
-  "compilerOptions": {
-    "lib": ["dom", "es5"]
-  },
   "include": ["src"]
 }

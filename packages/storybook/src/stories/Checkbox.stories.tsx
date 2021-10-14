@@ -19,20 +19,21 @@ Disabled.args = {
   disabled: true,
 }
 
+const checkboxProps = {
+  children: 'Label',
+}
+
 const CheckboxGroupTemplate: ComponentStory<typeof CheckboxGroup> = (args) => (
   <CheckboxGroup {...args}>
-    <Checkbox {...args} /> <Checkbox {...args} /> <Checkbox {...args} />
-    <Checkbox {...args} />
+    <Checkbox {...checkboxProps} /> <Checkbox {...checkboxProps} /> <Checkbox {...checkboxProps} />
+    <Checkbox {...checkboxProps} />
   </CheckboxGroup>
 )
 
 export const CheckboxGroupVertical = CheckboxGroupTemplate.bind({})
-CheckboxGroupVertical.args = {
-  children: 'Label',
-}
+CheckboxGroupVertical.args = {}
 
 export const CheckboxGroupHorizontal = CheckboxGroupTemplate.bind({})
 CheckboxGroupHorizontal.args = {
   horizontal: true,
-  children: 'Label',
 }

@@ -5,6 +5,7 @@ Object {
   "Breadcrumb": [Function],
   "Breadcrumbs": [Function],
   "Button": [Function],
+  "Checkbox": [Function],
   "Divider": [Function],
   "theme": Object {
     "colors": Object {

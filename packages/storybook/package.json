@@ -14,6 +14,7 @@
   "dependencies": {
     "@littlespoon/breadcrumbs": "1.2.1",
     "@littlespoon/button": "1.4.4",
+    "@littlespoon/checkbox": "1.0.0",
     "@littlespoon/divider": "1.1.1",
     "@littlespoon/icons": "1.1.5",
     "@littlespoon/theme": "1.8.0"

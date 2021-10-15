@@ -5,6 +5,8 @@ Object {
   "Breadcrumb": [Function],
   "Breadcrumbs": [Function],
   "Button": [Function],
+  "Checkbox": [Function],
+  "CheckboxGroup": [Function],
   "Divider": [Function],
   "Typography": [Function],
   "theme": Object {

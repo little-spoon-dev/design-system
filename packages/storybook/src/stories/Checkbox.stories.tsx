@@ -6,21 +6,21 @@ export default {
   component: Checkbox,
 } as ComponentMeta<typeof Checkbox>
 
-const Template: ComponentStory<typeof Checkbox> = (args) => <Checkbox {...args} />
+const CheckboxTemplate: ComponentStory<typeof Checkbox> = (args) => <Checkbox {...args} />
 
-export const Default = Template.bind({})
+export const Default = CheckboxTemplate.bind({})
 Default.args = {
-  children: 'Label',
+  children: 'Text',
 }
 
-export const Disabled = Template.bind({})
+export const Disabled = CheckboxTemplate.bind({})
 Disabled.args = {
-  children: 'Label',
+  children: 'Text',
   disabled: true,
 }
 
 const checkboxProps = {
-  children: 'Label',
+  children: 'Text',
 }
 
 const CheckboxGroupTemplate: ComponentStory<typeof CheckboxGroup> = (args) => (

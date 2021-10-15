@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 import type { CheckboxGroupProps, CheckboxProps } from './Checkbox'
 
-export const CheckboxWrapper = styled.div<CheckboxProps & { checked: boolean }>`
+export const CheckboxWrapper = styled.div<CheckboxProps>`
   font-family: ${family};
   ${paragraph.p3};
   user-select: none;

@@ -70,23 +70,33 @@ export interface CheckboxProps extends React.HTMLAttributes<HTMLElement> {
   checked?: boolean
 
   /**
-   * Handler invoked when checkbox is clicked
+   * Handler when checkbox state is changed
    */
-  onChange?: () => void
+  changeHandler?: () => void
 }
 
 export function Checkbox({ children, ...props }: CheckboxProps): React.ReactElement<CheckboxProps> {
-  const self = useController(props.checked)
+  const [isChecked, setChecked] = useState(
+    typeof props.checked === 'boolean' ? props.checked : false,
+  )
+
+  const handleChange = () => {
+    setChecked(!isChecked)
+    if (props.changeHandler) {
+      props.changeHandler()
+    }
+  }
+
   return (
-    <CheckboxWrapper {...props} checked={self.checked}>
-      <CheckboxLabel>
+    <CheckboxWrapper {...props} checked={isChecked}>
+      <CheckboxLabel disabled={props.disabled}>
         <CheckboxItem
+          {...props}
           type="checkbox"
-          checked={self.checked}
-          aria-checked={self.checked}
-          onClick={props.disabled ? () => null : () => self.handleClick(props.onChange)}
+          aria-checked={isChecked}
+          onChange={!props.disabled && (() => handleChange())}
         />
-        {self.checked ? checkedBox : uncheckedBox}
+        {isChecked ? checkedBox : uncheckedBox}
         {children}
       </CheckboxLabel>
     </CheckboxWrapper>
@@ -94,16 +104,3 @@ export function Checkbox({ children, ...props }: CheckboxProps): React.ReactElem
 }
 
 export default { Checkbox }
-
-function useController(isChecked: CheckboxProps['checked']) {
-  const [checked, setChecked] = useState(typeof isChecked === 'boolean' ? isChecked : false)
-
-  const handleClick = (onChange: CheckboxProps['onChange']) => {
-    setChecked(!checked)
-    if (onChange) {
-      onChange()
-    }
-  }
-
-  return { checked, handleClick }
-}

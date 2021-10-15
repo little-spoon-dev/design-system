@@ -72,7 +72,7 @@ export interface CheckboxProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * Handler when checkbox state is changed
    */
-  changeHandler?: () => void
+  onChange?: () => void
 }
 
 export function Checkbox({ children, ...props }: CheckboxProps): React.ReactElement<CheckboxProps> {
@@ -82,8 +82,8 @@ export function Checkbox({ children, ...props }: CheckboxProps): React.ReactElem
 
   const handleChange = () => {
     setChecked(!isChecked)
-    if (props.changeHandler) {
-      props.changeHandler()
+    if (props.onChange) {
+      props.onChange()
     }
   }
 
@@ -94,7 +94,7 @@ export function Checkbox({ children, ...props }: CheckboxProps): React.ReactElem
           {...props}
           type="checkbox"
           aria-checked={isChecked}
-          onChange={props.disabled ? undefined : () => handleChange()}
+          onChange={props.disabled ? undefined : handleChange}
         />
         {isChecked ? checkedBox : uncheckedBox}
         {children}

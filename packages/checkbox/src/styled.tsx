@@ -13,13 +13,6 @@ export const CheckboxWrapper = styled.div<CheckboxProps & { checked: boolean }>`
 
   color: ${(props) => (props.disabled ? grey40() : shadeBlack)};
   font-weight: ${(props) => (props.checked ? weight.bold : weight.normal)};
-`
-
-export const CheckboxLabel = styled.label<CheckboxProps>`
-  display: flex;
-  align-items: center;
-  cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
-
   svg {
     margin-right: 1rem;
     path {
@@ -29,16 +22,21 @@ export const CheckboxLabel = styled.label<CheckboxProps>`
   }
 `
 
+export const CheckboxLabel = styled.label<CheckboxProps>`
+  display: flex;
+  align-items: center;
+  cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
+`
+
 export const CheckboxItem = styled.input<CheckboxProps>`
   position: absolute;
-  opacity: 0;
   width: 1.8rem;
   height: 1.8rem;
   top: 1;
   left: 1;
   margin: 0;
   padding: 0;
-  z-index: 1;
+  z-index: -1;
   cursor: ${(props) => (props.disabled ? 'default' : 'pointer')}
   &:focus {
     outline: 0.2rem solid ${informative50()};

@@ -88,13 +88,13 @@ export function Checkbox({ children, ...props }: CheckboxProps): React.ReactElem
   }
 
   return (
-    <CheckboxWrapper {...props} checked={isChecked}>
-      <CheckboxLabel disabled={props.disabled}>
+    <CheckboxWrapper>
+      <CheckboxLabel disabled={props.disabled} checked={isChecked}>
         <CheckboxItem
           {...props}
           type="checkbox"
           aria-checked={isChecked}
-          onChange={!props.disabled && (() => handleChange())}
+          onChange={props.disabled ? undefined : () => handleChange()}
         />
         {isChecked ? checkedBox : uncheckedBox}
         {children}

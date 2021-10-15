@@ -47,16 +47,16 @@ it('updates to checked state when clicked', () => {
   expect(screen.getByTitle(checkedBox)).toBeInTheDocument()
 })
 
-it('invokes passed-in onChange function on-click', () => {
-  checkboxProps.onChange = () => onChangeFunction()
+it('invokes passed-in changeHandler function on-change', () => {
+  checkboxProps.changeHandler = () => onChangeFunction()
   render(<Checkbox {...checkboxProps} />)
   fireEvent.click(screen.getByText('Label'))
   expect(onChangeValue).toEqual(1)
 })
 
-it('does not throw error if onChange prop is undefined', () => {
+it('does not throw error if changeHandler prop is undefined', () => {
   const checkedBox = 'Checked checkbox'
-  checkboxProps.onChange = undefined
+  checkboxProps.changeHandler = undefined
   render(<Checkbox {...checkboxProps} />)
   fireEvent.click(screen.getByText('Label'))
   expect(screen.getByTitle(checkedBox)).toBeInTheDocument()

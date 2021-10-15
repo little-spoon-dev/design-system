@@ -6,10 +6,16 @@ import styled from 'styled-components'
 
 import type { CheckboxGroupProps, CheckboxProps } from './Checkbox'
 
-export const CheckboxWrapper = styled.div<CheckboxProps>`
+export const CheckboxWrapper = styled.div`
   font-family: ${family};
   ${paragraph.p3};
   user-select: none;
+`
+
+export const CheckboxLabel = styled.label<CheckboxProps>`
+  display: flex;
+  align-items: center;
+  cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
 
   color: ${(props) => (props.disabled ? grey40() : shadeBlack)};
   font-weight: ${(props) => (props.checked ? weight.bold : weight.normal)};
@@ -20,12 +26,6 @@ export const CheckboxWrapper = styled.div<CheckboxProps>`
         props.disabled ? grey40() : shadeBlack}
     }
   }
-`
-
-export const CheckboxLabel = styled.label<CheckboxProps>`
-  display: flex;
-  align-items: center;
-  cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
 `
 
 export const CheckboxItem = styled.input<CheckboxProps>`

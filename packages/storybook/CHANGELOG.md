@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.13.0...storybook@1.14.0) (2021-10-15)
+
+### Features
+
+- **checkbox:** add checkbox to design-system LS-1945 ([44a7ab2](https://github.com/little-spoon-dev/design-system/commit/44a7ab23ae3bfdc89ec3dfd3dffacfb0e675435c))
+
 # [1.13.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.12.1...storybook@1.13.0) (2021-10-14)
 
 ### Features

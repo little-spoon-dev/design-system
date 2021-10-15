@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.7.0...@littlespoon/ui@1.8.0) (2021-10-15)
+
+### Features
+
+- **checkbox:** add checkbox to design-system LS-1945 ([44a7ab2](https://github.com/little-spoon-dev/design-system/commit/44a7ab23ae3bfdc89ec3dfd3dffacfb0e675435c))
+
 # [1.7.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.6.0...@littlespoon/ui@1.7.0) (2021-10-14)
 
 ### Features

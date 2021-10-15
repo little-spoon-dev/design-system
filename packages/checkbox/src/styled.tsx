@@ -6,21 +6,19 @@ import styled from 'styled-components'
 
 import type { CheckboxGroupProps, CheckboxProps } from './Checkbox'
 
-export const CheckboxItem = styled.div<CheckboxProps & { checked: boolean }>`
-  display: flex;
-  align-items: center;
+export const CheckboxWrapper = styled.div<CheckboxProps & { checked: boolean }>`
   font-family: ${family};
   ${paragraph.p3};
   user-select: none;
-  cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
+
   color: ${(props) => (props.disabled ? grey40() : shadeBlack)};
   font-weight: ${(props) => (props.checked ? weight.bold : weight.normal)};
+`
 
-  &:focus-visible {
-    outline: 0.2rem solid ${informative50()};
-    outline-offset: 0.2rem;
-    border-radius: 0.2rem;
-  }
+export const CheckboxLabel = styled.label<CheckboxProps>`
+  display: flex;
+  align-items: center;
+  cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
 
   svg {
     margin-right: 1rem;
@@ -28,6 +26,24 @@ export const CheckboxItem = styled.div<CheckboxProps & { checked: boolean }>`
       ${(props) => (props.checked ? 'fill' : 'stroke')}: ${(props) =>
         props.disabled ? grey40() : shadeBlack}
     }
+  }
+`
+
+export const CheckboxItem = styled.input<CheckboxProps>`
+  position: absolute;
+  opacity: 0;
+  width: 1.8rem;
+  height: 1.8rem;
+  top: 1;
+  left: 1;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  cursor: ${(props) => (props.disabled ? 'default' : 'pointer')}
+  &:focus {
+    outline: 0.2rem solid ${informative50()};
+    outline-offset: 0.2rem;
+    border-radius: 0.2rem;
   }
 `
 

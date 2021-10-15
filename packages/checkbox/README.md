@@ -21,5 +21,5 @@ npm install checkbox --save
 ## Usage
 
 ```tsx
-import Component from 'checkbox'
+import { Checkbox, CheckboxGroup } from '@littlespoon/checkbox'
 ```

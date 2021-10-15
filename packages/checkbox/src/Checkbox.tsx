@@ -1,7 +1,7 @@
 import type React from 'react'
 import { useState } from 'react'
 
-import { CheckboxGroupWrapper, CheckboxItem } from './styled'
+import { CheckboxGroupWrapper, CheckboxItem, CheckboxLabel, CheckboxWrapper } from './styled'
 
 const checkedBox = (
   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,17 +77,18 @@ export interface CheckboxProps extends React.HTMLAttributes<HTMLElement> {
 export function Checkbox({ children, ...props }: CheckboxProps): React.ReactElement<CheckboxProps> {
   const self = useController(props.checked)
   return (
-    <CheckboxItem
-      {...props}
-      checked={self.checked}
-      onClick={props.disabled ? () => null : () => self.handleClick(props.onChange)}
-      role="checkbox"
-      aria-checked={self.checked ? true : false}
-      tabIndex={0}
-    >
-      {self.checked ? checkedBox : uncheckedBox}
-      {children}
-    </CheckboxItem>
+    <CheckboxWrapper {...props} checked={self.checked}>
+      <CheckboxLabel>
+        <CheckboxItem
+          type="checkbox"
+          checked={self.checked}
+          aria-checked={self.checked}
+          onClick={props.disabled ? () => null : () => self.handleClick(props.onChange)}
+        />
+        {self.checked ? checkedBox : uncheckedBox}
+        {children}
+      </CheckboxLabel>
+    </CheckboxWrapper>
   )
 }
 

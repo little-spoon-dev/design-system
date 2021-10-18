@@ -7,5 +7,6 @@ describe('accessibility', () => {
   it('is accessible with no props', async () => {
     const { container } = render(<CloseIcon />)
     expect(await axe(container)).toHaveNoViolations()
+    expect(screen.getByTitle('Close icon')).toBeInTheDocument()
   })
 })

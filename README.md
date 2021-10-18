@@ -21,6 +21,7 @@ To get started, check out [contributing](docs/CONTRIBUTING.md).
 | [@littlespoon/button](packages/checkbox) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/checkbox.svg)](https://www.npmjs.com/package/@littlespoon/checkbox) | Checkbox |
 | [@littlespoon/divider](packages/divider) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/divider.svg)](https://www.npmjs.com/package/@littlespoon/divider) | Divider |
 | [@littlespoon/icons](packages/icons) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/icons.svg)](https://www.npmjs.com/package/@littlespoon/icons) | Icons |
+| [@littlespoon/tag](packages/tag) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/tag.svg)](https://www.npmjs.com/package/@littlespoon/tag) | Tag |
 | [@littlespoon/theme](packages/theme) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/theme.svg)](https://www.npmjs.com/package/@littlespoon/theme) | Theme (colors, fonts) |
 | [@littlespoon/typography](packages/typography) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/typography.svg)](https://www.npmjs.com/package/@littlespoon/typography) | Typography |
 | [@littlespoon/ui](packages/ui) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/ui.svg)](https://www.npmjs.com/package/@littlespoon/ui) | UI (collection of modules) |

@@ -3,12 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.1.6](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.1.4...@littlespoon/icons@1.1.6) (2021-10-13)
-
-### Features
-
-- **icons:** add filter icon to package LS-1943
-
 ## [1.1.5](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.1.4...@littlespoon/icons@1.1.5) (2021-10-13)
 
 **Note:** Version bump only for package @littlespoon/icons

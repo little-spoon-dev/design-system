@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.14.0...storybook@1.15.0) (2021-10-18)
+
+### Features
+
+- **icons:** add CloseIcon LS-1944 ([032e01c](https://github.com/little-spoon-dev/design-system/commit/032e01c02d738505851a16fdd33814853130ac25))
+- **tag:** add Tag LS-1944 ([0e3b1ed](https://github.com/little-spoon-dev/design-system/commit/0e3b1ed91189fa55f675e4e2d6514e6d22b7fb3b))
+
 # [1.14.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.13.0...storybook@1.14.0) (2021-10-15)
 
 ### Features

@@ -31,6 +31,13 @@ describe('with props.fill', () => {
   expect(screen.getByTitle('Arrow icon')).toBeInTheDocument()
 })
 
+describe('with props.aria-label', () => {
+  it('renders label text', () => {
+    render(<ArrowIcon aria-label="label" />)
+    expect(screen.getByLabelText('label')).toBeInTheDocument()
+  })
+})
+
 describe('with props.direction', () => {
   it.each<ArrowIconProps['direction']>(['up', 'down', 'left', 'right'])(
     'renders arrow icon with direction=%j',

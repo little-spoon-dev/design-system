@@ -1,6 +1,6 @@
 import ArrowIcon from './ArrowIcon'
-import FilterIcon from './FilterIcon'
 import CloseIcon from './CloseIcon'
+import FilterIcon from './FilterIcon'
 
 export { ArrowIcon, CloseIcon, FilterIcon }
 

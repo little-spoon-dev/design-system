@@ -1,4 +1,8 @@
-import icons, { ArrowIcon as arrowIcon, CloseIcon as closeIcon, FilterIcon as filterIcon } from '../src/'
+import icons, {
+  ArrowIcon as arrowIcon,
+  CloseIcon as closeIcon,
+  FilterIcon as filterIcon,
+} from '../src/'
 import ArrowIcon from '../src/ArrowIcon'
 import CloseIcon from '../src/CloseIcon'
 import FilterIcon from '../src/FilterIcon'

@@ -22,8 +22,6 @@ export const FilterBase = styled.svg<FilterIconProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 1rem;
-  cursor: pointer;
   transition: transform 0.4s;
   ${getSvgSizeCss}
 `

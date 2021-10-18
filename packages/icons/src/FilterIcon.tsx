@@ -4,11 +4,6 @@ import { FilterBase } from './FilterBase'
 
 export interface FilterIconProps extends React.SVGAttributes<SVGElement> {
   /**
-   * Additional classes for the component. Defaults to "".
-   */
-  className?: string
-
-  /**
    * The size of the component. Defaults to "small".
    */
   size?: 'xsmall' | 'small' | 'medium' | 'large'

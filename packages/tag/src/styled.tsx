@@ -14,31 +14,31 @@ function getSizeCss(props: TagProps): string {
       return `
       font-size: ${primary.paragraph.small.fontSize};
       line-height: ${primary.paragraph.small.lineHeight};
-          svg {
-            width: 1.6rem;
-            height: 1.6rem;
-          };
-        `
+      svg {
+        width: 1.6rem;
+        height: 1.6rem;
+      };
+    `
 
     case 'medium':
       return `
       font-size: ${primary.paragraph.medium.fontSize};
       line-height: ${primary.paragraph.medium.lineHeight};
-          svg {
-            width: 1.65rem;
-            height: 1.65rem;
-          };
-        `
+      svg {
+        width: 1.65rem;
+        height: 1.65rem;
+      };
+    `
 
     case 'large':
       return `
-          font-size: ${primary.paragraph.large.fontSize};
-          line-height: ${primary.paragraph.large.lineHeight};
-          svg {
-            width: 2.0rem;
-            height: 2.0rem;
-          };
-        `
+      font-size: ${primary.paragraph.large.fontSize};
+      line-height: ${primary.paragraph.large.lineHeight};
+      svg {
+        width: 2.0rem;
+        height: 2.0rem;
+      };
+    `
 
     default:
       return ''

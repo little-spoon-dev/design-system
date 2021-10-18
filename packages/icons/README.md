@@ -25,10 +25,12 @@ Import icons:
 ```tsx
 import icons from '@littlespoon/icons'
 icons.ArrowIcon
+icons.FilterIcon
 ```
 
 Import arrow icon:
 
 ```tsx
 import ArrowIcon from '@littlespoon/icons/lib/ArrowIcon'
+import FilterIcoon from '@littlespoon/icons/lib/FilterIcon'
 ```

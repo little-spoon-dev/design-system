@@ -1,4 +1,4 @@
-import { shadeBlack } from '@littlespoon/theme/lib/colors/token'
+import { shadeBlack, shadeWhite } from '@littlespoon/theme/lib/colors/token'
 
 import { FilterBase } from './FilterBase'
 
@@ -25,20 +25,21 @@ export default function FilterIcon({
   stroke = shadeBlack,
   ...other
 }: FilterIconProps): React.ReactElement {
+  const fill = shadeWhite
+
   return (
     <FilterBase
       xmlns="http://www.w3.org/2000/svg"
-      width="44"
-      height="44"
       className={className}
       size={size}
+      viewBox="0 0 44 44"
       {...other}
     >
       <title>Filter icon</title>
       <desc>Filter icon</desc>
       <path
         d="M0 5a5 5 0 0 1 5-5h34a5 5 0 0 1 5 5v34a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V5Z"
-        fill="#fff"
+        fill={fill}
       />
       <path
         stroke={stroke}
@@ -47,7 +48,7 @@ export default function FilterIcon({
         stroke-linejoin="round"
         d="M13.584 28.38h16.833"
       />
-      <circle cx="27.562" cy="28.666" r="1.583" fill="#fff" stroke={stroke} stroke-width="1.5" />
+      <circle cx="27.562" cy="28.666" r="1.583" fill={fill} stroke={stroke} stroke-width="1.5" />
       <path
         stroke={stroke}
         stroke-width="1.5"
@@ -57,7 +58,7 @@ export default function FilterIcon({
       />
       <path
         d="M27.562 16.917a1.583 1.583 0 1 0 0-3.167 1.583 1.583 0 0 0 0 3.167Z"
-        fill="#fff"
+        fill={fill}
         stroke={stroke}
         stroke-width="1.5"
       />
@@ -70,7 +71,7 @@ export default function FilterIcon({
       />
       <path
         d="M16.44 23.584a1.583 1.583 0 1 1 0-3.167 1.583 1.583 0 0 1 0 3.167Z"
-        fill="#fff"
+        fill={fill}
         stroke={stroke}
         stroke-width="1.5"
       />

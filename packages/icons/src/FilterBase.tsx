@@ -2,16 +2,19 @@ import styled from 'styled-components'
 
 import type { FilterIconProps } from './FilterIcon'
 
+const BASE_HEIGHT = 44
+const BASE_WIDTH = 44
+
 function getSvgSizeCss(props: FilterIconProps): string {
   switch (props.size) {
     case 'xsmall':
-      return 'transform: scale(0.5);'
+      return `height: ${BASE_HEIGHT * 0.5}px; width: ${BASE_WIDTH * 0.5}px;`
     case 'medium':
-      return 'transform: scale(2);'
+      return `height: ${BASE_HEIGHT * 2}px; width: ${BASE_WIDTH * 2}px;`
     case 'large':
-      return 'transform: scale(3.2);'
+      return `height: ${BASE_HEIGHT * 3.2}px; width: ${BASE_WIDTH * 3.2}px;`
     default:
-      return 'transform: scale(1);'
+      return `height: ${BASE_HEIGHT}px; width: ${BASE_WIDTH}px;`
   }
 }
 

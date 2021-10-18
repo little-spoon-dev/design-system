@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.1.5...@littlespoon/icons@1.2.0) (2021-10-18)
+
+### Features
+
+- **icons:** add CloseIcon LS-1944 ([032e01c](https://github.com/little-spoon-dev/design-system/commit/032e01c02d738505851a16fdd33814853130ac25))
+
 ## [1.1.5](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.1.4...@littlespoon/icons@1.1.5) (2021-10-13)
 
 **Note:** Version bump only for package @littlespoon/icons

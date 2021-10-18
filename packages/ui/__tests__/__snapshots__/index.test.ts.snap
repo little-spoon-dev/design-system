@@ -8,6 +8,7 @@ Object {
   "Checkbox": [Function],
   "CheckboxGroup": [Function],
   "Divider": [Function],
+  "Tag": [Function],
   "Typography": [Function],
   "theme": Object {
     "colors": Object {

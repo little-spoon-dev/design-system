@@ -2,6 +2,7 @@ import { Breadcrumb, Breadcrumbs } from '@littlespoon/breadcrumbs'
 import Button from '@littlespoon/button'
 import Divider from '@littlespoon/divider'
 import icons from '@littlespoon/icons'
+import Tag from '@littlespoon/tag'
 import theme from '@littlespoon/theme'
 import Typography from '@littlespoon/typography'
 import { createElement, isValidElement } from 'react'
@@ -12,6 +13,7 @@ import uiBreadcrumbs from '../Breadcrumbs'
 import uiButton from '../Button'
 import uiDivider from '../Divider'
 import uiIcons from '../icons'
+import uiTag from '../Tag'
 import uiTheme from '../theme'
 import uiTypography from '../Typography'
 
@@ -37,6 +39,11 @@ it('exports Button', () => {
 it('exports Divider', () => {
   expect(uiDivider).toBe(Divider)
   expect(isValidElement(createElement(Divider))).toBe(true)
+})
+
+it('exports Tag', () => {
+  expect(uiTag).toBe(Tag)
+  expect(isValidElement(createElement(Tag))).toBe(true)
 })
 
 it('exports Typography', () => {

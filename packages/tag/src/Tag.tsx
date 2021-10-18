@@ -26,7 +26,7 @@ export interface TagProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export default function Tag(props: TagProps): React.ReactElement<TagProps> {
-  if (props.onClick) {
+  if (typeof props.onClick === 'function') {
     return <DefaultTag {...props} />
   }
 

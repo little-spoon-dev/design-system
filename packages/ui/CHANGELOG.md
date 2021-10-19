@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.9.0...@littlespoon/ui@1.10.0) (2021-10-19)
+
+### Features
+
+- **icons:** add filter icon LS-1943 ([33f0fd5](https://github.com/little-spoon-dev/design-system/commit/33f0fd51cce0c6bf9bcff07ea88ea400e6c2d994))
+- **icons:** reverting manual icons version bump LS-1943 ([64d7009](https://github.com/little-spoon-dev/design-system/commit/64d7009f5f1344337c5492f3264aff7d6c4db143))
+- **icons:** tweaking filter icon based on feedback LS-1943 ([0af2583](https://github.com/little-spoon-dev/design-system/commit/0af25839ac592b2a10c9a4026aafc38f73b4a2ce))
+
 # [1.9.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.8.0...@littlespoon/ui@1.9.0) (2021-10-18)
 
 ### Features

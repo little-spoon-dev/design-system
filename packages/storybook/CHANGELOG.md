@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.16.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.15.0...storybook@1.16.0) (2021-10-19)
+
+### Features
+
+- **icons:** add filter icon LS-1943 ([33f0fd5](https://github.com/little-spoon-dev/design-system/commit/33f0fd51cce0c6bf9bcff07ea88ea400e6c2d994))
+
 # [1.15.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.14.0...storybook@1.15.0) (2021-10-18)
 
 ### Features

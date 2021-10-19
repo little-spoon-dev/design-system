@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.2.0...@littlespoon/icons@1.3.0) (2021-10-19)
+
+### Features
+
+- **icons:** add filter icon LS-1943 ([33f0fd5](https://github.com/little-spoon-dev/design-system/commit/33f0fd51cce0c6bf9bcff07ea88ea400e6c2d994))
+- **icons:** cleaning up filter icon props LS-1943 ([deaf0a9](https://github.com/little-spoon-dev/design-system/commit/deaf0a916d0268969fe7851cc109cfe8a1c73798))
+- **icons:** linting after merge LS-1943 ([be94c97](https://github.com/little-spoon-dev/design-system/commit/be94c971f5a90250060f2a2882a6843c8d872429))
+- **icons:** reverting manual icons version bump LS-1943 ([64d7009](https://github.com/little-spoon-dev/design-system/commit/64d7009f5f1344337c5492f3264aff7d6c4db143))
+- **icons:** switching filter icon to rem LS-1943 ([1b55436](https://github.com/little-spoon-dev/design-system/commit/1b5543601af64499b5e9e98381af46ccf9b384fe))
+- **icons:** tweaking filter icon based on feedback LS-1943 ([0af2583](https://github.com/little-spoon-dev/design-system/commit/0af25839ac592b2a10c9a4026aafc38f73b4a2ce))
+
 # [1.2.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.1.5...@littlespoon/icons@1.2.0) (2021-10-18)
 
 ### Features

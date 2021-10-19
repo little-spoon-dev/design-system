@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.3.0...@littlespoon/icons@1.4.0) (2021-10-19)
+
+### Bug Fixes
+
+- **icons:** fix transform style for ArrowIcon LS-2041 ([961e7d9](https://github.com/little-spoon-dev/design-system/commit/961e7d91c3a58f68a014fdab5f0747137b4f11fd))
+
+### Features
+
+- **icons:** add prop fill to FilterIcon LS-2041 ([7d717dc](https://github.com/little-spoon-dev/design-system/commit/7d717dc87bbf65dc45b613ac3b945a6fd10fceb5))
+- **icons:** add props fill and stroke to CloseIcon LS-2041 ([513b43d](https://github.com/little-spoon-dev/design-system/commit/513b43d55b7c3ce9cbb0c428239a1e9f1b2a7ce1))
+
 # [1.3.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.2.0...@littlespoon/icons@1.3.0) (2021-10-19)
 
 ### Features

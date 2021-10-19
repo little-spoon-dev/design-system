@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.17.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.16.0...storybook@1.17.0) (2021-10-19)
+
+### Features
+
+- **storybook:** update stories for icons and Typography LS-2041 ([f11cd9c](https://github.com/little-spoon-dev/design-system/commit/f11cd9c3a2169944b946e35e909d4773f40938fe))
+
 # [1.16.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.15.0...storybook@1.16.0) (2021-10-19)
 
 ### Features

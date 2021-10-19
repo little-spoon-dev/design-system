@@ -9,6 +9,9 @@ export default {
 
 const Template: ComponentStory<typeof FilterIcon> = (args) => <FilterIcon {...args} />
 
+export const Default = Template.bind({})
+Default.args = {}
+
 export const ExtraSmall = Template.bind({})
 ExtraSmall.args = {
   size: 'xsmall',
@@ -27,6 +30,11 @@ Medium.args = {
 export const Large = Template.bind({})
 Large.args = {
   size: 'large',
+}
+
+export const Fill = Template.bind({})
+Fill.args = {
+  fill: theme.colors.primary.primaryBlue.blue60(),
 }
 
 export const Stroke = Template.bind({})

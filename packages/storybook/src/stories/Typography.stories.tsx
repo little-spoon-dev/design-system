@@ -67,3 +67,15 @@ Variant.args = {
   children: 'h1 styled as h6',
   variant: 'h6',
 }
+
+const Template2: ComponentStory<typeof Typography> = (args) => (
+  <>
+    <Typography {...args} />
+    <Typography {...args} />
+  </>
+)
+
+export const Multiple = Template2.bind({})
+Multiple.args = {
+  children: 'Lorem ipsum dolor sit amet.',
+}

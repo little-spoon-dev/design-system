@@ -6,7 +6,17 @@ export default {
   component: CloseIcon,
 } as ComponentMeta<typeof CloseIcon>
 
-const Template: ComponentStory<typeof CloseIcon> = () => <CloseIcon />
+const Template: ComponentStory<typeof CloseIcon> = (args) => <CloseIcon {...args} />
 
 export const Default = Template.bind({})
 Default.args = {}
+
+export const Fill = Template.bind({})
+Fill.args = {
+  fill: 'skyblue',
+}
+
+export const Stroke = Template.bind({})
+Stroke.args = {
+  stroke: 'tomato',
+}

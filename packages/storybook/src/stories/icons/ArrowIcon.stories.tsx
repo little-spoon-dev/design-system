@@ -9,6 +9,9 @@ export default {
 
 const Template: ComponentStory<typeof ArrowIcon> = (args) => <ArrowIcon {...args} />
 
+export const Default = Template.bind({})
+Default.args = {}
+
 export const ExtraSmall = Template.bind({})
 ExtraSmall.args = {
   size: 'xsmall',
@@ -29,7 +32,32 @@ Large.args = {
   size: 'large',
 }
 
+export const Up = Template.bind({})
+Up.args = {
+  direction: 'up',
+}
+
+export const Right = Template.bind({})
+Right.args = {
+  direction: 'right',
+}
+
+export const Down = Template.bind({})
+Down.args = {
+  direction: 'down',
+}
+
+export const Left = Template.bind({})
+Left.args = {
+  direction: 'left',
+}
+
 export const Fill = Template.bind({})
 Fill.args = {
   fill: theme.colors.primary.primaryBlue.blue60(),
+}
+
+export const Stroke = Template.bind({})
+Stroke.args = {
+  stroke: theme.colors.primary.primaryBlue.blue60(),
 }

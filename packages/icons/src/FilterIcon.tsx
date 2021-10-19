@@ -15,7 +15,6 @@ export interface FilterIconProps extends React.SVGAttributes<SVGElement> {
 }
 
 export default function FilterIcon({
-  className = '',
   size = 'small',
   stroke = shadeBlack,
   ...other
@@ -23,13 +22,7 @@ export default function FilterIcon({
   const fill = shadeWhite
 
   return (
-    <FilterBase
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      size={size}
-      viewBox="0 0 44 44"
-      {...other}
-    >
+    <FilterBase xmlns="http://www.w3.org/2000/svg" size={size} viewBox="0 0 44 44" {...other}>
       <title>Filter icon</title>
       <desc>Filter icon</desc>
       <path

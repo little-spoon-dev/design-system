@@ -2,39 +2,48 @@ import styled from 'styled-components'
 
 import type { ArrowIconProps } from './ArrowIcon'
 
-function getSvgSizeCss(props: ArrowIconProps): string {
+function getTransformCss(props: ArrowIconProps): string {
+  let scale = 1
+
   switch (props.size) {
     case 'xsmall':
-      return 'transform: scale(0.5);'
+      scale = 0.5
+      break
     case 'medium':
-      return 'transform: scale(2);'
+      scale = 2
+      break
     case 'large':
-      return 'transform: scale(3.2);'
+      scale = 3.2
+      break
+    case 'small':
     default:
-      return 'transform: scale(1);'
+      break
   }
-}
 
-function getSvgDirectionCss(props: ArrowIconProps): string {
+  let rotate = 0
+
   switch (props.direction) {
     case 'up':
-      return 'transform: rotate(180deg);'
+      rotate = 180
+      break
     case 'left':
-      return 'transform: rotate(90deg);'
+      rotate = 90
+      break
     case 'right':
-      return 'transform: rotate(-90deg);'
+      rotate = -90
+      break
+    case 'down':
     default:
-      return 'transform: rotate(0deg);'
+      break
   }
+
+  return `transform: scale(${scale}) rotate(${rotate}deg);`
 }
 
 export const ArrowBase = styled.svg<ArrowIconProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 1rem;
-  cursor: pointer;
   transition: transform 0.4s;
-  ${getSvgSizeCss}
-  ${getSvgDirectionCss}
+  ${getTransformCss}
 `

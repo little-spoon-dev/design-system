@@ -13,7 +13,7 @@ describe('accessibility', () => {
 
 describe('with props.className', () => {
   it('renders filter icon with className', () => {
-    render(<FilterIcon className={'custom-filter-icon'} />)
+    render(<FilterIcon className="custom-filter-icon" />)
     expect(screen.getByTitle('Filter icon')).toBeInTheDocument()
   })
 })
@@ -33,9 +33,16 @@ describe('with props.size', () => {
   })
 })
 
+describe('with props.fill', () => {
+  it('renders filter icon with stroke', () => {
+    render(<FilterIcon fill="#bada55" />)
+    expect(screen.getByTitle('Filter icon')).toBeInTheDocument()
+  })
+})
+
 describe('with props.stroke', () => {
   it('renders filter icon with stroke', () => {
-    render(<FilterIcon stroke={'black'} />)
+    render(<FilterIcon stroke="#bada55" />)
     expect(screen.getByTitle('Filter icon')).toBeInTheDocument()
   })
 })

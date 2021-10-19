@@ -4,23 +4,27 @@ import { FilterBase } from './FilterBase'
 
 export interface FilterIconProps extends React.SVGAttributes<SVGElement> {
   /**
+   * The fill of the component. Defaults to white.
+   */
+  fill?: string
+
+  /**
    * The size of the component. Defaults to "small".
    */
   size?: 'xsmall' | 'small' | 'medium' | 'large'
 
   /**
-   * The stroke of the component. Defaults to "black".
+   * The stroke of the component. Defaults to black.
    */
   stroke?: string
 }
 
 export default function FilterIcon({
+  fill = shadeWhite,
   size = 'small',
   stroke = shadeBlack,
   ...other
 }: FilterIconProps): React.ReactElement {
-  const fill = shadeWhite
-
   return (
     <FilterBase xmlns="http://www.w3.org/2000/svg" size={size} viewBox="0 0 44 44" {...other}>
       <title>Filter icon</title>
@@ -31,37 +35,37 @@ export default function FilterIcon({
       />
       <path
         stroke={stroke}
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         d="M13.584 28.38h16.833"
       />
-      <circle cx="27.562" cy="28.666" r="1.583" fill={fill} stroke={stroke} stroke-width="1.5" />
+      <circle cx="27.562" cy="28.666" r="1.583" fill={fill} stroke={stroke} strokeWidth="1.5" />
       <path
         stroke={stroke}
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         d="M13.584 15.047h16.833"
       />
       <path
         d="M27.562 16.917a1.583 1.583 0 1 0 0-3.167 1.583 1.583 0 0 0 0 3.167Z"
         fill={fill}
         stroke={stroke}
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
       <path
         stroke={stroke}
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         d="M30.418 21.714H13.585"
       />
       <path
         d="M16.44 23.584a1.583 1.583 0 1 1 0-3.167 1.583 1.583 0 0 1 0 3.167Z"
         fill={fill}
         stroke={stroke}
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
     </FilterBase>
   )

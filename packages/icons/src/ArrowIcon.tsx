@@ -4,25 +4,25 @@ import { ArrowBase } from './ArrowBase'
 
 export interface ArrowIconProps extends React.SVGAttributes<SVGElement> {
   /**
-   * The fill of the component. Defaults to "black".
+   * The fill of the component. Defaults to black.
    */
   fill?: string
-
-  /**
-   * The size of the component. Defaults to "small".
-   */
-  size?: 'xsmall' | 'small' | 'medium' | 'large'
 
   /**
    * The direction of the component. Defaults to "down".
    */
   direction?: 'up' | 'down' | 'left' | 'right'
+
+  /**
+   * The size of the component. Defaults to "small".
+   */
+  size?: 'xsmall' | 'small' | 'medium' | 'large'
 }
 
 export default function ArrowIcon({
-  size = 'small',
   direction = 'down',
   fill = shadeBlack,
+  size = 'small',
   ...other
 }: ArrowIconProps): React.ReactElement {
   return (

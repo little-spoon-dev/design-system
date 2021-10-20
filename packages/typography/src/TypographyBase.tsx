@@ -1,3 +1,4 @@
+import { desktop, down } from '@littlespoon/theme/lib/breakpoints'
 import {
   caption,
   family as primaryFamily,
@@ -21,6 +22,7 @@ export const TypographyBase = styled.p<TypographyProps>`
   ${(props) => `margin: 0 0 ${props.noMargin ? '0' : rem(0.8)} 0;`}
   ${(props) => props.uppercase && `text-transform: uppercase;`}
   ${getVariantCss}
+  ${getResponsiveCss}
 `
 
 /**
@@ -93,4 +95,41 @@ function getVariantCss(props: TypographyProps) {
   }
 
   return `font: ${font}; line-height: ${lineHeight};`
+}
+
+/**
+ * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/37ada3}
+ */
+const responsiveStyles = {
+  display1: 'h1',
+  display2: 'h1',
+  h1: 'h2',
+  h2: 'h3',
+  h3: 'h4',
+  h4: 'h5',
+  h5: 'h6',
+  h6: '',
+  p: '',
+  p1: 'p2',
+  p2: 'p3',
+  p3: '',
+  p4: '',
+  caption1: '',
+} as const
+
+/**
+ * Gets responsive styles.
+ */
+function getResponsiveCss(props: TypographyProps) {
+  if (!props.variant) {
+    return ''
+  }
+
+  const variant = responsiveStyles[props.variant]
+  if (!variant) {
+    return ''
+  }
+
+  const css = getVariantCss({ variant })
+  return down(desktop, css)
 }

@@ -4,6 +4,7 @@ import {
   weight as primaryWeight,
 } from '@littlespoon/theme/lib/fonts/primary'
 import {
+  display,
   family as secondaryFamily,
   heading,
   weight as secondaryWeight,
@@ -16,26 +17,36 @@ import type { TypographyProps } from './Typography'
 export const TypographyBase = styled.p<TypographyProps>`
   border: 0;
   padding: 0;
-  ${getMarginStyles}
-  ${getVariantStyles}
+  ${getMarginCss}
+  ${getVariantCss}
 `
 
 /**
  * Gets margin styles.
  */
-function getMarginStyles(props: TypographyProps) {
-  let styles = 'margin: 0;'
-  if (!props.noMargin) {
-    styles += `margin-bottom: ${rem(0.8)};`
-  }
-  return styles
+function getMarginCss(props: TypographyProps) {
+  return `margin: 0 0 ${props.noMargin ? '0' : rem(0.8)} 0;`
 }
 
 /**
  * Gets variant styles.
  */
-function getVariantStyles(props: TypographyProps) {
+function getVariantCss(props: TypographyProps) {
+  let font: string
+  let lineHeight: string
+
   switch (props.variant) {
+    /**
+     * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/348dfa}
+     */
+    case 'display1':
+    case 'display2': {
+      const { fontSize, lineHeight: displayLineHeight } = display[props.variant]
+      font = `${secondaryWeight.bold} ${fontSize} ${secondaryFamily}`
+      lineHeight = displayLineHeight
+      break
+    }
+
     /**
      * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/440937}
      */
@@ -45,11 +56,10 @@ function getVariantStyles(props: TypographyProps) {
     case 'h4':
     case 'h5':
     case 'h6': {
-      const { fontSize, lineHeight } = heading[props.variant]
-      return `
-        font: ${secondaryWeight.bold} ${fontSize} ${secondaryFamily};
-        line-height: ${lineHeight};
-      `
+      const { fontSize, lineHeight: headingLineHeight } = heading[props.variant]
+      font = `${secondaryWeight.bold} ${fontSize} ${secondaryFamily}`
+      lineHeight = headingLineHeight
+      break
     }
 
     /**
@@ -59,11 +69,10 @@ function getVariantStyles(props: TypographyProps) {
     case 'p2':
     case 'p3':
     case 'p4': {
-      const { fontSize, lineHeight } = paragraph[props.variant]
-      return `
-        font: ${primaryWeight.normal} ${fontSize} ${primaryFamily};
-        line-height: ${lineHeight};
-      `
+      const { fontSize, lineHeight: paragraphLineHeight } = paragraph[props.variant]
+      font = `${primaryWeight.normal} ${fontSize} ${primaryFamily}`
+      lineHeight = paragraphLineHeight
+      break
     }
 
     /**
@@ -71,11 +80,12 @@ function getVariantStyles(props: TypographyProps) {
      */
     case 'p':
     default: {
-      const { fontSize, lineHeight } = paragraph.p3
-      return `
-        font: ${primaryWeight.normal} ${fontSize} ${primaryFamily};
-        line-height: ${lineHeight};
-      `
+      const { fontSize, lineHeight: paragraphLineHeight } = paragraph.p3
+      font = `${primaryWeight.normal} ${fontSize} ${primaryFamily}`
+      lineHeight = paragraphLineHeight
+      break
     }
   }
+
+  return `font: ${font}; line-height: ${lineHeight};`
 }

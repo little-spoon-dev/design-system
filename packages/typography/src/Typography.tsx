@@ -23,7 +23,7 @@ export interface TypographyProps {
   /**
    * The variant to use. Defaults to "p", which is "p3".
    */
-  variant?: ElementType | 'p1' | 'p2' | 'p3' | 'p4'
+  variant?: ElementType | 'p1' | 'p2' | 'p3' | 'p4' | 'display1' | 'display2'
 }
 
 export default function Typography(props: TypographyProps): React.ReactElement<TypographyProps> {

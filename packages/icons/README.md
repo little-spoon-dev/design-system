@@ -27,17 +27,14 @@ import icons from '@littlespoon/icons'
 icons.ArrowIcon
 icons.CloseIcon
 icons.FilterIcon
+icons.OpenIcon
 ```
 
-Import arrow icon:
+Import icons:
 
 ```tsx
-import ArrowIcon from '@littlespoon/icons/lib/ArrowIcon'
-import FilterIcoon from '@littlespoon/icons/lib/FilterIcon'
-```
-
-Import close icon:
-
-```tsx
-import CloseIcon from '@littlespoon/icons/lib/CloseIcon'
+import ArrowIcon from '@littlespoon/ui/icons/ArrowIcon'
+import FilterIcoon from '@littlespoon/ui/icons/FilterIcon'
+import CloseIcon from '@littlespoon/ui/icons/CloseIcon'
+import OpenIcon from '@littlespoon/ui/icons/OpenIcon'
 ```

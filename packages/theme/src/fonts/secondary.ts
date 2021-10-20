@@ -1,21 +1,28 @@
 import { fontFamily, rem } from '../utils'
 
 /**
- * Displays
+ * Display 1
  *
- * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/348dfa}
+ * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/158618}
  */
+export const display1 = {
+  fontSize: rem(7.4),
+  lineHeight: rem(9.2),
+} as const
+
+/**
+ * Display 2
+ *
+ * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/615eab}
+ */
+export const display2 = {
+  fontSize: rem(6.6),
+  lineHeight: rem(8.2),
+} as const
+
 export const display = {
-  /** Display 1 */
-  large: {
-    fontSize: rem(7.4),
-    lineHeight: rem(9.2),
-  },
-  /** Display 2 */
-  medium: {
-    fontSize: rem(6.6),
-    lineHeight: rem(8.2),
-  },
+  display1,
+  display2,
 } as const
 
 /**

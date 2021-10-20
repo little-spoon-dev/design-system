@@ -255,11 +255,11 @@ Object {
     },
     "secondary": Object {
       "display": Object {
-        "large": Object {
+        "display1": Object {
           "fontSize": "7.4rem",
           "lineHeight": "9.2rem",
         },
-        "medium": Object {
+        "display2": Object {
           "fontSize": "6.6rem",
           "lineHeight": "8.2rem",
         },

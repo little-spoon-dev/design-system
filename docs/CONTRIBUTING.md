@@ -152,6 +152,8 @@ Runs Storybook:
 yarn storybook
 ```
 
+Note: must build before running storybook command
+
 #### `yarn test`
 
 Runs tests for all packages:

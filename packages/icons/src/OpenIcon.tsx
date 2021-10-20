@@ -25,7 +25,6 @@ export default function OpenIcon({ fill = shadeWhite, stroke = shadeBlack, ...ot
     >
       <circle cx="12" cy="12" r="12" fill={fill} />
       <title>Open icon</title>
-      <desc>Open icon</desc>
       <path
         d="M7.56567 7.56583L16.4342 16.4343M7.56568 16.4343L16.4342 7.56583"
         stroke={stroke}

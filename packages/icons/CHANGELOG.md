@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.4.0...@littlespoon/icons@1.5.0) (2021-10-20)
+
+### Bug Fixes
+
+- **icons:** add open icon ([23233f9](https://github.com/little-spoon-dev/design-system/commit/23233f9e10f151e4a5ebd597211270094e8b0d62))
+- **icons:** name in test ([1c3bdbc](https://github.com/little-spoon-dev/design-system/commit/1c3bdbcdf8a9cc84db8c644deab83053b20f61da))
+- **icons:** pr comments ([5527d6b](https://github.com/little-spoon-dev/design-system/commit/5527d6b2e2977f2c77bb4bc98e6e000512a77d6b))
+- **icons:** remove desc ([594b777](https://github.com/little-spoon-dev/design-system/commit/594b7777f88efb9a494630d1d3f34ae0b0b03c36))
+- rotate ([9b2f7db](https://github.com/little-spoon-dev/design-system/commit/9b2f7db1a9e9c360ea94d215ae2d001767bd8607))
+
+### Features
+
+- **icons:** new open icon ([b6a2cb5](https://github.com/little-spoon-dev/design-system/commit/b6a2cb5dd358d9c31d403eceee5e25db3c54eb79))
+
 # [1.4.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.3.0...@littlespoon/icons@1.4.0) (2021-10-19)
 
 ### Bug Fixes

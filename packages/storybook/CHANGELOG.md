@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.18.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.17.0...storybook@1.18.0) (2021-10-20)
+
+### Features
+
+- **icons:** new open icon ([b6a2cb5](https://github.com/little-spoon-dev/design-system/commit/b6a2cb5dd358d9c31d403eceee5e25db3c54eb79))
+
 # [1.17.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.16.0...storybook@1.17.0) (2021-10-19)
 
 ### Features

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.2](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.10.1...@littlespoon/ui@1.10.2) (2021-10-20)
+
+### Bug Fixes
+
+- **icons:** add storybook ([d441e9b](https://github.com/little-spoon-dev/design-system/commit/d441e9b75a84af9539a708b54ac7c4a35718c888))
+
 ## [1.10.1](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.10.0...@littlespoon/ui@1.10.1) (2021-10-19)
 
 **Note:** Version bump only for package @littlespoon/ui

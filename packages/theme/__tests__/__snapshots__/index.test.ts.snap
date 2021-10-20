@@ -2,6 +2,19 @@
 
 exports[`matches theme 1`] = `
 Object {
+  "breakpoints": Object {
+    "desktop": 1000,
+    "down": [Function],
+    "lg": 1000,
+    "md": 768,
+    "mobile": 0,
+    "sm": 550,
+    "tablet": 768,
+    "up": [Function],
+    "xl": 1200,
+    "xs": 340,
+    "xxl": 1600,
+  },
   "colors": Object {
     "alert": Object {
       "critical": Object {

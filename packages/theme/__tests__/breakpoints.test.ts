@@ -1,0 +1,51 @@
+import breakpoints, { desktop, down, mobile, tablet, up } from '../src/breakpoints'
+
+describe('breakpoints', () => {
+  it('returns breakpoints', () => {
+    expect(breakpoints).toMatchInlineSnapshot(`
+      Object {
+        "desktop": 1000,
+        "down": [Function],
+        "lg": 1000,
+        "md": 768,
+        "mobile": 0,
+        "sm": 550,
+        "tablet": 768,
+        "up": [Function],
+        "xl": 1200,
+        "xs": 340,
+        "xxl": 1600,
+      }
+    `)
+  })
+
+  it('matches mobile breakpoint', () => {
+    expect(breakpoints.mobile).toBe(mobile)
+  })
+
+  it('matches tablet breakpoint', () => {
+    expect(breakpoints.tablet).toBe(tablet)
+    expect(breakpoints.md).toBe(tablet)
+  })
+
+  it('matches desktop breakpoint', () => {
+    expect(breakpoints.desktop).toBe(desktop)
+    expect(breakpoints.lg).toBe(desktop)
+  })
+})
+
+describe('up', () => {
+  it('generates media query', () => {
+    expect(up(mobile, 'font-size: 42rem;')).toMatchInlineSnapshot(
+      `"@media (min-width: 0px) { font-size: 42rem; }"`,
+    )
+  })
+})
+
+describe('down', () => {
+  it('generates media query', () => {
+    expect(down(desktop, 'display: none;')).toMatchInlineSnapshot(
+      `"@media (max-width: 1000px) { display: none; }"`,
+    )
+  })
+})

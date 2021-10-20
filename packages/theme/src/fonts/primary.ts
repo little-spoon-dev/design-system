@@ -28,15 +28,18 @@ export const button = {
 } as const
 
 /**
- * Captions
+ * Caption 1
  *
- * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/36c339}
+ * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/4725bd}
  */
+export const caption1 = {
+  fontSize: rem(1.2),
+  lineHeight: rem(1.8),
+} as const
+
 export const caption = {
-  medium: {
-    fontSize: rem(1.2),
-    lineHeight: rem(1.8),
-  },
+  caption1,
+  medium: caption1,
 } as const
 
 /**

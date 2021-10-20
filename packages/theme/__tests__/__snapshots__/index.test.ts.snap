@@ -208,6 +208,10 @@ Object {
         },
       },
       "caption": Object {
+        "caption1": Object {
+          "fontSize": "1.2rem",
+          "lineHeight": "1.8rem",
+        },
         "medium": Object {
           "fontSize": "1.2rem",
           "lineHeight": "1.8rem",

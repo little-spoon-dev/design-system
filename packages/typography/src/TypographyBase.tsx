@@ -17,16 +17,10 @@ import type { TypographyProps } from './Typography'
 export const TypographyBase = styled.p<TypographyProps>`
   border: 0;
   padding: 0;
-  ${getMarginCss}
+  ${(props) => `margin: 0 0 ${props.noMargin ? '0' : rem(0.8)} 0;`}
+  ${(props) => props.uppercase && `text-transform: uppercase;`}
   ${getVariantCss}
 `
-
-/**
- * Gets margin styles.
- */
-function getMarginCss(props: TypographyProps) {
-  return `margin: 0 0 ${props.noMargin ? '0' : rem(0.8)} 0;`
-}
 
 /**
  * Gets variant styles.

@@ -155,3 +155,24 @@ describe('with props.black', () => {
     expect(element.parentElement!.tagName).toBe('H2')
   })
 })
+
+describe('with props.bold, props.extraBold, props.black', () => {
+  it('renders strong with biggest font-weight', () => {
+    render(
+      <Typography bold extraBold black>
+        {children}
+      </Typography>,
+    )
+    const element = screen.getByText(children)
+    expect(element.tagName).toBe('STRONG')
+    expect(element).toHaveStyle('font-weight: 900')
+    expect(element.parentElement!.tagName).toBe('P')
+  })
+})
+
+describe('with props.uppercase', () => {
+  it('transforms text into uppercase', () => {
+    render(<Typography uppercase>{children}</Typography>)
+    expect(screen.getByText(children)).toHaveStyle('text-transform: uppercase')
+  })
+})

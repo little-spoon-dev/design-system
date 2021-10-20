@@ -40,6 +40,11 @@ export interface TypographyProps {
    * Whether to remove bottom margin. Defaults to false.
    */
   noMargin?: boolean
+
+  /**
+   * Whether to transform the text to uppercase. Defaults to false.
+   */
+  uppercase?: boolean
 }
 
 export default function Typography(props: TypographyProps): React.ReactElement<TypographyProps> {

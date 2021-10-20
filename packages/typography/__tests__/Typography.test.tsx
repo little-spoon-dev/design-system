@@ -94,6 +94,7 @@ describe('with props.variant', () => {
     ['p2', 'font: Lato,sans-serif 1.8rem 400 1.8rem'],
     ['p3', 'font: Lato,sans-serif 1.6rem 400 1.6rem'],
     ['p4', 'font: Lato,sans-serif 1.4rem 400 1.4rem'],
+    ['caption1', 'font: Lato,sans-serif 1.2rem 400 1.2rem'],
   ])('renders p with variant=%j', (variant, style) => {
     render(<Typography variant={variant}>{variant}</Typography>)
     expect(document.querySelectorAll('p').length).toBe(1)

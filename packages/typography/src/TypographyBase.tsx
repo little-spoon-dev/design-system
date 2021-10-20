@@ -1,4 +1,5 @@
 import {
+  caption,
   family as primaryFamily,
   paragraph,
   weight as primaryWeight,
@@ -53,6 +54,16 @@ function getVariantCss(props: TypographyProps) {
       const { fontSize, lineHeight: headingLineHeight } = heading[props.variant]
       font = `${secondaryWeight.bold} ${fontSize} ${secondaryFamily}`
       lineHeight = headingLineHeight
+      break
+    }
+
+    /**
+     * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/4725bd}
+     */
+    case 'caption1': {
+      const { fontSize, lineHeight: captionLineHeight } = caption[props.variant]
+      font = `${primaryWeight.normal} ${fontSize} ${primaryFamily}`
+      lineHeight = captionLineHeight
       break
     }
 

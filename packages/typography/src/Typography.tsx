@@ -19,7 +19,7 @@ export interface TypographyProps {
   /**
    * The variant to use. Defaults to `as`.
    */
-  variant?: ElementType | 'p1' | 'p2' | 'p3' | 'p4' | 'display1' | 'display2'
+  variant?: ElementType | 'p1' | 'p2' | 'p3' | 'p4' | 'display1' | 'display2' | 'caption1'
 
   /**
    * Whether the content is bold. Defaults to false.

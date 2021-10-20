@@ -117,3 +117,41 @@ describe('with props.as and props.variant', () => {
     expect(screen.getByRole('heading', { level: 1, name: children })).toBeInTheDocument()
   })
 })
+
+describe('with props.bold', () => {
+  it('renders strong with font-weight', () => {
+    render(<Typography bold>{children}</Typography>)
+    const element = screen.getByText(children)
+    expect(element.tagName).toBe('STRONG')
+    expect(element).toHaveStyle('font-weight: 700')
+    expect(element.parentElement!.tagName).toBe('P')
+  })
+})
+
+describe('with props.extraBold', () => {
+  it('renders strong with font-weight', () => {
+    render(
+      <Typography as="h1" extraBold>
+        {children}
+      </Typography>,
+    )
+    const element = screen.getByText(children)
+    expect(element.tagName).toBe('STRONG')
+    expect(element).toHaveStyle('font-weight: 800')
+    expect(element.parentElement!.tagName).toBe('H1')
+  })
+})
+
+describe('with props.black', () => {
+  it('renders strong with font-weight', () => {
+    render(
+      <Typography as="h2" variant="display1" black>
+        {children}
+      </Typography>,
+    )
+    const element = screen.getByText(children)
+    expect(element.tagName).toBe('STRONG')
+    expect(element).toHaveStyle('font-weight: 900')
+    expect(element.parentElement!.tagName).toBe('H2')
+  })
+})

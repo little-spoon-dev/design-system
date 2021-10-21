@@ -19,9 +19,10 @@ export const xl = 1200
 
 export const xxl = 1600
 
-export const up = (min: number, css: string) => `@media (min-width: ${min}px) { ${css} }`
+export const up = (minWidth: number, css: string) => `@media (min-width: ${minWidth}px) { ${css} }`
 
-export const down = (max: number, css: string) => `@media (max-width: ${max}px) { ${css} }`
+export const down = (maxWidth: number, css: string) =>
+  `@media (max-width: ${maxWidth}px) { ${css} }`
 
 const breakpoints = {
   xs,

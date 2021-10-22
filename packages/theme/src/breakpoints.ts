@@ -19,8 +19,34 @@ export const xl = 1200
 
 export const xxl = 1600
 
+/**
+ * Generates media query that matches screen widths greater than the screen size given by the breakpoint (inclusive).
+ *
+ * @param minWidth - The min-width.
+ * @param css - The CSS.
+ *
+ * @example
+ *
+ * ```ts
+ * breakpoints.up(breakpoints.tablet, 'width: 42rem')
+ * // '@media (min-width: 768px) { width: 42rem; }'
+ * ```
+ */
 export const up = (minWidth: number, css: string) => `@media (min-width: ${minWidth}px) { ${css} }`
 
+/**
+ * Generates media query that matches screen widths smaller than the screen size given by the breakpoint (inclusive).
+ *
+ * @param maxWidth - The max-width.
+ * @param css - The CSS.
+ *
+ * @example
+ *
+ * ```ts
+ * breakpoints.down(breakpoints.desktop, 'display: none;')
+ * // '@media (max-width: 1000px) { display: none; }'
+ * ```
+ */
 export const down = (maxWidth: number, css: string) =>
   `@media (max-width: ${maxWidth}px) { ${css} }`
 

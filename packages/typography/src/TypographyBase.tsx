@@ -1,9 +1,12 @@
+import { desktop, down } from '@littlespoon/theme/lib/breakpoints'
 import {
+  caption,
   family as primaryFamily,
   paragraph,
   weight as primaryWeight,
 } from '@littlespoon/theme/lib/fonts/primary'
 import {
+  display,
   family as secondaryFamily,
   heading,
   weight as secondaryWeight,
@@ -16,26 +19,31 @@ import type { TypographyProps } from './Typography'
 export const TypographyBase = styled.p<TypographyProps>`
   border: 0;
   padding: 0;
-  ${getMarginStyles}
-  ${getVariantStyles}
+  ${(props) => `margin: 0 0 ${props.noMargin ? '0' : rem(0.8)} 0;`}
+  ${(props) => props.uppercase && `text-transform: uppercase;`}
+  ${getVariantCss}
+  ${getResponsiveCss}
 `
-
-/**
- * Gets margin styles.
- */
-function getMarginStyles(props: TypographyProps) {
-  let styles = 'margin: 0;'
-  if (!props.noMargin) {
-    styles += `margin-bottom: ${rem(0.8)};`
-  }
-  return styles
-}
 
 /**
  * Gets variant styles.
  */
-function getVariantStyles(props: TypographyProps) {
+function getVariantCss(props: TypographyProps) {
+  let font: string
+  let lineHeight: string
+
   switch (props.variant) {
+    /**
+     * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/348dfa}
+     */
+    case 'display1':
+    case 'display2': {
+      const { fontSize, lineHeight: displayLineHeight } = display[props.variant]
+      font = `${secondaryWeight.bold} ${fontSize} ${secondaryFamily}`
+      lineHeight = displayLineHeight
+      break
+    }
+
     /**
      * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/440937}
      */
@@ -45,11 +53,20 @@ function getVariantStyles(props: TypographyProps) {
     case 'h4':
     case 'h5':
     case 'h6': {
-      const { fontSize, lineHeight } = heading[props.variant]
-      return `
-        font: ${secondaryWeight.bold} ${fontSize} ${secondaryFamily};
-        line-height: ${lineHeight};
-      `
+      const { fontSize, lineHeight: headingLineHeight } = heading[props.variant]
+      font = `${secondaryWeight.bold} ${fontSize} ${secondaryFamily}`
+      lineHeight = headingLineHeight
+      break
+    }
+
+    /**
+     * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/4725bd}
+     */
+    case 'caption1': {
+      const { fontSize, lineHeight: captionLineHeight } = caption[props.variant]
+      font = `${primaryWeight.normal} ${fontSize} ${primaryFamily}`
+      lineHeight = captionLineHeight
+      break
     }
 
     /**
@@ -59,11 +76,10 @@ function getVariantStyles(props: TypographyProps) {
     case 'p2':
     case 'p3':
     case 'p4': {
-      const { fontSize, lineHeight } = paragraph[props.variant]
-      return `
-        font: ${primaryWeight.normal} ${fontSize} ${primaryFamily};
-        line-height: ${lineHeight};
-      `
+      const { fontSize, lineHeight: paragraphLineHeight } = paragraph[props.variant]
+      font = `${primaryWeight.normal} ${fontSize} ${primaryFamily}`
+      lineHeight = paragraphLineHeight
+      break
     }
 
     /**
@@ -71,11 +87,49 @@ function getVariantStyles(props: TypographyProps) {
      */
     case 'p':
     default: {
-      const { fontSize, lineHeight } = paragraph.p3
-      return `
-        font: ${primaryWeight.normal} ${fontSize} ${primaryFamily};
-        line-height: ${lineHeight};
-      `
+      const { fontSize, lineHeight: paragraphLineHeight } = paragraph.p3
+      font = `${primaryWeight.normal} ${fontSize} ${primaryFamily}`
+      lineHeight = paragraphLineHeight
+      break
     }
   }
+
+  return `font: ${font}; line-height: ${lineHeight};`
+}
+
+/**
+ * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/37ada3}
+ */
+const responsiveStyles = {
+  display1: 'h1',
+  display2: 'h1',
+  h1: 'h2',
+  h2: 'h3',
+  h3: 'h4',
+  h4: 'h5',
+  h5: 'h6',
+  h6: '',
+  p: '',
+  p1: 'p2',
+  p2: 'p3',
+  p3: '',
+  p4: '',
+  caption1: '',
+} as const
+
+/**
+ * Gets responsive styles.
+ */
+function getResponsiveCss(props: TypographyProps) {
+  if (!props.variant) {
+    return ''
+  }
+
+  const variant = responsiveStyles[props.variant]
+  if (!variant) {
+    return ''
+  }
+
+  const css = getVariantCss({ variant })
+  return down(desktop, css)
 }

@@ -2,6 +2,19 @@
 
 exports[`matches theme 1`] = `
 Object {
+  "breakpoints": Object {
+    "desktop": 1000,
+    "down": [Function],
+    "lg": 1000,
+    "md": 768,
+    "mobile": 0,
+    "sm": 550,
+    "tablet": 768,
+    "up": [Function],
+    "xl": 1200,
+    "xs": 340,
+    "xxl": 1600,
+  },
   "colors": Object {
     "alert": Object {
       "critical": Object {
@@ -208,6 +221,10 @@ Object {
         },
       },
       "caption": Object {
+        "caption1": Object {
+          "fontSize": "1.2rem",
+          "lineHeight": "1.8rem",
+        },
         "medium": Object {
           "fontSize": "1.2rem",
           "lineHeight": "1.8rem",
@@ -255,11 +272,11 @@ Object {
     },
     "secondary": Object {
       "display": Object {
-        "large": Object {
+        "display1": Object {
           "fontSize": "7.4rem",
           "lineHeight": "9.2rem",
         },
-        "medium": Object {
+        "display2": Object {
           "fontSize": "6.6rem",
           "lineHeight": "8.2rem",
         },

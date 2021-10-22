@@ -61,3 +61,21 @@ import { family, weight } from '@littlespoon/theme/lib/fonts/primary'
 family // 'Lato, sans-serif'
 weight.bold // 700
 ```
+
+Import breakpoints:
+
+```ts
+import breakpoints, { desktop } from '@littlespoon/theme/lib/breakpoints'
+
+breakpoints.mobile // 0
+desktop // 1000
+```
+
+Generate media queries:
+
+```ts
+import { desktop, down, mobile, up } from '@littlespoon/theme/lib/breakpoints'
+
+up(mobile, 'font-size: 42rem') // '@media (min-width: 0px) { font-size: 42rem; }'
+down(desktop, 'display: none') // '@media (max-width: 1000px) { display: none; }'
+```

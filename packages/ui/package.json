@@ -1,6 +1,6 @@
 {
   "name": "@littlespoon/ui",
-  "version": "1.10.2",
+  "version": "1.11.0",
   "description": "Little Spoon UI",
   "main": "index.js",
   "scripts": {
@@ -13,13 +13,13 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@littlespoon/breadcrumbs": "1.2.1",
-    "@littlespoon/button": "1.4.4",
-    "@littlespoon/checkbox": "1.1.0",
+    "@littlespoon/breadcrumbs": "1.2.2",
+    "@littlespoon/button": "1.4.5",
+    "@littlespoon/checkbox": "1.1.1",
     "@littlespoon/divider": "1.1.1",
-    "@littlespoon/icons": "1.5.0",
-    "@littlespoon/theme": "1.8.0",
-    "@littlespoon/typography": "1.1.0"
+    "@littlespoon/icons": "1.5.1",
+    "@littlespoon/theme": "1.9.0",
+    "@littlespoon/typography": "1.2.0"
   },
   "peerDependencies": {
     "react": "17",

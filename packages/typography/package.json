@@ -1,6 +1,6 @@
 {
   "name": "@littlespoon/typography",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Little Spoon typography",
   "main": "lib/index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@littlespoon/theme": "1.8.0"
+    "@littlespoon/theme": "1.9.0"
   },
   "peerDependencies": {
     "react": "17",

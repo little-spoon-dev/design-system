@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.19.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.18.0...storybook@1.19.0) (2021-10-22)
+
+### Features
+
+- **storybook:** add story for theme breakpoints LS-2016 ([7e5875a](https://github.com/little-spoon-dev/design-system/commit/7e5875a5c78b04fc13907074bd905d6937992782))
+- **storybook:** update Typography stories LS-2016 ([95c59aa](https://github.com/little-spoon-dev/design-system/commit/95c59aaa2db077b85cf553bf7d0efcad47702868))
+
 # [1.18.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.17.0...storybook@1.18.0) (2021-10-20)
 
 ### Features

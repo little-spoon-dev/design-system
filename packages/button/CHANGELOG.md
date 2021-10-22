@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.5](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/button@1.4.4...@littlespoon/button@1.4.5) (2021-10-22)
+
+**Note:** Version bump only for package @littlespoon/button
+
 ## [1.4.4](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/button@1.4.3...@littlespoon/button@1.4.4) (2021-10-13)
 
 **Note:** Version bump only for package @littlespoon/button

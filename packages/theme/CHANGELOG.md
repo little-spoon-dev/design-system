@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.8.0...@littlespoon/theme@1.9.0) (2021-10-22)
+
+### Features
+
+- **theme:** add breakpoints LS-2016 ([5b02162](https://github.com/little-spoon-dev/design-system/commit/5b021628d6258ffe983bd85079465916e3b9516f))
+- **theme:** add primary font alias caption1 LS-2016 ([c249d1d](https://github.com/little-spoon-dev/design-system/commit/c249d1d4d1776f5d3479ccccaf6c4b01fd99c274))
+- **theme:** rename display large & medium to display1 & display2 LS-2016 ([5ce7147](https://github.com/little-spoon-dev/design-system/commit/5ce7147abab040a78225339c49453ebe05e482e1))
+
 # [1.8.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.7.0...@littlespoon/theme@1.8.0) (2021-10-13)
 
 ### Features

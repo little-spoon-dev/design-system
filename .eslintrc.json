@@ -14,18 +14,13 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": [
-    "@typescript-eslint",
-    "eslint-plugin-tsdoc",
-    "jsx-a11y",
-    "prettier",
-    "simple-import-sort"
-  ],
+  "plugins": ["@typescript-eslint", "jsx-a11y", "prettier", "simple-import-sort", "tsdoc"],
   "ignorePatterns": ["lib"],
   "rules": {
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-extra-semi": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-unused-vars": "error",
     "no-console": "error",
     "no-debugger": "error",
     "prettier/prettier": "error",

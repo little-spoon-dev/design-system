@@ -1,4 +1,4 @@
-import CloseIcon from '@littlespoon/icons/src/CloseIcon'
+import CloseIcon from '@littlespoon/icons/lib/CloseIcon'
 import type React from 'react'
 
 import { Button, DefaultTag, DeletableTag, VisuallyHidden } from './styled'

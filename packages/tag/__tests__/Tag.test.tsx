@@ -1,7 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { axe } from 'jest-axe'
 
-import CloseIcon from '../../icons/src/CloseIcon'
 import type { TagProps } from '../src'
 import Tag from '../src'
 

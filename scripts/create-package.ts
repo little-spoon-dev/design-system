@@ -320,6 +320,7 @@ export * from '${packageName}'
   writeFileSync(uiIndexPath, uiIndex)
 
   exec(`npx lerna run --scope=${packageName} build`)
+  exec(`npx lerna run --scope=@littlespoon/ui build`)
   exec('npx lerna run --scope=@littlespoon/ui lint:fix')
   exec('npx lerna run --scope=@littlespoon/ui test -- --updateSnapshot')
 }

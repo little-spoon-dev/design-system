@@ -1,13 +1,18 @@
 import type React from 'react'
-import styled from 'styled-components'
+import styled, { ThemedStyledProps } from 'styled-components'
 
-const StyledBox = styled.div``
+const StyledBox = styled.div<BoxProps>((props) => props.sx)
 
 export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
   /**
-   * Box content
+   * Box content.
    */
   children?: React.ReactNode
+
+  /**
+   * Box style.
+   */
+  sx?: ThemedStyledProps<any, any> // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 
 /**

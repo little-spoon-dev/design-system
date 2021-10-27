@@ -13,3 +13,9 @@ it('renders text', () => {
   render(<Box>{text}</Box>)
   expect(screen.getByText(text)).toBeInTheDocument()
 })
+
+it('renders style', () => {
+  const text = 'text'
+  render(<Box sx={{ marginBottom: '1rem' }}>{text}</Box>)
+  expect(screen.getByText(text)).toHaveStyle('margin-bottom: 1rem')
+})

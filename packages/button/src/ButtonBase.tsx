@@ -79,6 +79,7 @@ function getVariantCss(props: ButtonProps<'button'>): string {
   let backgroundColor = ''
   let border = ''
   let color = ''
+  let focusColor = ''
   let focusOutline = ''
   let hoverBackgroundColor = ''
   let hoverColor = ''
@@ -91,6 +92,7 @@ function getVariantCss(props: ButtonProps<'button'>): string {
   if (disabled) {
     backgroundColor = grey20()
     color = grey40()
+    focusColor = color
     focusOutline = `${rem(0.2)} solid ${informative50()}`
     hoverBackgroundColor = backgroundColor
     hoverColor = color
@@ -104,6 +106,7 @@ function getVariantCss(props: ButtonProps<'button'>): string {
       case 'primary':
         backgroundColor = shadeBlack
         color = shadeWhite
+        focusColor = color
         focusOutline = `${rem(0.2)} solid ${informative50()};`
         hoverBackgroundColor = grey70()
         hoverColor = color
@@ -117,6 +120,7 @@ function getVariantCss(props: ButtonProps<'button'>): string {
       case 'secondary':
         backgroundColor = blue60()
         color = shadeBlack
+        focusColor = color
         focusOutline = `${rem(0.2)} solid ${informative50()}`
         hoverBackgroundColor = blue30()
         hoverColor = color
@@ -131,6 +135,7 @@ function getVariantCss(props: ButtonProps<'button'>): string {
         backgroundColor = shadeWhite
         border = `${rem(0.2)} solid ${shadeBlack}}`
         color = shadeBlack
+        focusColor = color
         focusOutline = `${rem(0.2)} solid ${informative50()}`
         hoverBackgroundColor = color
         hoverColor = backgroundColor
@@ -145,6 +150,7 @@ function getVariantCss(props: ButtonProps<'button'>): string {
     border: ${border};
     color: ${color};
     &:focus {
+      color: ${focusColor};
       outline: ${focusOutline};
       outline-offset: ${rem(0.2)};
     }

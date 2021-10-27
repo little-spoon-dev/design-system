@@ -10,11 +10,13 @@ describe('accessibility', () => {
   describe('button', () => {
     it('is accessible with text', async () => {
       const { container } = render(<Button>{children}</Button>)
+      expect(document.querySelectorAll('button')).toHaveLength(1)
       expect(await axe(container)).toHaveNoViolations()
     })
 
     it('is not accessible without text', async () => {
       const { container } = render(<Button />)
+      expect(document.querySelectorAll('button')).toHaveLength(1)
       expect(await axe(container)).not.toHaveNoViolations()
     })
   })
@@ -26,11 +28,13 @@ describe('accessibility', () => {
           {children}
         </Button>,
       )
+      expect(document.querySelectorAll('a')).toHaveLength(1)
       expect(await axe(container)).toHaveNoViolations()
     })
 
     it('is not accessible without text and href', async () => {
       const { container } = render(<Button as="a" href="" />)
+      expect(document.querySelectorAll('a')).toHaveLength(1)
       expect(await axe(container)).not.toHaveNoViolations()
     })
   })
@@ -69,17 +73,17 @@ describe('with props.aria-label', () => {
 })
 
 describe('with props.size', () => {
-  it.each<ButtonProps<'button'>['size']>(['small', 'medium', 'large', 'xlarge'])(
+  it.each<Required<ButtonProps<'button'>>['size']>(['small', 'medium', 'large', 'xlarge'])(
     'renders button with size=%j',
     (size) => {
       render(<Button size={size}>{size}</Button>)
-      expect(screen.getByText(size!)).toBeInTheDocument()
+      expect(screen.getByText(size)).toBeInTheDocument()
     },
   )
 })
 
 describe('with props.variant', () => {
-  it.each<ButtonProps<'button'>['variant']>([
+  it.each<Required<ButtonProps<'button'>>['variant']>([
     'primary',
     'secondary',
     'ghost',
@@ -87,7 +91,18 @@ describe('with props.variant', () => {
     'critical',
   ])('renders button with variant=%j', (variant) => {
     render(<Button variant={variant}>{variant}</Button>)
-    expect(screen.getByText(variant!)).toBeInTheDocument()
+    expect(screen.getByText(variant)).toBeInTheDocument()
+  })
+
+  it.each<[Required<ButtonProps<'button'>>['variant'], string]>([
+    ['primary', 'background-color: rgb(0, 0, 0)'],
+    ['secondary', 'background-color: rgb(0, 227, 205)'],
+    ['ghost', 'background-color: rgb(255, 255, 255)'],
+    ['critical', 'background-color: ButtonFace'],
+  ])('renders button with %s style', (variant, style) => {
+    render(<Button variant={variant}>{variant}</Button>)
+    expect(document.querySelectorAll('button')).toHaveLength(1)
+    expect(screen.getByText(variant)).toHaveStyle(style)
   })
 
   it('does not throw for invalid size', () => {
@@ -102,32 +117,30 @@ describe('with props.variant', () => {
     expect(screen.getByText(children)).toBeInTheDocument()
   })
 
-  it.each<ButtonProps<'button'>['variant']>(['primary', 'secondary'])(
+  it.each<Required<ButtonProps<'button'>>['variant']>(['primary', 'secondary'])(
     'renders button with variant=%j',
     (variant) => {
       render(<Button variant={variant}>{variant}</Button>)
-      expect(screen.getByText(variant!)).toBeInTheDocument()
+      expect(screen.getByText(variant)).toBeInTheDocument()
     },
   )
 })
 
 describe('with props.disabled', () => {
   it('renders disabled button not throw for invalid variant', () => {
-    // @ts-ignore
     render(<Button disabled>{children}</Button>)
     expect(screen.getByText(children)).toBeDisabled()
   })
 
-  it.each<ButtonProps<'button'>['variant']>(['primary', 'secondary'])(
+  it.each<Required<ButtonProps<'button'>>['variant']>(['primary', 'secondary'])(
     'renders disabled button with variant=%j',
     (variant) => {
       render(
-        // @ts-ignore
         <Button disabled variant={variant}>
           {variant}
         </Button>,
       )
-      expect(screen.getByText(variant!)).toBeDisabled()
+      expect(screen.getByText(variant)).toBeDisabled()
     },
   )
 })
@@ -141,7 +154,9 @@ describe('with props.as', () => {
       </Button>,
     )
     // @ts-ignore
-    expect(screen.getByRole('link', { name: children })).toHaveAttribute('href', href)
+    const element = screen.getByRole('link', { name: children })
+    expect(element).toHaveAttribute('href', href)
+    expect(element).toHaveStyle('color: rgb(255, 255, 255)')
   })
 
   it('renders component', () => {

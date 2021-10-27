@@ -18,9 +18,10 @@ import type { TypographyProps } from './Typography'
 
 export const TypographyBase = styled.p<TypographyProps>`
   border: 0;
+  margin: ${(props) => `0 0 ${props.noMargin ? '0' : rem(0.8)} 0`};
   padding: 0;
-  ${(props) => `margin: 0 0 ${props.noMargin ? '0' : rem(0.8)} 0;`}
-  ${(props) => props.uppercase && `text-transform: uppercase;`}
+  text-align: ${(props) => props.center && 'center'};
+  text-transform: ${(props) => props.uppercase && 'uppercase'};
   ${getVariantCss}
   ${getResponsiveCss}
 `

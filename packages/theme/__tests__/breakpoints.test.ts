@@ -13,8 +13,8 @@ describe('breakpoints', () => {
         "tablet": 768,
         "up": [Function],
         "xl": 1200,
-        "xs": 340,
-        "xxl": 1600,
+        "xs": 375,
+        "xxl": 1440,
       }
     `)
   })

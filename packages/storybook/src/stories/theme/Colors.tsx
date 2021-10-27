@@ -22,37 +22,39 @@ export default function Colors(props: Props) {
             <h1>{colorGroup}</h1>
 
             <table>
-              {Object.entries(colors).map(([colorKey, color]) => {
-                color = typeof color === 'function' ? color() : color
-                const { hex, alpha } = rgb2hex(color)
+              <tbody>
+                {Object.entries(colors).map(([colorKey, color]) => {
+                  color = typeof color === 'function' ? color() : color
+                  const { hex, alpha } = rgb2hex(color)
 
-                return (
-                  <tr key={colorKey}>
-                    <td
-                      style={{
-                        backgroundColor: color,
-                        height: 100,
-                        width: 100,
-                      }}
-                    />
+                  return (
+                    <tr key={colorKey}>
+                      <td
+                        style={{
+                          backgroundColor: color,
+                          height: 100,
+                          width: 100,
+                        }}
+                      />
 
-                    <td style={{ padding: '1rem' }}>
-                      <code>
-                        {hex.toUpperCase()}
-                        {alpha !== 1 && ` (${alpha * 100}%)`}
-                      </code>
-                      {color !== hex && (
-                        <>
-                          <br />
-                          <code>{color}</code>
-                        </>
-                      )}
-                    </td>
+                      <td style={{ padding: '1rem' }}>
+                        <code>
+                          {hex.toUpperCase()}
+                          {alpha !== 1 && ` (${alpha * 100}%)`}
+                        </code>
+                        {color !== hex && (
+                          <>
+                            <br />
+                            <code>{color}</code>
+                          </>
+                        )}
+                      </td>
 
-                    <td>{colorKey}</td>
-                  </tr>
-                )
-              })}
+                      <td>{colorKey}</td>
+                    </tr>
+                  )
+                })}
+              </tbody>
             </table>
           </section>
 

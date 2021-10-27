@@ -45,11 +45,20 @@ export interface TypographyProps {
    * Whether to transform the text to uppercase. Defaults to false.
    */
   uppercase?: boolean
+
+  /**
+   * Whether to align the text to the center. Defaults to false.
+   */
+  center?: boolean
 }
 
-export default function Typography(props: TypographyProps): React.ReactElement<TypographyProps> {
-  const { bold, extraBold, black, children, ...other } = props
-
+export default function Typography({
+  bold,
+  extraBold,
+  black,
+  children,
+  ...other
+}: TypographyProps): React.ReactElement<TypographyProps> {
   return (
     <TypographyBase {...other} variant={other.variant || other.as}>
       {bold || extraBold || black ? (

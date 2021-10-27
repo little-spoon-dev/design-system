@@ -92,8 +92,10 @@ function getVariantCss(props: ButtonProps<'button'>): string {
     backgroundColor = grey20()
     color = grey40()
     focusOutline = `${rem(0.2)} solid ${informative50()}`
-    hoverBackgroundColor = grey20()
+    hoverBackgroundColor = backgroundColor
+    hoverColor = color
     activeBackgroundColor = grey80()
+    activeColor = color
   } else {
     switch (variant) {
       /**
@@ -104,7 +106,9 @@ function getVariantCss(props: ButtonProps<'button'>): string {
         color = shadeWhite
         focusOutline = `${rem(0.2)} solid ${informative50()};`
         hoverBackgroundColor = grey70()
+        hoverColor = color
         activeBackgroundColor = grey80()
+        activeColor = color
         break
 
       /**
@@ -115,7 +119,9 @@ function getVariantCss(props: ButtonProps<'button'>): string {
         color = shadeBlack
         focusOutline = `${rem(0.2)} solid ${informative50()}`
         hoverBackgroundColor = blue30()
+        hoverColor = color
         activeBackgroundColor = blue80()
+        activeColor = color
         break
 
       /**
@@ -126,10 +132,10 @@ function getVariantCss(props: ButtonProps<'button'>): string {
         border = `${rem(0.2)} solid ${shadeBlack}}`
         color = shadeBlack
         focusOutline = `${rem(0.2)} solid ${informative50()}`
-        hoverBackgroundColor = shadeBlack
-        hoverColor = shadeWhite
+        hoverBackgroundColor = color
+        hoverColor = backgroundColor
         activeBackgroundColor = grey80()
-        activeColor = shadeWhite
+        activeColor = backgroundColor
         break
     }
   }

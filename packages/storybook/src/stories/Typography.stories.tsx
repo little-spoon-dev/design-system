@@ -124,6 +124,12 @@ Variant.args = {
   variant: 'h6',
 }
 
+export const Center = Template.bind({})
+Center.args = {
+  children: 'Centered text',
+  center: true,
+}
+
 export const NoMargin = TemplateAll.bind({})
 NoMargin.args = {
   noMargin: true,

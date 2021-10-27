@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/button@1.4.5...@littlespoon/button@1.5.0) (2021-10-27)
+
+### Bug Fixes
+
+- **button:** set visited color LS-1899 ([f253b29](https://github.com/little-spoon-dev/design-system/commit/f253b29c4703a57db8d9f8dd0e3edc085d51b3e0))
+
+### Features
+
+- **button:** add variant ghost LS-1899 ([cbd8874](https://github.com/little-spoon-dev/design-system/commit/cbd887487108faf594aba5a14c3d39af92261967))
+
 ## [1.4.5](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/button@1.4.4...@littlespoon/button@1.4.5) (2021-10-22)
 
 **Note:** Version bump only for package @littlespoon/button

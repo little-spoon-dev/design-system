@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.20.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.19.0...storybook@1.20.0) (2021-10-27)
+
+### Features
+
+- **storybook:** add ghost to Button stories LS-1899 ([dbf671d](https://github.com/little-spoon-dev/design-system/commit/dbf671d2c24281c42fcec2c65f2a1d6f9a0d232a))
+
 # [1.19.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.18.0...storybook@1.19.0) (2021-10-22)
 
 ### Features

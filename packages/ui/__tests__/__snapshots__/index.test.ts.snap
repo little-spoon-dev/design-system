@@ -2,6 +2,7 @@
 
 exports[`exports ui 1`] = `
 Object {
+  "Box": [Function],
   "Breadcrumb": [Function],
   "Breadcrumbs": [Function],
   "Button": [Function],

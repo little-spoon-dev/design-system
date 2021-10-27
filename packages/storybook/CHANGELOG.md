@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.22.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.21.0...storybook@1.22.0) (2021-10-27)
+
+### Features
+
+- **box:** add Box LS-2103 ([a53fd8d](https://github.com/little-spoon-dev/design-system/commit/a53fd8d6ca5f4505e2f452f79bf0957c56a7025e))
+- **storybook:** add Box stories LS-2103 ([3aeea56](https://github.com/little-spoon-dev/design-system/commit/3aeea562ba07c76a317f4428c258badf83903b78))
+
 # [1.21.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.20.0...storybook@1.21.0) (2021-10-27)
 
 ### Bug Fixes

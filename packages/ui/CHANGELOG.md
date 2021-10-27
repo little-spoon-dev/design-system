@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.12.0...@littlespoon/ui@1.13.0) (2021-10-27)
+
+### Features
+
+- **box:** add Box LS-2103 ([a53fd8d](https://github.com/little-spoon-dev/design-system/commit/a53fd8d6ca5f4505e2f452f79bf0957c56a7025e))
+
 # [1.12.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.11.2...@littlespoon/ui@1.12.0) (2021-10-27)
 
 ### Features

@@ -1,7 +1,7 @@
 // mobile
 export const mobile = 0
 
-export const xs = 340
+export const xs = 375
 
 export const sm = 550
 
@@ -17,7 +17,7 @@ export const desktop = lg
 
 export const xl = 1200
 
-export const xxl = 1600
+export const xxl = 1440
 
 /**
  * Generates media query that matches screen widths greater than the screen size given by the breakpoint (inclusive).

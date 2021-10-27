@@ -20,6 +20,14 @@ npm install @littlespoon/box --save
 
 ## Usage
 
+Import component:
+
 ```tsx
 import Box from '@littlespoon/box'
+```
+
+Style box with margin:
+
+```tsx
+<Button sx={{ margin: '1rem' }}>Text</Button>
 ```

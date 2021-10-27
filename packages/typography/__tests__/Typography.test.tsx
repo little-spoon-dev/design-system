@@ -177,3 +177,10 @@ describe('with props.uppercase', () => {
     expect(screen.getByText(children)).toHaveStyle('text-transform: uppercase')
   })
 })
+
+describe('with props.center', () => {
+  it('aligns text to center', () => {
+    render(<Typography center>{children}</Typography>)
+    expect(screen.getByText(children)).toHaveStyle('text-align: center')
+  })
+})

@@ -151,5 +151,8 @@ function getVariantCss(props: ButtonProps<'button'>): string {
       background-color: ${activeBackgroundColor};
       color: ${activeColor};
     }
+    &:visited {
+      color: ${color};
+    }
   `
 }

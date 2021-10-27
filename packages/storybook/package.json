@@ -1,7 +1,7 @@
 {
   "name": "storybook",
   "private": true,
-  "version": "1.22.0",
+  "version": "1.22.1",
   "description": "Little Spoon Storybook",
   "scripts": {
     "build": "yarn copy-changelog && build-storybook",
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@littlespoon/breadcrumbs": "1.2.3",
-    "@littlespoon/button": "1.5.1",
+    "@littlespoon/button": "1.5.2",
     "@littlespoon/checkbox": "1.1.2",
     "@littlespoon/divider": "1.1.1",
     "@littlespoon/icons": "1.5.2",

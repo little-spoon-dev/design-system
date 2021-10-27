@@ -29,19 +29,21 @@ import Button from '@littlespoon/button'
 Render button:
 
 ```tsx
-<Button>Hello, world!</Button>
+<Button>Text</Button>
 ```
 
 Render button with props:
 
 ```tsx
 <Button size="medium" variant="primary">
-  Hello, world!
+  This is a button
 </Button>
 ```
 
 Render button as a link:
 
 ```tsx
-<Button as="a">This is a link</Button>
+<Button as="a" href="#">
+  This is a link
+</Button>
 ```

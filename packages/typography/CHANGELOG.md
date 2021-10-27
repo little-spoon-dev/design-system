@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/typography@1.2.0...@littlespoon/typography@1.3.0) (2021-10-27)
+
+### Features
+
+- **typography:** add prop center LS-2102 ([3f5dd0c](https://github.com/little-spoon-dev/design-system/commit/3f5dd0ce84b283807b31e7c3f846d4678cf5a7f4))
+
 # [1.2.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/typography@1.1.0...@littlespoon/typography@1.2.0) (2021-10-22)
 
 ### Features

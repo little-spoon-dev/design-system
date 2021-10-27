@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.21.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.20.0...storybook@1.21.0) (2021-10-27)
+
+### Bug Fixes
+
+- **storybook:** fix React warning in colors stories LS-2102 ([b24d21d](https://github.com/little-spoon-dev/design-system/commit/b24d21d8bfa85fd2557f6ffaa9a27c4ed417107b))
+
+### Features
+
+- **storybook:** add center to Typography stories LS-2102 ([4086aef](https://github.com/little-spoon-dev/design-system/commit/4086aef91549a54f9552560e1793fb2487266587))
+
 # [1.20.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.19.0...storybook@1.20.0) (2021-10-27)
 
 ### Features

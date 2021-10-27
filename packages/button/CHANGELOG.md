@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/button@1.5.0...@littlespoon/button@1.5.1) (2021-10-27)
+
+### Bug Fixes
+
+- **button:** set hover & active color so it doesn't get overridden LS-1899 ([2f3f4cf](https://github.com/little-spoon-dev/design-system/commit/2f3f4cfbffd2d196cad95867a40822b8dceddb2e))
+
 # [1.5.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/button@1.4.5...@littlespoon/button@1.5.0) (2021-10-27)
 
 ### Bug Fixes

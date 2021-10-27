@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.9.0...@littlespoon/theme@1.10.0) (2021-10-27)
+
+### Features
+
+- **theme:** update breakpoint xs to 375 and xxl to 1440 LS-2102 ([321dc66](https://github.com/little-spoon-dev/design-system/commit/321dc66305b467e7607f24a8bfa491309763bdba))
+
 # [1.9.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.8.0...@littlespoon/theme@1.9.0) (2021-10-22)
 
 ### Features

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.11.2...@littlespoon/ui@1.12.0) (2021-10-27)
+
+### Features
+
+- **theme:** update breakpoint xs to 375 and xxl to 1440 LS-2102 ([321dc66](https://github.com/little-spoon-dev/design-system/commit/321dc66305b467e7607f24a8bfa491309763bdba))
+
 ## [1.11.2](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.11.1...@littlespoon/ui@1.11.2) (2021-10-27)
 
 **Note:** Version bump only for package @littlespoon/ui

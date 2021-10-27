@@ -10,5 +10,13 @@ const Template: ComponentStory<typeof Box> = (args) => <Box {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  children: 'Lorem ipsum',
+  children: 'No style',
+}
+
+export const Margin = Template.bind({})
+Margin.args = {
+  children: 'With margin',
+  sx: {
+    margin: '1rem',
+  },
 }

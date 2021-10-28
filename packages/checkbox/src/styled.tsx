@@ -51,7 +51,7 @@ export const CheckboxGroupWrapper = styled.div<CheckboxGroupProps>(
     display: flex;
     flex-direction: ${props.horizontal ? 'row' : 'column'};
 
-    div {
+    ${CheckboxWrapper} {
       ${props.horizontal ? 'margin-right' : 'margin-bottom'}: 2rem;
     }
   `,

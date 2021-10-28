@@ -36,6 +36,10 @@ describe('breakpoints', () => {
 
 describe('up', () => {
   it('generates media query', () => {
+    expect(up(mobile)).toMatchInlineSnapshot(`"@media (min-width: 0px)"`)
+  })
+
+  it('generates media query with css', () => {
     expect(up(mobile, 'font-size: 42rem;')).toMatchInlineSnapshot(
       `"@media (min-width: 0px) { font-size: 42rem; }"`,
     )
@@ -44,6 +48,10 @@ describe('up', () => {
 
 describe('down', () => {
   it('generates media query', () => {
+    expect(down(desktop)).toMatchInlineSnapshot(`"@media (max-width: 1000px)"`)
+  })
+
+  it('generates media query with css', () => {
     expect(down(desktop, 'display: none;')).toMatchInlineSnapshot(
       `"@media (max-width: 1000px) { display: none; }"`,
     )

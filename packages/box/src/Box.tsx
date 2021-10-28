@@ -1,9 +1,10 @@
 import type React from 'react'
-import styled, { ThemedStyledProps } from 'styled-components'
+import type { StyledComponentProps, StyledProps } from 'styled-components'
 
-const StyledBox = styled.div<BoxProps>((props) => props.sx)
+import { BoxBase } from './BoxBase'
 
-export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
+export interface BoxProps
+  extends StyledComponentProps<'div', object, object, string | number | symbol> {
   /**
    * Box content.
    */
@@ -12,12 +13,12 @@ export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * Box style.
    */
-  sx?: ThemedStyledProps<any, any> // eslint-disable-line @typescript-eslint/no-explicit-any
+  sx?: StyledProps<any> // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 
 /**
  * Box
  */
 export default function Box(props: BoxProps): React.ReactElement<BoxProps> {
-  return <StyledBox {...props} />
+  return <BoxBase {...props} />
 }

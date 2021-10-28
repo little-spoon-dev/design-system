@@ -3,19 +3,37 @@ import { axe } from 'jest-axe'
 
 import Box from '../src'
 
-it('is accessible', async () => {
-  const { container } = render(<Box>text</Box>)
-  expect(await axe(container)).toHaveNoViolations()
+const children = 'children'
+
+describe('accessibility', () => {
+  it('is accessible', async () => {
+    const { container } = render(<Box>{children}</Box>)
+    expect(await axe(container)).toHaveNoViolations()
+  })
 })
 
 it('renders text', () => {
-  const text = 'text'
-  render(<Box>{text}</Box>)
-  expect(screen.getByText(text)).toBeInTheDocument()
+  render(<Box>{children}</Box>)
+  expect(screen.getByText(children)).toBeInTheDocument()
+})
+
+it('renders span', () => {
+  render(
+    <Box>
+      <span>{children}</span>
+    </Box>,
+  )
+  expect(document.querySelectorAll('span')).toHaveLength(1)
+  expect(screen.getByText(children)).toBeInTheDocument()
+})
+
+it('renders as main', () => {
+  render(<Box as="main">{children}</Box>)
+  expect(document.querySelectorAll('main')).toHaveLength(1)
+  expect(screen.getByText(children)).toBeInTheDocument()
 })
 
 it('renders style', () => {
-  const text = 'text'
-  render(<Box sx={{ marginBottom: '1rem' }}>{text}</Box>)
-  expect(screen.getByText(text)).toHaveStyle('margin-bottom: 1rem')
+  render(<Box sx={{ marginBottom: '1rem' }}>{children}</Box>)
+  expect(screen.getByText(children)).toHaveStyle('margin-bottom: 1rem')
 })

@@ -38,7 +38,7 @@ export interface CheckboxProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * Handler when checkbox state is changed
    */
-  onChange: () => void
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 export function Checkbox(props: CheckboxProps): React.ReactElement {

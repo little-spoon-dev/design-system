@@ -29,5 +29,11 @@ import Box from '@littlespoon/box'
 Style box with margin:
 
 ```tsx
-<Button sx={{ margin: '1rem' }}>Text</Button>
+<Box sx={{ margin: '1rem' }}>Text</Box>
+```
+
+Style box with responsive breakpoints:
+
+```tsx
+<Box sx={{ margin: '1rem', xs: { margin: '2rem' }, desktop: { margin: '3rem' } }}>Text</Box>
 ```

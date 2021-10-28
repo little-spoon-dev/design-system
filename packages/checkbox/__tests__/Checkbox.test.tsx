@@ -1,5 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { axe } from 'jest-axe'
+import { useState } from 'react'
 
 import type { CheckboxProps } from '../src'
 import { Checkbox, CheckboxGroup } from '../src'
@@ -15,15 +16,12 @@ const defaultProps: CheckboxProps = {
 }
 
 // Used to track individual tests' scoped state changes.
-class CheckboxController {
-  state: boolean
-  constructor(initialValue = false) {
-    this.state = initialValue
+function useToggle(initialState: boolean): [boolean, () => void] {
+  const [state, setState] = useState(initialState)
+  const toggleState = () => {
+    setState(!state)
   }
-
-  toggleState = () => {
-    this.state = !this.state
-  }
+  return [state, toggleState]
 }
 
 const CHECKED_BOX_TITLE = 'Checked checkbox'
@@ -49,40 +47,33 @@ describe('Checkbox', () => {
   })
 
   it('updates to checked/unchecked state when clicked', () => {
-    const controller = new CheckboxController(false)
+    const ComponentWithState = () => {
+      const [state, toggleState] = useToggle(false)
+      return <Checkbox {...defaultProps} checked={state} onChange={toggleState} />
+    }
 
-    const getComponentWithState = () => (
-      <Checkbox {...defaultProps} checked={controller.state} onChange={controller.toggleState} />
-    )
-
-    const { rerender } = render(getComponentWithState())
+    const { rerender } = render(<ComponentWithState />)
     fireEvent.click(screen.getByText('Label'))
 
-    rerender(getComponentWithState())
+    rerender(<ComponentWithState />)
     expect(screen.getByTitle(CHECKED_BOX_TITLE)).toBeInTheDocument()
 
     fireEvent.click(screen.getByText('Label'))
-    rerender(getComponentWithState())
+    rerender(<ComponentWithState />)
     expect(screen.getByTitle(UNCHECKED_BOX_TITLE)).toBeInTheDocument()
   })
 
   it('does not update state if disabled', () => {
-    const controller = new CheckboxController()
+    const ComponentWithState = () => {
+      const [state, toggleState] = useToggle(false)
+      return <Checkbox {...defaultProps} checked={state} onChange={toggleState} disabled />
+    }
 
-    const getComponentWithState = () => (
-      <Checkbox
-        {...defaultProps}
-        checked={controller.state}
-        onChange={controller.toggleState}
-        disabled
-      />
-    )
-
-    const { rerender } = render(getComponentWithState())
+    const { rerender } = render(<ComponentWithState />)
 
     fireEvent.click(screen.getByText('Label'))
 
-    rerender(getComponentWithState())
+    rerender(<ComponentWithState />)
     expect(screen.getByTitle(UNCHECKED_BOX_TITLE)).toBeInTheDocument()
   })
 })

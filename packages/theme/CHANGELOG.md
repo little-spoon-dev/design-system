@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.10.0...@littlespoon/theme@1.11.0) (2021-10-28)
+
+### Features
+
+- **theme:** make breakpoints up and down last arg optional LS-2111 ([caa388e](https://github.com/little-spoon-dev/design-system/commit/caa388e75e319c95207e1c1b21b3174f3dcb2428))
+
 # [1.10.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.9.0...@littlespoon/theme@1.10.0) (2021-10-27)
 
 ### Features

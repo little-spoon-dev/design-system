@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.23.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.22.2...storybook@1.23.0) (2021-10-28)
+
+### Features
+
+- **storybook:** update Box stories with responsive styles LS-2111 ([c8a6e0f](https://github.com/little-spoon-dev/design-system/commit/c8a6e0ff231d496275a3f844ce42b2a7da9e9ad8))
+
 ## [1.22.2](https://github.com/little-spoon-dev/design-system/compare/storybook@1.22.1...storybook@1.22.2) (2021-10-28)
 
 **Note:** Version bump only for package storybook

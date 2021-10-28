@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/typography@1.3.0...@littlespoon/typography@1.3.1) (2021-10-28)
+
+**Note:** Version bump only for package @littlespoon/typography
+
 # [1.3.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/typography@1.2.0...@littlespoon/typography@1.3.0) (2021-10-27)
 
 ### Features

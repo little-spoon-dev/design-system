@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/checkbox@1.1.2...@littlespoon/checkbox@1.1.3) (2021-10-28)
+
+**Note:** Version bump only for package @littlespoon/checkbox
+
 ## [1.1.2](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/checkbox@1.1.1...@littlespoon/checkbox@1.1.2) (2021-10-27)
 
 **Note:** Version bump only for package @littlespoon/checkbox

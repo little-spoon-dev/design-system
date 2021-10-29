@@ -32,8 +32,8 @@ export const CheckboxLabel = styled.label<{ disabled?: boolean; checked: boolean
 export const Input = styled.input(
   (props) => css`
   position: absolute;
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 1.6rem;
+  height: 1.6rem;
   margin: 0;
   padding: 0;
   z-index: -1;
@@ -52,7 +52,7 @@ export const CheckboxGroupWrapper = styled.div<CheckboxGroupProps>(
     flex-direction: ${props.horizontal ? 'row' : 'column'};
 
     ${CheckboxWrapper} {
-      ${props.horizontal ? 'margin-right' : 'margin-bottom'}: 2rem;
+      ${props.horizontal ? 'margin-right: 2rem' : 'margin-bottom: 1rem'};
     }
   `,
 )

@@ -1,93 +1,102 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { axe } from 'jest-axe'
+import { useState } from 'react'
 
 import type { CheckboxProps } from '../src'
 import { Checkbox, CheckboxGroup } from '../src'
 
-const checkboxProps: CheckboxProps = {
+// Setup
+
+const defaultProps: CheckboxProps = {
   children: 'Label',
+  checked: true,
+  onChange: () => {
+    return undefined
+  },
 }
 
-let onChangeValue = 0
-
-function onChangeFunction() {
-  ++onChangeValue
+// Used to track individual tests' scoped state changes.
+function useToggle(initialState: boolean): [boolean, () => void] {
+  const [state, setState] = useState(initialState)
+  const toggleState = () => {
+    setState(!state)
+  }
+  return [state, toggleState]
 }
 
-it('checkbox is accessible', async () => {
-  const { container } = render(<Checkbox {...checkboxProps} />)
-  expect(await axe(container)).toHaveNoViolations()
+const CHECKED_BOX_TITLE = 'Checked checkbox'
+const UNCHECKED_BOX_TITLE = 'Unchecked checkbox'
+
+// Tests
+
+describe('Checkbox', () => {
+  it('is is accessible', async () => {
+    const { container } = render(<Checkbox {...defaultProps} />)
+    expect(await axe(container)).toHaveNoViolations()
+  })
+
+  it('renders text', () => {
+    const text = 'Label'
+    render(<Checkbox {...defaultProps} />)
+    expect(screen.getByText(text)).toBeInTheDocument()
+  })
+
+  it('renders in an unchecked state', () => {
+    render(<Checkbox {...defaultProps} checked={false} />)
+    expect(screen.getByTitle(UNCHECKED_BOX_TITLE)).toBeInTheDocument()
+  })
+
+  it('updates to checked/unchecked state when clicked', () => {
+    const ComponentWithState = () => {
+      const [state, toggleState] = useToggle(false)
+      return <Checkbox {...defaultProps} checked={state} onChange={toggleState} />
+    }
+
+    const { rerender } = render(<ComponentWithState />)
+    fireEvent.click(screen.getByText('Label'))
+
+    rerender(<ComponentWithState />)
+    expect(screen.getByTitle(CHECKED_BOX_TITLE)).toBeInTheDocument()
+
+    fireEvent.click(screen.getByText('Label'))
+    rerender(<ComponentWithState />)
+    expect(screen.getByTitle(UNCHECKED_BOX_TITLE)).toBeInTheDocument()
+  })
+
+  it('does not update state if disabled', () => {
+    const ComponentWithState = () => {
+      const [state, toggleState] = useToggle(false)
+      return <Checkbox {...defaultProps} checked={state} onChange={toggleState} disabled />
+    }
+
+    const { rerender } = render(<ComponentWithState />)
+
+    fireEvent.click(screen.getByText('Label'))
+
+    rerender(<ComponentWithState />)
+    expect(screen.getByTitle(UNCHECKED_BOX_TITLE)).toBeInTheDocument()
+  })
 })
 
-it('checkbox group is accessible', async () => {
-  const { container } = render(
-    <CheckboxGroup>
-      <Checkbox {...checkboxProps} />
-    </CheckboxGroup>,
-  )
-  expect(await axe(container)).toHaveNoViolations()
-})
+describe('CheckboxGroup', () => {
+  it('checkbox group is accessible', async () => {
+    const { container } = render(
+      <CheckboxGroup>
+        <Checkbox {...defaultProps} />
+      </CheckboxGroup>,
+    )
+    expect(await axe(container)).toHaveNoViolations()
+  })
 
-it('renders text', () => {
-  const text = 'Label'
-  render(<Checkbox {...checkboxProps} />)
-  expect(screen.getByText(text)).toBeInTheDocument()
-})
-
-it('renders in an unchecked state', () => {
-  const uncheckedBox = 'Unchecked checkbox'
-  render(<Checkbox {...checkboxProps} />)
-  expect(screen.getByTitle(uncheckedBox)).toBeInTheDocument()
-})
-
-it('updates to checked state when clicked', () => {
-  const checkedBox = 'Checked checkbox'
-  render(<Checkbox {...checkboxProps} />)
-  fireEvent.click(screen.getByText('Label'))
-  expect(screen.getByTitle(checkedBox)).toBeInTheDocument()
-})
-
-it('invokes passed-in changeHandler function on-change', () => {
-  checkboxProps.onChange = () => onChangeFunction()
-  render(<Checkbox {...checkboxProps} />)
-  fireEvent.click(screen.getByText('Label'))
-  expect(onChangeValue).toEqual(1)
-})
-
-it('does not throw error if changeHandler prop is undefined', () => {
-  const checkedBox = 'Checked checkbox'
-  checkboxProps.onChange = undefined
-  render(<Checkbox {...checkboxProps} />)
-  fireEvent.click(screen.getByText('Label'))
-  expect(screen.getByTitle(checkedBox)).toBeInTheDocument()
-})
-
-it('does not update state if disabled', () => {
-  const uncheckedBox = 'Unchecked checkbox'
-  checkboxProps.disabled = true
-  render(<Checkbox {...checkboxProps} />)
-  fireEvent.click(screen.getByText('Label'))
-  expect(screen.getByTitle(uncheckedBox)).toBeInTheDocument()
-})
-
-it('renders expected amount of Checkboxes', () => {
-  const uncheckedBox = 'Unchecked checkbox'
-  render(
-    <CheckboxGroup horizontal>
-      <Checkbox {...checkboxProps} />
-      <Checkbox {...checkboxProps} />
-      <Checkbox {...checkboxProps} />
-      <Checkbox {...checkboxProps} />
-    </CheckboxGroup>,
-  )
-  expect(screen.getAllByTitle(uncheckedBox)).toHaveLength(4)
-})
-
-it('renders state based on checked prop', () => {
-  const uncheckedBox = 'Unchecked checkbox'
-  checkboxProps.checked = true
-  checkboxProps.disabled = false
-  render(<Checkbox {...checkboxProps} />)
-  fireEvent.click(screen.getByText('Label'))
-  expect(screen.getByTitle(uncheckedBox)).toBeInTheDocument()
+  it('renders expected amount of Checkboxes', () => {
+    render(
+      <CheckboxGroup horizontal>
+        <Checkbox {...defaultProps} />
+        <Checkbox {...defaultProps} />
+        <Checkbox {...defaultProps} />
+        <Checkbox {...defaultProps} />
+      </CheckboxGroup>,
+    )
+    expect(screen.getAllByTitle(CHECKED_BOX_TITLE)).toHaveLength(4)
+  })
 })

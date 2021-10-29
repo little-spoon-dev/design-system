@@ -47,7 +47,7 @@ export function Checkbox(props: CheckboxProps): React.ReactElement {
       <CheckboxLabel disabled={props.disabled} checked={props.checked}>
         <Input
           type="checkbox"
-          aria-checked={props.checked}
+          checked={props.checked}
           onChange={props.disabled ? undefined : props.onChange}
           disabled={props.disabled}
         />

@@ -57,10 +57,12 @@ describe('Checkbox', () => {
 
     rerender(<ComponentWithState />)
     expect(screen.getByTitle(CHECKED_BOX_TITLE)).toBeInTheDocument()
+    expect(screen.getByRole('checkbox')).toBeChecked()
 
     fireEvent.click(screen.getByText('Label'))
     rerender(<ComponentWithState />)
     expect(screen.getByTitle(UNCHECKED_BOX_TITLE)).toBeInTheDocument()
+    expect(screen.getByRole('checkbox')).not.toBeChecked()
   })
 
   it('does not update state if disabled', () => {

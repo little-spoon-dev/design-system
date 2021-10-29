@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/checkbox@1.2.0...@littlespoon/checkbox@1.2.1) (2021-10-29)
+
+### Bug Fixes
+
+- changes aria-checked with checked ([87b0bef](https://github.com/little-spoon-dev/design-system/commit/87b0befdd6f219d518d649cda66d757a0065944a))
+
 # [1.2.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/checkbox@1.1.3...@littlespoon/checkbox@1.2.0) (2021-10-29)
 
 ### Bug Fixes

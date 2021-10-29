@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.23.1](https://github.com/little-spoon-dev/design-system/compare/storybook@1.23.0...storybook@1.23.1) (2021-10-29)
+
+### Bug Fixes
+
+- **checkbox:** updates stories to have internal state ([4b5dff1](https://github.com/little-spoon-dev/design-system/commit/4b5dff1edc7edcc1ba36993ea7142455bd7f12c9))
+
 # [1.23.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.22.2...storybook@1.23.0) (2021-10-28)
 
 ### Features

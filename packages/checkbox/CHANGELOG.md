@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/checkbox@1.1.3...@littlespoon/checkbox@1.2.0) (2021-10-29)
+
+### Bug Fixes
+
+- **checkbox:** updates tests to match the new stateles version of the component ([503356e](https://github.com/little-spoon-dev/design-system/commit/503356efc2f2889d438712c0013458017391362a))
+- removes internal state and refactors file ([ed4988f](https://github.com/little-spoon-dev/design-system/commit/ed4988f15a6253bf4f39f4f97858a2268f61adf2))
+
+### Features
+
+- adjusts spacing and size to match figma changes ([8b90b77](https://github.com/little-spoon-dev/design-system/commit/8b90b7738d35a00321dd8dd161488cf20f615af3))
+
 ## [1.1.3](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/checkbox@1.1.2...@littlespoon/checkbox@1.1.3) (2021-10-28)
 
 **Note:** Version bump only for package @littlespoon/checkbox

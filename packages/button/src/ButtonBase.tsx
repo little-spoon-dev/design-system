@@ -180,5 +180,9 @@ function getVariantCss(props: ButtonProps<'button'>): string {
     &:visited {
       color: ${color};
     }
+    // remove focus styles for non-keyboard focus
+    :focus:not(:focus-visible) {
+      outline: 0;
+    }
   `
 }

@@ -3,19 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.11.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.10.0...@littlespoon/theme@1.11.0) (2021-10-28)
+## [1.11.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.10.0...@littlespoon/theme@1.11.0) (2021-10-28)
 
 ### Features
 
 - **theme:** make breakpoints up and down last arg optional LS-2111 ([caa388e](https://github.com/little-spoon-dev/design-system/commit/caa388e75e319c95207e1c1b21b3174f3dcb2428))
 
-# [1.10.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.9.0...@littlespoon/theme@1.10.0) (2021-10-27)
+## [1.10.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.9.0...@littlespoon/theme@1.10.0) (2021-10-27)
 
 ### Features
 
 - **theme:** update breakpoint xs to 375 and xxl to 1440 LS-2102 ([321dc66](https://github.com/little-spoon-dev/design-system/commit/321dc66305b467e7607f24a8bfa491309763bdba))
 
-# [1.9.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.8.0...@littlespoon/theme@1.9.0) (2021-10-22)
+## [1.9.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.8.0...@littlespoon/theme@1.9.0) (2021-10-22)
 
 ### Features
 
@@ -23,25 +23,25 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **theme:** add primary font alias caption1 LS-2016 ([c249d1d](https://github.com/little-spoon-dev/design-system/commit/c249d1d4d1776f5d3479ccccaf6c4b01fd99c274))
 - **theme:** rename display large & medium to display1 & display2 LS-2016 ([5ce7147](https://github.com/little-spoon-dev/design-system/commit/5ce7147abab040a78225339c49453ebe05e482e1))
 
-# [1.8.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.7.0...@littlespoon/theme@1.8.0) (2021-10-13)
+## [1.8.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.7.0...@littlespoon/theme@1.8.0) (2021-10-13)
 
 ### Features
 
 - **theme:** export p1, p2, p3, p4 from fonts paragraph LS-2014 ([58279a9](https://github.com/little-spoon-dev/design-system/commit/58279a9ef752f39dea9120a7101b6f7ee5b45365))
 
-# [1.7.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.6.0...@littlespoon/theme@1.7.0) (2021-10-13)
+## [1.7.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.6.0...@littlespoon/theme@1.7.0) (2021-10-13)
 
 ### Features
 
 - **theme:** modularize theme fonts primary and secondary LS-2000 ([8591915](https://github.com/little-spoon-dev/design-system/commit/8591915f51584b0fd4870f247b51a6abc4425c96))
 
-# [1.6.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.5.0...@littlespoon/theme@1.6.0) (2021-10-13)
+## [1.6.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.5.0...@littlespoon/theme@1.6.0) (2021-10-13)
 
 ### Features
 
 - **breadcrumbs:** add breadcrumbs to design system, add visited link color LS-1919 ([6a5a2c1](https://github.com/little-spoon-dev/design-system/commit/6a5a2c1cf6849b7897f465d8cb75eb3b29a789a0))
 
-# [1.5.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.4.1...@littlespoon/theme@1.5.0) (2021-10-04)
+## [1.5.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.4.1...@littlespoon/theme@1.5.0) (2021-10-04)
 
 ### Features
 

@@ -9,7 +9,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **divider:** rename ComponentProps to DividerProps LS-2001 ([2d56c12](https://github.com/little-spoon-dev/design-system/commit/2d56c125b908fa156224238c5c18bd06e886344b))
 
-# 1.1.0 (2021-09-30)
+## 1.1.0 (2021-09-30)
 
 ### Features
 

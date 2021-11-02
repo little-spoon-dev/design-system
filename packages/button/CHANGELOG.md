@@ -19,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **button:** set hover & active color so it doesn't get overridden LS-1899 ([2f3f4cf](https://github.com/little-spoon-dev/design-system/commit/2f3f4cfbffd2d196cad95867a40822b8dceddb2e))
 
-# [1.5.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/button@1.4.5...@littlespoon/button@1.5.0) (2021-10-27)
+## [1.5.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/button@1.4.5...@littlespoon/button@1.5.0) (2021-10-27)
 
 ### Bug Fixes
 
@@ -49,7 +49,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @littlespoon/button
 
-# [1.4.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/button@1.3.1...@littlespoon/button@1.4.0) (2021-10-04)
+## [1.4.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/button@1.3.1...@littlespoon/button@1.4.0) (2021-10-04)
 
 ### Features
 
@@ -59,7 +59,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @littlespoon/button
 
-# [1.3.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/button@1.2.0...@littlespoon/button@1.3.0) (2021-09-27)
+## [1.3.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/button@1.2.0...@littlespoon/button@1.3.0) (2021-09-27)
 
 ### Features
 

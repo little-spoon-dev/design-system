@@ -23,13 +23,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @littlespoon/ui
 
-# [1.13.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.12.0...@littlespoon/ui@1.13.0) (2021-10-27)
+## [1.13.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.12.0...@littlespoon/ui@1.13.0) (2021-10-27)
 
 ### Features
 
 - **box:** add Box LS-2103 ([a53fd8d](https://github.com/little-spoon-dev/design-system/commit/a53fd8d6ca5f4505e2f452f79bf0957c56a7025e))
 
-# [1.12.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.11.2...@littlespoon/ui@1.12.0) (2021-10-27)
+## [1.12.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.11.2...@littlespoon/ui@1.12.0) (2021-10-27)
 
 ### Features
 
@@ -45,7 +45,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **tag:** add icons and tag to dependencies and fix import path ([9e9a02d](https://github.com/little-spoon-dev/design-system/commit/9e9a02dd46571c3aed427e302f83cd56bee3731e))
 
-# [1.11.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.10.2...@littlespoon/ui@1.11.0) (2021-10-22)
+## [1.11.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.10.2...@littlespoon/ui@1.11.0) (2021-10-22)
 
 ### Features
 
@@ -64,7 +64,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @littlespoon/ui
 
-# [1.10.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.9.0...@littlespoon/ui@1.10.0) (2021-10-19)
+## [1.10.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.9.0...@littlespoon/ui@1.10.0) (2021-10-19)
 
 ### Features
 
@@ -72,26 +72,26 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **icons:** reverting manual icons version bump LS-1943 ([64d7009](https://github.com/little-spoon-dev/design-system/commit/64d7009f5f1344337c5492f3264aff7d6c4db143))
 - **icons:** tweaking filter icon based on feedback LS-1943 ([0af2583](https://github.com/little-spoon-dev/design-system/commit/0af25839ac592b2a10c9a4026aafc38f73b4a2ce))
 
-# [1.9.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.8.0...@littlespoon/ui@1.9.0) (2021-10-18)
+## [1.9.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.8.0...@littlespoon/ui@1.9.0) (2021-10-18)
 
 ### Features
 
 - **icons:** add CloseIcon LS-1944 ([032e01c](https://github.com/little-spoon-dev/design-system/commit/032e01c02d738505851a16fdd33814853130ac25))
 - **tag:** add Tag LS-1944 ([0e3b1ed](https://github.com/little-spoon-dev/design-system/commit/0e3b1ed91189fa55f675e4e2d6514e6d22b7fb3b))
 
-# [1.8.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.7.0...@littlespoon/ui@1.8.0) (2021-10-15)
+## [1.8.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.7.0...@littlespoon/ui@1.8.0) (2021-10-15)
 
 ### Features
 
 - **checkbox:** add checkbox to design-system LS-1945 ([44a7ab2](https://github.com/little-spoon-dev/design-system/commit/44a7ab23ae3bfdc89ec3dfd3dffacfb0e675435c))
 
-# [1.7.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.6.0...@littlespoon/ui@1.7.0) (2021-10-14)
+## [1.7.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.6.0...@littlespoon/ui@1.7.0) (2021-10-14)
 
 ### Features
 
 - **ui:** export Typography LS-1883 ([3c66208](https://github.com/little-spoon-dev/design-system/commit/3c6620890ecb58dfe5ae721ad7573634f0b12cdd))
 
-# [1.6.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.5.1...@littlespoon/ui@1.6.0) (2021-10-13)
+## [1.6.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.5.1...@littlespoon/ui@1.6.0) (2021-10-13)
 
 ### Features
 
@@ -101,7 +101,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @littlespoon/ui
 
-# [1.5.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.4.1...@littlespoon/ui@1.5.0) (2021-10-13)
+## [1.5.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.4.1...@littlespoon/ui@1.5.0) (2021-10-13)
 
 ### Features
 
@@ -111,13 +111,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @littlespoon/ui
 
-# [1.4.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.3.0...@littlespoon/ui@1.4.0) (2021-10-13)
+## [1.4.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.3.0...@littlespoon/ui@1.4.0) (2021-10-13)
 
 ### Features
 
 - **breadcrumbs:** add breadcrumbs to design system, add visited link color LS-1919 ([6a5a2c1](https://github.com/little-spoon-dev/design-system/commit/6a5a2c1cf6849b7897f465d8cb75eb3b29a789a0))
 
-# [1.3.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.2.2...@littlespoon/ui@1.3.0) (2021-10-04)
+## [1.3.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.2.2...@littlespoon/ui@1.3.0) (2021-10-04)
 
 ### Features
 
@@ -131,7 +131,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @littlespoon/ui
 
-# [1.2.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.1.3...@littlespoon/ui@1.2.0) (2021-09-30)
+## [1.2.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.1.3...@littlespoon/ui@1.2.0) (2021-09-30)
 
 ### Features
 

@@ -3,13 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.2.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/box@1.1.0...@littlespoon/box@1.2.0) (2021-10-28)
+## [1.2.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/box@1.1.0...@littlespoon/box@1.2.0) (2021-10-28)
 
 ### Features
 
 - **box:** allow prop sx to contain responsive styles LS-2111 ([499e9e0](https://github.com/little-spoon-dev/design-system/commit/499e9e0c7658816f90bae5a71a94847c6b86550d))
 
-# 1.1.0 (2021-10-27)
+## 1.1.0 (2021-10-27)
 
 ### Features
 

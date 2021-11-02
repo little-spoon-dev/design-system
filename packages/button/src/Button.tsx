@@ -21,7 +21,7 @@ export interface Props<C extends React.ElementType> {
   /**
    * The variant to use. Defaults to "primary".
    */
-  variant?: 'primary' | 'secondary' | 'ghost' | 'overlay' | 'critical'
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'ghost'
 }
 
 export type ButtonProps<C extends React.ElementType> = Props<C> &

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.24.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.23.2...storybook@1.24.0) (2021-11-03)
+
+### Features
+
+- **storybook:** add variant 'tertiary' to button stories LS-2152 ([57b4a57](https://github.com/little-spoon-dev/design-system/commit/57b4a57d56d6b176db0c07995c1f2c53fc6dfb85))
+
 ## [1.23.2](https://github.com/little-spoon-dev/design-system/compare/storybook@1.23.1...storybook@1.23.2) (2021-10-29)
 
 **Note:** Version bump only for package storybook

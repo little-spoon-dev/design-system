@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/button@1.5.3...@littlespoon/button@1.6.0) (2021-11-03)
+
+### Bug Fixes
+
+- **button:** remove focus styles for non-keyboard focus LS-2152 ([eea138c](https://github.com/little-spoon-dev/design-system/commit/eea138c5ef6382c5af1b09e087ef0fb1b9280fc8))
+
+### Features
+
+- **button:** add variant 'tertiary' LS-2152 ([afdd79b](https://github.com/little-spoon-dev/design-system/commit/afdd79babfb741fe46924985c87c4053ec05206d))
+
 ## [1.5.3](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/button@1.5.2...@littlespoon/button@1.5.3) (2021-10-28)
 
 **Note:** Version bump only for package @littlespoon/button

@@ -1,6 +1,6 @@
 import { informative50 } from '@littlespoon/theme/lib/colors/alert'
 import { blue30, blue60, blue80 } from '@littlespoon/theme/lib/colors/primary'
-import { grey20, grey40, grey70, grey80 } from '@littlespoon/theme/lib/colors/secondary'
+import { grey10, grey20, grey40, grey70, grey80 } from '@littlespoon/theme/lib/colors/secondary'
 import { shadeBlack, shadeWhite } from '@littlespoon/theme/lib/colors/token'
 import { button, family, weight } from '@littlespoon/theme/lib/fonts/primary'
 import { rem } from '@littlespoon/theme/lib/utils'
@@ -131,6 +131,20 @@ function getVariantCss(props: ButtonProps<'button'>): string {
       /**
        * {@link https://zeroheight.com/3ddd0f892/p/01a397-buttons/t/52ebb4}
        */
+      case 'tertiary':
+        backgroundColor = shadeWhite
+        color = shadeBlack
+        focusColor = color
+        focusOutline = `${rem(0.2)} solid ${informative50()}`
+        hoverBackgroundColor = grey10()
+        hoverColor = shadeBlack
+        activeBackgroundColor = grey20()
+        activeColor = color
+        break
+
+      /**
+       * {@link https://zeroheight.com/3ddd0f892/p/01a397-buttons/t/52ebb4}
+       */
       case 'ghost':
         backgroundColor = shadeWhite
         border = `${rem(0.2)} solid ${shadeBlack}}`
@@ -165,6 +179,10 @@ function getVariantCss(props: ButtonProps<'button'>): string {
     }
     &:visited {
       color: ${color};
+    }
+    // remove focus styles for non-keyboard focus
+    :focus:not(:focus-visible) {
+      outline: 0;
     }
   `
 }

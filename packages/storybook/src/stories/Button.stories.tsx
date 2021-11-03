@@ -25,6 +25,12 @@ Secondary.args = {
   variant: 'secondary',
 }
 
+export const Tertiary = Template.bind({})
+Tertiary.args = {
+  children: 'tertiary',
+  variant: 'tertiary',
+}
+
 export const Ghost = Template.bind({})
 Ghost.args = {
   children: 'ghost',

@@ -19,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @littlespoon/breadcrumbs
 
-# [1.2.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/breadcrumbs@1.1.1...@littlespoon/breadcrumbs@1.2.0) (2021-10-13)
+## [1.2.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/breadcrumbs@1.1.1...@littlespoon/breadcrumbs@1.2.0) (2021-10-13)
 
 ### Features
 
@@ -29,7 +29,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @littlespoon/breadcrumbs
 
-# 1.1.0 (2021-10-13)
+## 1.1.0 (2021-10-13)
 
 ### Features
 

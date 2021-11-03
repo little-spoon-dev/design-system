@@ -1,23 +1,21 @@
 # Contributing
 
+- [Prerequisites](#prerequisites)
+- [Install](#install)
+- [Available Scripts](#available-scripts)
+  - [`yarn build`](#yarn-build)
+  - [`yarn clean`](#yarn-clean)
+  - [`yarn create-package`](#yarn-create-package)
+  - [`yarn lint`](#yarn-lint)
+  - [`yarn lint:fix`](#yarn-lintfix)
+  - [`yarn storybook`](#yarn-storybook)
+  - [`yarn test`](#yarn-test)
 - [Development](#development)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Available Scripts](#available-scripts)
-    - [`yarn build`](#yarn-build)
-    - [`yarn clean`](#yarn-clean)
-    - [`yarn create-package`](#yarn-create-package)
-    - [`yarn lint`](#yarn-lint)
-    - [`yarn lint:fix`](#yarn-lintfix)
-    - [`yarn storybook`](#yarn-storybook)
-    - [`yarn test`](#yarn-test)
 - [Release](#release)
   - [Canary](#canary)
   - [Dry Run](#dry-run)
 
-## Development
-
-### Prerequisites
+## Prerequisites
 
 [Node.js](https://nodejs.org/):
 
@@ -31,7 +29,7 @@ brew install node
 brew install yarn
 ```
 
-### Install
+## Install
 
 Clone the repository:
 
@@ -46,19 +44,19 @@ Install dependencies and bootstrap packages:
 yarn
 ```
 
-### Available Scripts
+## Available Scripts
 
 In the root directory, you can run:
 
-#### `yarn build`
+### `yarn build`
 
-Builds all packages:
+Build all packages:
 
 ```sh
 yarn build
 ```
 
-To build a single package:
+Build a single package:
 
 ```sh
 yarn build --scope=<packageName>
@@ -70,15 +68,15 @@ For example:
 yarn build --scope=@littlespoon/button
 ```
 
-#### `yarn clean`
+### `yarn clean`
 
-Deletes build artifacts from all packages:
+Delete build artifacts from all packages:
 
 ```sh
 yarn clean
 ```
 
-To clean a single package:
+Clean a single package:
 
 ```sh
 yarn clean --scope=<packageName>
@@ -90,9 +88,9 @@ For example:
 yarn clean --scope=@littlespoon/button
 ```
 
-#### `yarn create-package`
+### `yarn create-package`
 
-You can create a package using the prompt:
+Create a package using the prompt:
 
 ```sh
 yarn create-package
@@ -104,15 +102,15 @@ Or create a package using the CLI:
 yarn create-package --help
 ```
 
-#### `yarn lint`
+### `yarn lint`
 
-Lints all packages:
+Lint all packages:
 
 ```sh
 yarn lint
 ```
 
-To lint a single package:
+Lint a single package:
 
 ```sh
 yarn lint --scope=<packageName>
@@ -124,15 +122,15 @@ For example:
 yarn lint --scope=@littlespoon/button
 ```
 
-#### `yarn lint:fix`
+### `yarn lint:fix`
 
-Fixes lint errors for all packages:
+Automatically fix lint errors for all packages:
 
 ```sh
 yarn lint:fix
 ```
 
-To fix lint for a single package:
+Automatically fix lint errors for a single package:
 
 ```sh
 yarn lint:fix --scope=<packageName>
@@ -144,25 +142,31 @@ For example:
 yarn lint:fix --scope=@littlespoon/button
 ```
 
-#### `yarn storybook`
+### `yarn storybook`
 
-Runs Storybook:
+Run Storybook:
 
 ```sh
 yarn storybook
 ```
 
-Note: must build before running storybook command
+But make sure to build before running Storybook:
 
-#### `yarn test`
+```sh
+yarn build
+```
 
-Runs tests for all packages:
+Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
+
+### `yarn test`
+
+Run tests for all packages:
 
 ```sh
 yarn test
 ```
 
-To run tests for a single package:
+Run tests for a single package:
 
 ```sh
 yarn test --scope=<packageName>
@@ -172,6 +176,20 @@ For example:
 
 ```sh
 yarn test --scope=@littlespoon/button
+```
+
+## Development
+
+Test your package in another app by installing the local package:
+
+```sh
+yarn add file:<path>/design-system/packages/<package>
+```
+
+The following command installs button when design-system is found in the `$HOME` directory:
+
+```sh
+yarn add file:~/design-system/packages/button
 ```
 
 ## Release
@@ -189,8 +207,8 @@ To prevent race conditions with Lerna release, don't merge PRs until after the p
 
 ### Canary
 
-To release a canary version for testing, run the [publish](https://github.com/little-spoon-dev/design-system/actions/workflows/publish.yml) workflow with a branch other than `master`.
+Release a canary version for testing by running the [publish](https://github.com/little-spoon-dev/design-system/actions/workflows/publish.yml) workflow with a branch other than `master`.
 
 ### Dry Run
 
-To see the to-be-updated versions, run the [publish](https://github.com/little-spoon-dev/design-system/actions/workflows/publish.yml) workflow and change `N` to `y` under **Dry run?**.
+See the to-be-updated versions by running the [publish](https://github.com/little-spoon-dev/design-system/actions/workflows/publish.yml) workflow and change `N` to `y` under **Dry run?**.

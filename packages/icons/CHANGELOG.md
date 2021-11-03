@@ -19,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @littlespoon/icons
 
-# [1.5.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.4.0...@littlespoon/icons@1.5.0) (2021-10-20)
+## [1.5.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.4.0...@littlespoon/icons@1.5.0) (2021-10-20)
 
 ### Bug Fixes
 
@@ -33,7 +33,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **icons:** new open icon ([b6a2cb5](https://github.com/little-spoon-dev/design-system/commit/b6a2cb5dd358d9c31d403eceee5e25db3c54eb79))
 
-# [1.4.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.3.0...@littlespoon/icons@1.4.0) (2021-10-19)
+## [1.4.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.3.0...@littlespoon/icons@1.4.0) (2021-10-19)
 
 ### Bug Fixes
 
@@ -44,7 +44,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **icons:** add prop fill to FilterIcon LS-2041 ([7d717dc](https://github.com/little-spoon-dev/design-system/commit/7d717dc87bbf65dc45b613ac3b945a6fd10fceb5))
 - **icons:** add props fill and stroke to CloseIcon LS-2041 ([513b43d](https://github.com/little-spoon-dev/design-system/commit/513b43d55b7c3ce9cbb0c428239a1e9f1b2a7ce1))
 
-# [1.3.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.2.0...@littlespoon/icons@1.3.0) (2021-10-19)
+## [1.3.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.2.0...@littlespoon/icons@1.3.0) (2021-10-19)
 
 ### Features
 
@@ -55,7 +55,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **icons:** switching filter icon to rem LS-1943 ([1b55436](https://github.com/little-spoon-dev/design-system/commit/1b5543601af64499b5e9e98381af46ccf9b384fe))
 - **icons:** tweaking filter icon based on feedback LS-1943 ([0af2583](https://github.com/little-spoon-dev/design-system/commit/0af25839ac592b2a10c9a4026aafc38f73b4a2ce))
 
-# [1.2.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.1.5...@littlespoon/icons@1.2.0) (2021-10-18)
+## [1.2.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.1.5...@littlespoon/icons@1.2.0) (2021-10-18)
 
 ### Features
 
@@ -81,7 +81,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @littlespoon/icons
 
-# 1.1.0 (2021-09-27)
+## 1.1.0 (2021-09-27)
 
 ### Features
 

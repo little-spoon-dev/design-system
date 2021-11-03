@@ -13,7 +13,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **checkbox:** updates stories to have internal state ([4b5dff1](https://github.com/little-spoon-dev/design-system/commit/4b5dff1edc7edcc1ba36993ea7142455bd7f12c9))
 
-# [1.23.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.22.2...storybook@1.23.0) (2021-10-28)
+## [1.23.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.22.2...storybook@1.23.0) (2021-10-28)
 
 ### Features
 
@@ -27,14 +27,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package storybook
 
-# [1.22.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.21.0...storybook@1.22.0) (2021-10-27)
+## [1.22.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.21.0...storybook@1.22.0) (2021-10-27)
 
 ### Features
 
 - **box:** add Box LS-2103 ([a53fd8d](https://github.com/little-spoon-dev/design-system/commit/a53fd8d6ca5f4505e2f452f79bf0957c56a7025e))
 - **storybook:** add Box stories LS-2103 ([3aeea56](https://github.com/little-spoon-dev/design-system/commit/3aeea562ba07c76a317f4428c258badf83903b78))
 
-# [1.21.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.20.0...storybook@1.21.0) (2021-10-27)
+## [1.21.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.20.0...storybook@1.21.0) (2021-10-27)
 
 ### Bug Fixes
 
@@ -44,51 +44,51 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **storybook:** add center to Typography stories LS-2102 ([4086aef](https://github.com/little-spoon-dev/design-system/commit/4086aef91549a54f9552560e1793fb2487266587))
 
-# [1.20.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.19.0...storybook@1.20.0) (2021-10-27)
+## [1.20.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.19.0...storybook@1.20.0) (2021-10-27)
 
 ### Features
 
 - **storybook:** add ghost to Button stories LS-1899 ([dbf671d](https://github.com/little-spoon-dev/design-system/commit/dbf671d2c24281c42fcec2c65f2a1d6f9a0d232a))
 
-# [1.19.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.18.0...storybook@1.19.0) (2021-10-22)
+## [1.19.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.18.0...storybook@1.19.0) (2021-10-22)
 
 ### Features
 
 - **storybook:** add story for theme breakpoints LS-2016 ([7e5875a](https://github.com/little-spoon-dev/design-system/commit/7e5875a5c78b04fc13907074bd905d6937992782))
 - **storybook:** update Typography stories LS-2016 ([95c59aa](https://github.com/little-spoon-dev/design-system/commit/95c59aaa2db077b85cf553bf7d0efcad47702868))
 
-# [1.18.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.17.0...storybook@1.18.0) (2021-10-20)
+## [1.18.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.17.0...storybook@1.18.0) (2021-10-20)
 
 ### Features
 
 - **icons:** new open icon ([b6a2cb5](https://github.com/little-spoon-dev/design-system/commit/b6a2cb5dd358d9c31d403eceee5e25db3c54eb79))
 
-# [1.17.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.16.0...storybook@1.17.0) (2021-10-19)
+## [1.17.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.16.0...storybook@1.17.0) (2021-10-19)
 
 ### Features
 
 - **storybook:** update stories for icons and Typography LS-2041 ([f11cd9c](https://github.com/little-spoon-dev/design-system/commit/f11cd9c3a2169944b946e35e909d4773f40938fe))
 
-# [1.16.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.15.0...storybook@1.16.0) (2021-10-19)
+## [1.16.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.15.0...storybook@1.16.0) (2021-10-19)
 
 ### Features
 
 - **icons:** add filter icon LS-1943 ([33f0fd5](https://github.com/little-spoon-dev/design-system/commit/33f0fd51cce0c6bf9bcff07ea88ea400e6c2d994))
 
-# [1.15.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.14.0...storybook@1.15.0) (2021-10-18)
+## [1.15.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.14.0...storybook@1.15.0) (2021-10-18)
 
 ### Features
 
 - **icons:** add CloseIcon LS-1944 ([032e01c](https://github.com/little-spoon-dev/design-system/commit/032e01c02d738505851a16fdd33814853130ac25))
 - **tag:** add Tag LS-1944 ([0e3b1ed](https://github.com/little-spoon-dev/design-system/commit/0e3b1ed91189fa55f675e4e2d6514e6d22b7fb3b))
 
-# [1.14.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.13.0...storybook@1.14.0) (2021-10-15)
+## [1.14.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.13.0...storybook@1.14.0) (2021-10-15)
 
 ### Features
 
 - **checkbox:** add checkbox to design-system LS-1945 ([44a7ab2](https://github.com/little-spoon-dev/design-system/commit/44a7ab23ae3bfdc89ec3dfd3dffacfb0e675435c))
 
-# [1.13.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.12.1...storybook@1.13.0) (2021-10-14)
+## [1.13.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.12.1...storybook@1.13.0) (2021-10-14)
 
 ### Features
 
@@ -98,7 +98,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package storybook
 
-# [1.12.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.11.2...storybook@1.12.0) (2021-10-13)
+## [1.12.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.11.2...storybook@1.12.0) (2021-10-13)
 
 ### Features
 
@@ -112,7 +112,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package storybook
 
-# [1.11.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.10.2...storybook@1.11.0) (2021-10-13)
+## [1.11.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.10.2...storybook@1.11.0) (2021-10-13)
 
 ### Features
 
@@ -128,7 +128,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package storybook
 
-# [1.10.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.9.0...storybook@1.10.0) (2021-10-04)
+## [1.10.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.9.0...storybook@1.10.0) (2021-10-04)
 
 ### Features
 
@@ -136,20 +136,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **storybook:** group theme stories and render color hex LS-1868 ([0573bd0](https://github.com/little-spoon-dev/design-system/commit/0573bd0cd24770aae8def787bcfa20d825d0d510))
 - **storybook:** improve Divider stories LS-1868 ([8d4d572](https://github.com/little-spoon-dev/design-system/commit/8d4d572192b42dc55841d85917faa1bf58c4e284))
 
-# [1.9.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.8.0...storybook@1.9.0) (2021-09-30)
+## [1.9.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.8.0...storybook@1.9.0) (2021-09-30)
 
 ### Features
 
 - **divider-curve:** add divider curve variants to design system LS-1842 ([b78d397](https://github.com/little-spoon-dev/design-system/commit/b78d397b586aa55145f310c42bb7992426f69e61))
 - **divider:** update package name to divider, refactor SVG file & variant prop ([3155d97](https://github.com/little-spoon-dev/design-system/commit/3155d979764e142cf8cf22da775d1be94a50a27a))
 
-# [1.8.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.7.0...storybook@1.8.0) (2021-09-27)
+## [1.8.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.7.0...storybook@1.8.0) (2021-09-27)
 
 ### Features
 
 - **storybook:** add button stories for link and click LS-1777 ([f219ed7](https://github.com/little-spoon-dev/design-system/commit/f219ed7856e39cf8cb8a6035eea876cb240e79c6))
 
-# [1.7.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.6.2...storybook@1.7.0) (2021-09-27)
+## [1.7.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.6.2...storybook@1.7.0) (2021-09-27)
 
 ### Features
 

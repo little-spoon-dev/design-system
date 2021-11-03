@@ -183,7 +183,7 @@ yarn test --scope=@littlespoon/button
 Test your package in another app by installing the local package:
 
 ```sh
-yarn add file:path/to/design-system/packages/package-name
+yarn add file:<path>/design-system/packages/<package>
 ```
 
 The following command installs button when design-system is found in the `$HOME` directory:

@@ -61,6 +61,7 @@ export const DeletableTag = styled.div<TagProps>`
   ${getSizeCss}
   font-family: ${primary.family};
   display: inline-flex;
+  justify-content: space-between;
   align-items: center;
   padding: 0.6rem 0.6rem;
   background-color: ${secondary.secondaryNeutralGrey.grey100()};
@@ -70,8 +71,7 @@ export const DeletableTag = styled.div<TagProps>`
 
 export const Button = styled.button`
   background-color: ${secondary.secondaryNeutralGrey.grey100()};
-  padding-right: 0.2rem;
-  padding-top: 0.2rem;
+  padding: 0.2rem 0.2rem 0 0.8rem;
   border: none;
 `
 

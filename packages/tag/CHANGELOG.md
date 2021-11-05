@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/tag@1.1.5...@littlespoon/tag@1.2.0) (2021-11-05)
+
+### Features
+
+- **tag:** add padding between text and icon LS-2201 ([e346a12](https://github.com/little-spoon-dev/design-system/commit/e346a12e0c345088fd291865891cc6e4b09f3b74))
+
 ## [1.1.5](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/tag@1.1.4...@littlespoon/tag@1.1.5) (2021-10-28)
 
 **Note:** Version bump only for package @littlespoon/tag

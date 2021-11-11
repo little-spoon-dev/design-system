@@ -1,58 +1,67 @@
 import type React from 'react'
 
-import { CheckedBoxIcon, UncheckedBoxIcon } from './icons'
+import { checkedIcon, uncheckedIcon } from './icons'
 import { CheckboxGroupWrapper, CheckboxLabel, CheckboxWrapper, Input } from './styled'
 
 export interface CheckboxGroupProps extends React.HTMLAttributes<HTMLElement> {
-  /**
-   * Component content
-   */
-  children?: React.ReactNode
-
   /**
    * Determines whether children are rendered horizontally or vertically
    */
   horizontal?: boolean
 }
 
-export function CheckboxGroup(props: CheckboxGroupProps): React.ReactElement {
-  return <CheckboxGroupWrapper {...props} />
-}
-
-export interface CheckboxProps extends React.HTMLAttributes<HTMLElement> {
+export interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
   /**
-   * Component content
+   * Component content.
    */
   children?: React.ReactNode
 
   /**
-   * Determines whether the checkbox is interactable
+   * If true, the component is checked.
    */
-  disabled?: boolean
+  checked?: boolean
 
   /**
-   * Determines whether the checkbox is checked by default
+   * Callback fired when the state is changed.
    */
-  checked: boolean
-
-  /**
-   * Handler when checkbox state is changed
-   */
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-export function Checkbox(props: CheckboxProps): React.ReactElement {
+export interface CheckboxLabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
+  /**
+   * If true, the component is checked.
+   */
+  checked?: boolean
+
+  /**
+   * If true, the component is disabled.
+   */
+  disabled?: boolean
+}
+
+export function CheckboxGroup(props: CheckboxGroupProps): React.ReactElement {
+  return <CheckboxGroupWrapper {...props} />
+}
+
+export function Checkbox({
+  children,
+  checked,
+  disabled,
+  onChange,
+  ...other
+}: CheckboxProps): React.ReactElement {
   return (
-    <CheckboxWrapper className={props.className}>
-      <CheckboxLabel disabled={props.disabled} checked={props.checked}>
+    <CheckboxWrapper>
+      <CheckboxLabel checked={checked} disabled={disabled}>
         <Input
           type="checkbox"
-          checked={props.checked}
-          onChange={props.disabled ? undefined : props.onChange}
-          disabled={props.disabled}
+          checked={checked}
+          disabled={disabled}
+          onChange={onChange}
+          {...other}
         />
-        {props.checked ? <CheckedBoxIcon /> : <UncheckedBoxIcon />}
-        {props.children}
+        {checked ? checkedIcon : uncheckedIcon}
+        {children}
       </CheckboxLabel>
     </CheckboxWrapper>
   )

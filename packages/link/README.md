@@ -20,6 +20,38 @@ npm install @littlespoon/link --save
 
 ## Usage
 
+Import component:
+
 ```tsx
 import Link from '@littlespoon/link'
+```
+
+Render link:
+
+```tsx
+<Link href="#">Text</Link>
+```
+
+Render link with underline on hover:
+
+```tsx
+<Link href="#" underline="hover">
+  Text
+</Link>
+```
+
+Render link with no underline:
+
+```tsx
+<Link href="#" underline="none">
+  Text
+</Link>
+```
+
+Render external link:
+
+```tsx
+<Link href="https://www.littlespoon.com/" target="_blank">
+  Text
+</Link>
 ```

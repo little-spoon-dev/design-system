@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/checkbox@1.2.1...@littlespoon/checkbox@1.2.2) (2021-11-12)
+
+### Bug Fixes
+
+- **checkbox:** fix Checkbox focus state and improve icons LS-2304 ([c7585e1](https://github.com/little-spoon-dev/design-system/commit/c7585e1e719e3bf077ec1d139d4cf74ef4f2b8df))
+
 ## [1.2.1](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/checkbox@1.2.0...@littlespoon/checkbox@1.2.1) (2021-10-29)
 
 ### Bug Fixes

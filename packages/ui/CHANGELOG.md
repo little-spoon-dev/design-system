@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.8](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.13.7...@littlespoon/ui@1.13.8) (2021-11-12)
+
+**Note:** Version bump only for package @littlespoon/ui
+
 ## [1.13.7](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.13.6...@littlespoon/ui@1.13.7) (2021-11-05)
 
 **Note:** Version bump only for package @littlespoon/ui

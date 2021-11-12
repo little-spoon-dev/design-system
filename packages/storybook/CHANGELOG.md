@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.25.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.24.1...storybook@1.25.0) (2021-11-12)
+
+### Features
+
+- **storybook:** add Link stories LS-2202 ([ea0ad77](https://github.com/little-spoon-dev/design-system/commit/ea0ad7751007cff4a6c887e5f085fcd81db3a0bc))
+
 ## [1.24.1](https://github.com/little-spoon-dev/design-system/compare/storybook@1.24.0...storybook@1.24.1) (2021-11-12)
 
 **Note:** Version bump only for package storybook

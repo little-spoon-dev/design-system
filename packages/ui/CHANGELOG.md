@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.13.8...@littlespoon/ui@1.14.0) (2021-11-12)
+
+### Features
+
+- **ui:** export Link LS-2202 ([d29fcdf](https://github.com/little-spoon-dev/design-system/commit/d29fcdfcdd54dd7928eaf52f9a1e89e8eb2472bc))
+
 ## [1.13.8](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.13.7...@littlespoon/ui@1.13.8) (2021-11-12)
 
 **Note:** Version bump only for package @littlespoon/ui

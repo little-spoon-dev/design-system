@@ -9,6 +9,7 @@ Object {
   "Checkbox": [Function],
   "CheckboxGroup": [Function],
   "Divider": [Function],
+  "Link": [Function],
   "Tag": [Function],
   "Typography": [Function],
   "theme": Object {

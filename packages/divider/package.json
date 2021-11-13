@@ -9,6 +9,7 @@
     "clean": "rm -rf coverage exports lib",
     "lint": "eslint .",
     "lint:fix": "yarn lint --fix",
+    "lint:tsc": "tsc --noEmit",
     "test": "jest",
     "test:watch": "jest --watch"
   },

@@ -7,8 +7,9 @@
     "build": "yarn copy-changelog && build-storybook",
     "clean": "rm -rf storybook-static src/stories/changelog",
     "copy-changelog": "mkdir -p src/stories/changelog && ts-node scripts/copy-changelog",
-    "lint": "eslint . && tsc --noEmit",
+    "lint": "eslint . && yarn lint:tsc",
     "lint:fix": "eslint . --fix",
+    "lint:tsc": "tsc --noEmit",
     "storybook": "start-storybook -p 6006"
   },
   "dependencies": {

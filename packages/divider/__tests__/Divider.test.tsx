@@ -13,7 +13,6 @@ describe('accessibility', () => {
 describe('when no props are passed', () => {
   it('should render when no props are passed', () => {
     render(<Divider />)
-    // @ts-ignore
     expect(screen.getByRole('separator')).toBeInTheDocument()
   })
 })
@@ -21,7 +20,6 @@ describe('when no props are passed', () => {
 describe('when passed variant props', () => {
   it('renders inverted variant', () => {
     render(<Divider inverted />)
-    // @ts-ignore
     expect(screen.getByRole('separator')).toBeInTheDocument()
   })
 })

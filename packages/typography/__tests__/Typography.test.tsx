@@ -52,7 +52,6 @@ describe('with props.as', () => {
       render(<Typography as={element}>{element}</Typography>)
       if (element[0] === 'h') {
         expect(
-          // @ts-ignore
           screen.getByRole('heading', { level: Number(element[1]), name: element }),
         ).toBeInTheDocument()
       } else {
@@ -114,7 +113,6 @@ describe('with props.as and props.variant', () => {
         {children}
       </Typography>,
     )
-    // @ts-ignore
     expect(screen.getByRole('heading', { level: 1, name: children })).toBeInTheDocument()
   })
 })

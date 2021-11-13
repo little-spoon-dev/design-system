@@ -51,7 +51,6 @@ describe('with props.size', () => {
         <Breadcrumb active>Active</Breadcrumb>
       </Breadcrumbs>,
     )
-    // @ts-ignore
     expect(screen.getByRole('list')).toHaveStyle(`font-size: ${paragraph[size].fontSize}`)
   })
 

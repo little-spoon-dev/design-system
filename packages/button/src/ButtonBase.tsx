@@ -1,5 +1,5 @@
 import { informative50 } from '@littlespoon/theme/lib/colors/alert'
-import { blue30, blue60, blue80 } from '@littlespoon/theme/lib/colors/primary'
+import { brand30, brand60, brand80 } from '@littlespoon/theme/lib/colors/primary'
 import { grey10, grey20, grey40, grey70, grey80 } from '@littlespoon/theme/lib/colors/secondary'
 import { shadeBlack, shadeWhite } from '@littlespoon/theme/lib/colors/token'
 import { button, family, weight } from '@littlespoon/theme/lib/fonts/primary'
@@ -118,13 +118,13 @@ function getVariantCss(props: ButtonProps<'button'>): string {
        * {@link https://zeroheight.com/3ddd0f892/p/01a397-buttons/t/06560c}
        */
       case 'secondary':
-        backgroundColor = blue60()
+        backgroundColor = brand60()
         color = shadeBlack
         focusColor = color
         focusOutline = `${rem(0.2)} solid ${informative50()}`
-        hoverBackgroundColor = blue30()
+        hoverBackgroundColor = brand30()
         hoverColor = color
-        activeBackgroundColor = blue80()
+        activeBackgroundColor = brand80()
         activeColor = color
         break
 

@@ -1,7 +1,7 @@
 import theme, { colors as themeColors, fonts as themeFonts } from '../src/'
 import colors from '../src/colors'
 import primaryColor from '../src/colors/primary'
-import { blue60 } from '../src/colors/primary'
+import { brand60 } from '../src/colors/primary'
 import fonts from '../src/fonts'
 import primaryFont from '../src/fonts/primary'
 import { family } from '../src/fonts/primary'
@@ -20,9 +20,9 @@ describe('colors', () => {
     expect(theme.colors.primary).toBe(primaryColor)
   })
 
-  it('matches blue60', () => {
-    expect(theme.colors.primary.primaryBlue.blue60).toBe(blue60)
-    expect(blue60()).toBe('rgba(0,227,205,1)')
+  it('matches brand60', () => {
+    expect(theme.colors.primary.brand.brand60).toBe(brand60)
+    expect(brand60()).toBe('rgba(0,227,205,1)')
   })
 })
 

@@ -47,6 +47,18 @@ Object {
       },
     },
     "primary": Object {
+      "brand": Object {
+        "brand10": [Function],
+        "brand100": [Function],
+        "brand20": [Function],
+        "brand30": [Function],
+        "brand40": [Function],
+        "brand50": [Function],
+        "brand60": [Function],
+        "brand70": [Function],
+        "brand80": [Function],
+        "brand90": [Function],
+      },
       "primaryBlue": Object {
         "blue10": [Function],
         "blue100": [Function],

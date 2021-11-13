@@ -34,10 +34,10 @@ Large.args = {
 
 export const Fill = Template.bind({})
 Fill.args = {
-  fill: theme.colors.primary.primaryBlue.blue60(),
+  fill: theme.colors.primary.brand.brand60(),
 }
 
 export const Stroke = Template.bind({})
 Stroke.args = {
-  stroke: theme.colors.primary.primaryBlue.blue60(),
+  stroke: theme.colors.primary.brand.brand60(),
 }

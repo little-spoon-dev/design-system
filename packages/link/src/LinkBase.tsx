@@ -1,5 +1,5 @@
 import { informative50 } from '@littlespoon/theme/lib/colors/alert'
-import { blue80 } from '@littlespoon/theme/lib/colors/primary'
+import { brand80 } from '@littlespoon/theme/lib/colors/primary'
 import { grey70 } from '@littlespoon/theme/lib/colors/secondary'
 import { shadeBlack } from '@littlespoon/theme/lib/colors/token'
 import { family } from '@littlespoon/theme/lib/fonts/primary'
@@ -14,7 +14,7 @@ export const LinkBase = styled.a<LinkProps>`
   color: ${shadeBlack};
   font-family: ${family};
   &:visited {
-    color: ${blue80()};
+    color: ${brand80()};
   }
   &:hover {
     color: ${grey70()};

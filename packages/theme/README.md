@@ -25,7 +25,7 @@ Import theme:
 ```ts
 import theme from '@littlespoon/theme'
 
-theme.colors.primary.primaryBlue.blue60() // 'rgba(44,213,196,1)'
+theme.colors.primary.brand.brand60() // 'rgba(44,213,196,1)'
 ```
 
 Import colors:
@@ -33,15 +33,15 @@ Import colors:
 ```ts
 import colors from '@littlespoon/theme/lib/colors'
 
-colors.primary.primaryBlue.blue60() // 'rgba(44,213,196,1)'
+colors.primary.brand.brand60() // 'rgba(44,213,196,1)'
 ```
 
 Import color with alpha transparency:
 
 ```ts
-import { blue60 } from '@littlespoon/theme/lib/colors/primary'
+import { brand60 } from '@littlespoon/theme/lib/colors/primary'
 
-blue60(0.5) // 'rgba(44,213,196,0.5)'
+brand60(0.5) // 'rgba(44,213,196,0.5)'
 ```
 
 Import fonts:

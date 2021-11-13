@@ -1,7 +1,7 @@
 {
   "name": "storybook",
   "private": true,
-  "version": "1.25.0",
+  "version": "1.25.1",
   "description": "Little Spoon Storybook",
   "scripts": {
     "build": "yarn copy-changelog && build-storybook",
@@ -13,12 +13,12 @@
     "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
-    "@littlespoon/breadcrumbs": "1.2.4",
-    "@littlespoon/button": "1.6.0",
-    "@littlespoon/checkbox": "1.2.2",
-    "@littlespoon/divider": "1.1.1",
-    "@littlespoon/icons": "1.5.4",
-    "@littlespoon/theme": "1.11.0"
+    "@littlespoon/breadcrumbs": "1.2.5",
+    "@littlespoon/button": "1.6.1",
+    "@littlespoon/checkbox": "1.2.3",
+    "@littlespoon/divider": "1.1.2",
+    "@littlespoon/icons": "1.5.5",
+    "@littlespoon/theme": "1.11.1"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",

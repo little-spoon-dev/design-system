@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.6](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/breadcrumbs@1.2.5...@littlespoon/breadcrumbs@1.2.6) (2021-11-13)
+
+**Note:** Version bump only for package @littlespoon/breadcrumbs
+
 ## [1.2.5](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/breadcrumbs@1.2.4...@littlespoon/breadcrumbs@1.2.5) (2021-11-13)
 
 **Note:** Version bump only for package @littlespoon/breadcrumbs

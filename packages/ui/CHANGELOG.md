@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.14.1...@littlespoon/ui@1.15.0) (2021-11-13)
+
+### Features
+
+- **theme:** duplicate and rename primary color brand blue LS-2313 ([31d48b9](https://github.com/little-spoon-dev/design-system/commit/31d48b9aa8f1988d4be011fbe074a0eeb30eba54))
+
 ## [1.14.1](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.14.0...@littlespoon/ui@1.14.1) (2021-11-13)
 
 **Note:** Version bump only for package @littlespoon/ui

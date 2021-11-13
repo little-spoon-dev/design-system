@@ -8,6 +8,7 @@
     "create-package": "ts-node scripts/create-package",
     "lint": "lerna run lint",
     "lint:fix": "lerna run lint:fix --parallel",
+    "lint:tsc": "lerna run lint:tsc --parallel",
     "postinstall": "husky install",
     "storybook": "lerna run storybook",
     "test": "lerna run test -- --colors"

@@ -9,6 +9,7 @@
     "clean": "rm -rf coverage && find . \\( -name '*.js' -o -name '*.js.map' -o -name '*.js.flow' -o -name '*.d.ts*' \\) -type f -delete",
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "yarn lint --fix",
+    "lint:tsc": "tsc --noEmit",
     "test": "jest",
     "test:watch": "jest --watch"
   },

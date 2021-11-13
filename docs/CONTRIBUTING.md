@@ -8,6 +8,7 @@
   - [`yarn create-package`](#yarn-create-package)
   - [`yarn lint`](#yarn-lint)
   - [`yarn lint:fix`](#yarn-lintfix)
+  - [`yarn lint:tsc`](#yarn-linttsc)
   - [`yarn storybook`](#yarn-storybook)
   - [`yarn test`](#yarn-test)
 - [Development](#development)
@@ -140,6 +141,26 @@ For example:
 
 ```sh
 yarn lint:fix --scope=@littlespoon/button
+```
+
+### `yarn lint:tsc`
+
+Type check all packages:
+
+```sh
+yarn lint:tsc
+```
+
+Type check single package:
+
+```sh
+yarn lint:tsc --scope=<packageName>
+```
+
+For example:
+
+```sh
+yarn lint:tsc --scope=@littlespoon/button
 ```
 
 ### `yarn storybook`

@@ -11,7 +11,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package storybook
 
-# [1.25.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.24.1...storybook@1.25.0) (2021-11-12)
+## [1.25.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.24.1...storybook@1.25.0) (2021-11-12)
 
 ### Features
 
@@ -21,7 +21,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package storybook
 
-# [1.24.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.23.2...storybook@1.24.0) (2021-11-03)
+## [1.24.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.23.2...storybook@1.24.0) (2021-11-03)
 
 ### Features
 

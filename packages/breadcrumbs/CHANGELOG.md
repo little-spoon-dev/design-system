@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.7](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/breadcrumbs@1.2.6...@littlespoon/breadcrumbs@1.2.7) (2021-11-18)
+
+### Bug Fixes
+
+- **breadcrumbs:** match breadcrumb styling to updated link styling LS-2353 ([bd6042a](https://github.com/little-spoon-dev/design-system/commit/bd6042a981f20303a6d1541d14d4de065d74cada))
+
 ## [1.2.6](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/breadcrumbs@1.2.5...@littlespoon/breadcrumbs@1.2.6) (2021-11-13)
 
 **Note:** Version bump only for package @littlespoon/breadcrumbs

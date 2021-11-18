@@ -1,6 +1,6 @@
 {
   "name": "@littlespoon/ui",
-  "version": "1.15.0",
+  "version": "1.15.1",
   "description": "Little Spoon UI",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@littlespoon/box": "1.2.2",
-    "@littlespoon/breadcrumbs": "1.2.6",
+    "@littlespoon/breadcrumbs": "1.2.7",
     "@littlespoon/button": "1.6.2",
     "@littlespoon/checkbox": "1.2.4",
     "@littlespoon/divider": "1.1.2",

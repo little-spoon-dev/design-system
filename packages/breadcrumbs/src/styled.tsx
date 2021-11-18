@@ -1,6 +1,4 @@
-import { informative50 } from '@littlespoon/theme/lib/colors/alert'
-import { visitedLinkPurple } from '@littlespoon/theme/lib/colors/secondary'
-import { shadeBlack } from '@littlespoon/theme/lib/colors/token'
+import { colors } from '@littlespoon/theme/lib'
 import { family, paragraph, weight } from '@littlespoon/theme/lib/fonts/primary'
 import styled from 'styled-components'
 
@@ -8,7 +6,7 @@ import type { BreadcrumbsProps } from './Breadcrumbs'
 
 const defaultStyles = `
   font-family: ${family};
-  color: ${shadeBlack};
+  color: ${colors.token.shadeBlack};
 `
 
 /**
@@ -57,12 +55,16 @@ export const BreadcrumbItem = styled.li`
     text-decoration: none;
 
     &:focus {
-      outline: 0.2rem solid ${informative50()};
+      outline: 0.2rem solid ${colors.alert.informative.informative50()};
       outline-offset: 0.2rem;
     }
 
+    &:hover {
+      color: ${colors.secondary.secondaryNeutralGrey.grey80()};
+    }
+
     &:visited {
-      color: ${visitedLinkPurple()};
+      color: ${colors.primary.primaryBlue.blue80()};
     }
   }
 `

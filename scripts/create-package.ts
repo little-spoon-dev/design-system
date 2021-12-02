@@ -220,11 +220,9 @@ const DEFAULT_COMPONENT_NAME = 'Component'
   addToReadme(packageName, directory, componentName)
 
   /**
-   * Install, clean, build.
+   * Install and bootstrap.
    */
   exec('yarn')
-  exec(`npx lerna run --scope=${packageName} clean`)
-  exec(`npx lerna run --scope=${packageName} build`)
 })()
 
 /**
@@ -319,8 +317,7 @@ export * from '${packageName}'
   uiIndex = uiIndex.replace('export default {', `export default { ${componentOrDirectory},`)
   writeFileSync(uiIndexPath, uiIndex)
 
-  exec(`npx lerna run --scope=${packageName} build`)
-  exec(`npx lerna run --scope=@littlespoon/ui build`)
+  exec('yarn build')
   exec('npx lerna run --scope=@littlespoon/ui lint:fix')
   exec('npx lerna run --scope=@littlespoon/ui test -- --updateSnapshot')
 }

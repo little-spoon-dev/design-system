@@ -146,7 +146,7 @@ const DEFAULT_COMPONENT_NAME = 'Component'
    */
   console.log(`Replacing string '${templateName}' with '${packageName}' in '${path.directory}'...`)
   exec(
-    `grep -rl '${templateName}' '${path.directory}' | xargs sed -i '' -e 's|${templateName}|${packageName}|g'`,
+    `LC_CTYPE=C && LANG=C && grep -rl '${templateName}' '${path.directory}' | xargs sed -i '' -e 's|${templateName}|${packageName}|g'`,
   )
 
   /**
@@ -220,11 +220,9 @@ const DEFAULT_COMPONENT_NAME = 'Component'
   addToReadme(packageName, directory, componentName)
 
   /**
-   * Install, clean, build.
+   * Install and bootstrap.
    */
   exec('yarn')
-  exec(`npx lerna run --scope=${packageName} clean`)
-  exec(`npx lerna run --scope=${packageName} build`)
 })()
 
 /**
@@ -319,8 +317,7 @@ export * from '${packageName}'
   uiIndex = uiIndex.replace('export default {', `export default { ${componentOrDirectory},`)
   writeFileSync(uiIndexPath, uiIndex)
 
-  exec(`npx lerna run --scope=${packageName} build`)
-  exec(`npx lerna run --scope=@littlespoon/ui build`)
+  exec('npx lerna run --ignore=storybook build')
   exec('npx lerna run --scope=@littlespoon/ui lint:fix')
   exec('npx lerna run --scope=@littlespoon/ui test -- --updateSnapshot')
 }

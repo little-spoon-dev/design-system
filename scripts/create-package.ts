@@ -317,7 +317,7 @@ export * from '${packageName}'
   uiIndex = uiIndex.replace('export default {', `export default { ${componentOrDirectory},`)
   writeFileSync(uiIndexPath, uiIndex)
 
-  exec('yarn build')
+  exec('npx lerna run --ignore=storybook build')
   exec('npx lerna run --scope=@littlespoon/ui lint:fix')
   exec('npx lerna run --scope=@littlespoon/ui test -- --updateSnapshot')
 }

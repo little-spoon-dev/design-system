@@ -146,7 +146,7 @@ const DEFAULT_COMPONENT_NAME = 'Component'
    */
   console.log(`Replacing string '${templateName}' with '${packageName}' in '${path.directory}'...`)
   exec(
-    `grep -rl '${templateName}' '${path.directory}' | xargs sed -i '' -e 's|${templateName}|${packageName}|g'`,
+    `LC_CTYPE=C && LANG=C && grep -rl '${templateName}' '${path.directory}' | xargs sed -i '' -e 's|${templateName}|${packageName}|g'`,
   )
 
   /**

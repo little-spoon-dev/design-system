@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/breadcrumbs@1.2.7...@littlespoon/breadcrumbs@1.3.0) (2022-04-12)
+
+### Features
+
+- **all:** add react 18 to package.json peerDependencies ([010aeb4](https://github.com/little-spoon-dev/design-system/commit/010aeb4320c92dd1747093904b0d82c7743eb8e8))
+
 ## [1.2.7](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/breadcrumbs@1.2.6...@littlespoon/breadcrumbs@1.2.7) (2021-11-18)
 
 ### Bug Fixes

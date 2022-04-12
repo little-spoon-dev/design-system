@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.25.4](https://github.com/little-spoon-dev/design-system/compare/storybook@1.25.3...storybook@1.25.4) (2022-04-12)
+
+**Note:** Version bump only for package storybook
+
 ## [1.25.3](https://github.com/little-spoon-dev/design-system/compare/storybook@1.25.2...storybook@1.25.3) (2021-11-18)
 
 **Note:** Version bump only for package storybook

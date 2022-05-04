@@ -1,8 +1,10 @@
 import { resolve } from 'path'
 
+// eslint-disable-next-line tsdoc/syntax
 /** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
 export default {
   collectCoverage: true,
+  collectCoverageFrom: ['src/**/*.{ts,tsx}'],
   coverageThreshold: {
     global: {
       branches: 100,

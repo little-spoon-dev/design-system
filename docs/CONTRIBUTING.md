@@ -228,8 +228,8 @@ To prevent race conditions with Lerna release, don't merge PRs until after the p
 
 ### Canary
 
-Release a canary version for testing by running the [publish](https://github.com/little-spoon-dev/design-system/actions/workflows/publish.yml) workflow with a branch other than `master`.
+Release a canary version for testing by running the [publish](https://github.com/little-spoon-dev/design-system/actions/workflows/publish.yml) workflow with a branch other than `main`.
 
 ### Dry Run
 
-See the to-be-updated versions by running the [publish](https://github.com/little-spoon-dev/design-system/actions/workflows/publish.yml) workflow and change `N` to `y` under **Dry run?**.
+See the to-be-updated versions by running the [publish](https://github.com/little-spoon-dev/design-system/actions/workflows/publish.yml) workflow and enable **Dry run**.

@@ -31,7 +31,7 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-tsdoc": "^0.2.14",
     "flowgen": "^1.17.0",
-    "husky": "^7.0.4",
+    "husky": "^8.0.1",
     "inquirer": "^8.2.2",
     "jest": "^27.5.1",
     "jest-axe": "^6.0.0",

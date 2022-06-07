@@ -7929,9 +7929,9 @@ flatted@^3.1.0:
   integrity sha512-JaTY/wtrcSyvXJl4IMFHPKyFur1sE9AUqc0QnhOaJ0CxHtAoIV8pYDzeEfAaNEtGkOfq4gr3LBFmdXW5mOQFnA==
 
 flowgen@^1.17.0:
-  version "1.18.0"
-  resolved "https://registry.yarnpkg.com/flowgen/-/flowgen-1.18.0.tgz#8e6e95480f647d225f32843be8fa6c0073676e06"
-  integrity sha512-braO/CMX36S19MnhwRbp0R79KpEFn+c8/zPzV0yPtk2jmdkU6IaaOB6yvRmrrkf+gD8HaH1AUIzBwJ+9+AtpjQ==
+  version "1.20.0"
+  resolved "https://registry.yarnpkg.com/flowgen/-/flowgen-1.20.0.tgz#268b49506429c5da765da5cd49ff231fa6465fe7"
+  integrity sha512-7ezkbL4hKBHzgVYzmwibzGcBwu4zA47I+eP4U1U0HAG4F4p7xIYLvuEmzfk5xKzBXnsr42d/ZgMM0Le84MeS2A==
   dependencies:
     "@babel/code-frame" "^7.16.7"
     "@babel/highlight" "^7.16.7"

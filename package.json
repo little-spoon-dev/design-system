@@ -32,7 +32,7 @@
     "eslint-plugin-tsdoc": "^0.2.14",
     "flowgen": "^1.17.0",
     "husky": "^8.0.1",
-    "inquirer": "^8.2.2",
+    "inquirer": "^9.0.0",
     "jest": "^27.5.1",
     "jest-axe": "^6.0.0",
     "lerna": "^5.0.0",

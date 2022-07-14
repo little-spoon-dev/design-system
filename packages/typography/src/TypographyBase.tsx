@@ -11,6 +11,7 @@ import {
   heading,
   weight as secondaryWeight,
 } from '@littlespoon/theme/lib/fonts/secondary'
+import { getStyle } from '@littlespoon/theme/lib/style'
 import { rem } from '@littlespoon/theme/lib/utils'
 import styled from 'styled-components'
 
@@ -24,6 +25,7 @@ export const TypographyBase = styled.p<TypographyProps>`
   text-transform: ${(props) => props.uppercase && 'uppercase'};
   ${getVariantCss}
   ${getResponsiveCss}
+  ${getStyle}
 `
 
 /**

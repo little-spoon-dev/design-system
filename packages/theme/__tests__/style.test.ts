@@ -3,7 +3,7 @@ import { getStyle } from '../src/style'
 
 describe('getStyle', () => {
   it.each([{}, { sx: undefined }, { sx: null }, { foo: 'bar' }])(
-    'returns style for %p',
+    'returns empty style for %p',
     (style) => {
       expect(getStyle(style)).toEqual({})
     },

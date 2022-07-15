@@ -1,3 +1,4 @@
+import type { StyleProps } from '@littlespoon/theme/lib/style'
 import type React from 'react'
 
 import { Bold } from './Bold'
@@ -5,7 +6,7 @@ import { TypographyBase } from './TypographyBase'
 
 type ElementType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p'
 
-export interface TypographyProps {
+export interface TypographyProps extends StyleProps {
   /**
    * The content of the component.
    */
@@ -52,6 +53,9 @@ export interface TypographyProps {
   center?: boolean
 }
 
+/**
+ * Typography
+ */
 export default function Typography({
   bold,
   extraBold,

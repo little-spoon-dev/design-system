@@ -1,10 +1,13 @@
-import { getStyle } from '../src/BoxBase'
+import breakpoints from '../src/breakpoints'
+import { getStyle } from '../src/style'
 
 describe('getStyle', () => {
-  it('returns empty style', () => {
-    expect(getStyle({ sx: undefined })).toEqual({})
-    expect(getStyle({ sx: null })).toEqual({})
-  })
+  it.each([{}, { sx: undefined }, { sx: null }, { foo: 'bar' }])(
+    'returns empty style for %p',
+    (style) => {
+      expect(getStyle(style)).toEqual({})
+    },
+  )
 
   it('returns invalid style', () => {
     const sx = {
@@ -46,6 +49,21 @@ describe('getStyle', () => {
     expect(getStyle({ sx })).toEqual(sx)
   })
 
+  it('returns style with multiple breakpoints', () => {
+    expect(getStyle({ sx: { xs: { color: 'blue', height: 42 }, mobile: { border: 0 } } }))
+      .toMatchInlineSnapshot(`
+      Object {
+        "@media (min-width: 0px)": Object {
+          "border": 0,
+        },
+        "@media (min-width: 375px)": Object {
+          "color": "blue",
+          "height": 42,
+        },
+      }
+    `)
+  })
+
   it('replaces breakpoint once', () => {
     const sx = {
       tablet: {
@@ -64,12 +82,7 @@ describe('getStyle', () => {
     `)
   })
 
-  it('does not replace invalid breakpoint', () => {
-    const sx = {
-      up: {
-        marginBottom: '1rem',
-      },
-    }
-    expect(getStyle({ sx })).toEqual(sx)
+  it.each(Object.entries(breakpoints))('returns style for %p', (key) => {
+    expect(getStyle({ sx: { [key]: { color: 'blue' } } })).toMatchSnapshot()
   })
 })

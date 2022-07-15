@@ -130,6 +130,26 @@ Center.args = {
   center: true,
 }
 
+export const Style = Template.bind({})
+Style.args = {
+  children: 'Styled text',
+  sx: {
+    mobile: {
+      fontSize: '1rem',
+    },
+    tablet: {
+      fontSize: '2rem',
+    },
+    desktop: {
+      fontSize: '3rem',
+    },
+    xxl: {
+      fontSize: '4rem',
+    },
+    fontSize: '5rem',
+  },
+}
+
 export const NoMargin = TemplateAll.bind({})
 NoMargin.args = {
   noMargin: true,

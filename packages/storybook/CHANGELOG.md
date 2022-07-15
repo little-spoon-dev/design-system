@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.26.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.25.4...storybook@1.26.0) (2022-07-15)
+
+### Features
+
+- **storybook:** add style prop sx to Typography stories ([7ae668c](https://github.com/little-spoon-dev/design-system/commit/7ae668ca3a19142b32f3f2de6deb29853c7ed2e3))
+
 ## [1.25.4](https://github.com/little-spoon-dev/design-system/compare/storybook@1.25.3...storybook@1.25.4) (2022-04-12)
 
 **Note:** Version bump only for package storybook

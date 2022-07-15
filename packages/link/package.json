@@ -1,6 +1,6 @@
 {
   "name": "@littlespoon/link",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Little Spoon link",
   "main": "lib/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@littlespoon/theme": "1.12.0"
+    "@littlespoon/theme": "1.13.0"
   },
   "peerDependencies": {
     "react": "17 || 18",

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.12.0...@littlespoon/theme@1.13.0) (2022-07-15)
+
+### Features
+
+- **theme:** add style prop sx ([e975478](https://github.com/little-spoon-dev/design-system/commit/e975478b5c49ab42f78a237cc0ecd4b686cb9d91))
+
 ## [1.12.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.11.1...@littlespoon/theme@1.12.0) (2021-11-13)
 
 ### Features

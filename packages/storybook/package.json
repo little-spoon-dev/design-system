@@ -4,7 +4,7 @@
   "version": "1.26.0",
   "description": "Little Spoon Storybook",
   "scripts": {
-    "build": "yarn copy-changelog && build-storybook",
+    "build": "yarn copy-changelog && NODE_OPTIONS=--openssl-legacy-provider build-storybook",
     "clean": "rm -rf storybook-static src/stories/changelog",
     "copy-changelog": "mkdir -p src/stories/changelog && ts-node scripts/copy-changelog",
     "lint": "eslint . && yarn lint:tsc",

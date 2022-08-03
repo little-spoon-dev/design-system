@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.26.2](https://github.com/little-spoon-dev/design-system/compare/storybook@1.26.1...storybook@1.26.2) (2022-08-03)
+
+### Bug Fixes
+
+- **storybook:** set NODE_OPTIONS to openssl-legacy-provider ([c976899](https://github.com/little-spoon-dev/design-system/commit/c976899d5642cc58f85a5d70ac286ca06b73d94c))
+
 ## [1.26.1](https://github.com/little-spoon-dev/design-system/compare/storybook@1.26.0...storybook@1.26.1) (2022-07-30)
 
 **Note:** Version bump only for package storybook

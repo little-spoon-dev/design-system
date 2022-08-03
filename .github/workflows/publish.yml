@@ -18,10 +18,14 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Use Node.js
+      - name: Read .nvmrc
+        run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
+        id: nvm
+
+      - name: Use Node.js ${{ steps.nvm.outputs.NODE_VERSION }}
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
           registry-url: 'https://registry.npmjs.org'
 
       - name: Configure Git user

@@ -12,6 +12,7 @@ Object {
   "Link": [Function],
   "Tag": [Function],
   "Typography": [Function],
+  "label": [Function],
   "theme": Object {
     "breakpoints": Object {
       "desktop": 1000,

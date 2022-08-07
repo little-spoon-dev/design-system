@@ -1,0 +1,36 @@
+{
+  "name": "label",
+  "version": "1.0.0",
+  "description": "Little Spoon label",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:flowtypes": "flowgen lib && rm -rf lib && mv exports lib && yarn build",
+    "clean": "rm -rf coverage exports lib",
+    "lint": "eslint .",
+    "lint:fix": "yarn lint --fix",
+    "lint:tsc": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/little-spoon-dev/design-system.git",
+    "directory": "packages/label"
+  },
+  "bugs": {
+    "url": "https://github.com/little-spoon-dev/design-system/issues"
+  },
+  "keywords": [
+    "littlespoon",
+    "label"
+  ],
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "UNLICENSED"
+}

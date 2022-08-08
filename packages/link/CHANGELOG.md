@@ -7,7 +7,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @littlespoon/link
 
-# [1.2.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/link@1.1.2...@littlespoon/link@1.2.0) (2022-04-12)
+## [1.2.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/link@1.1.2...@littlespoon/link@1.2.0) (2022-04-12)
 
 ### Features
 

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/divider@1.2.0...@littlespoon/divider@1.2.1) (2022-08-08)
+
+**Note:** Version bump only for package @littlespoon/divider
+
 ## [1.2.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/divider@1.1.2...@littlespoon/divider@1.2.0) (2022-04-12)
 
 ### Features

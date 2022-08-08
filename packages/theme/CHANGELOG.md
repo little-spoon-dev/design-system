@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.13.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.12.0...@littlespoon/theme@1.13.0) (2022-07-15)
+## [1.13.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.12.0...@littlespoon/theme@1.13.0) (2022-07-15)
 
 ### Features
 

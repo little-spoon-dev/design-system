@@ -7,7 +7,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @littlespoon/tag
 
-# [1.3.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/tag@1.2.2...@littlespoon/tag@1.3.0) (2022-04-12)
+## [1.3.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/tag@1.2.2...@littlespoon/tag@1.3.0) (2022-04-12)
 
 ### Features
 

@@ -13,7 +13,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package storybook
 
-# [1.26.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.25.4...storybook@1.26.0) (2022-07-15)
+## [1.26.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.25.4...storybook@1.26.0) (2022-07-15)
 
 ### Features
 

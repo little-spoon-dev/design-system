@@ -3,13 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.5.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/typography@1.4.0...@littlespoon/typography@1.5.0) (2022-07-15)
+## [1.5.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/typography@1.4.0...@littlespoon/typography@1.5.0) (2022-07-15)
 
 ### Features
 
 - **typography:** add style prop sx ([be725e6](https://github.com/little-spoon-dev/design-system/commit/be725e690c01db83caf0b3e3abbc6ebf12730ce4))
 
-# [1.4.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/typography@1.3.3...@littlespoon/typography@1.4.0) (2022-04-12)
+## [1.4.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/typography@1.3.3...@littlespoon/typography@1.4.0) (2022-04-12)
 
 ### Features
 

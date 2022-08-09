@@ -1,19 +1,11 @@
-import {
-  critical20,
-  informative20,
-  success20,
-  warning20,
-} from '@littlespoon/theme/lib/colors/alert'
-import { brand60 } from '@littlespoon/theme/lib/colors/primary'
-import { gold60, limeGreen60, peach60, pink60 } from '@littlespoon/theme/lib/colors/secondary'
-import { shadeBlack } from '@littlespoon/theme/lib/colors/token'
 import { family, weight } from '@littlespoon/theme/lib/fonts/primary'
 import { rem } from '@littlespoon/theme/lib/utils'
+import { allColors } from '@littlespoon/theme/src/colors'
 import styled from 'styled-components'
 
 import type { LabelProps } from './Label'
 
-export const LabelBase = styled.label<LabelProps<'label'>>`
+export const LabelBase = styled.label<LabelProps>`
   align-items: center;
   border-radius: 2px;
   border: 0;
@@ -25,15 +17,15 @@ export const LabelBase = styled.label<LabelProps<'label'>>`
   text-transform: uppercase;
   width: fit-content;
   line-height: 150%;
-  color: ${shadeBlack};
+  color: ${allColors.shadeBlack};
+  ${getBackgroundColor}
   ${getSizeCss}
-  ${getVariantCss}
 `
 
 /**
  * Gets size styles.
  */
-function getSizeCss(props: LabelProps<'label'>): string {
+function getSizeCss(props: LabelProps): string {
   const { size } = props
   if (!size) {
     return ''
@@ -70,82 +62,22 @@ function getSizeCss(props: LabelProps<'label'>): string {
 }
 
 /**
- * Gets variant styles.
+ * Gets background color.
  */
-function getVariantCss(props: LabelProps<'label'>): string {
-  const { variant } = props
+function getBackgroundColor(props: LabelProps) {
+  const { color } = props
+  let bgColor
 
-  let backgroundColor = ''
-
-  /**
-   * {@link https://zeroheight.com/3ddd0f892/p/01a397-labels/t/190120}
-   */
-  switch (variant) {
-    /**
-     * {@link https://zeroheight.com/3ddd0f892/p/336556-label/t/07ca52}
-     */
-    case 'success':
-      backgroundColor = success20()
-      break
-
-    /**
-     * {@link https://zeroheight.com/3ddd0f892/p/336556-label/t/07ca52}
-     */
-    case 'warning':
-      backgroundColor = warning20()
-      break
-
-    /**
-     * {@link https://zeroheight.com/3ddd0f892/p/336556-label/t/07ca52}
-     */
-    case 'critical':
-      backgroundColor = critical20()
-      break
-
-    /**
-     * {@link https://zeroheight.com/3ddd0f892/p/336556-label/t/07ca52}
-     */
-    case 'informative':
-      backgroundColor = informative20()
-      break
-
-    /**
-     * {@link https://zeroheight.com/3ddd0f892/p/336556-label/t/657ada}
-     */
-    case 'BLW':
-      backgroundColor = pink60()
-      break
-
-    /**
-     * {@link https://zeroheight.com/3ddd0f892/p/336556-label/t/657ada}
-     */
-    case 'most-popular':
-      backgroundColor = brand60()
-      break
-
-    /**
-     * {@link https://zeroheight.com/3ddd0f892/p/336556-label/t/657ada}
-     */
-    case 'picky-eater-fave':
-      backgroundColor = peach60()
-      break
-
-    /**
-     * {@link https://zeroheight.com/3ddd0f892/p/336556-label/t/657ada}
-     */
-    case 'seasonal':
-      backgroundColor = gold60()
-      break
-
-    /**
-     * {@link https://zeroheight.com/3ddd0f892/p/336556-label/t/657ada}
-     */
-    case 'beggie-packed':
-      backgroundColor = limeGreen60()
-      break
+  if (color && allColors[color]) {
+    if (typeof allColors[color] === 'string') {
+      bgColor = allColors[color]
+    } else {
+      bgColor = (allColors[color] as () => string)()
+    }
+  } else {
+    bgColor = 'transparnet'
   }
-
   return `
-    background-color: ${backgroundColor};
+    background-color: ${bgColor};
   `
 }

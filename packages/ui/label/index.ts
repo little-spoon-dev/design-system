@@ -1,2 +1,2 @@
-export { default } from 'label'
-export * from 'label'
+export { default } from '@littlespoon/label'
+export * from '@littlespoon/label'

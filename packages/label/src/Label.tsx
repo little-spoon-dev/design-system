@@ -1,13 +1,9 @@
+import { Color } from '@littlespoon/theme/src/colors'
 import type React from 'react'
 
 import { LabelBase } from './LabelBase'
 
-export interface Props<C extends React.ElementType> {
-  /**
-   * The root node component. Use a string for an HTML element or a component. Defaults to "Label".
-   */
-  as?: C
-
+export interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
   /**
    * The content of the component.
    */
@@ -19,32 +15,18 @@ export interface Props<C extends React.ElementType> {
   category?: 'status' | 'product'
 
   /**
-   * The background color of the component. Defaults to "primary".
+   * The background color of the component. Defaults to "success20".
    */
-  variant?:
-    | 'success'
-    | 'warning'
-    | 'critical'
-    | 'informative'
-    | 'BLW'
-    | 'most-popular'
-    | 'picky-eater-fave'
-    | 'seasonal'
-    | 'beggie-packed'
+  color?: Color
   /**
    * The size of the component. Defaults to "medium".
    */
   size?: 'small' | 'medium' | 'large'
 }
 
-export type LabelProps<C extends React.ElementType> = Props<C> &
-  Omit<React.ComponentPropsWithoutRef<C>, keyof Props<C>>
-
-export default function Label<C extends React.ElementType = 'label'>({
-  size = 'medium',
-  variant = 'critical',
-  ...other
-}: LabelProps<C>): React.ReactElement<LabelProps<C>> {
-  ;(other as LabelProps<'label'>).as = other.as || 'label'
-  return <LabelBase {...other} size={size} variant={variant} />
+/**
+ * Label
+ */
+export default function Label({ size = 'medium', color = 'success20', ...other }: LabelProps) {
+  return <LabelBase {...other} size={size} color={color} />
 }

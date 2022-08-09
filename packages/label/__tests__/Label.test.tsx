@@ -1,3 +1,4 @@
+import { allColors, Color } from '@littlespoon/theme/src/colors'
 import { render, screen } from '@testing-library/react'
 import { axe } from 'jest-axe'
 
@@ -5,17 +6,6 @@ import type { LabelProps } from '../src/'
 import Label from '../src/'
 
 const children = 'children'
-const variants = [
-  'success',
-  'warning',
-  'critical',
-  'informative',
-  'BLW',
-  'most-popular',
-  'picky-eater-fave',
-  'seasonal',
-  'beggie-packed',
-] as const
 
 describe('accessibility', () => {
   describe('label', () => {
@@ -64,7 +54,7 @@ describe('with props.aria-label', () => {
 })
 
 describe('with props.size', () => {
-  it.each<Required<LabelProps<'label'>>['size']>(['small', 'medium', 'large'])(
+  it.each<Required<LabelProps>['size']>(['small', 'medium', 'large'])(
     'renders label with size=%j',
     (size) => {
       render(<Label size={size}>{size}</Label>)
@@ -73,68 +63,40 @@ describe('with props.size', () => {
   )
 })
 
-describe('with props.variant', () => {
-  it.each<Required<LabelProps<'label'>>['variant']>(variants)(
-    'renders label with variant=%j',
-    (variant) => {
-      render(<Label variant={variant}>{variant}</Label>)
-      expect(screen.getByText(variant)).toBeInTheDocument()
+describe('with props.color', () => {
+  it.each<Required<LabelProps>['color']>(Object.keys(allColors) as readonly Color[])(
+    'renders label with color=%j',
+    (color) => {
+      render(<Label color={color}>{color}</Label>)
+      expect(screen.getByText(color)).toBeInTheDocument()
     },
   )
 
-  it.each<[Required<LabelProps<'label'>>['variant'], string]>([
-    ['success', 'background-color: rgb(153, 199, 187)'],
-    ['warning', 'background-color: rgb(252, 208, 168)'],
-    ['critical', 'background-color: rgb(237, 169, 159)'],
-    ['informative', 'background-color: rgb(169, 193, 231)'],
-    ['BLW', 'background-color: rgb(255, 145, 165)'],
-    ['most-popular', 'background-color: rgb(0, 227, 205)'],
-    ['picky-eater-fave', 'background-color: rgb(255, 128, 92)'],
-    ['seasonal', 'background-color: rgb(252, 191, 74)'],
-    ['beggie-packed', 'background-color: rgb(190, 242, 145)'],
-  ])('renders label with %s style', (variant, style) => {
-    render(<Label variant={variant}>{variant}</Label>)
+  it.each<[Required<LabelProps>['color'], string]>([
+    ['success20', 'background-color: rgba(153,199,187,1)'],
+  ])('renders label with %s style', (color, style) => {
+    render(<Label color={color}>{color}</Label>)
     expect(document.querySelectorAll('label')).toHaveLength(1)
-    expect(screen.getByText(variant)).toHaveStyle(style)
+    expect(screen.getByText(color)).toHaveStyle(style)
   })
 
   it('does not throw for invalid size', () => {
-    render(<Label size={'' as LabelProps<'label'>['size']}>{children}</Label>)
+    render(<Label size={'' as LabelProps['size']}>{children}</Label>)
     expect(screen.getByText(children)).toBeInTheDocument()
   })
 })
 
-describe('with props.variant', () => {
-  it('does not throw for invalid variant', () => {
-    render(<Label variant={'' as LabelProps<'label'>['variant']}>{children}</Label>)
+describe('with props.color', () => {
+  it('does not throw for invalid color', () => {
+    render(<Label color={'' as LabelProps['color']}>{children}</Label>)
     expect(screen.getByText(children)).toBeInTheDocument()
   })
 
-  it.each<Required<LabelProps<'label'>>['variant']>(variants)(
-    'renders label with variant=%j',
-    (variant) => {
-      render(<Label variant={variant}>{variant}</Label>)
-      expect(screen.getByText(variant)).toBeInTheDocument()
+  it.each<Required<LabelProps>['color']>(Object.keys(allColors) as readonly Color[])(
+    'renders label with color=%j',
+    (color) => {
+      render(<Label color={color}>{color}</Label>)
+      expect(screen.getByText(color)).toBeInTheDocument()
     },
   )
-})
-
-describe('with props.as', () => {
-  it('renders link', () => {
-    const href = 'https://example.com/'
-    render(
-      <Label as="a" href={href}>
-        {children}
-      </Label>,
-    )
-    const element = screen.getByRole('link', { name: children })
-    expect(element).toHaveAttribute('href', href)
-    expect(element).toHaveStyle('color: rgb(0, 0, 0)')
-  })
-
-  it('renders component', () => {
-    const Component = () => <>{children}</>
-    render(<Label as={Component} />)
-    expect(screen.getByText(children)).toBeInTheDocument()
-  })
 })

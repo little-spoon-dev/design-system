@@ -1,5 +1,5 @@
 {
-  "name": "label",
+  "name": "@littlespoon/label",
   "version": "1.0.0",
   "description": "Little Spoon label",
   "main": "lib/index.js",
@@ -13,7 +13,9 @@
     "test": "jest",
     "test:watch": "jest --watch"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@littlespoon/theme": "1.13.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/little-spoon-dev/design-system.git",

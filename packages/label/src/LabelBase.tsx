@@ -75,7 +75,7 @@ function getBackgroundColor(props: LabelProps) {
       bgColor = (colors[color] as () => string)()
     }
   } else {
-    bgColor = 'transparnet'
+    bgColor = 'transparent'
   }
   return `
     background-color: ${bgColor};

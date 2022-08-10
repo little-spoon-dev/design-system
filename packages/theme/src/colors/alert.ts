@@ -88,6 +88,7 @@ export const alertColors = {
   ...critical,
   ...informative,
 }
+
 export default {
   success,
   warning,

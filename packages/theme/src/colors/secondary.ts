@@ -294,6 +294,7 @@ export const secondaryColors = {
   ...secondaryMintGreen,
   ...secondaryNeutralGrey,
 }
+
 export default {
   secondaryDeepGreen,
   secondaryPurple,

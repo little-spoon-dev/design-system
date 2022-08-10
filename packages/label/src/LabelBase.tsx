@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 import type { LabelProps } from './Label'
 
-export const LabelBase = styled.label<LabelProps>`
+export const LabelBase = styled.span<LabelProps>`
   align-items: center;
   border-radius: 2px;
   border: 0;

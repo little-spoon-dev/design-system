@@ -11,13 +11,13 @@ describe('accessibility', () => {
   describe('label', () => {
     it('is accessible with text', async () => {
       const { container } = render(<Label>{children}</Label>)
-      expect(document.querySelectorAll('label')).toHaveLength(1)
+      expect(document.querySelectorAll('span')).toHaveLength(1)
       expect(await axe(container)).toHaveNoViolations()
     })
 
     it('is accessible without text', async () => {
       const { container } = render(<Label />)
-      expect(document.querySelectorAll('label')).toHaveLength(1)
+      expect(document.querySelectorAll('span')).toHaveLength(1)
       expect(await axe(container)).toHaveNoViolations()
     })
   })
@@ -25,15 +25,15 @@ describe('accessibility', () => {
 
 describe('no props', () => {
   it('renders label', async () => {
-    render(<Label htmlFor="name"></Label>)
-    expect(document.querySelector('label')).toHaveAttribute('for', 'name')
+    render(<Label className="label"></Label>)
+    expect(document.querySelector('span')).toHaveClass('label')
   })
 })
 
 describe('with props.children', () => {
   it('renders text', () => {
     render(<Label>{children}</Label>)
-    expect(document.querySelector('label')).toHaveTextContent(children)
+    expect(document.querySelector('span')).toHaveTextContent(children)
   })
 
   it('renders span with text', () => {
@@ -48,8 +48,8 @@ describe('with props.children', () => {
 
 describe('with props.aria-label', () => {
   it('renders label text', () => {
-    render(<Label aria-label="label" />)
-    expect(screen.getByLabelText('label')).toBeInTheDocument()
+    render(<Label aria-label="span" />)
+    expect(screen.getByLabelText('span')).toBeInTheDocument()
   })
 })
 
@@ -76,7 +76,7 @@ describe('with props.color', () => {
     ['success20', 'background-color: rgba(153,199,187,1)'],
   ])('renders label with %s style', (color, style) => {
     render(<Label color={color}>{color}</Label>)
-    expect(document.querySelectorAll('label')).toHaveLength(1)
+    expect(document.querySelectorAll('span')).toHaveLength(1)
     expect(screen.getByText(color)).toHaveStyle(style)
   })
 

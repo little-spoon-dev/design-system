@@ -9,10 +9,10 @@ Object {
   "Checkbox": [Function],
   "CheckboxGroup": [Function],
   "Divider": [Function],
+  "Label": [Function],
   "Link": [Function],
   "Tag": [Function],
   "Typography": [Function],
-  "label": [Function],
   "theme": Object {
     "breakpoints": Object {
       "desktop": 1000,

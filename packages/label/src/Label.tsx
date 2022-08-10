@@ -3,7 +3,7 @@ import type React from 'react'
 
 import { LabelBase } from './LabelBase'
 
-export interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
+export interface LabelProps extends React.HTMLAttributes<HTMLSpanElement> {
   /**
    * The content of the component.
    */

@@ -67,6 +67,7 @@ export const primaryColors = {
   ...brand,
   ...primaryBlue,
 }
+
 export default {
   brand,
   primaryBlue,

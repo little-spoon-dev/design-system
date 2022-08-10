@@ -1,4 +1,4 @@
-import { Color } from '@littlespoon/theme/src/colors'
+import { Color } from '@littlespoon/theme/lib/colors'
 import type React from 'react'
 
 import { LabelBase } from './LabelBase'
@@ -18,6 +18,7 @@ export interface LabelProps extends React.HTMLAttributes<HTMLSpanElement> {
    * The background color of the component. Defaults to "success20".
    */
   color?: Color
+
   /**
    * The size of the component. Defaults to "medium".
    */

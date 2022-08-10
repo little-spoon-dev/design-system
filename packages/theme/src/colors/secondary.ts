@@ -263,38 +263,6 @@ export const secondaryNeutralGrey = {
   grey100,
 }
 
-export type SecondaryDeepGreenColor = keyof typeof secondaryDeepGreen
-export type SecondaryPurpleColor = keyof typeof secondaryPurple
-export type SecondaryGoldColor = keyof typeof secondaryGold
-export type SecondaryBlueColor = keyof typeof secondaryBlue
-export type SecondaryPeachColor = keyof typeof secondaryPeach
-export type SecondaryPinkColor = keyof typeof secondaryPink
-export type SecondaryLimeGreenColor = keyof typeof secondaryLimeGreen
-export type SecondaryMintGreenColor = keyof typeof secondaryMintGreen
-export type SecondaryNeutralGreyColor = keyof typeof secondaryNeutralGrey
-export type SecondaryColor =
-  | SecondaryDeepGreenColor
-  | SecondaryPurpleColor
-  | SecondaryGoldColor
-  | SecondaryBlueColor
-  | SecondaryPeachColor
-  | SecondaryPinkColor
-  | SecondaryLimeGreenColor
-  | SecondaryMintGreenColor
-  | SecondaryNeutralGreyColor
-
-export const secondaryColors = {
-  ...secondaryDeepGreen,
-  ...secondaryPurple,
-  ...secondaryGold,
-  ...secondaryBlue,
-  ...secondaryPeach,
-  ...secondaryPink,
-  ...secondaryLimeGreen,
-  ...secondaryMintGreen,
-  ...secondaryNeutralGrey,
-}
-
 export default {
   secondaryDeepGreen,
   secondaryPurple,

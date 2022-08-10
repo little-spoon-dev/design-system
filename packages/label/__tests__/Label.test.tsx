@@ -1,4 +1,4 @@
-import { allColors, Color } from '@littlespoon/theme/src/colors'
+import colors, { Color } from '@littlespoon/theme/lib/colors'
 import { render, screen } from '@testing-library/react'
 import { axe } from 'jest-axe'
 
@@ -64,7 +64,7 @@ describe('with props.size', () => {
 })
 
 describe('with props.color', () => {
-  it.each<Required<LabelProps>['color']>(Object.keys(allColors) as readonly Color[])(
+  it.each<Required<LabelProps>['color']>(Object.keys(colors) as readonly Color[])(
     'renders label with color=%j',
     (color) => {
       render(<Label color={color}>{color}</Label>)
@@ -92,7 +92,7 @@ describe('with props.color', () => {
     expect(screen.getByText(children)).toBeInTheDocument()
   })
 
-  it.each<Required<LabelProps>['color']>(Object.keys(allColors) as readonly Color[])(
+  it.each<Required<LabelProps>['color']>(Object.keys(colors) as readonly Color[])(
     'renders label with color=%j',
     (color) => {
       render(<Label color={color}>{color}</Label>)

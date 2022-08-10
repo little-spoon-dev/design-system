@@ -59,15 +59,6 @@ export const primaryBlue = {
   blue100,
 }
 
-export type BrandColor = keyof typeof brand
-export type PrimaryBlueColor = keyof typeof primaryBlue
-export type PrimaryColor = BrandColor | PrimaryBlueColor
-
-export const primaryColors = {
-  ...brand,
-  ...primaryBlue,
-}
-
 export default {
   brand,
   primaryBlue,

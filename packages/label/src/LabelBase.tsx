@@ -1,6 +1,6 @@
+import colors from '@littlespoon/theme/lib/colors'
 import { family, weight } from '@littlespoon/theme/lib/fonts/primary'
 import { rem } from '@littlespoon/theme/lib/utils'
-import { allColors } from '@littlespoon/theme/src/colors'
 import styled from 'styled-components'
 
 import type { LabelProps } from './Label'
@@ -17,7 +17,7 @@ export const LabelBase = styled.span<LabelProps>`
   text-transform: uppercase;
   width: fit-content;
   line-height: 150%;
-  color: ${allColors.shadeBlack};
+  color: ${colors.shadeBlack};
   ${getBackgroundColor}
   ${getSizeCss}
 `
@@ -68,11 +68,11 @@ function getBackgroundColor(props: LabelProps) {
   const { color } = props
   let bgColor
 
-  if (color && allColors[color]) {
-    if (typeof allColors[color] === 'string') {
-      bgColor = allColors[color]
-    } else {
-      bgColor = (allColors[color] as () => string)()
+  if (color && colors[color]) {
+    if (typeof colors[color] === 'string') {
+      bgColor = colors[color]
+    } else if (typeof colors[color] === 'function') {
+      bgColor = (colors[color] as () => string)()
     }
   } else {
     bgColor = 'transparnet'

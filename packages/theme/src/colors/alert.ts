@@ -76,19 +76,6 @@ export const informative = {
   informative50,
 }
 
-export type SuccessColor = keyof typeof success
-export type WarningColor = keyof typeof warning
-export type CriticalColor = keyof typeof critical
-export type InformativeColor = keyof typeof informative
-export type AlertColor = SuccessColor | WarningColor | CriticalColor | InformativeColor
-
-export const alertColors = {
-  ...success,
-  ...warning,
-  ...critical,
-  ...informative,
-}
-
 export default {
   success,
   warning,

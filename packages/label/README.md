@@ -39,3 +39,9 @@ Render Label with props:
   This is a Label
 </Label>
 ```
+
+Notes
+
+```
+This is not an HTML label and this particular component is not meant to be used in forms.
+```

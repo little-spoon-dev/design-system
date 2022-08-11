@@ -15,7 +15,7 @@ export interface LabelProps extends React.HTMLAttributes<HTMLSpanElement> {
   category?: 'status' | 'product'
 
   /**
-   * The background color of the component. Defaults to "success20".
+   * The background color of the component. Defaults to "transparent".
    */
   color?: Color
 
@@ -28,6 +28,6 @@ export interface LabelProps extends React.HTMLAttributes<HTMLSpanElement> {
 /**
  * Label
  */
-export default function Label({ size = 'medium', color = 'success20', ...other }: LabelProps) {
+export default function Label({ size = 'medium', color, ...other }: LabelProps) {
   return <LabelBase {...other} size={size} color={color} />
 }

@@ -3,6 +3,7 @@ import { Breadcrumb, Breadcrumbs } from '@littlespoon/breadcrumbs'
 import Button from '@littlespoon/button'
 import { Checkbox, CheckboxGroup } from '@littlespoon/checkbox'
 import Divider from '@littlespoon/divider'
+import Label from '@littlespoon/label'
 import Link from '@littlespoon/link'
 import Tag from '@littlespoon/tag'
 import theme from '@littlespoon/theme'
@@ -16,6 +17,7 @@ export {
   Checkbox,
   CheckboxGroup,
   Divider,
+  Label,
   Link,
   Tag,
   theme,
@@ -23,6 +25,7 @@ export {
 }
 
 export default {
+  Label,
   Link,
   Box,
   Breadcrumb,

@@ -8,11 +8,29 @@ import primary from './primary'
 import secondary from './secondary'
 import token from './token'
 
-export { alert, primary, secondary, token }
-
-export default {
+const colors = {
+  ...alert.critical,
+  ...alert.informative,
+  ...alert.success,
+  ...alert.warning,
+  ...primary.brand,
+  ...primary.primaryBlue,
+  ...secondary.secondaryBlue,
+  ...secondary.secondaryDeepGreen,
+  ...secondary.secondaryGold,
+  ...secondary.secondaryLimeGreen,
+  ...secondary.secondaryMintGreen,
+  ...secondary.secondaryNeutralGrey,
+  ...secondary.secondaryPeach,
+  ...secondary.secondaryPeach,
+  ...secondary.secondaryPink,
+  ...token,
   alert,
   primary,
   secondary,
   token,
 }
+
+export { alert, primary, secondary, token }
+export type Color = keyof typeof colors
+export default colors

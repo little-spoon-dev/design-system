@@ -64,20 +64,20 @@ function getSizeCss(props: LabelProps): string {
 /**
  * Gets background color.
  */
-function getBackgroundColor(props: LabelProps) {
-  const { color } = props
-  let bgColor
+function getBackgroundColor(props: LabelProps): string {
+  const color = props.color && colors[props.color]
+  let backgroundColor = 'transparent'
 
-  if (color && colors[color]) {
-    if (typeof colors[color] === 'string') {
-      bgColor = colors[color]
-    } else if (typeof colors[color] === 'function') {
-      bgColor = (colors[color] as () => string)()
+  if (color) {
+    switch (typeof color) {
+      case 'string':
+        backgroundColor = color as string
+        break
+      case 'function':
+        backgroundColor = (color as () => string)()
+        break
     }
-  } else {
-    bgColor = 'transparent'
   }
-  return `
-    background-color: ${bgColor};
-  `
+
+  return `background-color: ${backgroundColor};`
 }

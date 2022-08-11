@@ -40,8 +40,4 @@ Render Label with props:
 </Label>
 ```
 
-Notes
-
-```
-This is not an HTML label and this particular component is not meant to be used in forms.
-```
+> Note: This is not an HTML label and this component is not intended to be used in forms.

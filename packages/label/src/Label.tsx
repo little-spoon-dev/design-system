@@ -1,4 +1,4 @@
-import { Color } from '@littlespoon/theme/lib/colors'
+import type { Color } from '@littlespoon/theme/lib/colors'
 import type React from 'react'
 
 import { LabelBase } from './LabelBase'
@@ -8,11 +8,6 @@ export interface LabelProps extends React.HTMLAttributes<HTMLSpanElement> {
    * The content of the component.
    */
   children?: React.ReactNode
-
-  /**
-   * The Category of the component. Defaults to "status".
-   */
-  category?: 'status' | 'product'
 
   /**
    * The background color of the component. Defaults to "transparent".
@@ -28,6 +23,6 @@ export interface LabelProps extends React.HTMLAttributes<HTMLSpanElement> {
 /**
  * Label
  */
-export default function Label({ size = 'medium', color, ...other }: LabelProps) {
-  return <LabelBase {...other} size={size} color={color} />
+export default function Label({ size = 'medium', ...other }: LabelProps) {
+  return <LabelBase {...other} size={size} />
 }

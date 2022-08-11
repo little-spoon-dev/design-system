@@ -54,10 +54,10 @@ Left.args = {
 
 export const Fill = Template.bind({})
 Fill.args = {
-  fill: theme.colors.primary.brand.brand60(),
+  fill: theme.colors.brand60(),
 }
 
 export const Stroke = Template.bind({})
 Stroke.args = {
-  stroke: theme.colors.primary.brand.brand60(),
+  stroke: theme.colors.brand60(),
 }

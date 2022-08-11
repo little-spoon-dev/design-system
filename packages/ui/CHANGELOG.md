@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.17.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.16.2...@littlespoon/ui@1.17.0) (2022-08-11)
+
+### Bug Fixes
+
+- build error ([b9b9813](https://github.com/little-spoon-dev/design-system/commit/b9b9813ea2ad6326f003aab36312dbd9e077e312))
+- build failure ([5456b75](https://github.com/little-spoon-dev/design-system/commit/5456b7514dd24328c0e0e59efdb3c3eee6f02f66))
+- replace variant with color props ([3f2f0cf](https://github.com/little-spoon-dev/design-system/commit/3f2f0cf86144616e853b8410cba2aef15e9fd81c))
+- spread colors in export ([92681e1](https://github.com/little-spoon-dev/design-system/commit/92681e112bda4ba7efae51240b646307019ef3b7))
+- use span element for label ([f2d87dc](https://github.com/little-spoon-dev/design-system/commit/f2d87dc44f21b3aa1445331b057ea7b9da1934b7))
+
+### Features
+
+- create label package ([ed858d7](https://github.com/little-spoon-dev/design-system/commit/ed858d79a6a071df349eec0b9539bffa39ba24ed))
+
 ## [1.16.2](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.16.1...@littlespoon/ui@1.16.2) (2022-08-08)
 
 **Note:** Version bump only for package @littlespoon/ui

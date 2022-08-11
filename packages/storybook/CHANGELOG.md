@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.27.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.26.3...storybook@1.27.0) (2022-08-11)
+
+### Bug Fixes
+
+- replace variant with color props ([3f2f0cf](https://github.com/little-spoon-dev/design-system/commit/3f2f0cf86144616e853b8410cba2aef15e9fd81c))
+
+### Features
+
+- create label package ([ed858d7](https://github.com/little-spoon-dev/design-system/commit/ed858d79a6a071df349eec0b9539bffa39ba24ed))
+
 ## [1.26.3](https://github.com/little-spoon-dev/design-system/compare/storybook@1.26.2...storybook@1.26.3) (2022-08-08)
 
 **Note:** Version bump only for package storybook

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/link@1.2.1...@littlespoon/link@1.2.2) (2022-08-11)
+
+**Note:** Version bump only for package @littlespoon/link
+
 ## [1.2.1](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/link@1.2.0...@littlespoon/link@1.2.1) (2022-07-15)
 
 **Note:** Version bump only for package @littlespoon/link

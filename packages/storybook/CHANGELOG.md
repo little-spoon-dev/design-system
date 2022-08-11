@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.27.1](https://github.com/little-spoon-dev/design-system/compare/storybook@1.27.0...storybook@1.27.1) (2022-08-11)
+
+### Bug Fixes
+
+- **storybook:** update Label stories LS-3794 ([a305f51](https://github.com/little-spoon-dev/design-system/commit/a305f51a47d4d345569d88d6f5a6049b2fa60778))
+
 # [1.27.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.26.3...storybook@1.27.0) (2022-08-11)
 
 ### Bug Fixes

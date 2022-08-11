@@ -6,7 +6,7 @@ import type { BreadcrumbsProps } from './Breadcrumbs'
 
 const defaultStyles = `
   font-family: ${family};
-  color: ${colors.token.shadeBlack};
+  color: ${colors.shadeBlack};
 `
 
 /**
@@ -55,16 +55,16 @@ export const BreadcrumbItem = styled.li`
     text-decoration: none;
 
     &:focus {
-      outline: 0.2rem solid ${colors.alert.informative.informative50()};
+      outline: 0.2rem solid ${colors.informative50()};
       outline-offset: 0.2rem;
     }
 
     &:hover {
-      color: ${colors.secondary.secondaryNeutralGrey.grey80()};
+      color: ${colors.grey80()};
     }
 
     &:visited {
-      color: ${colors.primary.primaryBlue.blue80()};
+      color: ${colors.blue80()};
     }
   }
 `

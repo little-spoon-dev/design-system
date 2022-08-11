@@ -1,4 +1,4 @@
-import Label from '@littlespoon/label'
+import Label from '@littlespoon/label/src/Label'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
@@ -10,31 +10,35 @@ const Template: ComponentStory<typeof Label> = (args) => <Label {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  children: 'Lorem ipsum',
+  children: 'default',
 }
 
-export const Success20 = Template.bind({})
-Success20.args = {
-  children: 'success20',
+export const Success = Template.bind({})
+Success.args = {
+  children: 'Success',
   color: 'success20',
+  size: 'medium',
 }
 
-export const Brand20 = Template.bind({})
-Brand20.args = {
-  children: 'brand20',
-  color: 'brand20',
+export const Warning = Template.bind({})
+Warning.args = {
+  children: 'Warning',
+  color: 'warning20',
+  size: 'medium',
 }
 
-export const deepGreen20 = Template.bind({})
-deepGreen20.args = {
-  children: 'deepGreen20',
-  color: 'deepGreen20',
+export const Critical = Template.bind({})
+Critical.args = {
+  children: 'Critical',
+  color: 'critical20',
+  size: 'medium',
 }
 
-export const SurfaceStrong = Template.bind({})
-SurfaceStrong.args = {
-  children: 'surfaceStrong',
-  color: 'surfaceStrong',
+export const Informative = Template.bind({})
+Informative.args = {
+  children: 'Informative',
+  color: 'informative20',
+  size: 'medium',
 }
 
 export const Small = Template.bind({})

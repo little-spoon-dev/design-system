@@ -22,6 +22,8 @@ export interface LabelProps extends React.HTMLAttributes<HTMLSpanElement> {
 
 /**
  * Label
+ *
+ * {@link https://zeroheight.com/3ddd0f892/p/336556-label/b/227461}
  */
 export default function Label({ size = 'medium', ...other }: LabelProps) {
   return <LabelBase {...other} size={size} />

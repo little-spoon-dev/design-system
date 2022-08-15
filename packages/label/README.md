@@ -1,6 +1,6 @@
 # @littlespoon/label
 
-[![NPM version](https://img.shields.io/npm/v/label.svg)](https://www.npmjs.com/package/label)
+[![NPM version](https://img.shields.io/npm/v/@littlespoon/label.svg)](https://www.npmjs.com/package/@littlespoon/label)
 
 ## Install
 

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.6.2...@littlespoon/icons@1.7.0) (2022-08-17)
+
+### Features
+
+- **icons:** add checkmark and exclamation mark icons LS-3819 ([d7d8937](https://github.com/little-spoon-dev/design-system/commit/d7d89374d34ce337c9a81365f75dc0f0b5e14fb9))
+
 ## [1.6.2](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.6.1...@littlespoon/icons@1.6.2) (2022-08-11)
 
 **Note:** Version bump only for package @littlespoon/icons

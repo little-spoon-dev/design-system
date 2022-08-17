@@ -1,6 +1,6 @@
 {
   "name": "@littlespoon/icons",
-  "version": "1.6.2",
+  "version": "1.7.0",
   "description": "Little Spoon icons",
   "main": "lib/index.js",
   "scripts": {

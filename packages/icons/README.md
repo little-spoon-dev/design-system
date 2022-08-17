@@ -25,7 +25,9 @@ Import icons:
 ```tsx
 import icons from '@littlespoon/icons'
 icons.ArrowIcon
+icons.CheckIcon
 icons.CloseIcon
+icons.ExclamationIcon
 icons.FilterIcon
 icons.OpenIcon
 ```
@@ -34,7 +36,9 @@ Import icons:
 
 ```tsx
 import ArrowIcon from '@littlespoon/ui/icons/ArrowIcon'
-import FilterIcoon from '@littlespoon/ui/icons/FilterIcon'
+import CheckIcon from '@littlespoon/ui/icons/CheckIcon'
 import CloseIcon from '@littlespoon/ui/icons/CloseIcon'
+import ExclamationIcon from '@littlespoon/ui/icons/ExclamationIcon'
+import FilterIcoon from '@littlespoon/ui/icons/FilterIcon'
 import OpenIcon from '@littlespoon/ui/icons/OpenIcon'
 ```

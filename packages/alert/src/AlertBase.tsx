@@ -1,5 +1,5 @@
 import CloseIcon from '@littlespoon/icons/lib/CloseIcon'
-import Link from '@littlespoon/Link'
+import Link from '@littlespoon/link'
 import { p3, p4 } from '@littlespoon/theme/lib/fonts/paragraph'
 import { family, weight } from '@littlespoon/theme/lib/fonts/primary'
 import { rem } from '@littlespoon/theme/lib/utils'

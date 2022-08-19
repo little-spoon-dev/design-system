@@ -1,6 +1,6 @@
 import CheckIcon from '@littlespoon/icons/lib/CheckIcon'
 import ExclamationIcon from '@littlespoon/icons/lib/ExclamationIcon'
-import colors from '@littlespoon/theme/src/colors'
+import colors from '@littlespoon/theme/lib/colors'
 import type React from 'react'
 
 import {

@@ -1,22 +1,22 @@
 # @littlespoon/alert
 
-[![NPM version](https://img.shields.io/npm/v/alert.svg)](https://www.npmjs.com/package/alert)
+[![NPM version](https://img.shields.io/npm/v/@littlespoon/alert.svg)](https://www.npmjs.com/package/@littlespoon/alert)
 
 ## Install
 
-[Yarn](https://yarnpkg.com/package/alert):
+[Yarn](https://yarnpkg.com/package/@littlespoon/alert):
 
 ```sh
 yarn add alert
 ```
 
-[npm](https://www.npmjs.com/package/alert):
+[npm](https://www.npmjs.com/package/@littlespoon/alert):
 
 ```sh
 npm install alert --save
 ```
 
-[UNPKG](https://unpkg.com/browse/alert/)
+[UNPKG](https://unpkg.com/browse/@littlespoon/alert/)
 
 ## Usage
 

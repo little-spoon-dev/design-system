@@ -2,6 +2,7 @@
 
 exports[`exports ui 1`] = `
 Object {
+  "Alert": [Function],
   "Box": [Function],
   "Breadcrumb": [Function],
   "Breadcrumbs": [Function],
@@ -13,7 +14,6 @@ Object {
   "Link": [Function],
   "Tag": [Function],
   "Typography": [Function],
-  "Alert": [Function],
   "theme": Object {
     "breakpoints": Object {
       "desktop": 1000,

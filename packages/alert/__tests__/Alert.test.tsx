@@ -4,7 +4,7 @@ import type { AlertProps } from '../src/'
 import Alert from '../src/'
 
 describe('no props', () => {
-  it('renders alert', async () => {
+  it('renders alert with className', async () => {
     render(<Alert className="alert"></Alert>)
     expect(document.getElementsByClassName('alert')).toHaveLength(1)
   })
@@ -25,7 +25,7 @@ describe('with props.description', () => {
 })
 
 describe('with props.link', () => {
-  it('renders description', () => {
+  it('renders alert with link', () => {
     render(
       <Alert
         description="alert description"
@@ -61,7 +61,7 @@ describe('with props.variant', () => {
 })
 
 describe('with props.type', () => {
-  it.each<AlertProps['type']>(['toast', 'banner'])('renders alert with variant', (type) => {
+  it.each<AlertProps['type']>(['toast', 'banner'])('renders alert with type', (type) => {
     if (type) {
       render(<Alert description="alert description" type={type} />)
       expect(document.querySelectorAll('span')).toHaveLength(1)

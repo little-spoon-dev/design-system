@@ -2500,11 +2500,6 @@
     npmlog "^6.0.2"
     write-file-atomic "^4.0.1"
 
-"@littlespoon/theme@1.13.0":
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/@littlespoon/theme/-/theme-1.13.0.tgz#c364f21b260919bfc2192f252a2fffa759700dd8"
-  integrity sha512-v62FyjIKMyvOCMAMZU20Iz4K0Mom5f46RWvdhFJ1X4jMPrRi8QBjePqAZ6WM9jdv26ZMPSRI/6OguBZfCNLB4g==
-
 "@mdx-js/mdx@^1.6.22":
   version "1.6.22"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-1.6.22.tgz#8a723157bf90e78f17dc0f27995398e6c731f1ba"

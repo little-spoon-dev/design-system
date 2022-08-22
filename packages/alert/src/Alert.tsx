@@ -1,15 +1,17 @@
 import CheckIcon from '@littlespoon/icons/lib/CheckIcon'
+import CloseIcon from '@littlespoon/icons/lib/CloseIcon'
 import ExclamationIcon from '@littlespoon/icons/lib/ExclamationIcon'
 import colors from '@littlespoon/theme/lib/colors'
 import type React from 'react'
 
 import {
   AlertActionLink,
-  AlertCloseIcon,
+  AlertCloseButton,
   AlertDescription,
   AlertMessages,
   AlertTitle,
   AlertWrapper,
+  VisuallyHidden,
 } from './AlertBase'
 
 export interface AlertProps extends React.HTMLAttributes<HTMLElement> {
@@ -32,11 +34,6 @@ export interface AlertProps extends React.HTMLAttributes<HTMLElement> {
    * The action link text of the component.
    */
   actionLinkText?: string
-
-  /**
-   * The action link text of the component.
-   */
-  dismissable?: boolean
 
   /**
    * Callback when close button is clicked.
@@ -65,10 +62,9 @@ export default function Alert({
   actionLinkText,
   actionLinkUrl,
   description = '',
-  dismissable,
   onClose,
   title,
-  type = 'toast',
+  type = 'banner',
   variant = 'success',
   ...other
 }: AlertProps): React.ReactElement<AlertProps> {
@@ -85,7 +81,12 @@ export default function Alert({
           </AlertActionLink>
         )}
       </AlertMessages>
-      {dismissable && <AlertCloseIcon fill="transparent" onClick={onClose} />}
+      {onClose && (
+        <AlertCloseButton onClick={onClose}>
+          <VisuallyHidden>close</VisuallyHidden>
+          <CloseIcon fill="transparent" aria-hidden />
+        </AlertCloseButton>
+      )}
     </AlertWrapper>
   )
 }

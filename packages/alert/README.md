@@ -33,5 +33,5 @@ Render Alert:
 Render alert with props:
 
 ```tsx
-<Alert title="Alert Title" description="Alert description" dismissable={true} variant="success" />
+<Alert title="Alert Title" description="Alert description" onClose={onClose} variant="success" />
 ```

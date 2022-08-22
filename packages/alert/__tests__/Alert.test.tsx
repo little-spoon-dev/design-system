@@ -69,9 +69,10 @@ describe('with props.type', () => {
   })
 })
 
-describe('with props.dismissable', () => {
+describe('with props.onClose', () => {
+  const onClose = jest.fn()
   it('renders icons', () => {
-    render(<Alert description="alert description" dismissable={true} />)
-    expect(document.querySelector('svg')).toBeInTheDocument()
+    render(<Alert description="alert description" onClose={onClose} />)
+    expect(document.querySelector('button')).toBeInTheDocument()
   })
 })

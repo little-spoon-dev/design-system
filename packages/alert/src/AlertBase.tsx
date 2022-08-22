@@ -1,4 +1,4 @@
-import CloseIcon from '@littlespoon/icons/lib/CloseIcon'
+import Button from '@littlespoon/button'
 import Link from '@littlespoon/link'
 import { p3, p4 } from '@littlespoon/theme/lib/fonts/paragraph'
 import { family, weight } from '@littlespoon/theme/lib/fonts/primary'
@@ -38,15 +38,27 @@ export const AlertDescription = styled.span<Partial<AlertProps>>`
   line-height: ${p4.lineHeight};
 `
 
-export const AlertCloseIcon = styled(CloseIcon)<Partial<AlertProps>>`
-  position: absolute;
-  right: ${rem(0.8)};
-  top: ${rem(0.8)};
-`
-
 export const AlertActionLink = styled(Link)<Partial<AlertProps>>`
   line-height: ${p4.lineHeight};
   font: ${weight.bold} ${p4.fontSize} ${family};
+`
+
+export const VisuallyHidden = styled.span`
+  clip: rect(0 0 0 0);
+  position: absolute;
+`
+
+export const AlertCloseButton = styled(Button)`
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  height: fit-content;
+  position: absolute;
+  right: ${rem(0.8)};
+  top: ${rem(0.8)};
+  &:hover {
+    background-color: transparent;
+  }
 `
 
 /**

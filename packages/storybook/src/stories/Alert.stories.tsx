@@ -6,6 +6,10 @@ export default {
   component: alert,
 } as ComponentMeta<typeof Alert>
 
+function onClose() {
+  // Empty function to fix lint error
+}
+
 const Template: ComponentStory<typeof Alert> = (args) => <Alert {...args} />
 
 export const Default = Template.bind({})
@@ -13,8 +17,7 @@ Default.args = {
   title: 'Alert Title',
   description: 'Description Copy goes here',
   variant: 'success',
-  type: 'toast',
-  dismissable: true,
+  onClose,
 }
 
 export const TitleNotDismissableNoAction = Template.bind({})
@@ -22,8 +25,6 @@ TitleNotDismissableNoAction.args = {
   title: 'Alert Title',
   description: 'Description Copy goes here',
   variant: 'success',
-  type: 'toast',
-  dismissable: false,
 }
 
 export const TitleDismissableNoAction = Template.bind({})
@@ -31,32 +32,26 @@ TitleDismissableNoAction.args = {
   title: 'Alert Title',
   description: 'Description Copy goes here',
   variant: 'success',
-  type: 'toast',
-  dismissable: true,
+  onClose,
 }
 
 export const NoTitleNotDismissableNoAction = Template.bind({})
 NoTitleNotDismissableNoAction.args = {
   description: 'Description Copy goes here',
   variant: 'success',
-  type: 'toast',
-  dismissable: false,
 }
 
 export const NoTitleDismissibleNoAction = Template.bind({})
 NoTitleDismissibleNoAction.args = {
   description: 'Description Copy goes here',
   variant: 'success',
-  type: 'toast',
-  dismissable: true,
+  onClose,
 }
 
 export const NoTitleNotDismissibleAction = Template.bind({})
 NoTitleNotDismissibleAction.args = {
   description: 'Description Copy goes here',
   variant: 'success',
-  type: 'toast',
-  dismissable: false,
   actionLinkUrl: 'test',
   actionLinkText: 'Action link',
 }
@@ -65,8 +60,7 @@ export const NoTitleDismissibleAction = Template.bind({})
 NoTitleDismissibleAction.args = {
   description: 'Description Copy goes here',
   variant: 'success',
-  type: 'toast',
-  dismissable: true,
+  onClose,
   actionLinkUrl: 'test',
   actionLinkText: 'Action link',
 }
@@ -76,8 +70,7 @@ Success.args = {
   title: 'Alert Title',
   description: 'Description Copy goes here',
   variant: 'success',
-  type: 'toast',
-  dismissable: true,
+  onClose,
 }
 
 export const Warning = Template.bind({})
@@ -85,8 +78,7 @@ Warning.args = {
   title: 'Alert Title',
   description: 'Description Copy goes here',
   variant: 'warning',
-  type: 'toast',
-  dismissable: true,
+  onClose,
 }
 
 export const Critical = Template.bind({})
@@ -94,8 +86,7 @@ Critical.args = {
   title: 'Alert Title',
   description: 'Description Copy goes here',
   variant: 'critical',
-  type: 'toast',
-  dismissable: true,
+  onClose,
 }
 
 export const Informative = Template.bind({})
@@ -103,8 +94,7 @@ Informative.args = {
   title: 'Alert Title',
   description: 'Description Copy goes here',
   variant: 'informative',
-  type: 'toast',
-  dismissable: true,
+  onClose,
 }
 
 export const Toast = Template.bind({})
@@ -113,7 +103,7 @@ Toast.args = {
   description: 'Description Copy goes here',
   variant: 'success',
   type: 'toast',
-  dismissable: true,
+  onClose,
 }
 
 export const Banner = Template.bind({})
@@ -122,5 +112,5 @@ Banner.args = {
   description: 'Description Copy goes here',
   variant: 'success',
   type: 'banner',
-  dismissable: true,
+  onClose,
 }

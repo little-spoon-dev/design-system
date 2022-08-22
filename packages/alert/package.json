@@ -1,0 +1,40 @@
+{
+  "name": "@littlespoon/alert",
+  "version": "1.0.0",
+  "description": "Little Spoon alert",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:flowtypes": "flowgen lib && rm -rf lib && mv exports lib && yarn build",
+    "clean": "rm -rf coverage exports lib",
+    "lint": "eslint .",
+    "lint:fix": "yarn lint --fix",
+    "lint:tsc": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@littlespoon/icons": "1.7.0",
+    "@littlespoon/theme": "1.13.1",
+    "@littlespoon/link": "1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/little-spoon-dev/design-system.git",
+    "directory": "packages/alert"
+  },
+  "bugs": {
+    "url": "https://github.com/little-spoon-dev/design-system/issues"
+  },
+  "keywords": [
+    "littlespoon",
+    "alert"
+  ],
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "UNLICENSED"
+}

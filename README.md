@@ -16,6 +16,7 @@ To get started, check out [contributing](docs/CONTRIBUTING.md).
 <!-- prettier-ignore-start -->
 | Package | Version | Description |
 | --- | --- | --- |
+| [@littlespoon/alert](packages/alert) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/alert.svg)](https://www.npmjs.com/package/@littlespoon/alert) | Alert |
 | [@littlespoon/box](packages/box) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/box.svg)](https://www.npmjs.com/package/@littlespoon/box) | Box |
 | [@littlespoon/breadcrumbs](packages/breadcrumbs) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/breadcrumbs.svg)](https://www.npmjs.com/package/@littlespoon/breadcrumbs) | Breadcrumbs |
 | [@littlespoon/button](packages/button) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/button.svg)](https://www.npmjs.com/package/@littlespoon/button) | Button |

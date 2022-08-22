@@ -24,7 +24,8 @@
     "@littlespoon/link": "1.2.2",
     "@littlespoon/tag": "1.3.3",
     "@littlespoon/theme": "1.13.1",
-    "@littlespoon/typography": "1.5.1"
+    "@littlespoon/typography": "1.5.1",
+    "@littlespoon/alert": "1.0.0"
   },
   "peerDependencies": {
     "react": "17 || 18",

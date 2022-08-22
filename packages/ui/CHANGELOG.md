@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.18.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.17.3...@littlespoon/ui@1.18.0) (2022-08-22)
+
+### Bug Fixes
+
+- **alert:** build failure issue ([7974f22](https://github.com/little-spoon-dev/design-system/commit/7974f225aabebd1c0f0c7041d79f789298ea0613))
+
+### Features
+
+- **alert:** create alert component LS-3564 ([b58b13e](https://github.com/little-spoon-dev/design-system/commit/b58b13ec6d3948fcd2000f838e85e480a4993b4c))
+
 ## [1.17.3](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.17.2...@littlespoon/ui@1.17.3) (2022-08-17)
 
 **Note:** Version bump only for package @littlespoon/ui

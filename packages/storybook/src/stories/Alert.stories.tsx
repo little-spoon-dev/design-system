@@ -3,11 +3,12 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
   title: 'Design System/Alert',
-  component: alert,
+  component: Alert,
 } as ComponentMeta<typeof Alert>
 
 function onClose() {
-  // Empty function to fix lint error
+  // eslint-disable-next-line no-console
+  console.log('Clicked Alert close button')
 }
 
 const Template: ComponentStory<typeof Alert> = (args) => <Alert {...args} />
@@ -20,15 +21,16 @@ Default.args = {
   onClose,
 }
 
-export const TitleNotDismissableNoAction = Template.bind({})
-TitleNotDismissableNoAction.args = {
+export const AlertWithoutClose = Template.bind({})
+AlertWithoutClose.args = {
   title: 'Alert Title',
   description: 'Description Copy goes here',
   variant: 'success',
+  onClose: undefined,
 }
 
-export const TitleDismissableNoAction = Template.bind({})
-TitleDismissableNoAction.args = {
+export const AlertWithClose = Template.bind({})
+AlertWithClose.args = {
   title: 'Alert Title',
   description: 'Description Copy goes here',
   variant: 'success',
@@ -39,6 +41,7 @@ export const NoTitleNotDismissableNoAction = Template.bind({})
 NoTitleNotDismissableNoAction.args = {
   description: 'Description Copy goes here',
   variant: 'success',
+  onClose: undefined,
 }
 
 export const NoTitleDismissibleNoAction = Template.bind({})
@@ -52,8 +55,9 @@ export const NoTitleNotDismissibleAction = Template.bind({})
 NoTitleNotDismissibleAction.args = {
   description: 'Description Copy goes here',
   variant: 'success',
-  actionLinkUrl: 'test',
+  actionLinkUrl: 'https://example.com/',
   actionLinkText: 'Action link',
+  onClose: undefined,
 }
 
 export const NoTitleDismissibleAction = Template.bind({})
@@ -61,7 +65,7 @@ NoTitleDismissibleAction.args = {
   description: 'Description Copy goes here',
   variant: 'success',
   onClose,
-  actionLinkUrl: 'test',
+  actionLinkUrl: 'https://example.com/',
   actionLinkText: 'Action link',
 }
 

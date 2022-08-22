@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.29.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.28.0...storybook@1.29.0) (2022-08-22)
+
+### Bug Fixes
+
+- **alert:** update props ([d465741](https://github.com/little-spoon-dev/design-system/commit/d465741ddf92bc3b70894bf0ccfc31cfa5547d20))
+- **alert:** update storybook ([9f36463](https://github.com/little-spoon-dev/design-system/commit/9f36463d3ba13dbe96703ecb07eea8b9dd72f034))
+
+### Features
+
+- **alert:** create alert component LS-3564 ([b58b13e](https://github.com/little-spoon-dev/design-system/commit/b58b13ec6d3948fcd2000f838e85e480a4993b4c))
+
 # [1.28.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.27.1...storybook@1.28.0) (2022-08-17)
 
 ### Features

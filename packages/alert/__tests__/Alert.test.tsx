@@ -1,3 +1,4 @@
+import colors from '@littlespoon/theme/src/colors'
 import { render, screen } from '@testing-library/react'
 
 import type { AlertProps } from '../src/'
@@ -42,10 +43,10 @@ describe('with props.variant', () => {
     'renders alert with variant',
     (variant) => {
       const colorMapping = {
-        success: 'rgba(0,116,84,1)',
-        warning: 'rgba(248,138,37,1)',
-        critical: 'rgba(209,39,15,1)',
-        informative: 'rgba(39,99,196,1)',
+        success: colors.success50(),
+        warning: colors.warning50(),
+        critical: colors.critical50(),
+        informative: colors.informative50(),
       }
       if (variant) {
         render(

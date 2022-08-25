@@ -38,7 +38,7 @@ export default function SubtractIcon({
       <circle cx="12" cy="12" r="12" fill={fill} />
       <title>Subtract icon</title>
       <path
-        d="M3.6 12h18.5"
+        d="M3 12h18.5"
         stroke={stroke}
         strokeWidth="1.5"
         strokeLinecap="round"

@@ -1,6 +1,6 @@
 {
   "name": "@littlespoon/alert",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Little Spoon alert",
   "main": "lib/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@littlespoon/icons": "1.7.0",
+    "@littlespoon/icons": "1.8.0",
     "@littlespoon/link": "1.2.2",
     "@littlespoon/theme": "1.13.1"
   },

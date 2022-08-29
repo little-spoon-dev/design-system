@@ -9926,12 +9926,12 @@ jest-mock@^29.0.1:
     "@jest/types" "^29.0.1"
     "@types/node" "*"
 
-jest-mock@^29.0.0:
-  version "29.0.0"
-  resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-29.0.0.tgz#dff9e2a9caa9c813115db24e78d00a0cba9f0019"
-  integrity sha512-0AWznVt415KMCxcJPaE2+tWaruw0w8aRrKH1Y/NZUx3+Pd9f20jQjUR82iHqGSuYS4EOHL9uI8SjAhJk+ET91g==
+jest-mock@^29.0.1:
+  version "29.0.1"
+  resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-29.0.1.tgz#12e1b137035365b022ccdb8fd67d476cd4d4bfad"
+  integrity sha512-i1yTceg2GKJwUNZFjIzrH7Y74fN1SKJWxQX/Vu3LT4TiJerFARH5l+4URNyapZ+DNpchHYrGOP2deVbn3ma8JA==
   dependencies:
-    "@jest/types" "^29.0.0"
+    "@jest/types" "^29.0.1"
     "@types/node" "*"
 
 jest-pnp-resolver@^1.2.2:
@@ -10088,12 +10088,12 @@ jest-util@^28.0.0, jest-util@^28.1.3:
     graceful-fs "^4.2.9"
     picomatch "^2.2.3"
 
-jest-util@^29.0.0:
-  version "29.0.0"
-  resolved "https://registry.yarnpkg.com/jest-util/-/jest-util-29.0.0.tgz#54dfddf25fb011a2ff93fe8d11738dee8ff7f663"
-  integrity sha512-HMjW/pkFgi34LGKumjNDK03DYonV+nPMNUZ63rZX8PFdBkdIWUtOCEiaa7sAJkWrw5MyMVzSpa22NcOJjoQ3JQ==
+jest-util@^29.0.1:
+  version "29.0.1"
+  resolved "https://registry.yarnpkg.com/jest-util/-/jest-util-29.0.1.tgz#f854a4a8877c7817316c4afbc2a851ceb2e71598"
+  integrity sha512-GIWkgNfkeA9d84rORDHPGGTFBrRD13A38QVSKE0bVrGSnoR1KDn8Kqz+0yI5kezMgbT/7zrWaruWP1Kbghlb2A==
   dependencies:
-    "@jest/types" "^29.0.0"
+    "@jest/types" "^29.0.1"
     "@types/node" "*"
     chalk "^4.0.0"
     ci-info "^3.2.0"
@@ -12467,10 +12467,10 @@ pretty-format@^28.0.0, pretty-format@^28.1.3:
     ansi-styles "^5.0.0"
     react-is "^18.0.0"
 
-pretty-format@^29.0.0:
-  version "29.0.0"
-  resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-29.0.0.tgz#a9a604ca71678f803f34f6563a25a638fce267ba"
-  integrity sha512-tMkFRn1vxRwZdiDETcveuNeonRKDg4doOvI+iyb1sOAtxYioGzRicqnsr+d3C/lLv9hBiM/2lDBi5ilR81h2bQ==
+pretty-format@^29.0.1:
+  version "29.0.1"
+  resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-29.0.1.tgz#2f8077114cdac92a59b464292972a106410c7ad0"
+  integrity sha512-iTHy3QZMzuL484mSTYbQIM1AHhEQsH8mXWS2/vd2yFBYnG3EBqGiMONo28PlPgrW7P/8s/1ISv+y7WH306l8cw==
   dependencies:
     "@jest/schemas" "^29.0.0"
     ansi-styles "^5.0.0"

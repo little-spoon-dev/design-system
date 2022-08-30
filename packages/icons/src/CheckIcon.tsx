@@ -52,5 +52,5 @@ export default function CheckIcon({
 
 const CheckIconBase = styled.svg<CheckIconProps>`
   transition: transform 0.4s;
-  transform: scale(${(p) => getScale(p.size)});
+  transform: scale(${(props) => getScale(props.size)});
 `

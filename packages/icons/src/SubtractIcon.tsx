@@ -51,5 +51,5 @@ export default function SubtractIcon({
 
 const SubtractIconBase = styled.svg<SubtractIconProps>`
   transition: transform 0.4s;
-  transform: scale(${(p) => getScale(p.size)});
+  transform: scale(${(props) => getScale(props.size)});
 `

@@ -52,5 +52,6 @@ const ArrowBase = styled.svg<ArrowIconProps>`
   justify-content: center;
   align-items: center;
   transition: transform 0.4s;
-  transform: scale(${(p) => getScale(p.size)}) rotate(${(p) => getRotate(p.direction)}deg);
+  transform: scale(${(props) => getScale(props.size)})
+    rotate(${(props) => getRotate(props.direction)}deg);
 `

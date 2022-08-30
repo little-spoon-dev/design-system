@@ -77,6 +77,6 @@ export const FilterBase = styled.svg<FilterIconProps>`
   justify-content: center;
   align-items: center;
   transition: transform 0.4s;
-  height: ${(p) => getSvgSize(p.size)};
-  width: ${(p) => getSvgSize(p.size)};
+  height: ${(props) => getSvgSize(props.size)};
+  width: ${(props) => getSvgSize(props.size)};
 `

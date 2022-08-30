@@ -13,6 +13,7 @@ import FilterIcon from './FilterIcon'
 import GiftCardIcon from './GiftCardIcon'
 import HamburgerMenuIcon from './HamburgerMenuIcon'
 import LogoutIcon from './LogoutIcon'
+import OpenIcon from './OpenIcon'
 import SubtractIcon from './SubtractIcon'
 
 export {
@@ -31,6 +32,7 @@ export {
   GiftCardIcon,
   HamburgerMenuIcon,
   LogoutIcon,
+  OpenIcon,
   SubtractIcon,
 }
 
@@ -49,5 +51,6 @@ export default {
   GiftCardIcon,
   HamburgerMenuIcon,
   LogoutIcon,
+  OpenIcon,
   SubtractIcon,
 }

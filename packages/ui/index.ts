@@ -1,3 +1,4 @@
+import accordion from '@littlespoon/accordion'
 import Alert from '@littlespoon/alert'
 import Box from '@littlespoon/box'
 import { Breadcrumb, Breadcrumbs } from '@littlespoon/breadcrumbs'
@@ -12,6 +13,7 @@ import theme from '@littlespoon/theme'
 import Typography from '@littlespoon/typography'
 
 export {
+  accordion,
   Alert,
   Box,
   Breadcrumb,
@@ -29,6 +31,7 @@ export {
 }
 
 export default {
+  accordion,
   Alert,
   Box,
   Breadcrumb,

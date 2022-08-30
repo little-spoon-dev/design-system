@@ -4,7 +4,7 @@ import { rem } from '@littlespoon/theme/lib/utils'
  * Returns rotation value for given direction.
  * Works only if icon initially points down
  */
-export function getRotate(direction: 'up' | 'left' | 'right' | 'down' | undefined): number {
+export function getRotate(direction?: 'up' | 'left' | 'right' | 'down'): number {
   switch (direction) {
     case 'up':
       return 180
@@ -22,7 +22,7 @@ export function getRotate(direction: 'up' | 'left' | 'right' | 'down' | undefine
  * Returns the scale property based on the size (xsmall, small, medium, large)
  * Defaults to 1 (small)
  */
-export function getScale(size: 'xsmall' | 'medium' | 'large' | 'small' | undefined): number {
+export function getScale(size?: 'xsmall' | 'medium' | 'large' | 'small'): number {
   switch (size) {
     case 'xsmall':
       return 0.5
@@ -40,10 +40,7 @@ export function getScale(size: 'xsmall' | 'medium' | 'large' | 'small' | undefin
  * Returns the size in rems based on the size (xsmall, small, medium, large)
  * Base size can be passed, default is 4.4
  */
-export function getSvgSize(
-  size: 'xsmall' | 'medium' | 'large' | 'small' | undefined,
-  baseSize = 4.4,
-): string {
+export function getSvgSize(size?: 'xsmall' | 'medium' | 'large' | 'small', baseSize = 4.4): string {
   switch (size) {
     case 'xsmall':
       return rem(baseSize * 0.5)

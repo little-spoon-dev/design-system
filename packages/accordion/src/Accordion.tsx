@@ -1,4 +1,5 @@
-import { OpenIcon, SubtractIcon } from '@littlespoon/ui/icons'
+import OpenIcon from '@littlespoon/icons/lib/OpenIcon'
+import SubtractIcon from '@littlespoon/icons/lib/SubtractIcon'
 import { ReactNode, useState } from 'react'
 
 import ExpandableContent from './AccordionContent'
@@ -17,7 +18,11 @@ export default function Accordion(props: AccordionProps) {
     <List>
       {props.items.map((item, i) => (
         <Item key={i}>
-          <ButtonWrapper type="button" onClick={() => self.handleClick(i)}>
+          <ButtonWrapper
+            type="button"
+            onClick={() => self.handleClick(i)}
+            aria-expanded={self.selectedItem === i}
+          >
             {item.header}
             {self.selectedItem === i && <SubtractIcon />}
             {self.selectedItem !== i && <OpenIcon />}

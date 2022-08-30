@@ -14,8 +14,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@littlespoon/icons": "1.7.0",
-    "@littlespoon/link": "1.2.2",
+    "@littlespoon/icons": "1.8.0",
     "@littlespoon/theme": "1.13.1"
   },
   "repository": {

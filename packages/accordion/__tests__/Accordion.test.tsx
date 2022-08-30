@@ -47,7 +47,6 @@ describe('single accordion', () => {
     const button = screen.getByRole('button')
     fireEvent.click(button)
     expect(screen.getByText('content 1')).toBeInTheDocument()
-    // expect(document.getElementsByTagName('button')).toHaveLength(1)
   })
 })
 

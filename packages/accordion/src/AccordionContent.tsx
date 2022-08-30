@@ -1,13 +1,14 @@
-import * as React from 'react'
+import { memo, ReactNode, useEffect, useRef, useState } from 'react'
 
 import { Wrapper } from './styled'
+
 export interface AccordionContentProps {
   isExpanded: boolean
-  children: React.ReactNode
+  children: ReactNode
   className?: string
 }
 
-const AccordionContent = React.memo((props: AccordionContentProps) => {
+const AccordionContent = memo((props: AccordionContentProps) => {
   const self = useController()
 
   return (
@@ -25,8 +26,8 @@ export default AccordionContent
 
 /* istanbul ignore next */
 function useController() {
-  const [innerContentHeight, setInnerContentHeight] = React.useState<number>(0)
-  const ref = React.useRef<HTMLDivElement>(null)
+  const [innerContentHeight, setInnerContentHeight] = useState<number>(0)
+  const ref = useRef<HTMLDivElement>(null)
   const expandedHeight = innerContentHeight
 
   const getScrollHeight = () => {
@@ -45,10 +46,10 @@ function useController() {
  */
 /* istanbul ignore next */
 function useResizeObserver(target: Element | null, callback: () => void) {
-  const resizeObserver = React.useRef<ResizeObserver>(null)
+  const resizeObserver = useRef<ResizeObserver>(null)
   let mounted = true
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!resizeObserver.current && target) {
       // create the observer only once
       // @ts-ignore

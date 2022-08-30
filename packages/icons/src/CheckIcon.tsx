@@ -1,6 +1,7 @@
 import { shadeBlack, shadeWhite } from '@littlespoon/theme/lib/colors/token'
+import styled from 'styled-components'
 
-import { CheckIconBase } from './CheckBase'
+import { getScale } from './utils/css-helpers'
 
 export interface CheckIconProps extends React.SVGAttributes<SVGElement> {
   /**
@@ -48,3 +49,8 @@ export default function CheckIcon({
     </CheckIconBase>
   )
 }
+
+const CheckIconBase = styled.svg<CheckIconProps>`
+  transition: transform 0.4s;
+  transform: scale(${(props) => getScale(props.size)});
+`

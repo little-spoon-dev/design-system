@@ -1,6 +1,7 @@
 import { shadeBlack, shadeWhite } from '@littlespoon/theme/lib/colors/token'
+import styled from 'styled-components'
 
-import { ExclamationBase } from './ExclamationBase'
+import { getScale } from './utils/css-helpers'
 
 export interface ExclamationIconProps extends React.SVGAttributes<SVGElement> {
   /**
@@ -47,3 +48,11 @@ export default function ExclamationIcon({
     </ExclamationBase>
   )
 }
+
+export const ExclamationBase = styled.svg<ExclamationIconProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s;
+  transform: scale(${(props) => getScale(props.size)});
+`

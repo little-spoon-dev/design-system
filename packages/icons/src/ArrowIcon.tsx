@@ -1,6 +1,7 @@
 import { shadeBlack } from '@littlespoon/theme/lib/colors/token'
+import styled from 'styled-components'
 
-import { ArrowBase } from './ArrowBase'
+import { getRotate, getScale } from './utils/css-helpers'
 
 export interface ArrowIconProps extends React.SVGAttributes<SVGElement> {
   /**
@@ -45,3 +46,11 @@ export default function ArrowIcon({
     </ArrowBase>
   )
 }
+
+const ArrowBase = styled.svg<ArrowIconProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s;
+  transform: scale(${(p) => getScale(p.size)}) rotate(${(p) => getRotate(p.direction)}deg);
+`

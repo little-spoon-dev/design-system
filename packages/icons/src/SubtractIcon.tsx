@@ -1,6 +1,7 @@
 import { shadeBlack, shadeWhite } from '@littlespoon/theme/lib/colors/token'
+import styled from 'styled-components'
 
-import { SubtractIconBase } from './SubtractIconBase'
+import { getScale } from './utils/css-helpers'
 
 export interface SubtractIconProps extends React.SVGAttributes<SVGElement> {
   /**
@@ -47,3 +48,8 @@ export default function SubtractIcon({
     </SubtractIconBase>
   )
 }
+
+const SubtractIconBase = styled.svg<SubtractIconProps>`
+  transition: transform 0.4s;
+  transform: scale(${(p) => getScale(p.size)});
+`

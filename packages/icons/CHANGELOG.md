@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.8.0...@littlespoon/icons@1.9.0) (2022-08-30)
+
+### Bug Fixes
+
+- **icons:** added explicit type and ([0974d75](https://github.com/little-spoon-dev/design-system/commit/0974d75372671793f920c5a71db0ff5784c2eca1))
+- **icons:** fixed helpers props types ([69331db](https://github.com/little-spoon-dev/design-system/commit/69331db577638f5b62942b77f867054a272ebc51))
+
+### Features
+
+- **icons:** add utils/css-helpers for getting CSS ([1e15434](https://github.com/little-spoon-dev/design-system/commit/1e154347ee5747da4bebe7ded2c4ad483883aab7))
+
 # [1.8.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.7.0...@littlespoon/icons@1.8.0) (2022-08-25)
 
 ### Bug Fixes

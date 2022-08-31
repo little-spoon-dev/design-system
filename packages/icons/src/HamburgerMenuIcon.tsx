@@ -36,8 +36,8 @@ export default function HamburgerMenuIcon({
       {...other}
     >
       {fill && <circle cx="12" cy="12" r="12" fill={fill} />}
-      <title>HamburgerMenu icon</title>
-      <desc>HamburgerMenu icon</desc>
+      <title>Hamburger menu icon</title>
+      <desc>Hamburger menu icon</desc>
       <path
         d="M2.75 18.1241H21.25"
         stroke={stroke}

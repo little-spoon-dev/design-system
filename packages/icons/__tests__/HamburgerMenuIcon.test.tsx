@@ -25,21 +25,21 @@ describe('with props.size', () => {
 
   it('does not throw for invalid size', () => {
     render(<HamburgerMenuIcon size={'' as HamburgerMenuIconProps['size']} />)
-    expect(screen.getByTitle('HamburgerMenu icon')).toBeInTheDocument()
+    expect(screen.getByTitle('Hamburger menu icon')).toBeInTheDocument()
   })
 })
 
 describe('with props.fill', () => {
   it('renders hamburger menu icon with props.fill', () => {
     render(<HamburgerMenuIcon fill="#bada55" />)
-    expect(screen.getByTitle('HamburgerMenu icon')).toBeInTheDocument()
+    expect(screen.getByTitle('Hamburger menu icon')).toBeInTheDocument()
   })
 })
 
 describe('with props.stroke', () => {
   it('renders hamburger menu icon with props.stroke', () => {
     render(<HamburgerMenuIcon stroke="#bada55" />)
-    expect(screen.getByTitle('HamburgerMenu icon')).toBeInTheDocument()
+    expect(screen.getByTitle('Hamburger menu icon')).toBeInTheDocument()
   })
 })
 

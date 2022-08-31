@@ -41,15 +41,15 @@ export default function BillIcon({
         d="M4.07275 3.83246C4.07275 3.53211 4.19207 3.24406 4.40444 3.03169C4.61682 2.81931 4.90487 2.7 5.20521 2.7H18.7947C19.0951 2.7 19.3831 2.81931 19.5955 3.03169C19.8079 3.24406 19.9272 3.53211 19.9272 3.83246V21.3L15.9636 18.4689L12 21.3L8.03636 18.4689L4.07275 21.3V3.83246Z"
         fill={fill}
         stroke={stroke}
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M8.60254 12.8921H15.3973M8.60254 8.3623H15.3973"
         stroke="white"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </BillIconBase>
   )

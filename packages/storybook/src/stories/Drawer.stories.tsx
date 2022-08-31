@@ -32,7 +32,7 @@ const drawerChildren = (
       dignissim commodo, bibendum et nibh. Sed varius feugiat dui non euismod. Quisque rutrum risus
       eget tincidunt pretium. Etiam gravida hendrerit dui, in vestibulum velit feugiat ultrices.
     </p>
-    <div className="button-bar">
+    <div>
       <Button variant="ghost">One</Button>
       <Button variant="ghost">Two</Button>
       <Button variant="ghost">Thee</Button>

@@ -1,5 +1,4 @@
 import { CloseIcon } from '@littlespoon/icons'
-import { shadeBlack, shadeWhite } from '@littlespoon/theme/lib/colors/token'
 import React, { PropsWithChildren, useEffect, useState } from 'react'
 import { FocusOn } from 'react-focus-on'
 
@@ -75,8 +74,7 @@ export default function Drawer({
               onClick={handleClose}
               title={closeButtonTitle}
             >
-              {/* TODO: Update stroke value? */}
-              <CloseIcon fill={shadeBlack} stroke={shadeWhite} />
+              <CloseIcon />
             </DrawerCloseButton>
           )}
           <DrawerContent tabIndex={-1}>{children}</DrawerContent>

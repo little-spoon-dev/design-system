@@ -75,7 +75,6 @@ export default function Drawer({
               onClick={handleClose}
               title={closeButtonTitle}
             >
-              {/* TODO: Remove <title> in CloseIcon */}
               {/* TODO: Update stroke value? */}
               <CloseIcon fill={shadeBlack} stroke={shadeWhite} />
             </DrawerCloseButton>

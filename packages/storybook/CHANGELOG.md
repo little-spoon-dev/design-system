@@ -7,13 +7,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package storybook
 
-# [1.30.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.29.0...storybook@1.30.0) (2022-08-25)
+## [1.30.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.29.0...storybook@1.30.0) (2022-08-25)
 
 ### Features
 
 - **icons:** create subtract icon ([6e26f75](https://github.com/little-spoon-dev/design-system/commit/6e26f75ae7eb5a81b0232d3a63a01f38b66fedfd))
 
-# [1.29.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.28.0...storybook@1.29.0) (2022-08-22)
+## [1.29.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.28.0...storybook@1.29.0) (2022-08-22)
 
 ### Bug Fixes
 
@@ -24,7 +24,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **alert:** create alert component LS-3564 ([b58b13e](https://github.com/little-spoon-dev/design-system/commit/b58b13ec6d3948fcd2000f838e85e480a4993b4c))
 
-# [1.28.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.27.1...storybook@1.28.0) (2022-08-17)
+## [1.28.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.27.1...storybook@1.28.0) (2022-08-17)
 
 ### Features
 
@@ -36,7 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **storybook:** update Label stories LS-3794 ([a305f51](https://github.com/little-spoon-dev/design-system/commit/a305f51a47d4d345569d88d6f5a6049b2fa60778))
 
-# [1.27.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.26.3...storybook@1.27.0) (2022-08-11)
+## [1.27.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.26.3...storybook@1.27.0) (2022-08-11)
 
 ### Bug Fixes
 

@@ -20,6 +20,13 @@ describe('accessibility', () => {
   })
 })
 
+describe('without props', () => {
+  it('does not render backdrop', () => {
+    render(<Backdrop />)
+    expect(screen.queryByTestId(backdropTestId)).toEqual(null)
+  })
+})
+
 describe('with props.open', () => {
   it('renders backdrop', () => {
     render(<Backdrop open={true} />)

@@ -18,6 +18,14 @@ describe('accessibility', () => {
   })
 })
 
+describe('without props', () => {
+  it('does not render drawer', () => {
+    render(<Drawer />)
+    expect(screen.queryByRole('dialog')).toEqual(null)
+    expect(screen.queryByTestId('backdrop')).toEqual(null)
+  })
+})
+
 describe('with props.open', () => {
   it('renders drawer', () => {
     render(<Drawer open={true} />)

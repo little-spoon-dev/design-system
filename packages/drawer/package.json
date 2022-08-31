@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@littlespoon/button": "1.7.2",
-    "@littlespoon/icons": "1.8.0",
+    "@littlespoon/icons": "1.9.0",
     "@littlespoon/theme": "1.13.1",
     "react-focus-on": "3.6.0"
   },

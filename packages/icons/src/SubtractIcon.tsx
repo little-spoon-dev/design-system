@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { getScale } from './utils/css-helpers'
 
-export interface CheckIconProps extends React.SVGAttributes<SVGElement> {
+export interface SubtractIconProps extends React.SVGAttributes<SVGElement> {
   /**
    * The fill of the component. Defaults to white.
    */
@@ -20,14 +20,14 @@ export interface CheckIconProps extends React.SVGAttributes<SVGElement> {
   size?: 'xsmall' | 'small' | 'medium' | 'large'
 }
 
-export default function CheckIcon({
+export default function SubtractIcon({
   fill = shadeWhite,
   stroke = shadeBlack,
   size = 'small',
   ...other
-}: CheckIconProps) {
+}: SubtractIconProps) {
   return (
-    <CheckIconBase
+    <SubtractIconBase
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -37,20 +37,19 @@ export default function CheckIcon({
       {...other}
     >
       <circle cx="12" cy="12" r="12" fill={fill} />
-      <title>Check icon</title>
-      <desc>Check icon</desc>
+      <title>Subtract icon</title>
       <path
-        d="m17.454 8.25-7.5 7.5-3.409-3.41"
+        d="M3 12h18.5"
         stroke={stroke}
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-    </CheckIconBase>
+    </SubtractIconBase>
   )
 }
 
-const CheckIconBase = styled.svg<CheckIconProps>`
+const SubtractIconBase = styled.svg<SubtractIconProps>`
   transition: transform 0.4s;
   transform: scale(${(props) => getScale(props.size)});
 `

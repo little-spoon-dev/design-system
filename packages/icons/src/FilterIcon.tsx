@@ -1,6 +1,7 @@
 import { shadeBlack, shadeWhite } from '@littlespoon/theme/lib/colors/token'
+import styled from 'styled-components'
 
-import { FilterBase } from './FilterBase'
+import { getSvgSize } from './utils/css-helpers'
 
 export interface FilterIconProps extends React.SVGAttributes<SVGElement> {
   /**
@@ -70,3 +71,12 @@ export default function FilterIcon({
     </FilterBase>
   )
 }
+
+export const FilterBase = styled.svg<FilterIconProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s;
+  height: ${(props) => getSvgSize(props.size)};
+  width: ${(props) => getSvgSize(props.size)};
+`

@@ -1,6 +1,5 @@
 import { shadeBlack, shadeWhite } from '@littlespoon/theme/lib/colors/token'
-
-import { OpenIconBase } from './OpenIconBase'
+import styled from 'styled-components'
 
 export interface OpenIconProps extends React.SVGAttributes<SVGElement> {
   /**
@@ -36,3 +35,7 @@ export default function OpenIcon({ fill = shadeWhite, stroke = shadeBlack, ...ot
     </OpenIconBase>
   )
 }
+
+const OpenIconBase = styled.svg<OpenIconProps>`
+  transform: rotate(45deg);
+`

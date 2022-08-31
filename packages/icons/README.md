@@ -30,6 +30,7 @@ icons.CloseIcon
 icons.ExclamationIcon
 icons.FilterIcon
 icons.OpenIcon
+icons.SubtractIcon
 ```
 
 Import icons:
@@ -41,4 +42,5 @@ import CloseIcon from '@littlespoon/ui/icons/CloseIcon'
 import ExclamationIcon from '@littlespoon/ui/icons/ExclamationIcon'
 import FilterIcoon from '@littlespoon/ui/icons/FilterIcon'
 import OpenIcon from '@littlespoon/ui/icons/OpenIcon'
+import SubtractIcon from '@littlespoon/ui/icons/SubtractIcon'
 ```

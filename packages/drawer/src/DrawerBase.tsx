@@ -29,8 +29,7 @@ export const DrawerBase = styled.div<Partial<DrawerProps>>`
   padding: ${rem(0.8)} ${rem(2)} ${rem(2)};
   position: fixed;
   right: 0;
-  /* TODO: Update z-index value? */
-  z-index: 2000;
+  z-index: 1001;
 
   ${up(
     xs + 1,

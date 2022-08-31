@@ -37,6 +37,7 @@ export const surfaceSecondary = grey10()
 export const surfaceStrong = brand90()
 export const surfaceContrast = grey80()
 export const surfaceOverlay = grey80(0.8)
+export const surfaceOverlay60 = grey80(0.6)
 
 /**
  * Sub-surface

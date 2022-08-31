@@ -22,6 +22,7 @@ To get started, check out [contributing](docs/CONTRIBUTING.md).
 | [@littlespoon/button](packages/button) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/button.svg)](https://www.npmjs.com/package/@littlespoon/button) | Button |
 | [@littlespoon/checkbox](packages/checkbox) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/checkbox.svg)](https://www.npmjs.com/package/@littlespoon/checkbox) | Checkbox |
 | [@littlespoon/divider](packages/divider) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/divider.svg)](https://www.npmjs.com/package/@littlespoon/divider) | Divider |
+| [@littlespoon/drawer](packages/drawer) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/drawer.svg)](https://www.npmjs.com/package/@littlespoon/drawer) | Drawer |
 | [@littlespoon/icons](packages/icons) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/icons.svg)](https://www.npmjs.com/package/@littlespoon/icons) | Icons |
 | [@littlespoon/label](packages/label) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/label.svg)](https://www.npmjs.com/package/@littlespoon/label) | Label |
 | [@littlespoon/link](packages/link) | [![NPM version](https://img.shields.io/npm/v/@littlespoon/link.svg)](https://www.npmjs.com/package/@littlespoon/link) | Link |

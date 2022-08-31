@@ -1,0 +1,45 @@
+{
+  "name": "@littlespoon/drawer",
+  "version": "1.0.0",
+  "description": "Little Spoon drawer",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:flowtypes": "flowgen lib && rm -rf lib && mv exports lib && yarn build",
+    "clean": "rm -rf coverage exports lib",
+    "lint": "eslint .",
+    "lint:fix": "yarn lint --fix",
+    "lint:tsc": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@littlespoon/button": "1.7.2",
+    "@littlespoon/icons": "1.9.0",
+    "@littlespoon/theme": "1.13.1",
+    "react-focus-on": "3.6.0"
+  },
+  "peerDependencies": {
+    "react": "17 || 18",
+    "styled-components": "4 || 5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/little-spoon-dev/design-system.git",
+    "directory": "packages/drawer"
+  },
+  "bugs": {
+    "url": "https://github.com/little-spoon-dev/design-system/issues"
+  },
+  "keywords": [
+    "littlespoon",
+    "drawer"
+  ],
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "UNLICENSED"
+}

@@ -68,7 +68,12 @@ export default function Drawer({
     <Portal>
       <FocusOn onEscapeKey={handleClose}>
         <Backdrop onClick={handleClose} open={isOpen} />
-        <DrawerBase aria-labelledby={ariaLabelledBy} aria-modal role="dialog">
+        <DrawerBase
+          aria-labelledby={ariaLabelledBy}
+          aria-modal
+          className={showCloseButton ? 'with-close-button' : ''}
+          role="dialog"
+        >
           {showCloseButton && (
             <DrawerCloseButton
               aria-label={closeButtonTitle}

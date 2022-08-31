@@ -22,7 +22,6 @@ export const DrawerBase = styled.div<Partial<DrawerProps>>`
   margin: 0;
   max-height: 80%;
   max-width: none;
-  /* TODO: Update this value */
   min-height: ${rem(20)};
   min-width: unset;
   outline: none;
@@ -41,7 +40,6 @@ export const DrawerBase = styled.div<Partial<DrawerProps>>`
     max-height: none;
     max-width: ${rem(48)};
     min-height: unset;
-    /* TODO: Update this value */
     min-width: ${rem(20)};
     padding: ${rem(4)};
     top: 0;
@@ -76,7 +74,6 @@ export const DrawerCloseButton = styled(Button)`
 `
 
 export const DrawerContent = styled.div`
-  /* TODO: Remove this line? */
   font: ${rem(1.6)} ${family};
   outline: none;
   overflow-x: hidden;

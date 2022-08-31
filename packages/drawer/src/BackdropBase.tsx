@@ -11,7 +11,6 @@ export const BackdropBase = styled.div`
   position: fixed;
   right: 0;
   top: 0;
-  /* TODO: Update z-index value? */
   z-index: 1000;
   -webkit-tap-highlight-color: transparent;
 `

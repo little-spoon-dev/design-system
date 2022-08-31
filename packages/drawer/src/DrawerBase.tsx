@@ -17,7 +17,6 @@ export const DrawerBase = styled.div<Partial<DrawerProps>>`
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: flex-end;
   left: 0;
   margin: 0;
   max-height: 80%;
@@ -31,10 +30,15 @@ export const DrawerBase = styled.div<Partial<DrawerProps>>`
   right: 0;
   z-index: 1001;
 
+  &.with-close-button {
+    padding: ${rem(6.4)} ${rem(2)} ${rem(2)};
+  }
+
   ${up(
     xs + 1,
     `
     border-radius: 0;
+    justify-content: flex-end;
     left: auto;
     max-height: none;
     max-width: ${rem(48)};
@@ -42,6 +46,10 @@ export const DrawerBase = styled.div<Partial<DrawerProps>>`
     min-width: ${rem(20)};
     padding: ${rem(4)};
     top: 0;
+    
+    &.with-close-button {
+      padding: ${rem(11.2)} ${rem(4)} ${rem(4)};
+    }
     `,
   )}
 `
@@ -75,6 +83,5 @@ export const DrawerCloseButton = styled(Button)`
 export const DrawerContent = styled.div`
   font: ${rem(1.6)} ${family};
   outline: none;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: auto;
 `

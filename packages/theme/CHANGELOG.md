@@ -83,7 +83,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **theme:** update font variants to be objects ([e775d3f](https://github.com/little-spoon-dev/design-system/commit/e775d3f33dd4c30258149f6e905f1f5ff177233f))
 - **theme:** update stories with font variants ([af382d7](https://github.com/little-spoon-dev/design-system/commit/af382d726928565a2274f90e5e210d14e63f9037))
 
-### [1.3.1](https://www.github.com/little-spoon-dev/design-system/compare/theme-v1.3.0...theme-v1.3.1) (2021-09-23)
+## [1.3.1](https://www.github.com/little-spoon-dev/design-system/compare/theme-v1.3.0...theme-v1.3.1) (2021-09-23)
 
 ### Performance Improvements
 

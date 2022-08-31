@@ -15,7 +15,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @littlespoon/ui
 
-# [1.18.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.17.3...@littlespoon/ui@1.18.0) (2022-08-22)
+## [1.18.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.17.3...@littlespoon/ui@1.18.0) (2022-08-22)
 
 ### Bug Fixes
 
@@ -37,7 +37,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @littlespoon/ui
 
-# [1.17.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.16.2...@littlespoon/ui@1.17.0) (2022-08-11)
+## [1.17.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.16.2...@littlespoon/ui@1.17.0) (2022-08-11)
 
 ### Bug Fixes
 

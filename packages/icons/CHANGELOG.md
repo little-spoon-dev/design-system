@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.9.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.8.0...@littlespoon/icons@1.9.0) (2022-08-30)
+## [1.9.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.8.0...@littlespoon/icons@1.9.0) (2022-08-30)
 
 ### Bug Fixes
 
@@ -14,7 +14,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **icons:** add utils/css-helpers for getting CSS ([1e15434](https://github.com/little-spoon-dev/design-system/commit/1e154347ee5747da4bebe7ded2c4ad483883aab7))
 
-# [1.8.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.7.0...@littlespoon/icons@1.8.0) (2022-08-25)
+## [1.8.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.7.0...@littlespoon/icons@1.8.0) (2022-08-25)
 
 ### Bug Fixes
 
@@ -24,7 +24,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **icons:** create subtract icon ([6e26f75](https://github.com/little-spoon-dev/design-system/commit/6e26f75ae7eb5a81b0232d3a63a01f38b66fedfd))
 
-# [1.7.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.6.2...@littlespoon/icons@1.7.0) (2022-08-17)
+## [1.7.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.6.2...@littlespoon/icons@1.7.0) (2022-08-17)
 
 ### Features
 

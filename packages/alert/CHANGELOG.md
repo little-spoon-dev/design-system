@@ -17,7 +17,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @littlespoon/alert
 
-# 1.1.0 (2022-08-22)
+## 1.1.0 (2022-08-22)
 
 ### Bug Fixes
 

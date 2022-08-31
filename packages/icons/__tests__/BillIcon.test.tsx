@@ -30,8 +30,17 @@ describe('with props.size', () => {
 })
 
 describe('with props.fill', () => {
-  render(<BillIcon fill="#bada55" stroke="#bada55" />)
-  expect(screen.getByTitle('Bill icon')).toBeInTheDocument()
+  it('renders bill icon with props.fill', () => {
+    render(<BillIcon fill="#bada55" stroke="#bada55" />)
+    expect(screen.getByTitle('Bill icon')).toBeInTheDocument()
+  })
+})
+
+describe('with props.stroke', () => {
+  it('renders bill icon with props.stroke', () => {
+    render(<BillIcon stroke="#bada55" />)
+    expect(screen.getByTitle('Bill icon')).toBeInTheDocument()
+  })
 })
 
 describe('with props.aria-label', () => {

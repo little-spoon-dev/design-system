@@ -31,7 +31,7 @@ describe('with props.size', () => {
 
 describe('with props.fill', () => {
   it('renders hamburger menu icon with props.fill', () => {
-    render(<HamburgerMenuIcon fill="#bada55" stroke="#bada55" />)
+    render(<HamburgerMenuIcon fill="#bada55" />)
     expect(screen.getByTitle('HamburgerMenu icon')).toBeInTheDocument()
   })
 })

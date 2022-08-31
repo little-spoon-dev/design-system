@@ -31,7 +31,7 @@ describe('with props.size', () => {
 
 describe('with props.fill', () => {
   it('renders bill icon with props.fill', () => {
-    render(<LogoutIcon fill="#bada55" stroke="#bada55" />)
+    render(<LogoutIcon fill="#bada55" />)
     expect(screen.getByTitle('Bill icon')).toBeInTheDocument()
   })
 })

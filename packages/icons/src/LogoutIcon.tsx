@@ -10,7 +10,7 @@ export interface LogoutIconProps extends React.SVGAttributes<SVGElement> {
   fill?: string
 
   /**
-   * The stroke of the component. Defaults to black.
+   * The stroke of the component. Defaults to null.
    */
   stroke?: string
 
@@ -22,7 +22,7 @@ export interface LogoutIconProps extends React.SVGAttributes<SVGElement> {
 
 export default function LogoutIcon({
   fill = shadeBlack,
-  stroke = shadeBlack,
+  stroke,
   size = 'small',
   ...other
 }: LogoutIconProps): React.ReactElement {

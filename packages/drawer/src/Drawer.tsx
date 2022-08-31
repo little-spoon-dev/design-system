@@ -74,6 +74,7 @@ export default function Drawer({
               onClick={handleClose}
               title={closeButtonTitle}
             >
+              {/* TODO: Remove <title> in CloseIcon */}
               <CloseIcon />
             </DrawerCloseButton>
           )}

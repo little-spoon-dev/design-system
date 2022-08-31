@@ -23,6 +23,8 @@ export default function CloseIcon({ fill = shadeWhite, stroke = shadeBlack, ...o
       {...other}
     >
       <circle cx="12" cy="12" r="12" fill={fill} />
+      <title>Close icon</title>
+      <desc>Close icon</desc>
       <path
         d="M7.56567 7.56583L16.4342 16.4343M7.56568 16.4343L16.4342 7.56583"
         stroke={stroke}

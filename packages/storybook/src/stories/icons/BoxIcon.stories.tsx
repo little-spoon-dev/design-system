@@ -1,12 +1,12 @@
-import CloseIcon from '@littlespoon/icons/src/CloseIcon'
+import BoxIcon from '@littlespoon/icons/src/BoxIcon'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
-  title: 'Design System/Icons/CloseIcon',
-  component: CloseIcon,
-} as ComponentMeta<typeof CloseIcon>
+  title: 'Design System/Icons/BoxIcon',
+  component: BoxIcon,
+} as ComponentMeta<typeof BoxIcon>
 
-const Template: ComponentStory<typeof CloseIcon> = (args) => <CloseIcon {...args} />
+const Template: ComponentStory<typeof BoxIcon> = (args) => <BoxIcon {...args} />
 
 export const Default = Template.bind({})
 Default.args = {}
@@ -36,7 +36,7 @@ Fill.args = {
   fill: 'skyblue',
 }
 
-export const Stroke = Template.bind({})
-Stroke.args = {
-  stroke: 'tomato',
+export const Notification = Template.bind({})
+Notification.args = {
+  notificationColor: 'tomato',
 }

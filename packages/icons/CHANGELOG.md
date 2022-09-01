@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.9.0...@littlespoon/icons@2.0.0) (2022-09-01)
+
+### Bug Fixes
+
+- **icons:** fixed add icon test LS-3568 ([244523f](https://github.com/little-spoon-dev/design-system/commit/244523f4a4ac46e61593fa4f9b62677aaf16de30))
+- **icons:** fixed logout icon test LS-3568 ([05f353f](https://github.com/little-spoon-dev/design-system/commit/05f353fbb49b9de985a4991e6246be14e0838717))
+- **icons:** wrong icon name in ui theme LS-3568 ([9565b2b](https://github.com/little-spoon-dev/design-system/commit/9565b2b6cf6b6b5e6569c919b1db2933cb29e893))
+
+### Features
+
+- **icons:** account icon with story and test ([28fc03b](https://github.com/little-spoon-dev/design-system/commit/28fc03b687d1020ffa294dd2e4a83ca85956a1cd))
+- **icons:** add size prop to close icon LS-3568 ([3f9ac8c](https://github.com/little-spoon-dev/design-system/commit/3f9ac8c454cf56250f080fc159c56107b2d7305b))
+- **icons:** bill icon with story and test LS-3568 ([173ff41](https://github.com/little-spoon-dev/design-system/commit/173ff41451ca0514df72dcbef24a49ac55704cbd))
+- **icons:** box icon with story and test LS-3568 ([99638ef](https://github.com/little-spoon-dev/design-system/commit/99638ef77c6f21a2e7cca24f27562ba9baa3857d))
+- **icons:** calendar icon with story and test ([203b485](https://github.com/little-spoon-dev/design-system/commit/203b485b5154a68a9a555f04a25c48201dddfb7d))
+- **icons:** caret icon with story and test ([1dd1558](https://github.com/little-spoon-dev/design-system/commit/1dd15586b3811f167213a64433b7647786dda5e1))
+- **icons:** cart icon with story and test LS-3568 ([cd37957](https://github.com/little-spoon-dev/design-system/commit/cd37957a4d8d1d6bda63bead5f691a6ba8ca2286))
+- **icons:** gift card icon with story and test ([87a8a71](https://github.com/little-spoon-dev/design-system/commit/87a8a71115e0f40e99e57aafa1ea64e215209111))
+- **icons:** hamburger menu icon with story and test ([5faa577](https://github.com/little-spoon-dev/design-system/commit/5faa5775f62de0065fb29ddc2e3239cf3a911a23))
+- **icons:** logout icon with story and test ([3c516f1](https://github.com/little-spoon-dev/design-system/commit/3c516f1d6822d45d4144e7a93af3da17ec87ad24))
+- **icons:** rename open icon to add icon add size prop to it LS-3568 ([8816d18](https://github.com/little-spoon-dev/design-system/commit/8816d189a7d16ba5737ed68d3684fff6ad8a57a1))
+
+### BREAKING CHANGES
+
+- **icons:** rename OpenIcon to AddIcon
+
 ## [1.9.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@1.8.0...@littlespoon/icons@1.9.0) (2022-08-30)
 
 ### Bug Fixes

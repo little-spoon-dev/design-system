@@ -1,12 +1,12 @@
-import CloseIcon from '@littlespoon/icons/src/CloseIcon'
+import CalendarIcon from '@littlespoon/icons/src/CalendarIcon'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
-  title: 'Design System/Icons/CloseIcon',
-  component: CloseIcon,
-} as ComponentMeta<typeof CloseIcon>
+  title: 'Design System/Icons/CalendarIcon',
+  component: CalendarIcon,
+} as ComponentMeta<typeof CalendarIcon>
 
-const Template: ComponentStory<typeof CloseIcon> = (args) => <CloseIcon {...args} />
+const Template: ComponentStory<typeof CalendarIcon> = (args) => <CalendarIcon {...args} />
 
 export const Default = Template.bind({})
 Default.args = {}
@@ -34,9 +34,4 @@ Large.args = {
 export const Fill = Template.bind({})
 Fill.args = {
   fill: 'skyblue',
-}
-
-export const Stroke = Template.bind({})
-Stroke.args = {
-  stroke: 'tomato',
 }

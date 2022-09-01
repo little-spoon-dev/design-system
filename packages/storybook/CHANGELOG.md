@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/little-spoon-dev/design-system/compare/storybook@2.0.0...storybook@2.1.0) (2022-09-01)
+
+### Features
+
+- **drawer:** implement Drawer component LS-3567 ([07101f8](https://github.com/little-spoon-dev/design-system/commit/07101f8d936c624465dc09c2f6da24d34bf1557e))
+- **storybook:** improve Drawer component stories ([d838db5](https://github.com/little-spoon-dev/design-system/commit/d838db580310e95b39d245ebf3e69a58f952f117))
+
 # [2.0.0](https://github.com/little-spoon-dev/design-system/compare/storybook@1.30.1...storybook@2.0.0) (2022-09-01)
 
 ### Features

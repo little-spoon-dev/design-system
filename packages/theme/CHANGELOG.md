@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.13.1...@littlespoon/theme@1.14.0) (2022-09-01)
+
+### Features
+
+- **theme:** add surfaceOverlay60 color ([0b11783](https://github.com/little-spoon-dev/design-system/commit/0b1178379ad94d3f3aacdfaaa55091fe8cefc2a1))
+- **theme:** add zIndex enum ([31ace56](https://github.com/little-spoon-dev/design-system/commit/31ace5627eade9ea720fd18257e09cdcdee39dc0))
+- **theme:** implement tests for ZIndex enum ([5075d9f](https://github.com/little-spoon-dev/design-system/commit/5075d9f3d9cb001e73d6dd5d026b2d5d73960fa5))
+
 ## [1.13.1](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.13.0...@littlespoon/theme@1.13.1) (2022-08-11)
 
 ### Bug Fixes

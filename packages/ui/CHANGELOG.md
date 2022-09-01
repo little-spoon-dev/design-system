@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.19.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.18.4...@littlespoon/ui@1.19.0) (2022-09-01)
+
+### Features
+
+- **drawer:** implement Drawer component LS-3567 ([07101f8](https://github.com/little-spoon-dev/design-system/commit/07101f8d936c624465dc09c2f6da24d34bf1557e))
+
 ## [1.18.4](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.18.3...@littlespoon/ui@1.18.4) (2022-09-01)
 
 ### Bug Fixes

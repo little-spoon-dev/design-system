@@ -1,6 +1,6 @@
 {
   "name": "@littlespoon/tag",
-  "version": "1.3.6",
+  "version": "1.3.7",
   "description": "Little Spoon tag",
   "main": "lib/index.js",
   "scripts": {
@@ -14,8 +14,8 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@littlespoon/icons": "2.0.0",
-    "@littlespoon/theme": "1.13.1"
+    "@littlespoon/icons": "2.0.1",
+    "@littlespoon/theme": "1.14.0"
   },
   "peerDependencies": {
     "react": "17 || 18",

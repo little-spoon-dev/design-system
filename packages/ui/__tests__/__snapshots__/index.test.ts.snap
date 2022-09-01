@@ -19,9 +19,9 @@ Object {
     "$$typeof": Symbol(react.forward_ref),
     "attrs": Array [],
     "componentStyle": e {
-      "baseHash": 1791515505,
+      "baseHash": -2110098852,
       "baseStyle": undefined,
-      "componentId": "sc-fEOsli",
+      "componentId": "sc-bjUoiL",
       "isStatic": false,
       "rules": Array [
         "
@@ -35,7 +35,7 @@ Object {
     "foldedComponentIds": Array [],
     "render": [Function],
     "shouldForwardProp": undefined,
-    "styledComponentId": "sc-fEOsli",
+    "styledComponentId": "sc-bjUoiL",
     "target": "dl",
     "toString": [Function],
     "warnTooManyClasses": [Function],

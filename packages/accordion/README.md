@@ -27,11 +27,40 @@ import Accordion from '@littlespoon/accordion'
 Render Accordion:
 
 ```tsx
-<Accordion />
+<Accordion>
+  <AccordionItem>
+    <AccordionSummary />
+    <AccordionDetails />
+  </AccordionItem>
+</Accordion>
 ```
 
 Render Accordion with props:
 
 ```tsx
-<Accordion items={items} />
+<Accordion>
+  <AccordionItem>
+    <AccordionSummary isExpanded={true} />
+    <AccordionDetails isExpanded={true} />
+  </AccordionItem>
+</Accordion>
+```
+
+Render Multiple Accordions with props:
+
+```tsx
+<Accordion>
+  <AccordionItem>
+    <AccordionSummary />
+    <AccordionDetails />
+  </AccordionItem>
+  <AccordionItem>
+    <AccordionSummary />
+    <AccordionDetails />
+  </AccordionItem>
+  <AccordionItem>
+    <AccordionSummary isExpanded={true} />
+    <AccordionDetails isExpanded={true} />
+  </AccordionItem>
+</Accordion>
 ```

@@ -35,7 +35,7 @@ describe('single expanded accordion', () => {
       </Accordion>,
     )
     expect(document.getElementsByTagName('button')).toHaveLength(1)
-    expect(screen.getByText('Open icon')).toBeInTheDocument()
+    expect(screen.getByText('Add icon')).toBeInTheDocument()
   })
 })
 

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import AccountIcon from './AccountIcon'
+=======
+>>>>>>> 3b21869 (fix(accordion): build failure issue)
 import AddIcon from './AddIcon'
 import ArrowIcon from './ArrowIcon'
 import BillIcon from './BillIcon'
@@ -10,6 +13,7 @@ import CheckIcon from './CheckIcon'
 import CloseIcon from './CloseIcon'
 import ExclamationIcon from './ExclamationIcon'
 import FilterIcon from './FilterIcon'
+<<<<<<< HEAD
 import GiftCardIcon from './GiftCardIcon'
 import HamburgerMenuIcon from './HamburgerMenuIcon'
 import LogoutIcon from './LogoutIcon'
@@ -35,6 +39,11 @@ export {
   OpenIcon,
   SubtractIcon,
 }
+=======
+import SubtractIcon from './SubtractIcon'
+
+export { AddIcon, ArrowIcon, CheckIcon, CloseIcon, ExclamationIcon, FilterIcon, SubtractIcon }
+>>>>>>> 3b21869 (fix(accordion): build failure issue)
 
 export default {
   AccountIcon,
@@ -48,9 +57,13 @@ export default {
   FilterIcon,
   CheckIcon,
   ExclamationIcon,
+<<<<<<< HEAD
   GiftCardIcon,
   HamburgerMenuIcon,
   LogoutIcon,
   OpenIcon,
+=======
+  AddIcon,
+>>>>>>> 3b21869 (fix(accordion): build failure issue)
   SubtractIcon,
 }

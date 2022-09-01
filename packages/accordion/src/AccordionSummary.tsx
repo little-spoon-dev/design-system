@@ -1,4 +1,4 @@
-import OpenIcon from '@littlespoon/icons/lib/OpenIcon'
+import AddIcon from '@littlespoon/icons/lib/AddIcon'
 import SubtractIcon from '@littlespoon/icons/lib/SubtractIcon'
 import { MouseEventHandler, ReactNode } from 'react'
 
@@ -15,7 +15,7 @@ export function AccordionSummary({ isExpanded = false, onClick, children }: Acco
     <ButtonWrapper type="button" onClick={onClick} aria-expanded={isExpanded}>
       {children}
       {isExpanded && <SubtractIcon />}
-      {!isExpanded && <OpenIcon />}
+      {!isExpanded && <AddIcon />}
     </ButtonWrapper>
   )
 }

@@ -3,6 +3,7 @@ import { up, xs } from '@littlespoon/theme/lib/breakpoints'
 import { shadeWhite } from '@littlespoon/theme/lib/colors/token'
 import { family } from '@littlespoon/theme/lib/fonts/primary'
 import { rem } from '@littlespoon/theme/lib/utils'
+import ZIndex from '@littlespoon/theme/lib/z-index'
 import styled from 'styled-components'
 
 import { DrawerProps } from './Drawer'
@@ -28,7 +29,7 @@ export const DrawerBase = styled.div<Partial<DrawerProps>>`
   padding: ${rem(0.8)} ${rem(2)} ${rem(2)};
   position: fixed;
   right: 0;
-  z-index: 1001;
+  z-index: ${ZIndex.drawer};
 
   &.with-close-button {
     padding: ${rem(6.4)} ${rem(2)} ${rem(2)};

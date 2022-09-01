@@ -21,7 +21,12 @@ npm install @littlespoon/accordion --save
 ## Usage
 
 ```ts
-import Accordion from '@littlespoon/accordion'
+import {
+  Accordion,
+  AccordionItem,
+  AccordionSummary,
+  AccordionDetails,
+} from '@littlespoon/accordion'
 ```
 
 Render Accordion:

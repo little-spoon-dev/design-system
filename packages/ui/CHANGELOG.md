@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.18.4](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.18.3...@littlespoon/ui@1.18.4) (2022-09-01)
+
+### Bug Fixes
+
+- **icons:** wrong icon name in ui theme LS-3568 ([9565b2b](https://github.com/little-spoon-dev/design-system/commit/9565b2b6cf6b6b5e6569c919b1db2933cb29e893))
+
 ## [1.18.3](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.18.2...@littlespoon/ui@1.18.3) (2022-08-30)
 
 **Note:** Version bump only for package @littlespoon/ui

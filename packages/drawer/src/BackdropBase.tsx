@@ -1,5 +1,5 @@
 import { surfaceOverlay60 } from '@littlespoon/theme/lib/colors/token'
-import ZIndex from '@littlespoon/theme/lib/z-index'
+import zIndex from '@littlespoon/theme/lib/z-index'
 import styled from 'styled-components'
 
 export const BackdropBase = styled.div`
@@ -12,6 +12,6 @@ export const BackdropBase = styled.div`
   position: fixed;
   right: 0;
   top: 0;
-  z-index: ${ZIndex.backdrop};
+  z-index: ${zIndex.backdrop};
   -webkit-tap-highlight-color: transparent;
 `

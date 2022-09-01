@@ -1,8 +1,8 @@
-import ZIndex from '../src/z-index'
+import zIndex from '../src/z-index'
 
-describe('ZIndex', () => {
+describe('zIndex', () => {
   it('gets values in enum', () => {
-    expect(ZIndex.backdrop).toBe(1100)
-    expect(ZIndex.drawer).toBe(1200)
+    expect(zIndex.backdrop).toBe(1100)
+    expect(zIndex.drawer).toBe(1200)
   })
 })

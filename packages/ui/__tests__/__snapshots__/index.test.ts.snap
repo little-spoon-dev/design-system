@@ -10,6 +10,7 @@ Object {
   "Checkbox": [Function],
   "CheckboxGroup": [Function],
   "Divider": [Function],
+  "Drawer": [Function],
   "Label": [Function],
   "Link": [Function],
   "Tag": [Function],

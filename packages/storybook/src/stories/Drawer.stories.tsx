@@ -1,16 +1,18 @@
 import Button from '@littlespoon/button/src/Button'
 import Drawer from '@littlespoon/drawer/src/Drawer'
+import { rem } from '@littlespoon/theme/lib/utils'
+import { useArgs } from '@storybook/client-api'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
   title: 'Design System/Drawer',
   component: Drawer,
-  argTypes: { onClose: { action: 'closed' } },
+  argTypes: { onClose: { action: 'drawer-close' } },
 } as ComponentMeta<typeof Drawer>
 
 const drawerChildren = (
   <>
-    <h1>Drawer</h1>
+    <h1>Lorem ipsum dolor sit amet</h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec convallis dolor. Morbi a
       vestibulum augue. Nunc quis turpis ipsum. Etiam volutpat, dui id finibus efficitur, libero
@@ -32,15 +34,33 @@ const drawerChildren = (
       dignissim commodo, bibendum et nibh. Sed varius feugiat dui non euismod. Quisque rutrum risus
       eget tincidunt pretium. Etiam gravida hendrerit dui, in vestibulum velit feugiat ultrices.
     </p>
-    <div>
-      <Button variant="ghost">One</Button>
-      <Button variant="ghost">Two</Button>
-      <Button variant="ghost">Thee</Button>
+    <div style={{ display: 'flex', gap: rem(0.8), justifyContent: 'center' }}>
+      <Button variant="ghost">Lorem</Button>
+      <Button variant="ghost">Ipsum</Button>
+      <Button variant="ghost">Dolor</Button>
     </div>
   </>
 )
 
-const Template: ComponentStory<typeof Drawer> = (args) => <Drawer {...args} />
+const Template: ComponentStory<typeof Drawer> = (args) => {
+  const [{ open: isOpen }, updateArgs] = useArgs()
+
+  const handleButtonClick = () => {
+    updateArgs({ open: !isOpen })
+  }
+
+  const handleDrawerClose = () => {
+    updateArgs({ open: !isOpen })
+    args.onClose && args.onClose()
+  }
+
+  return (
+    <>
+      <Button onClick={handleButtonClick}>Open Drawer</Button>
+      <Drawer {...args} onClose={handleDrawerClose} />
+    </>
+  )
+}
 
 export const Default = Template.bind({})
 Default.args = {

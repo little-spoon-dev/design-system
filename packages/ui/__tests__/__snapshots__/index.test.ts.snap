@@ -15,7 +15,32 @@ Object {
   "Link": [Function],
   "Tag": [Function],
   "Typography": [Function],
-  "accordion": [Function],
+  "accordion": Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "attrs": Array [],
+    "componentStyle": e {
+      "baseHash": 1791515505,
+      "baseStyle": undefined,
+      "componentId": "sc-fEOsli",
+      "isStatic": false,
+      "rules": Array [
+        "
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+",
+      ],
+      "staticRulesId": "",
+    },
+    "foldedComponentIds": Array [],
+    "render": [Function],
+    "shouldForwardProp": undefined,
+    "styledComponentId": "sc-fEOsli",
+    "target": "dl",
+    "toString": [Function],
+    "warnTooManyClasses": [Function],
+    "withComponent": [Function],
+  },
   "theme": Object {
     "breakpoints": Object {
       "desktop": 1000,

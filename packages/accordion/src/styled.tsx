@@ -5,10 +5,9 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div<{
   isExpanded: boolean
-  expandedHeight: number
 }>`
   position: relative;
-  height: ${(props) => (props.isExpanded ? `${props.expandedHeight / 10}rem` : '0')};
+  height: ${(props) => (props.isExpanded ? `auto` : '0')};
   transition: all 0.4s ease-in-out;
   overflow: hidden;
   visibility: ${(props) => (props.isExpanded ? 'visible' : 'hidden')};

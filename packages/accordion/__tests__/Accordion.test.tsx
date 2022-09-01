@@ -1,65 +1,84 @@
-import { fireEvent, render, screen } from '@testing-library/react'
+import { Accordion, AccordionItem } from '@littlespoon/accordion/src/Accordion'
+import { AccordionDetails } from '@littlespoon/accordion/src/AccordionContent'
+import { AccordionSummary } from '@littlespoon/accordion/src/AccordionSummary'
+import { render, screen } from '@testing-library/react'
 
-import Accordion from '../src/'
-
-const singleArgs = {
-  items: [
-    {
-      header: 'Heading1',
-      content: 'content 1',
-    },
-  ],
-}
-
-const multipleArgs = {
-  items: [
-    {
-      header: 'Heading1',
-      content: 'content 1',
-    },
-    {
-      header: 'Heading2',
-      content: 'content 2',
-    },
-    {
-      header: 'Heading3',
-      content: 'content 3',
-    },
-  ],
-}
-
-window.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}))
-
-describe('single accordion', () => {
+describe('single default accordion', () => {
   it('renders single accordion', async () => {
-    render(<Accordion items={singleArgs.items}></Accordion>)
-    expect(document.getElementsByTagName('dt')).toHaveLength(1)
+    render(
+      <Accordion>
+        <AccordionItem>
+          <AccordionSummary isExpanded={true}>Heading</AccordionSummary>
+          <AccordionDetails isExpanded={true}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum
+          </AccordionDetails>
+        </AccordionItem>
+      </Accordion>,
+    )
+    expect(document.getElementsByTagName('button')).toHaveLength(1)
   })
 })
 
-describe('single accordion', () => {
+describe('single expanded accordion', () => {
   it('renders single accordion', async () => {
-    render(<Accordion items={singleArgs.items}></Accordion>)
-    const button = screen.getByRole('button')
-    fireEvent.click(button)
-    expect(screen.getByText('content 1')).toBeInTheDocument()
+    render(
+      <Accordion>
+        <AccordionItem>
+          <AccordionSummary>Heading</AccordionSummary>
+          <AccordionDetails>Content</AccordionDetails>
+        </AccordionItem>
+      </Accordion>,
+    )
+    expect(document.getElementsByTagName('button')).toHaveLength(1)
+    expect(screen.getByText('Open icon')).toBeInTheDocument()
   })
 })
 
 describe('multiple accordion', () => {
   it('renders multiple accordion', async () => {
-    render(<Accordion items={multipleArgs.items}></Accordion>)
-    const button = screen.getByText('Heading1')
-    fireEvent.click(button)
-    fireEvent.click(button)
-    expect(screen.getByText('content 1')).toBeInTheDocument()
-    const button2 = screen.getByText('Heading2')
-    fireEvent.click(button2)
-    expect(screen.getByText('content 2')).toBeInTheDocument()
-    expect(document.getElementsByTagName('dt')).toHaveLength(3)
+    render(
+      <Accordion>
+        <AccordionItem>
+          <AccordionSummary isExpanded={false}>Heading1</AccordionSummary>
+          <AccordionDetails isExpanded={false}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum
+          </AccordionDetails>
+        </AccordionItem>
+        <AccordionItem>
+          <AccordionSummary isExpanded={true}>Heading2</AccordionSummary>
+          <AccordionDetails isExpanded={true}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum
+          </AccordionDetails>
+        </AccordionItem>
+        <AccordionItem>
+          <AccordionSummary isExpanded={false}>Heading3</AccordionSummary>
+          <AccordionDetails isExpanded={false}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum
+          </AccordionDetails>
+        </AccordionItem>
+      </Accordion>,
+    )
+    expect(document.getElementsByTagName('button')).toHaveLength(3)
+    expect(screen.getByText('Subtract icon')).toBeInTheDocument()
   })
 })

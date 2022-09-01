@@ -1,53 +1,19 @@
-import OpenIcon from '@littlespoon/icons/lib/OpenIcon'
-import SubtractIcon from '@littlespoon/icons/lib/SubtractIcon'
-import { ReactNode, useState } from 'react'
+import { ReactNode } from 'react'
 
-import ExpandableContent from './AccordionContent'
-import { ButtonWrapper, Content, Divider, Item, List } from './styled'
+import { Divider, Item, List } from './styled'
 
-export interface AccordionProps {
-  items: Array<{
-    header: ReactNode
-    content: ReactNode
-  }>
+interface AccordionItemProps {
+  children?: ReactNode
 }
 
-export default function Accordion(props: AccordionProps) {
-  const self = useController()
+export function AccordionItem({ children }: AccordionItemProps) {
   return (
-    <List>
-      {props.items.map((item, i) => (
-        <Item key={i}>
-          <ButtonWrapper
-            type="button"
-            onClick={() => self.handleClick(i)}
-            aria-expanded={self.selectedItem === i}
-          >
-            {item.header}
-            {self.selectedItem === i && <SubtractIcon />}
-            {self.selectedItem !== i && <OpenIcon />}
-          </ButtonWrapper>
-          <ExpandableContent isExpanded={self.selectedItem === i}>
-            <Content>{item.content}</Content>
-          </ExpandableContent>
-          <Divider className="accordion-divider" />
-        </Item>
-      ))}
-    </List>
+    <Item>
+      {children}
+      <Divider className="accordion-divider" />
+    </Item>
   )
 }
 
-function useController() {
-  const [selectedItem, setSelectedItem] = useState<number | null>(null)
-
-  const handleClick = (i: number) => {
-    setSelectedItem((currentIndex) => {
-      if (i === currentIndex) {
-        return null
-      }
-      return i
-    })
-  }
-
-  return { selectedItem, handleClick }
-}
+export default List
+export { List as Accordion }

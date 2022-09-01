@@ -1,4 +1,6 @@
-import Accordion from '@littlespoon/accordion/src/Accordion'
+import { Accordion, AccordionItem } from '@littlespoon/accordion/src/Accordion'
+import { AccordionDetails } from '@littlespoon/accordion/src/AccordionContent'
+import { AccordionSummary } from '@littlespoon/accordion/src/AccordionSummary'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
@@ -10,32 +12,67 @@ const Template: ComponentStory<typeof Accordion> = (args) => <Accordion {...args
 
 export const Default = Template.bind({})
 Default.args = {
-  items: [
-    {
-      header: 'Heading',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-    },
-  ],
+  children: (
+    <AccordionItem>
+      <AccordionSummary>Heading</AccordionSummary>
+      <AccordionDetails>Content</AccordionDetails>
+    </AccordionItem>
+  ),
+}
+
+export const SingleExpanded = Template.bind({})
+SingleExpanded.args = {
+  children: (
+    <AccordionItem>
+      <AccordionSummary isExpanded={true}>Heading</AccordionSummary>
+      <AccordionDetails isExpanded={true}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      </AccordionDetails>
+    </AccordionItem>
+  ),
 }
 
 export const Multiple = Template.bind({})
 Multiple.args = {
-  items: [
-    {
-      header: 'Heading1',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-    },
-    {
-      header: 'Heading2',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-    },
-    {
-      header: 'Heading3',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-    },
-  ],
+  children: (
+    <>
+      <AccordionItem>
+        <AccordionSummary isExpanded={false}>Heading1</AccordionSummary>
+        <AccordionDetails isExpanded={false}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum
+        </AccordionDetails>
+      </AccordionItem>
+      <AccordionItem>
+        <AccordionSummary isExpanded={true}>Heading2</AccordionSummary>
+        <AccordionDetails isExpanded={true}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum
+        </AccordionDetails>
+      </AccordionItem>
+      <AccordionItem>
+        <AccordionSummary isExpanded={false}>Heading3</AccordionSummary>
+        <AccordionDetails isExpanded={false}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum
+        </AccordionDetails>
+      </AccordionItem>
+    </>
+  ),
 }

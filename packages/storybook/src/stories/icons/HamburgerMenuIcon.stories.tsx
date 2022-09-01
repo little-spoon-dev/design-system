@@ -1,12 +1,12 @@
-import CloseIcon from '@littlespoon/icons/src/CloseIcon'
+import HamburgerMenuIcon from '@littlespoon/icons/src/HamburgerMenuIcon'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
-  title: 'Design System/Icons/CloseIcon',
-  component: CloseIcon,
-} as ComponentMeta<typeof CloseIcon>
+  title: 'Design System/Icons/HamburgerMenuIcon',
+  component: HamburgerMenuIcon,
+} as ComponentMeta<typeof HamburgerMenuIcon>
 
-const Template: ComponentStory<typeof CloseIcon> = (args) => <CloseIcon {...args} />
+const Template: ComponentStory<typeof HamburgerMenuIcon> = (args) => <HamburgerMenuIcon {...args} />
 
 export const Default = Template.bind({})
 Default.args = {}

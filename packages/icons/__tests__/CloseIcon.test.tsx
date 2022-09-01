@@ -1,7 +1,8 @@
 import { render, screen } from '@testing-library/react'
 import { axe } from 'jest-axe'
 
-import CloseIcon from '../src/CloseIcon'
+import CloseIcon, { CloseIconProps } from '../src/CloseIcon'
+import { getScale } from '../src/utils/css-helpers'
 
 const label = 'label'
 
@@ -13,6 +14,21 @@ describe('accessibility', () => {
 
   it('has title', async () => {
     render(<CloseIcon />)
+    expect(screen.getByTitle('Close icon')).toBeInTheDocument()
+  })
+})
+
+describe('with props.size', () => {
+  it.each<CloseIconProps['size']>(['xsmall', 'small', 'medium', 'large'])(
+    'renders bill icon with size=%j',
+    (size) => {
+      render(<CloseIcon aria-label={label} size={size} />)
+      expect(screen.getByLabelText(label)).toHaveStyle(`transform: scale(${getScale(size)})`)
+    },
+  )
+
+  it('does not throw for invalid size', () => {
+    render(<CloseIcon size={'' as CloseIconProps['size']} />)
     expect(screen.getByTitle('Close icon')).toBeInTheDocument()
   })
 })

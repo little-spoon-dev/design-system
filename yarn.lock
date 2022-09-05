@@ -2548,13 +2548,6 @@
     npmlog "^6.0.2"
     write-file-atomic "^4.0.1"
 
-"@littlespoon/icons@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@littlespoon/icons/-/icons-2.0.0.tgz#b0299a825b3e3e4d0228af2c9ddf8a0c20ecb636"
-  integrity sha512-/1N6s3ppJjE6G6b1K1FsrigKbYftp0fGKeuIrmu63BWIrEC+KuO8G1XQtVtQjpzRLl6OgmQSYiSDSa+DhbnBaw==
-  dependencies:
-    "@littlespoon/theme" "1.13.1"
-
 "@mdx-js/mdx@^1.6.22":
   version "1.6.22"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-1.6.22.tgz#8a723157bf90e78f17dc0f27995398e6c731f1ba"
@@ -3816,9 +3809,9 @@
     redent "^3.0.0"
 
 "@testing-library/react@^13.3.0":
-  version "13.3.0"
-  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-13.3.0.tgz#bf298bfbc5589326bbcc8052b211f3bb097a97c5"
-  integrity sha512-DB79aA426+deFgGSjnf5grczDPiL4taK3hFaa+M5q7q20Kcve9eQottOG5kZ74KEr55v0tU2CQormSSDK87zYQ==
+  version "13.4.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-13.4.0.tgz#6a31e3bf5951615593ad984e96b9e5e2d9380966"
+  integrity sha512-sXOGON+WNTh3MLE9rve97ftaZukN3oNf2KjDy7YTx6hcTO2uuLHuCGynMDhFwGw/jYf4OJ2Qk0i4i79qMNNkyw==
   dependencies:
     "@babel/runtime" "^7.12.5"
     "@testing-library/dom" "^8.5.0"

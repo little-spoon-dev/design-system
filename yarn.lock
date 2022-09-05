@@ -2548,13 +2548,6 @@
     npmlog "^6.0.2"
     write-file-atomic "^4.0.1"
 
-"@littlespoon/icons@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@littlespoon/icons/-/icons-2.0.0.tgz#b0299a825b3e3e4d0228af2c9ddf8a0c20ecb636"
-  integrity sha512-/1N6s3ppJjE6G6b1K1FsrigKbYftp0fGKeuIrmu63BWIrEC+KuO8G1XQtVtQjpzRLl6OgmQSYiSDSa+DhbnBaw==
-  dependencies:
-    "@littlespoon/theme" "1.13.1"
-
 "@mdx-js/mdx@^1.6.22":
   version "1.6.22"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-1.6.22.tgz#8a723157bf90e78f17dc0f27995398e6c731f1ba"
@@ -7353,10 +7346,10 @@ eslint-plugin-prettier@^4.2.1:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-simple-import-sort@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-simple-import-sort/-/eslint-plugin-simple-import-sort-7.0.0.tgz#a1dad262f46d2184a90095a60c66fef74727f0f8"
-  integrity sha512-U3vEDB5zhYPNfxT5TYR7u01dboFZp+HNpnGhkDB2g/2E4wZ/g1Q9Ton8UwCLfRV9yAKyYqDh62oHOamvkFxsvw==
+eslint-plugin-simple-import-sort@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-simple-import-sort/-/eslint-plugin-simple-import-sort-8.0.0.tgz#9d9a2372b0606e999ea841b10458a370a6ccc160"
+  integrity sha512-bXgJQ+lqhtQBCuWY/FUWdB27j4+lqcvXv5rUARkzbeWLwea+S5eBZEQrhnO+WgX3ZoJHVj0cn943iyXwByHHQw==
 
 eslint-plugin-tsdoc@^0.2.16:
   version "0.2.16"

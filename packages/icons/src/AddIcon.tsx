@@ -39,7 +39,7 @@ export default function AddIcon({
       <circle cx="12" cy="12" r="12" fill={fill} />
       <title>Add icon</title>
       <path
-        d="m7.566 7.566 8.868 8.868m-8.868 0 8.868-8.868"
+        d="M12 2.75v18.5M2.75 12h18.5"
         stroke={stroke}
         strokeWidth="1.5"
         strokeLinecap="round"
@@ -54,5 +54,5 @@ const AddIconBase = styled.svg<AddIconProps>`
   justify-content: center;
   align-items: center;
   transition: transform 0.4s;
-  transform: rotate(45deg) scale(${(props) => getScale(props.size)});
+  transform: scale(${(props) => getScale(props.size)});
 `

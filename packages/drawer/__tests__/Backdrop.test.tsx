@@ -55,6 +55,6 @@ describe('with props.onClick', () => {
     const backdrop = screen.getByTestId(backdropTestId)
     expect(backdrop).toBeInTheDocument()
     fireEvent.click(backdrop)
-    expect(backdrop).not.toBeInTheDocument()
+    expect(backdrop).toBeInTheDocument()
   })
 })

@@ -1,6 +1,6 @@
 {
   "name": "@littlespoon/drawer",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Little Spoon drawer",
   "main": "lib/index.js",
   "scripts": {

@@ -28,7 +28,7 @@
     "eslint": "^8.20.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
     "eslint-plugin-tsdoc": "^0.2.16",
     "flowgen": "1.17.0",
     "husky": "^8.0.1",

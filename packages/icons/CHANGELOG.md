@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.3](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@2.0.2...@littlespoon/icons@2.0.3) (2022-09-06)
+
+### Bug Fixes
+
+- **icons:** fix testing failure issue ([2259ba5](https://github.com/little-spoon-dev/design-system/commit/2259ba5bf6ca9cadc3f46516f178a8ba6ddf9fa5))
+- **icons:** update add icon ([7f2ec6d](https://github.com/little-spoon-dev/design-system/commit/7f2ec6df5b15d69234b692cd7e589b365f001b29))
+
 ## [2.0.2](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@2.0.1...@littlespoon/icons@2.0.2) (2022-09-06)
 
 ### Bug Fixes

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.19.2](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.19.1...@littlespoon/ui@1.19.2) (2022-09-06)
+
+**Note:** Version bump only for package @littlespoon/ui
+
 ## [1.19.1](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.19.0...@littlespoon/ui@1.19.1) (2022-09-06)
 
 ### Bug Fixes

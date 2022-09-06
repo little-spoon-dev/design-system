@@ -4,14 +4,19 @@ import React, { PropsWithChildren, useEffect, useState } from 'react'
 import { FocusOn } from 'react-focus-on'
 
 import Backdrop from './Backdrop'
-import { DrawerBase, DrawerCloseButton, DrawerContent } from './DrawerBase'
+import {
+  DrawerBase,
+  DrawerCloseButton,
+  DrawerCloseButtonContainer,
+  DrawerContent,
+} from './DrawerBase'
 import Portal from './Portal'
 
 export type DrawerProps = PropsWithChildren<{
   /**
-   * Identifier of the element that will be used to label the Drawer.
+   * ARIA label of the component.
    */
-  ariaLabelledBy?: string
+  ariaLabel?: string
 
   /**
    * Close button title.
@@ -20,7 +25,19 @@ export type DrawerProps = PropsWithChildren<{
   closeButtonTitle?: string
 
   /**
-   * Close handler.
+   * If `true`, clicking the Backdrop will not fire the `onClose` callback.
+   * @defaultValue `false`
+   */
+  disableBackdropClick?: boolean
+
+  /**
+   * If `true`, pressing the Escape key will not fire the `onClose` callback.
+   * @defaultValue `false`
+   */
+  disableEscapeKeyDown?: boolean
+
+  /**
+   * Callback fired when the component requests to be closed.
    */
   onClose?: () => void
 
@@ -38,9 +55,11 @@ export type DrawerProps = PropsWithChildren<{
 }>
 
 export default function Drawer({
-  ariaLabelledBy,
+  ariaLabel,
   children,
   closeButtonTitle = 'Close',
+  disableBackdropClick = false,
+  disableEscapeKeyDown = false,
   onClose,
   open = false,
   showCloseButton = false,
@@ -56,32 +75,31 @@ export default function Drawer({
   }
 
   const handleClose = () => {
-    setIsOpen(false)
-
     if (!onClose) {
       return
     }
+    setIsOpen(false)
     onClose()
   }
 
+  const onEscapeKey = disableEscapeKeyDown ? undefined : handleClose
+  const onBackdropClick = disableBackdropClick ? undefined : handleClose
+
   return (
     <Portal>
-      <FocusOn onEscapeKey={handleClose}>
-        <Backdrop onClick={handleClose} open={isOpen} />
-        <DrawerBase
-          aria-labelledby={ariaLabelledBy}
-          aria-modal
-          className={showCloseButton ? 'with-close-button' : ''}
-          role="dialog"
-        >
+      <FocusOn onEscapeKey={onEscapeKey}>
+        <Backdrop onClick={onBackdropClick} open={isOpen} />
+        <DrawerBase aria-label={ariaLabel} aria-modal role="dialog">
           {showCloseButton && (
-            <DrawerCloseButton
-              aria-label={closeButtonTitle}
-              onClick={handleClose}
-              title={closeButtonTitle}
-            >
-              <CloseIcon fill={shadeBlack} stroke={shadeWhite} />
-            </DrawerCloseButton>
+            <DrawerCloseButtonContainer>
+              <DrawerCloseButton
+                aria-label={closeButtonTitle}
+                onClick={handleClose}
+                title={closeButtonTitle}
+              >
+                <CloseIcon aria-hidden fill={shadeBlack} stroke={shadeWhite} />
+              </DrawerCloseButton>
+            </DrawerCloseButtonContainer>
           )}
           <DrawerContent tabIndex={-1}>{children}</DrawerContent>
         </DrawerBase>

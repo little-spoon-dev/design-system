@@ -7,15 +7,20 @@ import { ButtonWrapper } from './styled'
 interface AccordionSummaryProps {
   children?: ReactNode
   isExpanded?: boolean
+  className?: string
   onClick?: MouseEventHandler<HTMLButtonElement>
 }
 
-export function AccordionSummary({ isExpanded = false, onClick, children }: AccordionSummaryProps) {
+export function AccordionSummary({
+  isExpanded = false,
+  onClick,
+  children,
+  className,
+}: AccordionSummaryProps) {
   return (
-    <ButtonWrapper type="button" onClick={onClick} aria-expanded={isExpanded}>
+    <ButtonWrapper type="button" onClick={onClick} aria-expanded={isExpanded} className={className}>
       {children}
-      {isExpanded && <SubtractIcon />}
-      {!isExpanded && <AddIcon />}
+      {isExpanded ? <SubtractIcon /> : <AddIcon />}
     </ButtonWrapper>
   )
 }

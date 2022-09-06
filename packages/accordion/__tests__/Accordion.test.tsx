@@ -1,5 +1,5 @@
 import { Accordion, AccordionItem } from '@littlespoon/accordion/src/Accordion'
-import { AccordionDetails } from '@littlespoon/accordion/src/AccordionContent'
+import { AccordionDetails } from '@littlespoon/accordion/src/AccordionDetails'
 import { AccordionSummary } from '@littlespoon/accordion/src/AccordionSummary'
 import { render, screen } from '@testing-library/react'
 
@@ -40,6 +40,19 @@ describe('single expanded accordion', () => {
 })
 
 describe('multiple accordion', () => {
+  class ResizeObserver {
+    observe() {
+      // do nothing
+    }
+    unobserve() {
+      // do nothing
+    }
+    disconnect() {
+      // do nothing
+    }
+  }
+
+  window.ResizeObserver = ResizeObserver
   it('renders multiple accordion', async () => {
     render(
       <Accordion>

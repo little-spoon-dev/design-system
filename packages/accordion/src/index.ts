@@ -1,4 +1,4 @@
 export * from './Accordion'
 export { default } from './Accordion'
-export * from './AccordionContent'
+export * from './AccordionDetails'
 export * from './AccordionSummary'

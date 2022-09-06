@@ -2548,6 +2548,18 @@
     npmlog "^6.0.2"
     write-file-atomic "^4.0.1"
 
+"@littlespoon/icons@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@littlespoon/icons/-/icons-2.0.0.tgz#b0299a825b3e3e4d0228af2c9ddf8a0c20ecb636"
+  integrity sha512-/1N6s3ppJjE6G6b1K1FsrigKbYftp0fGKeuIrmu63BWIrEC+KuO8G1XQtVtQjpzRLl6OgmQSYiSDSa+DhbnBaw==
+  dependencies:
+    "@littlespoon/theme" "1.13.1"
+
+"@littlespoon/theme@1.13.1":
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/@littlespoon/theme/-/theme-1.13.1.tgz#0bb84b75b0a587d053c504799a0153a1dda4c17e"
+  integrity sha512-40eZLNvw9/C+0X6ZCVoZZK7OXm5jzHhPwyZtoJp0cenvKJG0raUEzRL6DZiD/wfeI4ZkNj0GiNR6XgfJsrTyxA==
+
 "@mdx-js/mdx@^1.6.22":
   version "1.6.22"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-1.6.22.tgz#8a723157bf90e78f17dc0f27995398e6c731f1ba"

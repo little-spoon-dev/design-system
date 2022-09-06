@@ -1,6 +1,7 @@
 import CheckIcon from '@littlespoon/icons/lib/CheckIcon'
 import CloseIcon from '@littlespoon/icons/lib/CloseIcon'
 import ExclamationIcon from '@littlespoon/icons/lib/ExclamationIcon'
+import InfoIcon from '@littlespoon/icons/lib/InfoIcon'
 import colors from '@littlespoon/theme/lib/colors'
 import type React from 'react'
 
@@ -58,6 +59,13 @@ const iconFills = {
   informative: colors.informative50(),
 }
 
+const iconBase = {
+  success: CheckIcon,
+  warning: ExclamationIcon,
+  critical: ExclamationIcon,
+  informative: InfoIcon,
+}
+
 export default function Alert({
   actionLinkText,
   actionLinkUrl,
@@ -68,7 +76,7 @@ export default function Alert({
   variant = 'success',
   ...other
 }: AlertProps): React.ReactElement<AlertProps> {
-  const Icon = variant === 'success' ? CheckIcon : ExclamationIcon
+  const Icon = iconBase[variant]
   return (
     <AlertWrapper variant={variant} type={type} {...other}>
       <Icon stroke={colors.shadeWhite} fill={iconFills[variant]} />

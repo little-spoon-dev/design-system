@@ -12,6 +12,7 @@ import ExclamationIcon from './ExclamationIcon'
 import FilterIcon from './FilterIcon'
 import GiftCardIcon from './GiftCardIcon'
 import HamburgerMenuIcon from './HamburgerMenuIcon'
+import InfoIcon from './InfoIcon'
 import LogoutIcon from './LogoutIcon'
 import SubtractIcon from './SubtractIcon'
 
@@ -45,6 +46,7 @@ export default {
   CartIcon,
   FilterIcon,
   CheckIcon,
+  InfoIcon,
   ExclamationIcon,
   GiftCardIcon,
   HamburgerMenuIcon,

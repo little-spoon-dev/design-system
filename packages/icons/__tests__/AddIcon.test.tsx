@@ -23,7 +23,9 @@ describe('with props.size', () => {
     'renders bill icon with size=%j',
     (size) => {
       render(<AddIcon aria-label={label} size={size} />)
-      expect(screen.getByLabelText(label)).toHaveStyle(`transform: scale(${getScale(size)})`)
+      expect(screen.getByLabelText(label)).toHaveStyle(
+        `transform: rotate(45deg) scale(${getScale(size)})`,
+      )
     },
   )
 

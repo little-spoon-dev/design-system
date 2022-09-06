@@ -2,26 +2,13 @@
 
 exports[`exports ui 1`] = `
 Object {
-  "Alert": [Function],
-  "Box": [Function],
-  "Breadcrumb": [Function],
-  "Breadcrumbs": [Function],
-  "Button": [Function],
-  "Checkbox": [Function],
-  "CheckboxGroup": [Function],
-  "Divider": [Function],
-  "Drawer": [Function],
-  "Label": [Function],
-  "Link": [Function],
-  "Tag": [Function],
-  "Typography": [Function],
-  "accordion": Object {
+  "Accordion": Object {
     "$$typeof": Symbol(react.forward_ref),
     "attrs": Array [],
     "componentStyle": e {
-      "baseHash": -2110098852,
+      "baseHash": 217807692,
       "baseStyle": undefined,
-      "componentId": "sc-bjUoiL",
+      "componentId": "sc-ivTmOn",
       "isStatic": false,
       "rules": Array [
         "
@@ -35,12 +22,25 @@ Object {
     "foldedComponentIds": Array [],
     "render": [Function],
     "shouldForwardProp": undefined,
-    "styledComponentId": "sc-bjUoiL",
+    "styledComponentId": "sc-ivTmOn",
     "target": "dl",
     "toString": [Function],
     "warnTooManyClasses": [Function],
     "withComponent": [Function],
   },
+  "Alert": [Function],
+  "Box": [Function],
+  "Breadcrumb": [Function],
+  "Breadcrumbs": [Function],
+  "Button": [Function],
+  "Checkbox": [Function],
+  "CheckboxGroup": [Function],
+  "Divider": [Function],
+  "Drawer": [Function],
+  "Label": [Function],
+  "Link": [Function],
+  "Tag": [Function],
+  "Typography": [Function],
   "theme": Object {
     "breakpoints": Object {
       "desktop": 1000,

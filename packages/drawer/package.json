@@ -1,6 +1,6 @@
 {
   "name": "@littlespoon/drawer",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Little Spoon drawer",
   "main": "lib/index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@littlespoon/button": "1.7.3",
-    "@littlespoon/icons": "2.0.1",
+    "@littlespoon/icons": "2.0.2",
     "@littlespoon/theme": "1.14.0",
     "react-focus-on": "3.6.0"
   },

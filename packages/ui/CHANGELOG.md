@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.19.1](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.19.0...@littlespoon/ui@1.19.1) (2022-09-06)
+
+### Bug Fixes
+
+- **icons:** add exports of new PCH icons LS-3975 ([8320710](https://github.com/little-spoon-dev/design-system/commit/8320710e428bab89663add96b56b211a733e4370))
+
 # [1.19.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.18.4...@littlespoon/ui@1.19.0) (2022-09-01)
 
 ### Features

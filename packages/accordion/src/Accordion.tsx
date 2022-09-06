@@ -6,12 +6,16 @@ interface AccordionItemProps {
   children?: ReactNode
   className?: string
 }
+
+export default List
+export { List as Accordion }
+
 /* istanbul ignore next */
 export function useAccordionController() {
-  const [activeItem, setActiveItem] = useState<number>()
+  const [activeItem, setActiveItem] = useState<number | null>()
 
   const handleItemClick = (index: number) => {
-    setActiveItem((prev) => (prev === index ? undefined : index))
+    setActiveItem((prev) => (prev === index ? null : index))
   }
 
   return { activeItem, handleItemClick }
@@ -25,6 +29,3 @@ export function AccordionItem({ children, className }: AccordionItemProps) {
     </Item>
   )
 }
-
-export default List
-export { List as Accordion }

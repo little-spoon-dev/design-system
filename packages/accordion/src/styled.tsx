@@ -44,7 +44,7 @@ export const ContentWrapper = styled.div<{
   expandedHeight: number
 }>`
   position: relative;
-  height: ${(props) => (props.isExpanded ? `${props.expandedHeight}px` : '0')};
+  height: ${(props) => (props.isExpanded ? `${props.expandedHeight / 10}rem` : '0')};
   transition: all 0.4s ease-in-out;
   overflow: hidden;
   visibility: ${(props) => (props.isExpanded ? 'visible' : 'hidden')};

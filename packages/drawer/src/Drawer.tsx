@@ -16,7 +16,7 @@ export type DrawerProps = PropsWithChildren<{
   /**
    * ARIA label of the component.
    */
-  ariaLabel?: string
+  'aria-label'?: string
 
   /**
    * Close button title.
@@ -55,7 +55,7 @@ export type DrawerProps = PropsWithChildren<{
 }>
 
 export default function Drawer({
-  ariaLabel,
+  ['aria-label']: ariaLabel,
   children,
   closeButtonTitle = 'Close',
   disableBackdropClick = false,

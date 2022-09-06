@@ -52,10 +52,10 @@ describe('with props.children', () => {
   })
 })
 
-describe('with props.ariaLabel', () => {
+describe('with props.aria-label', () => {
   it('renders labelled drawer', () => {
     const label = 'Hello'
-    render(<Drawer ariaLabel={label} open={true} />)
+    render(<Drawer aria-label={label} open={true} />)
     expect(screen.getByLabelText(label)).toBeInTheDocument()
   })
 })

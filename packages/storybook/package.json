@@ -1,7 +1,7 @@
 {
   "name": "storybook",
   "private": true,
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Little Spoon Storybook",
   "scripts": {
     "build": "yarn copy-changelog && NODE_OPTIONS=--openssl-legacy-provider build-storybook",

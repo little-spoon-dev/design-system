@@ -47,9 +47,9 @@ export interface AlertProps extends React.HTMLAttributes<HTMLElement> {
   variant?: 'success' | 'warning' | 'critical' | 'informative'
 
   /**
-   * The variant to use. Defaults to "toast".
+   * The variant to use. Defaults to "relative".
    */
-  type?: 'toast' | 'banner'
+  type?: 'relative' | 'toast' | 'banner'
 }
 
 const icons = {
@@ -65,7 +65,7 @@ export default function Alert({
   description = '',
   onClose,
   title,
-  type = 'banner',
+  type = 'relative',
   variant = 'success',
   ...other
 }: AlertProps): React.ReactElement<AlertProps> {

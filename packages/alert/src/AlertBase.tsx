@@ -10,11 +10,11 @@ import type { AlertProps } from './Alert'
 
 export const AlertWrapper = styled.div<Partial<AlertProps>>`
   display: flex;
-  position: absolute;
+  position: ${(props) => (props.type === 'relative' ? 'relative' : 'absolute')};
   border-radius: 2px;
   border: 0;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 8px;
   max-width: 800px;
   width: 100%;
   color: ${colors.shadeBlack};
@@ -26,6 +26,7 @@ export const AlertMessages = styled.div<Partial<AlertProps>>`
   margin-left: ${rem(0.8)};
   display: flex;
   flex-direction: column;
+  justify-content: center;
 `
 
 export const AlertTitle = styled.span<Partial<AlertProps>>`
@@ -36,6 +37,7 @@ export const AlertTitle = styled.span<Partial<AlertProps>>`
 export const AlertDescription = styled.span<Partial<AlertProps>>`
   font: ${weight.normal} ${p4.fontSize} ${family};
   line-height: ${p4.lineHeight};
+  vertical-align: middle;
 `
 
 export const AlertActionLink = styled(Link)<Partial<AlertProps>>`

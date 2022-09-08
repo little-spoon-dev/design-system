@@ -6,9 +6,9 @@ Object {
     "$$typeof": Symbol(react.forward_ref),
     "attrs": Array [],
     "componentStyle": e {
-      "baseHash": 217807692,
+      "baseHash": 84895702,
       "baseStyle": undefined,
-      "componentId": "sc-ivTmOn",
+      "componentId": "sc-cxabCf",
       "isStatic": false,
       "rules": Array [
         "
@@ -22,7 +22,7 @@ Object {
     "foldedComponentIds": Array [],
     "render": [Function],
     "shouldForwardProp": undefined,
-    "styledComponentId": "sc-ivTmOn",
+    "styledComponentId": "sc-cxabCf",
     "target": "dl",
     "toString": [Function],
     "warnTooManyClasses": [Function],

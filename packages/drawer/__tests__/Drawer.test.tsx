@@ -52,15 +52,67 @@ describe('with props.children', () => {
   })
 })
 
-describe('with props.ariaLabelledBy', () => {
+describe('with props.aria-label', () => {
   it('renders labelled drawer', () => {
     const label = 'Hello'
-    render(
-      <Drawer ariaLabelledBy="drawer-title" open={true}>
-        <h1 id="drawer-title">{label}</h1>
-      </Drawer>,
-    )
+    render(<Drawer aria-label={label} open={true} />)
     expect(screen.getByLabelText(label)).toBeInTheDocument()
+  })
+})
+
+describe('with props.disableBackdropClick', () => {
+  const backdropTestId = 'backdrop'
+  const drawerRole = 'dialog'
+
+  it('fires the onClose event', () => {
+    const handleClose = jest.fn()
+    render(<Drawer disableBackdropClick={false} onClose={handleClose} open={true} />)
+    const backdrop = screen.getByTestId(backdropTestId)
+    const drawer = screen.getByRole(drawerRole)
+    expect(backdrop).toBeInTheDocument()
+    expect(drawer).toBeInTheDocument()
+    fireEvent.click(backdrop)
+    expect(handleClose).toHaveBeenCalledTimes(1)
+    expect(backdrop).not.toBeInTheDocument()
+    expect(drawer).not.toBeInTheDocument()
+  })
+
+  it('does not fire the onClose event', () => {
+    const handleClose = jest.fn()
+    render(<Drawer disableBackdropClick={true} onClose={handleClose} open={true} />)
+    const backdrop = screen.getByTestId(backdropTestId)
+    const drawer = screen.getByRole(drawerRole)
+    expect(backdrop).toBeInTheDocument()
+    expect(drawer).toBeInTheDocument()
+    fireEvent.click(backdrop)
+    expect(handleClose).toHaveBeenCalledTimes(0)
+    expect(backdrop).toBeInTheDocument()
+    expect(drawer).toBeInTheDocument()
+  })
+})
+
+describe('with props.disableEscapeKeyDown', () => {
+  const keyDownEventProperties = { charCode: 27, code: 'Escape', key: 'Escape' }
+  const drawerRole = 'dialog'
+
+  it('fires the onClose event', () => {
+    const handleClose = jest.fn()
+    render(<Drawer disableEscapeKeyDown={false} onClose={handleClose} open={true} />)
+    const drawer = screen.getByRole(drawerRole)
+    expect(drawer).toBeInTheDocument()
+    fireEvent.keyDown(drawer, keyDownEventProperties)
+    expect(handleClose).toHaveBeenCalledTimes(1)
+    expect(drawer).not.toBeInTheDocument()
+  })
+
+  it('does not fire the onClose event', () => {
+    const handleClose = jest.fn()
+    render(<Drawer disableEscapeKeyDown={true} onClose={handleClose} open={true} />)
+    const drawer = screen.getByRole(drawerRole)
+    expect(drawer).toBeInTheDocument()
+    fireEvent.keyDown(drawer, keyDownEventProperties)
+    expect(handleClose).toHaveBeenCalledTimes(0)
+    expect(drawer).toBeInTheDocument()
   })
 })
 
@@ -88,21 +140,29 @@ describe('with props.closeButtonTitle', () => {
 
 describe('with props.onClose', () => {
   const closeButtonTitle = 'Close'
+  const drawerRole = 'dialog'
 
   it('fires the onClose event', () => {
     const handleClose = jest.fn()
     render(<Drawer onClose={handleClose} open={true} showCloseButton={true} />)
+    const drawer = screen.getByRole(drawerRole)
     const closeButton = screen.getByLabelText(closeButtonTitle)
+    expect(drawer).toBeInTheDocument()
+    expect(closeButton).toBeInTheDocument()
     fireEvent.click(closeButton)
     expect(handleClose).toHaveBeenCalledTimes(1)
+    expect(drawer).not.toBeInTheDocument()
     expect(closeButton).not.toBeInTheDocument()
   })
 
   it('does not fire the onClose event', () => {
     render(<Drawer onClose={undefined} open={true} showCloseButton={true} />)
+    const drawer = screen.getByRole(drawerRole)
     const closeButton = screen.getByLabelText(closeButtonTitle)
+    expect(drawer).toBeInTheDocument()
     expect(closeButton).toBeInTheDocument()
     fireEvent.click(closeButton)
-    expect(closeButton).not.toBeInTheDocument()
+    expect(drawer).toBeInTheDocument()
+    expect(closeButton).toBeInTheDocument()
   })
 })

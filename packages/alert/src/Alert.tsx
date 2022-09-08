@@ -52,18 +52,11 @@ export interface AlertProps extends React.HTMLAttributes<HTMLElement> {
   type?: 'toast' | 'banner'
 }
 
-const iconFills = {
-  success: colors.success50(),
-  warning: colors.warning50(),
-  critical: colors.critical50(),
-  informative: colors.informative50(),
-}
-
-const iconBase = {
-  success: CheckIcon,
-  warning: ExclamationIcon,
-  critical: ExclamationIcon,
-  informative: InfoIcon,
+const icons = {
+  success: <CheckIcon stroke={colors.shadeWhite} fill={colors.success50()} />,
+  warning: <ExclamationIcon stroke={colors.shadeWhite} fill={colors.warning50()} />,
+  critical: <ExclamationIcon stroke={colors.shadeWhite} fill={colors.critical50()} />,
+  informative: <InfoIcon stroke={colors.shadeWhite} fill={colors.informative50()} />,
 }
 
 export default function Alert({
@@ -76,10 +69,10 @@ export default function Alert({
   variant = 'success',
   ...other
 }: AlertProps): React.ReactElement<AlertProps> {
-  const Icon = iconBase[variant]
+  const Icon = icons[variant]
   return (
     <AlertWrapper role="alert" variant={variant} type={type} {...other}>
-      <Icon stroke={colors.shadeWhite} fill={iconFills[variant]} />
+      {Icon}
       <AlertMessages>
         {title && <AlertTitle>{title}</AlertTitle>}
         <AlertDescription>{description}</AlertDescription>

@@ -78,7 +78,7 @@ export default function Alert({
 }: AlertProps): React.ReactElement<AlertProps> {
   const Icon = iconBase[variant]
   return (
-    <AlertWrapper variant={variant} type={type} {...other}>
+    <AlertWrapper role="alert" variant={variant} type={type} {...other}>
       <Icon stroke={colors.shadeWhite} fill={iconFills[variant]} />
       <AlertMessages>
         {title && <AlertTitle>{title}</AlertTitle>}

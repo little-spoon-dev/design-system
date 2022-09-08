@@ -23,11 +23,10 @@ export default function Backdrop({ children, onClick, open = false }: BackdropPr
   }, [open])
 
   const handleClick = () => {
-    setIsOpen(false)
-
     if (!onClick) {
       return
     }
+    setIsOpen(false)
     onClick()
   }
 

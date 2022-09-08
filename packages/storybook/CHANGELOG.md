@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/little-spoon-dev/design-system/compare/storybook@2.2.0...storybook@2.3.0) (2022-09-07)
+
+### Bug Fixes
+
+- **accordion:** component based architecture ([f6a625b](https://github.com/little-spoon-dev/design-system/commit/f6a625b30d2010f76a1d0d48412291bb86a68fba))
+- **accordion:** update accordion component ([483ffac](https://github.com/little-spoon-dev/design-system/commit/483ffac8dcfca24c95a12e32ce0c89cfa94c91fe))
+
+### Features
+
+- **accordion:** create accordion package ([f2a280c](https://github.com/little-spoon-dev/design-system/commit/f2a280c62f12e22cab437b1aef4c29b76a42c7ad))
+
+# [2.2.0](https://github.com/little-spoon-dev/design-system/compare/storybook@2.1.2...storybook@2.2.0) (2022-09-06)
+
+### Features
+
+- **drawer:** improve drawer ([a5f663c](https://github.com/little-spoon-dev/design-system/commit/a5f663c8c7a00bf6f2849192139988acd2e4e6b4))
+
 ## [2.1.2](https://github.com/little-spoon-dev/design-system/compare/storybook@2.1.1...storybook@2.1.2) (2022-09-06)
 
 **Note:** Version bump only for package storybook

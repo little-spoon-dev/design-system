@@ -1,6 +1,7 @@
 import Button from '@littlespoon/button/src/Button'
 import Drawer from '@littlespoon/drawer/src/Drawer'
 import { rem } from '@littlespoon/theme/lib/utils'
+import Typography from '@littlespoon/typography/src/Typography'
 import { useArgs } from '@storybook/client-api'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
@@ -12,8 +13,10 @@ export default {
 
 const drawerChildren = (
   <>
-    <h1>Lorem ipsum dolor sit amet</h1>
-    <p>
+    <Typography as="h2" noMargin variant="h5">
+      Lorem ipsum dolor sit amet
+    </Typography>
+    <Typography noMargin variant="p4">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec convallis dolor. Morbi a
       vestibulum augue. Nunc quis turpis ipsum. Etiam volutpat, dui id finibus efficitur, libero
       erat dictum tellus, ut volutpat tellus metus nec neque. Suspendisse viverra, enim vel
@@ -24,8 +27,8 @@ const drawerChildren = (
       venenatis, non tristique orci consectetur. Vestibulum consequat at elit ultrices rutrum. Donec
       egestas sit amet lorem nec dapibus. Duis non tellus augue. Praesent blandit nibh eu lobortis
       volutpat. Ut eros metus, pulvinar sed facilisis nec, imperdiet quis est. Suspendisse potenti.
-    </p>
-    <p>
+    </Typography>
+    <Typography noMargin variant="p4">
       Donec faucibus euismod sagittis. Etiam maximus tortor vel ullamcorper pharetra. Nam blandit
       suscipit tortor a cursus. Phasellus sit amet vestibulum dolor. Ut nec venenatis ante. Maecenas
       molestie massa ante, non tempus mauris luctus sed. Cras pellentesque enim a ipsum posuere
@@ -33,11 +36,10 @@ const drawerChildren = (
       faucibus orci luctus et ultrices posuere cubilia curae; Maecenas magna leo, elementum quis
       dignissim commodo, bibendum et nibh. Sed varius feugiat dui non euismod. Quisque rutrum risus
       eget tincidunt pretium. Etiam gravida hendrerit dui, in vestibulum velit feugiat ultrices.
-    </p>
+    </Typography>
     <div style={{ display: 'flex', gap: rem(0.8), justifyContent: 'center' }}>
-      <Button variant="ghost">Lorem</Button>
+      <Button>Lorem</Button>
       <Button variant="ghost">Ipsum</Button>
-      <Button variant="ghost">Dolor</Button>
     </div>
   </>
 )
@@ -51,7 +53,10 @@ const Template: ComponentStory<typeof Drawer> = (args) => {
 
   const handleDrawerClose = () => {
     updateArgs({ open: !isOpen })
-    args.onClose && args.onClose()
+    if (!args.onClose) {
+      return
+    }
+    args.onClose()
   }
 
   return (
@@ -71,6 +76,15 @@ Default.args = {
 export const DrawerWithCloseButton = Template.bind({})
 DrawerWithCloseButton.args = {
   children: drawerChildren,
+  open: false,
+  showCloseButton: true,
+}
+
+export const DrawerWithDisabledEscapeKeyDownAndDisabledBackdropClick = Template.bind({})
+DrawerWithDisabledEscapeKeyDownAndDisabledBackdropClick.args = {
+  children: drawerChildren,
+  disableBackdropClick: true,
+  disableEscapeKeyDown: true,
   open: false,
   showCloseButton: true,
 }

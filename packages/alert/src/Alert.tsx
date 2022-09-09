@@ -1,6 +1,7 @@
 import CheckIcon from '@littlespoon/icons/lib/CheckIcon'
 import CloseIcon from '@littlespoon/icons/lib/CloseIcon'
 import ExclamationIcon from '@littlespoon/icons/lib/ExclamationIcon'
+import InfoIcon from '@littlespoon/icons/lib/InfoIcon'
 import colors from '@littlespoon/theme/lib/colors'
 import type React from 'react'
 
@@ -46,16 +47,16 @@ export interface AlertProps extends React.HTMLAttributes<HTMLElement> {
   variant?: 'success' | 'warning' | 'critical' | 'informative'
 
   /**
-   * The variant to use. Defaults to "toast".
+   * The variant to use. Defaults to "relative".
    */
-  type?: 'toast' | 'banner'
+  type?: 'relative' | 'toast' | 'banner'
 }
 
-const iconFills = {
-  success: colors.success50(),
-  warning: colors.warning50(),
-  critical: colors.critical50(),
-  informative: colors.informative50(),
+const icons = {
+  success: <CheckIcon stroke={colors.shadeWhite} fill={colors.success50()} />,
+  warning: <ExclamationIcon stroke={colors.shadeWhite} fill={colors.warning50()} />,
+  critical: <ExclamationIcon stroke={colors.shadeWhite} fill={colors.critical50()} />,
+  informative: <InfoIcon stroke={colors.shadeWhite} fill={colors.informative50()} />,
 }
 
 export default function Alert({
@@ -64,14 +65,14 @@ export default function Alert({
   description = '',
   onClose,
   title,
-  type = 'banner',
+  type = 'relative',
   variant = 'success',
   ...other
 }: AlertProps): React.ReactElement<AlertProps> {
-  const Icon = variant === 'success' ? CheckIcon : ExclamationIcon
+  const Icon = icons[variant]
   return (
-    <AlertWrapper variant={variant} type={type} {...other}>
-      <Icon stroke={colors.shadeWhite} fill={iconFills[variant]} />
+    <AlertWrapper role="alert" variant={variant} type={type} {...other}>
+      {Icon}
       <AlertMessages>
         {title && <AlertTitle>{title}</AlertTitle>}
         <AlertDescription>{description}</AlertDescription>

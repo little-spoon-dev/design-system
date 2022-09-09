@@ -6,9 +6,9 @@ exports[`exports ui 1`] = `
     "$$typeof": Symbol(react.forward_ref),
     "attrs": [],
     "componentStyle": e {
-      "baseHash": 217807692,
+      "baseHash": 84895702,
       "baseStyle": undefined,
-      "componentId": "sc-ivTmOn",
+      "componentId": "sc-cxabCf",
       "isStatic": false,
       "rules": [
         "
@@ -22,7 +22,7 @@ exports[`exports ui 1`] = `
     "foldedComponentIds": [],
     "render": [Function],
     "shouldForwardProp": undefined,
-    "styledComponentId": "sc-ivTmOn",
+    "styledComponentId": "sc-cxabCf",
     "target": "dl",
     "toString": [Function],
     "warnTooManyClasses": [Function],

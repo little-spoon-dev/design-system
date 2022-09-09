@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`matches theme 1`] = `
-Object {
-  "breakpoints": Object {
+{
+  "breakpoints": {
     "desktop": 1000,
     "down": [Function],
     "lg": 1000,
@@ -15,30 +15,30 @@ Object {
     "xs": 375,
     "xxl": 1440,
   },
-  "colors": Object {
-    "alert": Object {
-      "critical": Object {
+  "colors": {
+    "alert": {
+      "critical": {
         "critical10": [Function],
         "critical20": [Function],
         "critical30": [Function],
         "critical40": [Function],
         "critical50": [Function],
       },
-      "informative": Object {
+      "informative": {
         "informative10": [Function],
         "informative20": [Function],
         "informative30": [Function],
         "informative40": [Function],
         "informative50": [Function],
       },
-      "success": Object {
+      "success": {
         "success10": [Function],
         "success20": [Function],
         "success30": [Function],
         "success40": [Function],
         "success50": [Function],
       },
-      "warning": Object {
+      "warning": {
         "warning10": [Function],
         "warning20": [Function],
         "warning30": [Function],
@@ -156,8 +156,8 @@ Object {
     "pink70": [Function],
     "pink80": [Function],
     "pink90": [Function],
-    "primary": Object {
-      "brand": Object {
+    "primary": {
+      "brand": {
         "brand10": [Function],
         "brand100": [Function],
         "brand20": [Function],
@@ -169,7 +169,7 @@ Object {
         "brand80": [Function],
         "brand90": [Function],
       },
-      "primaryBlue": Object {
+      "primaryBlue": {
         "blue10": [Function],
         "blue100": [Function],
         "blue20": [Function],
@@ -182,8 +182,8 @@ Object {
         "blue90": [Function],
       },
     },
-    "secondary": Object {
-      "secondaryBlue": Object {
+    "secondary": {
+      "secondaryBlue": {
         "blue10": [Function],
         "blue100": [Function],
         "blue20": [Function],
@@ -195,7 +195,7 @@ Object {
         "blue80": [Function],
         "blue90": [Function],
       },
-      "secondaryDeepGreen": Object {
+      "secondaryDeepGreen": {
         "deepGreen10": [Function],
         "deepGreen100": [Function],
         "deepGreen20": [Function],
@@ -207,7 +207,7 @@ Object {
         "deepGreen80": [Function],
         "deepGreen90": [Function],
       },
-      "secondaryGold": Object {
+      "secondaryGold": {
         "gold10": [Function],
         "gold100": [Function],
         "gold20": [Function],
@@ -219,7 +219,7 @@ Object {
         "gold80": [Function],
         "gold90": [Function],
       },
-      "secondaryLimeGreen": Object {
+      "secondaryLimeGreen": {
         "limeGreen10": [Function],
         "limeGreen100": [Function],
         "limeGreen20": [Function],
@@ -231,7 +231,7 @@ Object {
         "limeGreen80": [Function],
         "limeGreen90": [Function],
       },
-      "secondaryMintGreen": Object {
+      "secondaryMintGreen": {
         "mintGreen10": [Function],
         "mintGreen100": [Function],
         "mintGreen20": [Function],
@@ -243,7 +243,7 @@ Object {
         "mintGreen80": [Function],
         "mintGreen90": [Function],
       },
-      "secondaryNeutralGrey": Object {
+      "secondaryNeutralGrey": {
         "grey10": [Function],
         "grey100": [Function],
         "grey20": [Function],
@@ -255,7 +255,7 @@ Object {
         "grey80": [Function],
         "grey90": [Function],
       },
-      "secondaryPeach": Object {
+      "secondaryPeach": {
         "peach10": [Function],
         "peach100": [Function],
         "peach20": [Function],
@@ -267,7 +267,7 @@ Object {
         "peach80": [Function],
         "peach90": [Function],
       },
-      "secondaryPink": Object {
+      "secondaryPink": {
         "pink10": [Function],
         "pink100": [Function],
         "pink20": [Function],
@@ -279,7 +279,7 @@ Object {
         "pink80": [Function],
         "pink90": [Function],
       },
-      "secondaryPurple": Object {
+      "secondaryPurple": {
         "purple10": [Function],
         "purple100": [Function],
         "purple20": [Function],
@@ -310,7 +310,7 @@ Object {
     "surfacePrimary": "#FFFFFF",
     "surfaceSecondary": "rgba(241,241,241,1)",
     "surfaceStrong": "rgba(0,104,94,1)",
-    "token": Object {
+    "token": {
       "borderBold": "rgba(123,123,123,1)",
       "borderContrast": "rgba(66,66,66,1)",
       "borderCritical": "rgba(237,169,159,1)",
@@ -340,119 +340,119 @@ Object {
     "warning40": [Function],
     "warning50": [Function],
   },
-  "fonts": Object {
-    "primary": Object {
-      "button": Object {
-        "large": Object {
+  "fonts": {
+    "primary": {
+      "button": {
+        "large": {
           "fontSize": "1.8rem",
           "letterSpacing": "0.15rem",
           "lineHeight": "2.6rem",
         },
-        "medium": Object {
+        "medium": {
           "fontSize": "1.6rem",
           "letterSpacing": "0.15rem",
           "lineHeight": "2.4rem",
         },
-        "small": Object {
+        "small": {
           "fontSize": "1.4rem",
           "letterSpacing": "0.15rem",
           "lineHeight": "2rem",
         },
-        "xlarge": Object {
+        "xlarge": {
           "fontSize": "2rem",
           "letterSpacing": "0.15rem",
           "lineHeight": "3rem",
         },
       },
-      "caption": Object {
-        "caption1": Object {
+      "caption": {
+        "caption1": {
           "fontSize": "1.2rem",
           "lineHeight": "1.8rem",
         },
-        "medium": Object {
+        "medium": {
           "fontSize": "1.2rem",
           "lineHeight": "1.8rem",
         },
       },
       "family": "Lato, sans-serif",
-      "paragraph": Object {
-        "large": Object {
+      "paragraph": {
+        "large": {
           "fontSize": "1.8rem",
           "lineHeight": "2.6rem",
         },
-        "medium": Object {
+        "medium": {
           "fontSize": "1.6rem",
           "lineHeight": "2.4rem",
         },
-        "p1": Object {
+        "p1": {
           "fontSize": "2rem",
           "lineHeight": "3rem",
         },
-        "p2": Object {
+        "p2": {
           "fontSize": "1.8rem",
           "lineHeight": "2.6rem",
         },
-        "p3": Object {
+        "p3": {
           "fontSize": "1.6rem",
           "lineHeight": "2.4rem",
         },
-        "p4": Object {
+        "p4": {
           "fontSize": "1.4rem",
           "lineHeight": "2rem",
         },
-        "small": Object {
+        "small": {
           "fontSize": "1.4rem",
           "lineHeight": "2rem",
         },
-        "xlarge": Object {
+        "xlarge": {
           "fontSize": "2rem",
           "lineHeight": "3rem",
         },
       },
-      "weight": Object {
+      "weight": {
         "bold": 700,
         "normal": 400,
       },
     },
-    "secondary": Object {
-      "display": Object {
-        "display1": Object {
+    "secondary": {
+      "display": {
+        "display1": {
           "fontSize": "7.4rem",
           "lineHeight": "9.2rem",
         },
-        "display2": Object {
+        "display2": {
           "fontSize": "6.6rem",
           "lineHeight": "8.2rem",
         },
       },
       "family": "Mulish, sans-serif",
-      "heading": Object {
-        "h1": Object {
+      "heading": {
+        "h1": {
           "fontSize": "5.2rem",
           "lineHeight": "6.5rem",
         },
-        "h2": Object {
+        "h2": {
           "fontSize": "4.6rem",
           "lineHeight": "5.8rem",
         },
-        "h3": Object {
+        "h3": {
           "fontSize": "3.6rem",
           "lineHeight": "4.5rem",
         },
-        "h4": Object {
+        "h4": {
           "fontSize": "2.9rem",
           "lineHeight": "3.6rem",
         },
-        "h5": Object {
+        "h5": {
           "fontSize": "2.6rem",
           "lineHeight": "3.2rem",
         },
-        "h6": Object {
+        "h6": {
           "fontSize": "2rem",
           "lineHeight": "2.5rem",
         },
       },
-      "weight": Object {
+      "weight": {
         "black": 900,
         "bold": 700,
         "extraBold": 800,

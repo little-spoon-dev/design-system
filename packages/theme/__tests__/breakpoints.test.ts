@@ -3,7 +3,7 @@ import breakpoints, { desktop, down, mobile, tablet, up } from '../src/breakpoin
 describe('breakpoints', () => {
   it('returns breakpoints', () => {
     expect(breakpoints).toMatchInlineSnapshot(`
-      Object {
+      {
         "desktop": 1000,
         "down": [Function],
         "lg": 1000,

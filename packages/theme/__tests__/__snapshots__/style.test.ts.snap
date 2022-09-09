@@ -1,88 +1,88 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`getStyle returns style for "desktop" 1`] = `
-Object {
-  "@media (min-width: 1000px)": Object {
+{
+  "@media (min-width: 1000px)": {
     "color": "blue",
   },
 }
 `;
 
 exports[`getStyle returns style for "down" 1`] = `
-Object {
-  "down": Object {
+{
+  "down": {
     "color": "blue",
   },
 }
 `;
 
 exports[`getStyle returns style for "lg" 1`] = `
-Object {
-  "@media (min-width: 1000px)": Object {
+{
+  "@media (min-width: 1000px)": {
     "color": "blue",
   },
 }
 `;
 
 exports[`getStyle returns style for "md" 1`] = `
-Object {
-  "@media (min-width: 768px)": Object {
+{
+  "@media (min-width: 768px)": {
     "color": "blue",
   },
 }
 `;
 
 exports[`getStyle returns style for "mobile" 1`] = `
-Object {
-  "@media (min-width: 0px)": Object {
+{
+  "@media (min-width: 0px)": {
     "color": "blue",
   },
 }
 `;
 
 exports[`getStyle returns style for "sm" 1`] = `
-Object {
-  "@media (min-width: 550px)": Object {
+{
+  "@media (min-width: 550px)": {
     "color": "blue",
   },
 }
 `;
 
 exports[`getStyle returns style for "tablet" 1`] = `
-Object {
-  "@media (min-width: 768px)": Object {
+{
+  "@media (min-width: 768px)": {
     "color": "blue",
   },
 }
 `;
 
 exports[`getStyle returns style for "up" 1`] = `
-Object {
-  "up": Object {
+{
+  "up": {
     "color": "blue",
   },
 }
 `;
 
 exports[`getStyle returns style for "xl" 1`] = `
-Object {
-  "@media (min-width: 1200px)": Object {
+{
+  "@media (min-width: 1200px)": {
     "color": "blue",
   },
 }
 `;
 
 exports[`getStyle returns style for "xs" 1`] = `
-Object {
-  "@media (min-width: 375px)": Object {
+{
+  "@media (min-width: 375px)": {
     "color": "blue",
   },
 }
 `;
 
 exports[`getStyle returns style for "xxl" 1`] = `
-Object {
-  "@media (min-width: 1440px)": Object {
+{
+  "@media (min-width: 1440px)": {
     "color": "blue",
   },
 }

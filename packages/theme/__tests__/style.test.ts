@@ -31,8 +31,8 @@ describe('getStyle', () => {
       },
     }
     expect(getStyle({ sx })).toMatchInlineSnapshot(`
-      Object {
-        "@media (min-width: 0px)": Object {
+      {
+        "@media (min-width: 0px)": {
           "marginBottom": "1rem",
         },
         "marginBottom": "1rem",
@@ -52,11 +52,11 @@ describe('getStyle', () => {
   it('returns style with multiple breakpoints', () => {
     expect(getStyle({ sx: { xs: { color: 'blue', height: 42 }, mobile: { border: 0 } } }))
       .toMatchInlineSnapshot(`
-      Object {
-        "@media (min-width: 0px)": Object {
+      {
+        "@media (min-width: 0px)": {
           "border": 0,
         },
-        "@media (min-width: 375px)": Object {
+        "@media (min-width: 375px)": {
           "color": "blue",
           "height": 42,
         },
@@ -74,8 +74,8 @@ describe('getStyle', () => {
       },
     }
     expect(getStyle({ sx })).toMatchInlineSnapshot(`
-      Object {
-        "@media (min-width: 768px)": Object {
+      {
+        "@media (min-width: 768px)": {
           "marginBottom": "2rem",
         },
       }

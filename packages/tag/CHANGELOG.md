@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.10](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/tag@1.3.9...@littlespoon/tag@1.3.10) (2022-09-09)
+
+**Note:** Version bump only for package @littlespoon/tag
+
 ## [1.3.9](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/tag@1.3.8...@littlespoon/tag@1.3.9) (2022-09-06)
 
 **Note:** Version bump only for package @littlespoon/tag

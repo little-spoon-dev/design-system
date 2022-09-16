@@ -55,7 +55,7 @@ export type DrawerProps = PropsWithChildren<{
 }>
 
 export default function Drawer({
-  ['aria-label']: ariaLabel,
+  'aria-label': ariaLabel,
   children,
   closeButtonTitle = 'Close',
   disableBackdropClick = false,

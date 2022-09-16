@@ -15,7 +15,7 @@ export const AlertWrapper = styled.div<Partial<AlertProps>>`
   border: 0;
   box-sizing: border-box;
   padding: 8px;
-  max-width: 800px;
+  max-width: ${(props) => (props.type === 'relative' ? '100%' : '800px')};
   width: 100%;
   color: ${colors.shadeBlack};
   ${(props) => (props.type === 'banner' ? `top: 0px` : 'bottom: 0px')};

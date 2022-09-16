@@ -35,3 +35,15 @@ Render alert with props:
 ```tsx
 <Alert title="Alert Title" description="Alert description" onClose={onClose} variant="success" />
 ```
+
+Render alert with relative position:
+
+```tsx
+<Alert
+  type="relative"
+  title="Alert Title"
+  description="Alert description"
+  onClose={onClose}
+  variant="success"
+/>
+```

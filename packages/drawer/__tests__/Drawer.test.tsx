@@ -1,5 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { axe } from 'jest-axe'
+import styled from 'styled-components'
 
 import Drawer from '../src/'
 
@@ -62,6 +63,28 @@ describe('with props.aria-label', () => {
     render(<Drawer aria-label={label} open />)
     expect(screen.getByLabelText(label)).toBeInTheDocument()
     expect(screen.getByRole(drawerRole).getAttribute('aria-label')).toBe(label)
+  })
+})
+
+describe('with props.className', () => {
+  it('renders a drawer with custom styles', () => {
+    const className = 'styled-drawer'
+    const backgroundColor = 'yellow'
+    const textColor = 'green'
+    const StyledDrawer = styled(Drawer)`
+      background-color: ${backgroundColor};
+      &.${className} {
+        color: ${textColor};
+      }
+    `
+    render(<StyledDrawer className={className} open />)
+    const drawer = screen.getByRole(drawerRole)
+    expect(drawer).toBeInTheDocument()
+    expect(drawer.classList.contains(className)).toBe(true)
+    const drawerStyle = getComputedStyle(drawer)
+    expect(drawerStyle.backgroundColor).toBe(backgroundColor)
+    expect(drawerStyle.color).toBe(textColor)
+    expect(drawerStyle.position).toBe('fixed')
   })
 })
 

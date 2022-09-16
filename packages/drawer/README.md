@@ -29,26 +29,35 @@ import Drawer from '@littlespoon/drawer'
 Render drawer:
 
 ```tsx
-<Drawer open={true}>
+<Drawer open>
   <h2>Lorem Ipsum</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 </Drawer>
 ```
 
-Render drawer with close button:
+Render drawer with a close button:
 
 ```tsx
-<Drawer open={true} showCloseButton={true}>
+<Drawer open showCloseButton>
   <h2>Lorem Ipsum</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 </Drawer>
 ```
 
-Render drawer with a custom background color:
+Render a styled drawer:
 
 ```tsx
-<Drawer open={true} sx={{ backgroundColor: '#95efc3' }}>
+import styled from 'styled-components'
+
+const StyledDrawer = styled(Drawer)`
+  background-color: #95efc3;
+  &.styled-drawer {
+    color: #f10a86;
+  }
+`
+
+;<StyledDrawer className="styled-drawer" open>
   <h2>Lorem Ipsum</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</Drawer>
+</StyledDrawer>
 ```

@@ -30,7 +30,7 @@ Render drawer:
 
 ```tsx
 <Drawer open={true}>
-  <h2>Drawer</h2>
+  <h2>Lorem Ipsum</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 </Drawer>
 ```
@@ -39,7 +39,16 @@ Render drawer with close button:
 
 ```tsx
 <Drawer open={true} showCloseButton={true}>
-  <h2>Drawer</h2>
+  <h2>Lorem Ipsum</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</Drawer>
+```
+
+Render drawer with a custom background color:
+
+```tsx
+<Drawer open={true} sx={{ backgroundColor: '#95efc3' }}>
+  <h2>Lorem Ipsum</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 </Drawer>
 ```

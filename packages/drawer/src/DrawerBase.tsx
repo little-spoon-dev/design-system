@@ -1,6 +1,7 @@
 import Button from '@littlespoon/button'
 import { md, up } from '@littlespoon/theme/lib/breakpoints'
 import { shadeWhite } from '@littlespoon/theme/lib/colors/token'
+import { getStyle } from '@littlespoon/theme/lib/style'
 import { rem } from '@littlespoon/theme/lib/utils'
 import zIndex from '@littlespoon/theme/lib/z-index'
 import styled from 'styled-components'
@@ -41,6 +42,8 @@ export const DrawerBase = styled.div<Partial<DrawerProps>>`
     width: ${rem(48)};
     `,
   )}
+
+  ${getStyle}
 `
 
 export const DrawerCloseButtonContainer = styled.div`

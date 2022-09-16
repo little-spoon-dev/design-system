@@ -1,5 +1,6 @@
 import { CloseIcon } from '@littlespoon/icons'
 import { shadeBlack, shadeWhite } from '@littlespoon/theme/lib/colors/token'
+import type { StyleProps } from '@littlespoon/theme/lib/style'
 import React, { PropsWithChildren, useEffect, useState } from 'react'
 import { FocusOn } from 'react-focus-on'
 
@@ -12,7 +13,7 @@ import {
 } from './DrawerBase'
 import Portal from './Portal'
 
-export type DrawerProps = PropsWithChildren<{
+interface Props extends StyleProps {
   /**
    * ARIA label of the component.
    */
@@ -52,7 +53,8 @@ export type DrawerProps = PropsWithChildren<{
    * @defaultValue `false`
    */
   showCloseButton?: boolean
-}>
+}
+export type DrawerProps = PropsWithChildren<Props>
 
 export default function Drawer({
   'aria-label': ariaLabel,
@@ -63,6 +65,7 @@ export default function Drawer({
   onClose,
   open = false,
   showCloseButton = false,
+  sx,
 }: DrawerProps) {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -89,7 +92,7 @@ export default function Drawer({
     <Portal>
       <FocusOn onEscapeKey={onEscapeKey}>
         <Backdrop onClick={onBackdropClick} open={isOpen} />
-        <DrawerBase aria-label={ariaLabel} aria-modal role="dialog">
+        <DrawerBase aria-label={ariaLabel} aria-modal role="dialog" sx={sx}>
           {showCloseButton && (
             <DrawerCloseButtonContainer>
               <DrawerCloseButton

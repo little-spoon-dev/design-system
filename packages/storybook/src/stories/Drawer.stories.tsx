@@ -80,6 +80,15 @@ DrawerWithCloseButton.args = {
   showCloseButton: true,
 }
 
+export const DrawerWithCustomStyles = Template.bind({})
+DrawerWithCustomStyles.args = {
+  children: drawerChildren,
+  open: false,
+  sx: {
+    backgroundColor: '#95efc3',
+  },
+}
+
 export const DrawerWithDisabledEscapeKeyDownAndDisabledBackdropClick = Template.bind({})
 DrawerWithDisabledEscapeKeyDownAndDisabledBackdropClick.args = {
   children: drawerChildren,

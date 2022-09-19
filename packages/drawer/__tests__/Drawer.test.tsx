@@ -67,7 +67,7 @@ describe('with props.aria-label', () => {
 })
 
 describe('with props.className', () => {
-  it('renders a drawer with custom styles', () => {
+  it('renders a styled drawer', () => {
     const className = 'styled-drawer'
     const backgroundColor = 'yellow'
     const textColor = 'green'

@@ -37,6 +37,7 @@ icons.CloseIcon
 icons.ExclamationIcon
 icons.FilterIcon
 icons.GiftCardIcon
+icons.InfoIcon
 icons.LogoutIcon
 icons.SubtractIcon
 ```
@@ -58,6 +59,7 @@ import ExclamationIcon from '@littlespoon/ui/icons/ExclamationIcon'
 import FilterIcon from '@littlespoon/ui/icons/FilterIcon'
 import GiftCardIcon from '@littlespoon/ui/icons/GiftCardIcon'
 import HamburgerMenuIcon from '@littlespoon/ui/icons/HamburgerMenuIcon'
+import InfoIcon from '@littlespoon/ui/icons/InfoIcon'
 import LogoutIcon from '@littlespoon/ui/icons/LogoutIcon'
 import SubtractIcon from '@littlespoon/ui/icons/SubtractIcon'
 ```

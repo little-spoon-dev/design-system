@@ -31,6 +31,7 @@ export {
   FilterIcon,
   GiftCardIcon,
   HamburgerMenuIcon,
+  InfoIcon,
   LogoutIcon,
   SubtractIcon,
 }

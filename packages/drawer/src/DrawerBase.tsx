@@ -21,8 +21,6 @@ export const DrawerBase = styled.div<Partial<DrawerProps>>`
   margin: 0;
   max-height: 80%;
   max-width: none;
-  min-height: ${rem(20)};
-  min-width: unset;
   outline: none;
   overflow: hidden;
   padding: ${rem(2)};
@@ -38,10 +36,9 @@ export const DrawerBase = styled.div<Partial<DrawerProps>>`
     left: auto;
     max-height: none;
     max-width: ${rem(48)};
-    min-height: unset;
-    min-width: ${rem(20)};
     padding: ${rem(4)};
     top: 0;
+    width: ${rem(48)};
     `,
   )}
 `

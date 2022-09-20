@@ -8,13 +8,13 @@ const backdropTestId = 'backdrop'
 describe('accessibility', () => {
   describe('backdrop', () => {
     it('is accessible without children', async () => {
-      const { container } = render(<Backdrop open={true} />)
+      const { container } = render(<Backdrop open />)
       expect(await axe(container)).toHaveNoViolations()
     })
 
     it('is accessible with text', async () => {
       const text = 'Hello'
-      const { container } = render(<Backdrop open={true}>{text}</Backdrop>)
+      const { container } = render(<Backdrop open>{text}</Backdrop>)
       expect(await axe(container)).toHaveNoViolations()
     })
   })
@@ -23,7 +23,7 @@ describe('accessibility', () => {
 describe('without props', () => {
   it('does not render backdrop', () => {
     render(<Backdrop />)
-    expect(screen.queryByTestId(backdropTestId)).toEqual(null)
+    expect(screen.queryByTestId(backdropTestId)).not.toBeInTheDocument()
   })
 })
 
@@ -35,14 +35,14 @@ describe('with props.open', () => {
 
   it('does not render backdrop', () => {
     render(<Backdrop open={false} />)
-    expect(screen.queryByTestId(backdropTestId)).toEqual(null)
+    expect(screen.queryByTestId(backdropTestId)).not.toBeInTheDocument()
   })
 })
 
 describe('with props.onClick', () => {
   it('fires the onClick event', () => {
     const handleClick = jest.fn()
-    render(<Backdrop onClick={handleClick} open={true} />)
+    render(<Backdrop onClick={handleClick} open />)
     const backdrop = screen.getByTestId(backdropTestId)
     expect(backdrop).toBeInTheDocument()
     fireEvent.click(backdrop)
@@ -51,7 +51,7 @@ describe('with props.onClick', () => {
   })
 
   it('does not fire the onClick event', () => {
-    render(<Backdrop onClick={undefined} open={true} />)
+    render(<Backdrop onClick={undefined} open />)
     const backdrop = screen.getByTestId(backdropTestId)
     expect(backdrop).toBeInTheDocument()
     fireEvent.click(backdrop)

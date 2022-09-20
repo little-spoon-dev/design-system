@@ -4,6 +4,7 @@ import { rem } from '@littlespoon/theme/lib/utils'
 import Typography from '@littlespoon/typography/src/Typography'
 import { useArgs } from '@storybook/client-api'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import styled from 'styled-components'
 
 export default {
   title: 'Design System/Drawer',
@@ -11,24 +12,18 @@ export default {
   argTypes: { onClose: { action: 'drawer-close' } },
 } as ComponentMeta<typeof Drawer>
 
+const ButtonsContainer = styled.div`
+  display: flex;
+  gap: ${rem(0.8)};
+  justify-content: center;
+`
+
 const drawerChildren = (
   <>
-    <Typography as="h2" noMargin variant="h5">
+    <Typography as="h2" center noMargin variant="h5">
       Lorem ipsum dolor sit amet
     </Typography>
-    <Typography noMargin variant="p4">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec convallis dolor. Morbi a
-      vestibulum augue. Nunc quis turpis ipsum. Etiam volutpat, dui id finibus efficitur, libero
-      erat dictum tellus, ut volutpat tellus metus nec neque. Suspendisse viverra, enim vel
-      vulputate lobortis, libero lacus tincidunt quam, et maximus massa nisl sed dui. Quisque at
-      congue eros, vel maximus metus. Nulla quis viverra dui. Suspendisse tempus a ipsum blandit
-      tincidunt. Phasellus sed orci eros. Ut sapien dui, pellentesque nec aliquam vulputate, tempor
-      eu lacus. Vestibulum pretium orci et efficitur hendrerit. Integer maximus enim sit amet tortor
-      venenatis, non tristique orci consectetur. Vestibulum consequat at elit ultrices rutrum. Donec
-      egestas sit amet lorem nec dapibus. Duis non tellus augue. Praesent blandit nibh eu lobortis
-      volutpat. Ut eros metus, pulvinar sed facilisis nec, imperdiet quis est. Suspendisse potenti.
-    </Typography>
-    <Typography noMargin variant="p4">
+    <Typography center noMargin variant="p4">
       Donec faucibus euismod sagittis. Etiam maximus tortor vel ullamcorper pharetra. Nam blandit
       suscipit tortor a cursus. Phasellus sit amet vestibulum dolor. Ut nec venenatis ante. Maecenas
       molestie massa ante, non tempus mauris luctus sed. Cras pellentesque enim a ipsum posuere
@@ -37,14 +32,14 @@ const drawerChildren = (
       dignissim commodo, bibendum et nibh. Sed varius feugiat dui non euismod. Quisque rutrum risus
       eget tincidunt pretium. Etiam gravida hendrerit dui, in vestibulum velit feugiat ultrices.
     </Typography>
-    <div style={{ display: 'flex', gap: rem(0.8), justifyContent: 'center' }}>
+    <ButtonsContainer>
       <Button>Lorem</Button>
       <Button variant="ghost">Ipsum</Button>
-    </div>
+    </ButtonsContainer>
   </>
 )
 
-const Template: ComponentStory<typeof Drawer> = (args) => {
+const useDrawer = (onClose?: () => void) => {
   const [{ open: isOpen }, updateArgs] = useArgs()
 
   const handleButtonClick = () => {
@@ -53,11 +48,17 @@ const Template: ComponentStory<typeof Drawer> = (args) => {
 
   const handleDrawerClose = () => {
     updateArgs({ open: !isOpen })
-    if (!args.onClose) {
-      return
-    }
-    args.onClose()
+    onClose && onClose()
   }
+
+  return {
+    handleButtonClick,
+    handleDrawerClose,
+  }
+}
+
+const Template: ComponentStory<typeof Drawer> = (args) => {
+  const { handleButtonClick, handleDrawerClose } = useDrawer(args.onClose)
 
   return (
     <>
@@ -87,4 +88,28 @@ DrawerWithDisabledEscapeKeyDownAndDisabledBackdropClick.args = {
   disableEscapeKeyDown: true,
   open: false,
   showCloseButton: true,
+}
+
+const TemplateWithCustomStyles: ComponentStory<typeof Drawer> = (args) => {
+  const { handleButtonClick, handleDrawerClose } = useDrawer(args.onClose)
+
+  const StyledDrawer = styled(Drawer)`
+    background-color: #95efc3;
+    &.styled-drawer {
+      color: #f10a86;
+    }
+  `
+
+  return (
+    <>
+      <Button onClick={handleButtonClick}>Open Drawer</Button>
+      <StyledDrawer {...args} onClose={handleDrawerClose} />
+    </>
+  )
+}
+export const DrawerWithCustomStyles = TemplateWithCustomStyles.bind({})
+DrawerWithCustomStyles.args = {
+  children: drawerChildren,
+  className: 'styled-drawer',
+  open: false,
 }

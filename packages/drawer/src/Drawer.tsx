@@ -19,6 +19,11 @@ export type DrawerProps = PropsWithChildren<{
   'aria-label'?: string
 
   /**
+   * A space-separated list of CSS classes.
+   */
+  className?: string
+
+  /**
    * Close button title.
    * @defaultValue `'Close'`
    */
@@ -55,8 +60,9 @@ export type DrawerProps = PropsWithChildren<{
 }>
 
 export default function Drawer({
-  ['aria-label']: ariaLabel,
+  'aria-label': ariaLabel,
   children,
+  className,
   closeButtonTitle = 'Close',
   disableBackdropClick = false,
   disableEscapeKeyDown = false,
@@ -89,7 +95,7 @@ export default function Drawer({
     <Portal>
       <FocusOn onEscapeKey={onEscapeKey}>
         <Backdrop onClick={onBackdropClick} open={isOpen} />
-        <DrawerBase aria-label={ariaLabel} aria-modal role="dialog">
+        <DrawerBase aria-label={ariaLabel} aria-modal className={className} role="dialog">
           {showCloseButton && (
             <DrawerCloseButtonContainer>
               <DrawerCloseButton

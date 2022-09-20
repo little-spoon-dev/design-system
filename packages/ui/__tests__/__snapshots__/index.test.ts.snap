@@ -2,6 +2,32 @@
 
 exports[`exports ui 1`] = `
 {
+  "Accordion": {
+    "$$typeof": Symbol(react.forward_ref),
+    "attrs": [],
+    "componentStyle": e {
+      "baseHash": 84895702,
+      "baseStyle": undefined,
+      "componentId": "sc-cxabCf",
+      "isStatic": false,
+      "rules": [
+        "
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+",
+      ],
+      "staticRulesId": "",
+    },
+    "foldedComponentIds": [],
+    "render": [Function],
+    "shouldForwardProp": undefined,
+    "styledComponentId": "sc-cxabCf",
+    "target": "dl",
+    "toString": [Function],
+    "warnTooManyClasses": [Function],
+    "withComponent": [Function],
+  },
   "Alert": [Function],
   "Box": [Function],
   "Breadcrumb": [Function],

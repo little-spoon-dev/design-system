@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/little-spoon-dev/design-system/compare/storybook@2.3.2...storybook@2.4.0) (2022-09-20)
+
+### Features
+
+- **drawer:** add className prop and remove sx prop ([592e506](https://github.com/little-spoon-dev/design-system/commit/592e50604bb9c18cd66a7cd3cc270672ad6ed12f))
+- **drawer:** add sx prop ([ab01af6](https://github.com/little-spoon-dev/design-system/commit/ab01af6c9cf457bf352939e3dc3ca0a4073417f1))
+
 ## [2.3.2](https://github.com/little-spoon-dev/design-system/compare/storybook@2.3.1...storybook@2.3.2) (2022-09-09)
 
 **Note:** Version bump only for package storybook

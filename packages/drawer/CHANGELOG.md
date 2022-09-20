@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/drawer@1.2.1...@littlespoon/drawer@1.3.0) (2022-09-20)
+
+### Bug Fixes
+
+- **drawer:** remove min-height and min-width properties ([7cd8282](https://github.com/little-spoon-dev/design-system/commit/7cd8282a08e5cbdc6160db7972ad3c786ad40a55))
+
+### Features
+
+- **drawer:** add className prop and remove sx prop ([592e506](https://github.com/little-spoon-dev/design-system/commit/592e50604bb9c18cd66a7cd3cc270672ad6ed12f))
+- **drawer:** add sx prop ([ab01af6](https://github.com/little-spoon-dev/design-system/commit/ab01af6c9cf457bf352939e3dc3ca0a4073417f1))
+
 ## [1.2.1](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/drawer@1.2.0...@littlespoon/drawer@1.2.1) (2022-09-09)
 
 **Note:** Version bump only for package @littlespoon/drawer

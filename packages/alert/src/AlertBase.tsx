@@ -11,11 +11,11 @@ import type { AlertProps } from './Alert'
 export const AlertWrapper = styled.div<Partial<AlertProps>>`
   display: flex;
   position: ${(props) => (props.type === 'relative' ? 'relative' : 'absolute')};
-  border-radius: 2px;
+  border-radius: ${rem(0.2)};
   border: 0;
   box-sizing: border-box;
-  padding: 8px;
-  max-width: 800px;
+  padding: ${rem(0.8)};
+  max-width: ${(props) => (props.type === 'relative' ? '100%' : rem(80))};
   width: 100%;
   color: ${colors.shadeBlack};
   ${(props) => (props.type === 'banner' ? `top: 0px` : 'bottom: 0px')};

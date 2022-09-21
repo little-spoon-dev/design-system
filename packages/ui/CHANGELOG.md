@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.20.3](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.20.2...@littlespoon/ui@1.20.3) (2022-09-21)
+
+### Bug Fixes
+
+- info icon issue ([2615fd6](https://github.com/little-spoon-dev/design-system/commit/2615fd6e6e2f5c376df3d4ceecdd7ff06e84b680))
+
 ## [1.20.2](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.20.1...@littlespoon/ui@1.20.2) (2022-09-20)
 
 **Note:** Version bump only for package @littlespoon/ui

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.1](https://github.com/little-spoon-dev/design-system/compare/storybook@2.4.0...storybook@2.4.1) (2022-09-21)
+
+### Bug Fixes
+
+- info icon issue ([2615fd6](https://github.com/little-spoon-dev/design-system/commit/2615fd6e6e2f5c376df3d4ceecdd7ff06e84b680))
+
 # [2.4.0](https://github.com/little-spoon-dev/design-system/compare/storybook@2.3.2...storybook@2.4.0) (2022-09-20)
 
 ### Features

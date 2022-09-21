@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.9](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/alert@1.1.8...@littlespoon/alert@1.1.9) (2022-09-21)
+
+### Bug Fixes
+
+- info icon issue ([2615fd6](https://github.com/little-spoon-dev/design-system/commit/2615fd6e6e2f5c376df3d4ceecdd7ff06e84b680))
+
 ## [1.1.8](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/alert@1.1.7...@littlespoon/alert@1.1.8) (2022-09-09)
 
 **Note:** Version bump only for package @littlespoon/alert

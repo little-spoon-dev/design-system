@@ -23,6 +23,7 @@ export const TypographyBase = styled.p<TypographyProps>`
   padding: 0;
   text-align: ${(props) => props.center && 'center'};
   text-transform: ${(props) => props.uppercase && 'uppercase'};
+  letter-spacing: 0.006rem;
   ${getVariantCss}
   ${getResponsiveCss}
   ${getStyle}

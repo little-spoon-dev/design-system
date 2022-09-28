@@ -107,7 +107,7 @@ Toast.args = {
   description: 'Description Copy goes here',
   variant: 'success',
   type: 'toast',
-  onClose,
+  onClose: undefined,
 }
 
 export const Banner = Template.bind({})

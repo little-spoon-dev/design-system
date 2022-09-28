@@ -1,13 +1,26 @@
 import colors from '@littlespoon/theme/src/colors'
-import { render, screen } from '@testing-library/react'
+import { act, fireEvent, render, screen } from '@testing-library/react'
 
 import type { AlertProps } from '../src/'
 import Alert from '../src/'
+
+const onCloseMock = jest.fn()
 
 describe('no props', () => {
   it('renders alert with className', async () => {
     render(<Alert className="alert"></Alert>)
     expect(document.getElementsByClassName('alert')).toHaveLength(1)
+  })
+})
+
+describe('onClose called on close button click', () => {
+  it('renders alert with className', async () => {
+    render(<Alert onClose={onCloseMock}></Alert>)
+    const btnClose = screen.getByTestId('btn__close')
+    act(() => {
+      fireEvent.click(btnClose)
+    })
+    expect(onCloseMock).toHaveBeenCalledTimes(1)
   })
 })
 

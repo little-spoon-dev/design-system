@@ -3,7 +3,7 @@ import CloseIcon from '@littlespoon/icons/lib/CloseIcon'
 import ExclamationIcon from '@littlespoon/icons/lib/ExclamationIcon'
 import InfoIcon from '@littlespoon/icons/lib/InfoIcon'
 import colors from '@littlespoon/theme/lib/colors'
-import type React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import {
   AlertActionLink,
@@ -69,9 +69,34 @@ export default function Alert({
   variant = 'success',
   ...other
 }: AlertProps): React.ReactElement<AlertProps> {
+  const [show, setShow] = useState(true)
   const Icon = icons[variant]
+
+  useEffect(() => {
+    let timer: NodeJS.Timeout
+    if (type === 'toast') {
+      timer = setTimeout(hideAlert, 5 * 1000)
+    }
+
+    return () => {
+      if (timer) clearTimeout(timer)
+    }
+  }, [type])
+
+  /* istanbul ignore next */
+  const hideAlert = () => {
+    setShow(false)
+    onClose?.()
+  }
+
   return (
-    <AlertWrapper role="alert" variant={variant} type={type} {...other}>
+    <AlertWrapper
+      role="alert"
+      variant={variant}
+      type={type}
+      className={show ? 'show' : 'hide'}
+      {...other}
+    >
       {Icon}
       <AlertMessages>
         {title && <AlertTitle>{title}</AlertTitle>}
@@ -83,7 +108,7 @@ export default function Alert({
         )}
       </AlertMessages>
       {onClose && (
-        <AlertCloseButton onClick={onClose}>
+        <AlertCloseButton data-testid="btn__close" onClick={hideAlert}>
           <VisuallyHidden>close</VisuallyHidden>
           <CloseIcon fill="transparent" aria-hidden />
         </AlertCloseButton>

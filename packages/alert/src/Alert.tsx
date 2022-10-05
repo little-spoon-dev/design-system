@@ -3,7 +3,7 @@ import CloseIcon from '@littlespoon/icons/lib/CloseIcon'
 import ExclamationIcon from '@littlespoon/icons/lib/ExclamationIcon'
 import InfoIcon from '@littlespoon/icons/lib/InfoIcon'
 import colors from '@littlespoon/theme/lib/colors'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 
 import {
   AlertActionLink,
@@ -14,6 +14,14 @@ import {
   AlertWrapper,
   VisuallyHidden,
 } from './AlertBase'
+
+export * from './AlertProvider'
+
+export enum AlertTypes {
+  RELATIVE = 'relative',
+  TOAST = 'toast',
+  BANNER = 'banner',
+}
 
 export interface AlertProps extends React.HTMLAttributes<HTMLElement> {
   /**
@@ -50,6 +58,26 @@ export interface AlertProps extends React.HTMLAttributes<HTMLElement> {
    * The variant to use. Defaults to "relative".
    */
   type?: 'relative' | 'toast' | 'banner'
+
+  /**
+   * Show / Hide close button
+   */
+  showCloseButton?: boolean
+
+  /**
+   * Show / Hide Alert
+   */
+  isOpen?: boolean
+
+  /**
+   * Show alert duration
+   */
+  delay?: number
+
+  /**
+   * Offset Index
+   */
+  offsetIndex?: number
 }
 
 const icons = {
@@ -62,20 +90,25 @@ const icons = {
 export default function Alert({
   actionLinkText,
   actionLinkUrl,
+  delay,
   description = '',
+  isOpen = true,
+  offsetIndex = 0,
   onClose,
+  showCloseButton = true,
   title,
-  type = 'relative',
+  type = AlertTypes.RELATIVE,
   variant = 'success',
   ...other
 }: AlertProps): React.ReactElement<AlertProps> {
-  const [show, setShow] = useState(true)
   const Icon = icons[variant]
+  const delayInMiliseconds = delay || 5000
 
   useEffect(() => {
     let timer: NodeJS.Timeout
-    if (type === 'toast') {
-      timer = setTimeout(hideAlert, 5 * 1000)
+    if (type === AlertTypes.TOAST) {
+      /* istanbul ignore next */
+      timer = setTimeout(() => onClose?.(), delayInMiliseconds)
     }
 
     return () => {
@@ -83,18 +116,13 @@ export default function Alert({
     }
   }, [type])
 
-  /* istanbul ignore next */
-  const hideAlert = () => {
-    setShow(false)
-    onClose?.()
-  }
-
   return (
     <AlertWrapper
       role="alert"
       variant={variant}
       type={type}
-      className={show ? 'show' : 'hide'}
+      isOpen={isOpen}
+      offsetIndex={offsetIndex}
       {...other}
     >
       {Icon}
@@ -107,8 +135,8 @@ export default function Alert({
           </AlertActionLink>
         )}
       </AlertMessages>
-      {onClose && (
-        <AlertCloseButton data-testid="btn__close" onClick={hideAlert}>
+      {showCloseButton && (
+        <AlertCloseButton data-testid="btnClose" onClick={onClose}>
           <VisuallyHidden>close</VisuallyHidden>
           <CloseIcon fill="transparent" aria-hidden />
         </AlertCloseButton>

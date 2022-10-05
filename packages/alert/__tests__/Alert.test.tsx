@@ -2,7 +2,7 @@ import colors from '@littlespoon/theme/src/colors'
 import { act, fireEvent, render, screen } from '@testing-library/react'
 
 import type { AlertProps } from '../src/'
-import Alert from '../src/'
+import Alert, { AlertProvider } from '../src/'
 
 const onCloseMock = jest.fn()
 
@@ -16,7 +16,7 @@ describe('no props', () => {
 describe('onClose called on close button click', () => {
   it('renders alert with className', async () => {
     render(<Alert onClose={onCloseMock}></Alert>)
-    const btnClose = screen.getByTestId('btn__close')
+    const btnClose = screen.getByTestId('btnClose')
     act(() => {
       fireEvent.click(btnClose)
     })
@@ -67,7 +67,6 @@ describe('with props.variant', () => {
             {variant}
           </Alert>,
         )
-        expect(document.querySelectorAll('span')).toHaveLength(1)
         expect(document.querySelectorAll(`[fill="${colorMapping[variant]}"`)).toHaveLength(1)
       }
     },
@@ -75,12 +74,24 @@ describe('with props.variant', () => {
 })
 
 describe('with props.type', () => {
-  it.each<AlertProps['type']>(['toast', 'banner'])('renders alert with type', (type) => {
-    if (type) {
-      render(<Alert description="alert description" type={type} />)
-      expect(document.querySelectorAll('span')).toHaveLength(1)
-    }
-  })
+  it.each<AlertProps['type']>(['toast', 'banner', 'relative'])(
+    'renders alert with type',
+    (type) => {
+      if (type) {
+        render(
+          <Alert
+            description="alert description"
+            type={type}
+            showCloseButton={false}
+            isOpen={true}
+            offsetIndex={0}
+            delay={3000}
+          />,
+        )
+        expect(document.querySelectorAll('span')).toHaveLength(1)
+      }
+    },
+  )
 })
 
 describe('with props.onClose', () => {
@@ -88,5 +99,11 @@ describe('with props.onClose', () => {
   it('renders icons', () => {
     render(<Alert description="alert description" onClose={onClose} />)
     expect(document.querySelector('button')).toBeInTheDocument()
+  })
+})
+
+describe('with alert provider', () => {
+  it('renders toast stack', () => {
+    render(<AlertProvider maxStack={2} />)
   })
 })

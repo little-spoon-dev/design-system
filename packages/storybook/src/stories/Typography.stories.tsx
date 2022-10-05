@@ -174,3 +174,13 @@ export const Uppercase = TemplateAll.bind({})
 Uppercase.args = {
   uppercase: true,
 }
+
+export const WithBreakpoints = Template.bind({})
+WithBreakpoints.args = {
+  variant: {
+    0: 'p4',
+    1000: 'p3',
+    1500: 'p2',
+  },
+  children: 'Variant by breakpoint test (resize your screen for to change my size)',
+}

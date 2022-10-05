@@ -6,6 +6,12 @@ import { TypographyBase } from './TypographyBase'
 
 type ElementType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p'
 
+type DisplayType = ElementType | 'p1' | 'p2' | 'p3' | 'p4' | 'display1' | 'display2' | 'caption1'
+
+export interface StyleByBreakpoint {
+  [key: number]: DisplayType
+}
+
 export interface TypographyProps extends StyleProps {
   /**
    * The content of the component.
@@ -20,7 +26,7 @@ export interface TypographyProps extends StyleProps {
   /**
    * The variant to use. Defaults to `as`.
    */
-  variant?: ElementType | 'p1' | 'p2' | 'p3' | 'p4' | 'display1' | 'display2' | 'caption1'
+  variant?: ElementType | DisplayType | StyleByBreakpoint
 
   /**
    * Whether the content is bold. Defaults to false.

@@ -26,7 +26,7 @@ export interface TypographyProps extends StyleProps {
   /**
    * The variant to use. Defaults to `as`.
    */
-  variant?: ElementType | DisplayType | StyleByBreakpoint
+  variant?: DisplayType | StyleByBreakpoint
 
   /**
    * Whether the content is bold. Defaults to false.

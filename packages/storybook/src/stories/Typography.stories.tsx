@@ -182,5 +182,5 @@ WithBreakpoints.args = {
     1000: 'p3',
     1500: 'p2',
   },
-  children: 'Variant by breakpoint test (resize your screen for to change my size)',
+  children: 'Variant by breakpoint test (resize your screen to change my size)',
 }

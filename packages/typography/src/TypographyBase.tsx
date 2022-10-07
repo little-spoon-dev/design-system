@@ -104,12 +104,12 @@ function getVariantCss(props: TypographyProps) {
     const breakpoints = Object.entries(props.variant)
     let mediaStyles = ''
 
-    for (const [key, value] of breakpoints) {
-      if (+key === 0) {
-        mediaStyles += getVariantCss({ variant: value })
+    for (const [breakpoint, variant] of breakpoints) {
+      if (+breakpoint === 0) {
+        mediaStyles += getVariantCss({ variant: variant })
       } else {
-        mediaStyles += `@media screen and (min-width: ${key}px) { ${getVariantCss({
-          variant: value,
+        mediaStyles += `@media screen and (min-width: ${breakpoint}px) { ${getVariantCss({
+          variant: variant,
         })} }`
       }
     }

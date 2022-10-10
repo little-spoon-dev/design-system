@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/typography@1.5.3...@littlespoon/typography@1.6.0) (2022-10-10)
+
+### Bug Fixes
+
+- fixed typo and duplicated type LS-4105 ([4c8ba04](https://github.com/little-spoon-dev/design-system/commit/4c8ba04a22104ecc7b7956f889c71b8d5a4e78fd))
+
+### Features
+
+- typography add breakpoint acceptance for variant ([c119145](https://github.com/little-spoon-dev/design-system/commit/c1191459454b8b2cced32a2f39d274549be25a6b))
+- typography add breakpoint acceptance to ([29a4d23](https://github.com/little-spoon-dev/design-system/commit/29a4d2339b8fee776c5fe6404cfb4846d246deb0))
+
 ## [1.5.3](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/typography@1.5.2...@littlespoon/typography@1.5.3) (2022-09-27)
 
 ### Bug Fixes

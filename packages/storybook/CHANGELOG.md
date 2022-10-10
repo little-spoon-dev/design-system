@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/little-spoon-dev/design-system/compare/storybook@2.4.1...storybook@2.5.0) (2022-10-10)
+
+### Bug Fixes
+
+- fixed typo and duplicated type LS-4105 ([4c8ba04](https://github.com/little-spoon-dev/design-system/commit/4c8ba04a22104ecc7b7956f889c71b8d5a4e78fd))
+
+### Features
+
+- typography add breakpoint acceptance to ([29a4d23](https://github.com/little-spoon-dev/design-system/commit/29a4d2339b8fee776c5fe6404cfb4846d246deb0))
+
 ## [2.4.1](https://github.com/little-spoon-dev/design-system/compare/storybook@2.4.0...storybook@2.4.1) (2022-09-21)
 
 ### Bug Fixes

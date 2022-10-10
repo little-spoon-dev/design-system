@@ -78,7 +78,7 @@ describe('with props.noMargin', () => {
   })
 })
 
-describe('with props.variant', () => {
+describe('with props.variant as string', () => {
   it.each<[Required<TypographyProps>['variant'], string]>([
     ['display1', 'font: Mulish,sans-serif 7.4rem 700 7.4rem'],
     ['display2', 'font: Mulish,sans-serif 6.6rem 700 6.6rem'],
@@ -95,14 +95,36 @@ describe('with props.variant', () => {
     ['p4', 'font: Lato,sans-serif 1.4rem 400 1.4rem'],
     ['caption1', 'font: Lato,sans-serif 1.2rem 400 1.2rem'],
   ])('renders p with variant=%j', (variant, style) => {
-    render(<Typography variant={variant}>{variant}</Typography>)
+    const variantText = typeof variant === 'string' ? variant : variant[0]
+    render(<Typography variant={variant}>{variantText}</Typography>)
     expect(document.querySelectorAll('p').length).toBe(1)
-    expect(screen.getByText(variant)).toHaveStyle(style)
+    expect(screen.getByText(variantText)).toHaveStyle(style)
   })
 
   it('does not throw for invalid variant', () => {
     render(<Typography variant={'' as 'p'}>{children}</Typography>)
     expect(screen.getByText(children)).toBeInTheDocument()
+  })
+})
+
+describe('with props.variant as object', () => {
+  it('have proper styles for variant with breakpoints', async () => {
+    const text = 'Variant by breakpoint test desktop'
+    render(
+      <Typography
+        variant={{
+          0: 'p4',
+          1500: 'p2',
+        }}
+      >
+        {text}
+      </Typography>,
+    )
+
+    expect(document.querySelectorAll('p').length).toBe(1)
+    expect(screen.getByText(text)).toHaveStyle(
+      'font-family: Lato,sans-serif; font-size: 1.4rem; line-height: 2rem;',
+    )
   })
 })
 

@@ -36,69 +36,88 @@ function getVariantCss(props: TypographyProps) {
   let font: string
   let lineHeight: string
 
-  switch (props.variant) {
-    /**
-     * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/348dfa}
-     */
-    case 'display1':
-    case 'display2': {
-      const { fontSize, lineHeight: displayLineHeight } = display[props.variant]
-      font = `${secondaryWeight.bold} ${fontSize} ${secondaryFamily}`
-      lineHeight = displayLineHeight
-      break
+  if (typeof props.variant === 'string') {
+    switch (props.variant) {
+      /**
+       * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/348dfa}
+       */
+      case 'display1':
+      case 'display2': {
+        const { fontSize, lineHeight: displayLineHeight } = display[props.variant]
+        font = `${secondaryWeight.bold} ${fontSize} ${secondaryFamily}`
+        lineHeight = displayLineHeight
+        break
+      }
+
+      /**
+       * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/440937}
+       */
+      case 'h1':
+      case 'h2':
+      case 'h3':
+      case 'h4':
+      case 'h5':
+      case 'h6': {
+        const { fontSize, lineHeight: headingLineHeight } = heading[props.variant]
+        font = `${secondaryWeight.bold} ${fontSize} ${secondaryFamily}`
+        lineHeight = headingLineHeight
+        break
+      }
+
+      /**
+       * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/4725bd}
+       */
+      case 'caption1': {
+        const { fontSize, lineHeight: captionLineHeight } = caption[props.variant]
+        font = `${primaryWeight.normal} ${fontSize} ${primaryFamily}`
+        lineHeight = captionLineHeight
+        break
+      }
+
+      /**
+       * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/294b11}
+       */
+      case 'p1':
+      case 'p2':
+      case 'p3':
+      case 'p4': {
+        const { fontSize, lineHeight: paragraphLineHeight } = paragraph[props.variant]
+        font = `${primaryWeight.normal} ${fontSize} ${primaryFamily}`
+        lineHeight = paragraphLineHeight
+        break
+      }
+
+      /**
+       * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/48491c}
+       */
+      case 'p':
+      default: {
+        const { fontSize, lineHeight: paragraphLineHeight } = paragraph.p3
+        font = `${primaryWeight.normal} ${fontSize} ${primaryFamily}`
+        lineHeight = paragraphLineHeight
+        break
+      }
     }
 
-    /**
-     * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/440937}
-     */
-    case 'h1':
-    case 'h2':
-    case 'h3':
-    case 'h4':
-    case 'h5':
-    case 'h6': {
-      const { fontSize, lineHeight: headingLineHeight } = heading[props.variant]
-      font = `${secondaryWeight.bold} ${fontSize} ${secondaryFamily}`
-      lineHeight = headingLineHeight
-      break
+    return `font: ${font}; line-height: ${lineHeight};`
+  } else if (typeof props.variant === 'object') {
+    const breakpoints = Object.entries(props.variant)
+    let mediaStyles = ''
+
+    for (const [breakpoint, variant] of breakpoints) {
+      if (+breakpoint === 0) {
+        mediaStyles += getVariantCss({ variant: variant })
+      } else {
+        mediaStyles += `@media screen and (min-width: ${breakpoint}px) { ${getVariantCss({
+          variant: variant,
+        })} }`
+      }
     }
 
-    /**
-     * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/4725bd}
-     */
-    case 'caption1': {
-      const { fontSize, lineHeight: captionLineHeight } = caption[props.variant]
-      font = `${primaryWeight.normal} ${fontSize} ${primaryFamily}`
-      lineHeight = captionLineHeight
-      break
-    }
-
-    /**
-     * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/294b11}
-     */
-    case 'p1':
-    case 'p2':
-    case 'p3':
-    case 'p4': {
-      const { fontSize, lineHeight: paragraphLineHeight } = paragraph[props.variant]
-      font = `${primaryWeight.normal} ${fontSize} ${primaryFamily}`
-      lineHeight = paragraphLineHeight
-      break
-    }
-
-    /**
-     * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/48491c}
-     */
-    case 'p':
-    default: {
-      const { fontSize, lineHeight: paragraphLineHeight } = paragraph.p3
-      font = `${primaryWeight.normal} ${fontSize} ${primaryFamily}`
-      lineHeight = paragraphLineHeight
-      break
-    }
+    return mediaStyles
   }
 
-  return `font: ${font}; line-height: ${lineHeight};`
+  return ''
 }
 
 /**
@@ -125,7 +144,7 @@ const responsiveStyles = {
  * Gets responsive styles.
  */
 function getResponsiveCss(props: TypographyProps) {
-  if (!props.variant) {
+  if (!props.variant || typeof props.variant !== 'string') {
     return ''
   }
 

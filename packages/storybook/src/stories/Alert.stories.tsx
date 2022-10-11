@@ -2,6 +2,7 @@ import Alert, {
   AlertProps,
   AlertProvider,
   AlertProviderProps,
+  AlertTypes,
   useAlertProvider,
 } from '@littlespoon/alert/src/Alert'
 import Button from '@littlespoon/button'
@@ -15,10 +16,15 @@ const AlertStory = (args: AlertProps) => {
 }
 
 const AlertToastStack = () => {
-  const { toast } = useAlertProvider()
+  const { addToast } = useAlertProvider()
 
   const handleAddToast = () => {
-    toast({ title: 'Test Toast', type: 'toast', showCloseButton: false })
+    addToast({
+      title: 'Test Toast',
+      type: AlertTypes.TOAST,
+      showCloseButton: false,
+      description: 'This is a test toast',
+    })
   }
 
   return <Button onClick={handleAddToast}>Add Toast</Button>
@@ -133,7 +139,7 @@ Toast.args = {
   title: 'Alert Title',
   description: 'Description Copy goes here',
   variant: 'success',
-  type: 'toast',
+  type: AlertTypes.TOAST,
   showCloseButton: false,
 }
 
@@ -142,5 +148,5 @@ Banner.args = {
   title: 'Alert Title',
   description: 'Description Copy goes here',
   variant: 'success',
-  type: 'banner',
+  type: AlertTypes.BANNER,
 }

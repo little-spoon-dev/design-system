@@ -1,21 +1,21 @@
 import colors from '@littlespoon/theme/src/colors'
 import { act, fireEvent, render, screen } from '@testing-library/react'
 
-import type { AlertProps } from '../src/'
+import { AlertProps, AlertTypes } from '../src/'
 import Alert, { AlertProvider } from '../src/'
 
 const onCloseMock = jest.fn()
 
 describe('no props', () => {
   it('renders alert with className', async () => {
-    render(<Alert className="alert"></Alert>)
+    render(<Alert className="alert" description="test alert"></Alert>)
     expect(document.getElementsByClassName('alert')).toHaveLength(1)
   })
 })
 
 describe('onClose called on close button click', () => {
   it('renders alert with className', async () => {
-    render(<Alert onClose={onCloseMock}></Alert>)
+    render(<Alert onClose={onCloseMock} description="test alert"></Alert>)
     const btnClose = screen.getByTestId('btnClose')
     act(() => {
       fireEvent.click(btnClose)
@@ -24,16 +24,25 @@ describe('onClose called on close button click', () => {
   })
 })
 
+describe('onClose called after 1000ms', () => {
+  it('renders alert with className', async () => {
+    render(<Alert onClose={onCloseMock} delay={1000} description="test alert"></Alert>)
+    setTimeout(() => {
+      expect(onCloseMock).toHaveBeenCalledTimes(1)
+    }, 1000)
+  })
+})
+
 describe('with props.title', () => {
   it('renders title', () => {
-    render(<Alert title="alert title" />)
+    render(<Alert title="alert title" description="test alert" onClose={onCloseMock} />)
     expect(screen.getByText('alert title')).toBeInTheDocument()
   })
 })
 
 describe('with props.description', () => {
   it('renders description', () => {
-    render(<Alert description="alert description" />)
+    render(<Alert description="alert description" onClose={onCloseMock} />)
     expect(screen.getByText('alert description')).toBeInTheDocument()
   })
 })
@@ -45,6 +54,7 @@ describe('with props.link', () => {
         description="alert description"
         actionLinkText="Action Link"
         actionLinkUrl="https://littlespoon.com"
+        onClose={onCloseMock}
       />,
     )
     expect(document.querySelector('a')).toBeInTheDocument()
@@ -63,7 +73,7 @@ describe('with props.variant', () => {
       }
       if (variant) {
         render(
-          <Alert description="alert description" variant={variant}>
+          <Alert description="alert description" variant={variant} onClose={onCloseMock}>
             {variant}
           </Alert>,
         )
@@ -74,7 +84,7 @@ describe('with props.variant', () => {
 })
 
 describe('with props.type', () => {
-  it.each<AlertProps['type']>(['toast', 'banner', 'relative'])(
+  it.each<AlertProps['type']>([AlertTypes.TOAST, AlertTypes.BANNER, AlertTypes.RELATIVE])(
     'renders alert with type',
     (type) => {
       if (type) {
@@ -84,8 +94,8 @@ describe('with props.type', () => {
             type={type}
             showCloseButton={false}
             isOpen={true}
-            offsetIndex={0}
-            delay={3000}
+            onClose={onCloseMock}
+            stackIndex={0}
           />,
         )
         expect(document.querySelectorAll('span')).toHaveLength(1)

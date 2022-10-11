@@ -30,7 +30,7 @@ const fadeoutTop = keyframes`
 `
 
 /* istanbul ignore next */
-export const AlertWrapper = styled.div<Partial<AlertProps>>`
+export const AlertWrapper = styled.div<AlertProps>`
   display: flex;
   position: ${(props) => (props.type === AlertTypes.RELATIVE ? 'relative' : 'fixed')};
   border-radius: ${rem(0.2)};
@@ -42,7 +42,7 @@ export const AlertWrapper = styled.div<Partial<AlertProps>>`
   color: ${colors.shadeBlack};
   visibility: visible;
   ${(props) =>
-    props.type === AlertTypes.BANNER ? `top: 0` : `bottom: ${rem((props.offsetIndex || 0) * 5)}`};
+    props.type === AlertTypes.BANNER ? `top: 0` : `bottom: ${rem((props.stackIndex || 0) * 5)}`};
   ${getBackgroundColor}
   animation: ${(props) =>
     props.isOpen ? fadeInAnimation(props.type) : fadeOutAnimation(props.type)} 0.5s forwards;

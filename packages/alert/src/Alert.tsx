@@ -25,14 +25,14 @@ export enum AlertTypes {
 
 export interface AlertProps extends React.HTMLAttributes<HTMLElement> {
   /**
+   * The description of the component.
+   */
+  description: string
+
+  /**
    * The title of the component.
    */
   title?: string
-
-  /**
-   * The description of the component.
-   */
-  description?: string
 
   /**
    * The action link of the component.
@@ -57,7 +57,7 @@ export interface AlertProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * The variant to use. Defaults to "relative".
    */
-  type?: 'relative' | 'toast' | 'banner'
+  type?: AlertTypes
 
   /**
    * Show / Hide close button
@@ -77,7 +77,7 @@ export interface AlertProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * Offset Index
    */
-  offsetIndex?: number
+  stackIndex?: number
 }
 
 const icons = {
@@ -91,9 +91,9 @@ export default function Alert({
   actionLinkText,
   actionLinkUrl,
   delay,
-  description = '',
+  description,
   isOpen = true,
-  offsetIndex = 0,
+  stackIndex = 0,
   onClose,
   showCloseButton = true,
   title,
@@ -122,7 +122,9 @@ export default function Alert({
       variant={variant}
       type={type}
       isOpen={isOpen}
-      offsetIndex={offsetIndex}
+      stackIndex={stackIndex}
+      description={description}
+      data-testid="alertWrapper"
       {...other}
     >
       {Icon}

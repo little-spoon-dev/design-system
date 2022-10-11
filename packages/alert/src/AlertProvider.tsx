@@ -4,11 +4,11 @@ import React, { createContext, useContext, useState } from 'react'
 import Alert, { AlertProps } from './Alert'
 
 type AlertContextState = {
-  toast: (params: AlertProps) => void
+  addToast: (params: AlertProps) => void
 }
 
 const initialState = {
-  toast: () => null,
+  addToast: () => null,
 }
 
 const AlertContext = createContext<AlertContextState>(initialState)
@@ -53,17 +53,17 @@ export function AlertProvider({
   }
 
   return (
-    <AlertContext.Provider value={{ toast: addToast }}>
+    <AlertContext.Provider value={{ addToast: addToast }}>
       {children}
-      {toasts.map(({ alertId, onClose, ...toast }, index) => (
+      {toasts.map(({ alertId, onClose, ...addToast }, index) => (
         <Alert
           key={alertId}
-          offsetIndex={index}
+          stackIndex={index}
           onClose={() => {
             removeToast(alertId)
             onClose?.()
           }}
-          {...toast}
+          {...addToast}
         />
       ))}
     </AlertContext.Provider>

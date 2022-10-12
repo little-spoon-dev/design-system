@@ -116,13 +116,13 @@ export default function Alert({
   ...other
 }: AlertProps): React.ReactElement<AlertProps> {
   const Icon = icons[variant]
-  const delayInMiliseconds = delay || 5000
+  const delayInMilliseconds = delay || 5000
 
   useEffect(() => {
     let timer: NodeJS.Timeout
     if (type === AlertTypes.TOAST) {
       /* istanbul ignore next */
-      timer = setTimeout(() => onClose?.(), delayInMiliseconds)
+      timer = setTimeout(() => onClose?.(), delayInMilliseconds)
     }
 
     return () => {

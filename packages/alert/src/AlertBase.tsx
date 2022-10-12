@@ -7,7 +7,7 @@ import { rem } from '@littlespoon/theme/lib/utils'
 import styled, { Keyframes, keyframes } from 'styled-components'
 
 import type { AlertProps } from './Alert'
-import { AlertTypes } from './Alert'
+import { AlertTypes, BaseAlertProps } from './Alert'
 
 const fadeinBottom = keyframes`
   from {transform: translateY(${rem(3)}); opacity: 0;}
@@ -30,7 +30,7 @@ const fadeoutTop = keyframes`
 `
 
 /* istanbul ignore next */
-export const AlertWrapper = styled.div<AlertProps>`
+export const AlertWrapper = styled.div<BaseAlertProps>`
   display: flex;
   position: ${(props) => (props.type === AlertTypes.RELATIVE ? 'relative' : 'fixed')};
   border-radius: ${rem(0.2)};
@@ -42,7 +42,7 @@ export const AlertWrapper = styled.div<AlertProps>`
   color: ${colors.shadeBlack};
   visibility: visible;
   ${(props) =>
-    props.type === AlertTypes.BANNER ? `top: 0` : `bottom: ${rem((props.stackIndex || 0) * 5)}`};
+    props.type === AlertTypes.BANNER ? `top: 0` : `bottom: ${rem((props.stackIndex || 0) * 7)}`};
   ${getBackgroundColor}
   animation: ${(props) =>
     props.isOpen ? fadeInAnimation(props.type) : fadeOutAnimation(props.type)} 0.5s forwards;
@@ -101,7 +101,7 @@ function fadeOutAnimation(type?: string): Keyframes {
 /**
  * Gets Alert background color.
  */
-function getBackgroundColor(props: AlertProps): string {
+function getBackgroundColor(props: BaseAlertProps): string {
   let backgroundColor = colors.success20()
 
   switch (props.variant) {

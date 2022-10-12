@@ -19,7 +19,7 @@ export function useAlertProvider() {
 
 let newAlertId = 0
 
-interface Toast extends AlertProps {
+type Toast = AlertProps & {
   alertId: number
 }
 

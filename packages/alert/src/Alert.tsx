@@ -23,7 +23,7 @@ export enum AlertTypes {
   BANNER = 'banner',
 }
 
-export interface AlertProps extends React.HTMLAttributes<HTMLElement> {
+export type BaseAlertProps = {
   /**
    * The description of the component.
    */
@@ -43,11 +43,6 @@ export interface AlertProps extends React.HTMLAttributes<HTMLElement> {
    * The action link text of the component.
    */
   actionLinkText?: string
-
-  /**
-   * Callback when close button is clicked.
-   */
-  onClose?: () => void
 
   /**
    * The variant to use. Defaults to "success".
@@ -79,6 +74,25 @@ export interface AlertProps extends React.HTMLAttributes<HTMLElement> {
    */
   stackIndex?: number
 }
+
+type TypeProps =
+  | {
+      type: AlertTypes.TOAST
+      delay?: number
+      showCloseButton: false
+      onClose: () => void
+    }
+  | {
+      type?: AlertTypes.RELATIVE | AlertTypes.BANNER
+      showCloseButton: true
+      onClose: () => void
+    }
+  | {
+      type?: AlertTypes.RELATIVE | AlertTypes.BANNER
+      onClose?: () => void
+    }
+
+export type AlertProps = BaseAlertProps & TypeProps & React.HTMLAttributes<HTMLElement>
 
 const icons = {
   success: <CheckIcon stroke={colors.shadeWhite} fill={colors.success50()} />,

@@ -16,6 +16,8 @@ const AlertStory = (args: AlertProps) => {
 }
 
 const AlertToastStack = () => {
+  const [, setIsOpen] = useState(true)
+  const handleClose = () => setIsOpen(false)
   const { addToast } = useAlertProvider()
 
   const handleAddToast = () => {
@@ -24,6 +26,7 @@ const AlertToastStack = () => {
       type: AlertTypes.TOAST,
       showCloseButton: false,
       description: 'This is a test toast',
+      onClose: handleClose,
     })
   }
 

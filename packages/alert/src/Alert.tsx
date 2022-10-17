@@ -65,7 +65,7 @@ export type BaseAlertProps = {
   isOpen?: boolean
 
   /**
-   * Show alert duration
+   * Show alert delay (in milliseconds)
    */
   delay?: number
 
@@ -79,13 +79,13 @@ type TypeProps =
   | {
       type: AlertTypes.TOAST
       delay?: number
-      showCloseButton: false
+      showCloseButton: boolean
       onClose: () => void
     }
   | {
-      type?: AlertTypes.RELATIVE | AlertTypes.BANNER
-      showCloseButton: true
-      onClose: () => void
+      type: AlertTypes.RELATIVE | AlertTypes.BANNER
+      showCloseButton: boolean
+      onClose?: () => void
     }
   | {
       type?: AlertTypes.RELATIVE | AlertTypes.BANNER
@@ -104,7 +104,7 @@ const icons = {
 export default function Alert({
   actionLinkText,
   actionLinkUrl,
-  delay,
+  delay = 5000,
   description,
   isOpen = true,
   stackIndex = 0,
@@ -116,13 +116,12 @@ export default function Alert({
   ...other
 }: AlertProps): React.ReactElement<AlertProps> {
   const Icon = icons[variant]
-  const delayInMilliseconds = delay || 5000
 
   useEffect(() => {
     let timer: NodeJS.Timeout
     if (type === AlertTypes.TOAST) {
       /* istanbul ignore next */
-      timer = setTimeout(() => onClose?.(), delayInMilliseconds)
+      timer = setTimeout(() => onClose?.(), delay)
     }
 
     return () => {

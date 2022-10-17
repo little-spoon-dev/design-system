@@ -1,21 +1,21 @@
 import colors from '@littlespoon/theme/src/colors'
 import { act, fireEvent, render, screen } from '@testing-library/react'
 
-import { AlertProps, AlertTypes } from '../src/'
-import Alert, { AlertProvider } from '../src/'
+import Alert, { AlertProps, AlertProvider, AlertTypes } from '../src/'
 
 const onCloseMock = jest.fn()
+const testDescription = 'test alert'
 
 describe('no props', () => {
   it('renders alert with className', async () => {
-    render(<Alert className="alert" description="test alert"></Alert>)
+    render(<Alert className="alert" description={testDescription}></Alert>)
     expect(document.getElementsByClassName('alert')).toHaveLength(1)
   })
 })
 
 describe('onClose called on close button click', () => {
   it('renders alert with className', async () => {
-    render(<Alert onClose={onCloseMock} description="test alert"></Alert>)
+    render(<Alert onClose={onCloseMock} description={testDescription}></Alert>)
     const btnClose = screen.getByTestId('btnClose')
     act(() => {
       fireEvent.click(btnClose)
@@ -26,7 +26,7 @@ describe('onClose called on close button click', () => {
 
 describe('onClose called after 1000ms', () => {
   it('renders alert with className', async () => {
-    render(<Alert onClose={onCloseMock} delay={1000} description="test alert"></Alert>)
+    render(<Alert onClose={onCloseMock} delay={1000} description={testDescription}></Alert>)
     setTimeout(() => {
       expect(onCloseMock).toHaveBeenCalledTimes(1)
     }, 1000)
@@ -35,7 +35,7 @@ describe('onClose called after 1000ms', () => {
 
 describe('with props.title', () => {
   it('renders title', () => {
-    render(<Alert title="alert title" description="test alert" onClose={onCloseMock} />)
+    render(<Alert title="alert title" description={testDescription} onClose={onCloseMock} />)
     expect(screen.getByText('alert title')).toBeInTheDocument()
   })
 })

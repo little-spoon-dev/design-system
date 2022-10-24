@@ -104,7 +104,7 @@ const icons = {
 export default function Alert({
   actionLinkText,
   actionLinkUrl,
-  delay = 5000,
+  delay = 6000,
   description,
   isOpen = true,
   stackIndex = 0,

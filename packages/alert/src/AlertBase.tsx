@@ -4,22 +4,48 @@ import colors from '@littlespoon/theme/lib/colors'
 import { p3, p4 } from '@littlespoon/theme/lib/fonts/paragraph'
 import { family, weight } from '@littlespoon/theme/lib/fonts/primary'
 import { rem } from '@littlespoon/theme/lib/utils'
-import styled from 'styled-components'
+import styled, { Keyframes, keyframes } from 'styled-components'
 
 import type { AlertProps } from './Alert'
+import { AlertTypes, BaseAlertProps } from './Alert'
 
-export const AlertWrapper = styled.div<Partial<AlertProps>>`
+const fadeinBottom = keyframes`
+  from {transform: translateY(${rem(3)}); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+`
+
+const fadeoutBottom = keyframes`
+  from {transform: translateY(0); opacity: 1;}
+  to {transform: translateY(${rem(3)}); opacity: 0;}
+`
+
+const fadeinTop = keyframes`
+  from {top: ${rem(-3)}; opacity: 0;}
+  to {top: 0; opacity: 1;}
+`
+
+const fadeoutTop = keyframes`
+  from {top: 0; opacity: 1;}
+  to {top: ${rem(-3)}; opacity: 0;}
+`
+
+/* istanbul ignore next */
+export const AlertWrapper = styled.div<BaseAlertProps>`
   display: flex;
-  position: ${(props) => (props.type === 'relative' ? 'relative' : 'absolute')};
+  position: ${(props) => (props.type === AlertTypes.RELATIVE ? 'relative' : 'fixed')};
   border-radius: ${rem(0.2)};
   border: 0;
   box-sizing: border-box;
   padding: ${rem(0.8)};
-  max-width: ${(props) => (props.type === 'relative' ? '100%' : rem(80))};
+  max-width: ${(props) => (props.type === AlertTypes.RELATIVE ? '100%' : rem(80))};
   width: 100%;
   color: ${colors.shadeBlack};
-  ${(props) => (props.type === 'banner' ? `top: 0px` : 'bottom: 0px')};
+  visibility: visible;
+  ${(props) =>
+    props.type === AlertTypes.BANNER ? `top: 0` : `bottom: ${rem((props.stackIndex || 0) * 7)}`};
   ${getBackgroundColor}
+  animation: ${(props) =>
+    props.isOpen ? fadeInAnimation(props.type) : fadeOutAnimation(props.type)} 0.5s forwards;
 `
 
 export const AlertMessages = styled.div<Partial<AlertProps>>`
@@ -63,10 +89,19 @@ export const AlertCloseButton = styled(Button)`
   }
 `
 
+function fadeInAnimation(type?: string): Keyframes {
+  return type === AlertTypes.TOAST ? fadeinBottom : fadeinTop
+}
+
+/* istanbul ignore next */
+function fadeOutAnimation(type?: string): Keyframes {
+  return type === AlertTypes.TOAST ? fadeoutBottom : fadeoutTop
+}
+
 /**
  * Gets Alert background color.
  */
-function getBackgroundColor(props: AlertProps): string {
+function getBackgroundColor(props: BaseAlertProps): string {
   let backgroundColor = colors.success20()
 
   switch (props.variant) {

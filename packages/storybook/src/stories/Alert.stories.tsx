@@ -1,24 +1,67 @@
-import Alert from '@littlespoon/alert/src/Alert'
+import Alert, {
+  AlertProps,
+  AlertProvider,
+  AlertProviderProps,
+  AlertTypes,
+  useAlertProvider,
+} from '@littlespoon/alert/src/Alert'
+import Button from '@littlespoon/button'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { useState } from 'react'
+
+const AlertStory = (args: AlertProps) => {
+  const [isOpen, setIsOpen] = useState(true)
+  const handleClose = () => setIsOpen(false)
+  return <Alert isOpen={isOpen} onClose={handleClose} {...args} />
+}
+
+const AlertToastStack = () => {
+  const [, setIsOpen] = useState(true)
+  const handleClose = () => setIsOpen(false)
+  const { addToast } = useAlertProvider()
+
+  const handleAddToast = () => {
+    addToast({
+      title: 'Test Toast',
+      type: AlertTypes.TOAST,
+      showCloseButton: false,
+      description: 'This is a test toast',
+      onClose: handleClose,
+    })
+  }
+
+  return <Button onClick={handleAddToast}>Add Toast</Button>
+}
+
+const AlertProviderStory = (args: AlertProviderProps) => {
+  return (
+    <AlertProvider {...args}>
+      <AlertToastStack />
+    </AlertProvider>
+  )
+}
 
 export default {
   title: 'Design System/Alert',
-  component: Alert,
-} as ComponentMeta<typeof Alert>
+  component: AlertStory,
+} as ComponentMeta<typeof AlertStory>
 
-function onClose() {
-  // eslint-disable-next-line no-console
-  console.log('Clicked Alert close button')
+const Template: ComponentStory<typeof AlertStory> = (args) => <AlertStory {...args} />
+
+const ProviderTemplate: ComponentStory<typeof AlertProviderStory> = (args) => (
+  <AlertProviderStory {...args} />
+)
+
+export const ToastStack = ProviderTemplate.bind({})
+ToastStack.args = {
+  maxStack: 3,
 }
-
-const Template: ComponentStory<typeof Alert> = (args) => <Alert {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
   title: 'Alert Title',
   description: 'Description Copy goes here',
   variant: 'success',
-  onClose,
 }
 
 export const AlertWithoutClose = Template.bind({})
@@ -26,7 +69,7 @@ AlertWithoutClose.args = {
   title: 'Alert Title',
   description: 'Description Copy goes here',
   variant: 'success',
-  onClose: undefined,
+  showCloseButton: false,
 }
 
 export const AlertWithClose = Template.bind({})
@@ -34,21 +77,19 @@ AlertWithClose.args = {
   title: 'Alert Title',
   description: 'Description Copy goes here',
   variant: 'success',
-  onClose,
 }
 
 export const NoTitleNotDismissableNoAction = Template.bind({})
 NoTitleNotDismissableNoAction.args = {
   description: 'Description Copy goes here',
   variant: 'success',
-  onClose: undefined,
+  showCloseButton: false,
 }
 
 export const NoTitleDismissibleNoAction = Template.bind({})
 NoTitleDismissibleNoAction.args = {
   description: 'Description Copy goes here',
   variant: 'success',
-  onClose,
 }
 
 export const NoTitleNotDismissibleAction = Template.bind({})
@@ -57,14 +98,13 @@ NoTitleNotDismissibleAction.args = {
   variant: 'success',
   actionLinkUrl: 'https://example.com/',
   actionLinkText: 'Action link',
-  onClose: undefined,
+  showCloseButton: false,
 }
 
 export const NoTitleDismissibleAction = Template.bind({})
 NoTitleDismissibleAction.args = {
   description: 'Description Copy goes here',
   variant: 'success',
-  onClose,
   actionLinkUrl: 'https://example.com/',
   actionLinkText: 'Action link',
 }
@@ -74,7 +114,6 @@ Success.args = {
   title: 'Alert Title',
   description: 'Description Copy goes here',
   variant: 'success',
-  onClose,
 }
 
 export const Warning = Template.bind({})
@@ -82,7 +121,6 @@ Warning.args = {
   title: 'Alert Title',
   description: 'Description Copy goes here',
   variant: 'warning',
-  onClose,
 }
 
 export const Critical = Template.bind({})
@@ -90,7 +128,6 @@ Critical.args = {
   title: 'Alert Title',
   description: 'Description Copy goes here',
   variant: 'critical',
-  onClose,
 }
 
 export const Informative = Template.bind({})
@@ -98,7 +135,6 @@ Informative.args = {
   title: 'Alert Title',
   description: 'Description Copy goes here',
   variant: 'informative',
-  onClose,
 }
 
 export const Toast = Template.bind({})
@@ -106,8 +142,8 @@ Toast.args = {
   title: 'Alert Title',
   description: 'Description Copy goes here',
   variant: 'success',
-  type: 'toast',
-  onClose,
+  type: AlertTypes.TOAST,
+  showCloseButton: false,
 }
 
 export const Banner = Template.bind({})
@@ -115,6 +151,5 @@ Banner.args = {
   title: 'Alert Title',
   description: 'Description Copy goes here',
   variant: 'success',
-  type: 'banner',
-  onClose,
+  type: AlertTypes.BANNER,
 }

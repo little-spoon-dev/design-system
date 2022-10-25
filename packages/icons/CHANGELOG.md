@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@2.0.5...@littlespoon/icons@2.1.0) (2022-10-25)
+
+### Features
+
+- **alert:** update toast component ([f805974](https://github.com/little-spoon-dev/design-system/commit/f8059746435a6750c62a3fe89aeec83b39d71672))
+
 ## [2.0.5](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@2.0.4...@littlespoon/icons@2.0.5) (2022-09-21)
 
 ### Bug Fixes

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/alert@1.1.9...@littlespoon/alert@1.2.0) (2022-10-25)
+
+### Bug Fixes
+
+- **alert:** fix typo ([b3ce5ad](https://github.com/little-spoon-dev/design-system/commit/b3ce5adab0fa418ee690f4e7e7957de1d1b1b3d8))
+- **alert:** resolve comments ([847dc2d](https://github.com/little-spoon-dev/design-system/commit/847dc2df615f27a1a5ca1ffcbe547cfb6b454060))
+- **alert:** resolve comments ([9948218](https://github.com/little-spoon-dev/design-system/commit/99482186d8069b61e491f1432617a3f0642a69ea))
+- **alert:** resolve comments for test cases ([c91e2bd](https://github.com/little-spoon-dev/design-system/commit/c91e2bdc3eb77c8656b8bdf2f1dab63f326b0562))
+- **alert:** update alert types ([ab3d76e](https://github.com/little-spoon-dev/design-system/commit/ab3d76e3c49ad74fec42934e5d9596c77398cb4f))
+- **alert:** update default alert duration ([b0db177](https://github.com/little-spoon-dev/design-system/commit/b0db17711059c3bb51ab3059d2c40b9567cd2677))
+
+### Features
+
+- **alert:** create toast feature ([621b1c8](https://github.com/little-spoon-dev/design-system/commit/621b1c842a82cb4ffdefa1668fcecb1e5d2d7afa))
+- **alert:** update toast component ([f805974](https://github.com/little-spoon-dev/design-system/commit/f8059746435a6750c62a3fe89aeec83b39d71672))
+
 ## [1.1.9](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/alert@1.1.8...@littlespoon/alert@1.1.9) (2022-09-21)
 
 ### Bug Fixes

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/little-spoon-dev/design-system/compare/storybook@2.5.0...storybook@2.6.0) (2022-10-25)
+
+### Bug Fixes
+
+- **alert:** fix lint issue ([a42d8f7](https://github.com/little-spoon-dev/design-system/commit/a42d8f75c5ef78568914997daa0ba4662e227fbd))
+- **alert:** resolve comments ([9948218](https://github.com/little-spoon-dev/design-system/commit/99482186d8069b61e491f1432617a3f0642a69ea))
+
+### Features
+
+- **alert:** create toast feature ([621b1c8](https://github.com/little-spoon-dev/design-system/commit/621b1c842a82cb4ffdefa1668fcecb1e5d2d7afa))
+- **alert:** update toast component ([f805974](https://github.com/little-spoon-dev/design-system/commit/f8059746435a6750c62a3fe89aeec83b39d71672))
+
 # [2.5.0](https://github.com/little-spoon-dev/design-system/compare/storybook@2.4.1...storybook@2.5.0) (2022-10-10)
 
 ### Bug Fixes

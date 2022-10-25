@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/accordion@1.1.2...@littlespoon/accordion@1.1.3) (2022-10-25)
+
+**Note:** Version bump only for package @littlespoon/accordion
+
 ## [1.1.2](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/accordion@1.1.1...@littlespoon/accordion@1.1.2) (2022-09-21)
 
 **Note:** Version bump only for package @littlespoon/accordion

@@ -2,15 +2,16 @@ import CheckIcon from '@littlespoon/icons/lib/CheckIcon'
 import CloseIcon from '@littlespoon/icons/lib/CloseIcon'
 import ExclamationIcon from '@littlespoon/icons/lib/ExclamationIcon'
 import InfoIcon from '@littlespoon/icons/lib/InfoIcon'
+import Link from '@littlespoon/link'
+import breakpoints from '@littlespoon/theme/lib/breakpoints'
 import colors from '@littlespoon/theme/lib/colors'
+import Typography from '@littlespoon/typography'
 import React, { useEffect } from 'react'
 
 import {
-  AlertActionLink,
   AlertCloseButton,
   AlertDescription,
   AlertMessages,
-  AlertTitle,
   AlertWrapper,
   VisuallyHidden,
 } from './AlertBase'
@@ -142,12 +143,18 @@ export default function Alert({
     >
       {Icon}
       <AlertMessages>
-        {title && <AlertTitle>{title}</AlertTitle>}
+        {title && (
+          <Typography bold noMargin variant={{ 0: 'p2', [breakpoints.md]: 'p3' }}>
+            {title}
+          </Typography>
+        )}
         <AlertDescription>{description}</AlertDescription>
         {actionLinkText && actionLinkUrl && (
-          <AlertActionLink href={actionLinkUrl} underline="always">
-            {actionLinkText}
-          </AlertActionLink>
+          <Link href={actionLinkUrl} underline="always">
+            <Typography bold noMargin variant={{ 0: 'p3', [breakpoints.md]: 'p4' }}>
+              {actionLinkText}
+            </Typography>
+          </Link>
         )}
       </AlertMessages>
       {showCloseButton && (

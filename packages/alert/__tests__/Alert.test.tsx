@@ -98,7 +98,7 @@ describe('with props.type', () => {
             stackIndex={0}
           />,
         )
-        expect(document.querySelectorAll('span')).toHaveLength(1)
+        expect(document.querySelectorAll('p')).toHaveLength(1)
       }
     },
   )

@@ -6,13 +6,14 @@ import Link from '@littlespoon/link'
 import breakpoints from '@littlespoon/theme/lib/breakpoints'
 import colors from '@littlespoon/theme/lib/colors'
 import Typography from '@littlespoon/typography'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import {
   AlertCloseButton,
   AlertDescription,
   AlertMessages,
   AlertWrapper,
+  IconWrapper,
   VisuallyHidden,
 } from './AlertBase'
 
@@ -116,6 +117,7 @@ export default function Alert({
   variant = 'success',
   ...other
 }: AlertProps): React.ReactElement<AlertProps> {
+  const [isAlertOpen, setIsAlertOpen] = useState(isOpen)
   const Icon = icons[variant]
 
   useEffect(() => {
@@ -130,18 +132,27 @@ export default function Alert({
     }
   }, [type])
 
+  const handleClose = () => {
+    setIsAlertOpen(false)
+    onClose?.()
+  }
+
+  if (!isAlertOpen) {
+    return <></>
+  }
+
   return (
     <AlertWrapper
       role="alert"
       variant={variant}
       type={type}
-      isOpen={isOpen}
+      isOpen={isAlertOpen}
       stackIndex={stackIndex}
       description={description}
       data-testid="alertWrapper"
       {...other}
     >
-      {Icon}
+      <IconWrapper>{Icon}</IconWrapper>
       <AlertMessages>
         {title && (
           <Typography bold noMargin variant={{ 0: 'p2', [breakpoints.md]: 'p3' }}>
@@ -158,7 +169,7 @@ export default function Alert({
         )}
       </AlertMessages>
       {showCloseButton && (
-        <AlertCloseButton data-testid="btnClose" onClick={onClose}>
+        <AlertCloseButton data-testid="btnClose" onClick={handleClose}>
           <VisuallyHidden>close</VisuallyHidden>
           <CloseIcon fill="transparent" aria-hidden />
         </AlertCloseButton>

@@ -25,7 +25,7 @@ const AlertToastStack = () => {
       title: 'Test Toast',
       type: AlertTypes.TOAST,
       showCloseButton: false,
-      description: 'This is a test toast',
+      description: `This is a test toast ${Math.ceil(Math.random() * 1000)}`,
       onClose: handleClose,
     })
   }

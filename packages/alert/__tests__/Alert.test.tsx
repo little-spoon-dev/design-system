@@ -21,6 +21,18 @@ describe('onClose called on close button click', () => {
       fireEvent.click(btnClose)
     })
     expect(onCloseMock).toHaveBeenCalledTimes(1)
+    expect(document.getElementsByClassName('alert')).toHaveLength(0)
+  })
+})
+
+describe('alert closes when onClose handler is not provided', () => {
+  it('renders alert with className', () => {
+    render(<Alert description={alertDescription} showCloseButton></Alert>)
+    const btnClose = screen.getByTestId('btnClose')
+    act(() => {
+      fireEvent.click(btnClose)
+    })
+    expect(document.getElementsByClassName('alert')).toHaveLength(0)
   })
 })
 

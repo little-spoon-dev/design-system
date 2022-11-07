@@ -1,5 +1,6 @@
 import Button from '@littlespoon/button'
 import breakpoints from '@littlespoon/theme/lib/breakpoints'
+import { lg, up } from '@littlespoon/theme/lib/breakpoints'
 import colors from '@littlespoon/theme/lib/colors'
 import { rem } from '@littlespoon/theme/lib/utils'
 import Typography from '@littlespoon/ui/Typography'
@@ -42,11 +43,18 @@ export const AlertMessages = styled.div<Partial<AlertProps>>`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  ${up(
+    lg,
+    `
+    margin-left: ${rem(1.24)};
+    `,
+  )}
 `
 
 export const AlertDescription = styled(Typography).attrs({
   noMargin: true,
-  variant: { 0: 'p3', [breakpoints.md]: 'p4' },
+  variant: { 0: 'p4', [breakpoints.lg]: 'p3' },
 })(
   () => css`
     vertical-align: middle;
@@ -56,6 +64,28 @@ export const AlertDescription = styled(Typography).attrs({
 export const VisuallyHidden = styled.span`
   clip: rect(0 0 0 0);
   position: absolute;
+`
+
+export const IconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 2rem;
+  svg {
+    max-width: 1.6rem;
+    max-height: 1.6rem;
+  }
+
+  ${up(
+    lg,
+    `
+    max-height: 2.4rem;
+    svg {
+      max-width: 1.92rem;
+      max-height: 1.92rem;
+    }
+    `,
+  )}
 `
 
 export const AlertCloseButton = styled(Button)`

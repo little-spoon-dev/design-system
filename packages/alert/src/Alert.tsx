@@ -155,14 +155,14 @@ export default function Alert({
       <IconWrapper>{Icon}</IconWrapper>
       <AlertMessages>
         {title && (
-          <Typography bold noMargin variant={{ 0: 'p2', [breakpoints.md]: 'p3' }}>
+          <Typography bold noMargin variant={{ 0: 'p3', [breakpoints.lg]: 'p2' }}>
             {title}
           </Typography>
         )}
         <AlertDescription>{description}</AlertDescription>
         {actionLinkText && actionLinkUrl && (
           <Link href={actionLinkUrl} underline="always">
-            <Typography bold noMargin variant={{ 0: 'p3', [breakpoints.md]: 'p4' }}>
+            <Typography bold noMargin variant={{ 0: 'p4', [breakpoints.lg]: 'p3' }}>
               {actionLinkText}
             </Typography>
           </Link>

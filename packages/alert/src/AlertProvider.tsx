@@ -41,10 +41,14 @@ export function AlertProvider({
 
   const addToast = (params: AlertProps) => {
     setToasts((prev) => {
+      const newToast = { alertId: newAlertId++, ...params }
       if (prev.length < maxStack) {
-        return prev.concat([{ alertId: newAlertId++, ...params }])
+        return prev.concat([newToast])
+      } else {
+        const newToasts = prev.slice(1)
+        newToasts.push(newToast)
+        return newToasts
       }
-      return prev
     })
   }
 

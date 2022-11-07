@@ -116,7 +116,7 @@ export default function Alert({
   type = AlertTypes.RELATIVE,
   variant = 'success',
   ...other
-}: AlertProps): React.ReactElement<AlertProps> {
+}: AlertProps): React.ReactElement<AlertProps> | null {
   const [isAlertOpen, setIsAlertOpen] = useState(isOpen)
   const Icon = icons[variant]
 
@@ -138,7 +138,7 @@ export default function Alert({
   }
 
   if (!isAlertOpen) {
-    return <></>
+    return null
   }
 
   return (

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/little-spoon-dev/design-system/compare/storybook@2.6.1...storybook@2.7.0) (2022-11-08)
+
+### Features
+
+- add close functionality to the alert ([2ea0c97](https://github.com/little-spoon-dev/design-system/commit/2ea0c979f7f1648ad82916fbd6e5a6cbd48a46de))
+
 ## [2.6.1](https://github.com/little-spoon-dev/design-system/compare/storybook@2.6.0...storybook@2.6.1) (2022-10-28)
 
 **Note:** Version bump only for package storybook

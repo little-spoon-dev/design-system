@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/alert@1.2.0...@littlespoon/alert@1.3.0) (2022-11-08)
+
+### Bug Fixes
+
+- alert styling fixes ([49ac830](https://github.com/little-spoon-dev/design-system/commit/49ac830b445ef24dfaf49aaec9e385ce5bd66788))
+- **alert:** code cleanup ([4b03b37](https://github.com/little-spoon-dev/design-system/commit/4b03b378831c8e7036e7a1c2c829105e95f45cec))
+- **alert:** fix alert ui issues ([33a62db](https://github.com/little-spoon-dev/design-system/commit/33a62dbb70cf730d8e9b755eb7ab63182026955f))
+- **alert:** fix build issue ([ca8216d](https://github.com/little-spoon-dev/design-system/commit/ca8216dc247a0892d340259267c1d4275a0c8382))
+- fixed alert provider toasts replacing LS-4064 ([a3a9879](https://github.com/little-spoon-dev/design-system/commit/a3a9879d73490abfffb3328118069179377519ee))
+
+### Features
+
+- add close functionality to the alert ([2ea0c97](https://github.com/little-spoon-dev/design-system/commit/2ea0c979f7f1648ad82916fbd6e5a6cbd48a46de))
+- added test for alert onClose LS-4064 ([0063438](https://github.com/little-spoon-dev/design-system/commit/00634382c24cd144afe25fb95131d76721430e2a))
+
 # [1.2.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/alert@1.1.9...@littlespoon/alert@1.2.0) (2022-10-25)
 
 ### Bug Fixes

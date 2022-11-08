@@ -1,10 +1,10 @@
 import Button from '@littlespoon/button'
-import Link from '@littlespoon/link'
+import breakpoints from '@littlespoon/theme/lib/breakpoints'
+import { lg, up } from '@littlespoon/theme/lib/breakpoints'
 import colors from '@littlespoon/theme/lib/colors'
-import { p3, p4 } from '@littlespoon/theme/lib/fonts/paragraph'
-import { family, weight } from '@littlespoon/theme/lib/fonts/primary'
 import { rem } from '@littlespoon/theme/lib/utils'
-import styled, { Keyframes, keyframes } from 'styled-components'
+import Typography from '@littlespoon/ui/Typography'
+import styled, { css, Keyframes, keyframes } from 'styled-components'
 
 import type { AlertProps } from './Alert'
 import { AlertTypes, BaseAlertProps } from './Alert'
@@ -19,21 +19,11 @@ const fadeoutBottom = keyframes`
   to {transform: translateY(${rem(3)}); opacity: 0;}
 `
 
-const fadeinTop = keyframes`
-  from {top: ${rem(-3)}; opacity: 0;}
-  to {top: 0; opacity: 1;}
-`
-
-const fadeoutTop = keyframes`
-  from {top: 0; opacity: 1;}
-  to {top: ${rem(-3)}; opacity: 0;}
-`
-
 /* istanbul ignore next */
 export const AlertWrapper = styled.div<BaseAlertProps>`
   display: flex;
   position: ${(props) => (props.type === AlertTypes.RELATIVE ? 'relative' : 'fixed')};
-  border-radius: ${rem(0.2)};
+  border-radius: ${rem(0.4)};
   border: 0;
   box-sizing: border-box;
   padding: ${rem(0.8)};
@@ -49,31 +39,53 @@ export const AlertWrapper = styled.div<BaseAlertProps>`
 `
 
 export const AlertMessages = styled.div<Partial<AlertProps>>`
-  margin-left: ${rem(0.8)};
+  margin-left: ${rem(1)};
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  ${up(
+    lg,
+    `
+    margin-left: ${rem(1.24)};
+    `,
+  )}
 `
 
-export const AlertTitle = styled.span<Partial<AlertProps>>`
-  font: ${weight.bold} ${p3.fontSize} ${family};
-  line-height: ${p3.lineHeight};
-`
-
-export const AlertDescription = styled.span<Partial<AlertProps>>`
-  font: ${weight.normal} ${p4.fontSize} ${family};
-  line-height: ${p4.lineHeight};
-  vertical-align: middle;
-`
-
-export const AlertActionLink = styled(Link)<Partial<AlertProps>>`
-  line-height: ${p4.lineHeight};
-  font: ${weight.bold} ${p4.fontSize} ${family};
-`
+export const AlertDescription = styled(Typography).attrs({
+  noMargin: true,
+  variant: { 0: 'p4', [breakpoints.lg]: 'p3' },
+})(
+  () => css`
+    vertical-align: middle;
+  `,
+)
 
 export const VisuallyHidden = styled.span`
   clip: rect(0 0 0 0);
   position: absolute;
+`
+
+export const IconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 2rem;
+  svg {
+    max-width: 1.6rem;
+    max-height: 1.6rem;
+  }
+
+  ${up(
+    lg,
+    `
+    max-height: 2.4rem;
+    svg {
+      max-width: 1.92rem;
+      max-height: 1.92rem;
+    }
+    `,
+  )}
 `
 
 export const AlertCloseButton = styled(Button)`
@@ -89,13 +101,13 @@ export const AlertCloseButton = styled(Button)`
   }
 `
 
-function fadeInAnimation(type?: string): Keyframes {
-  return type === AlertTypes.TOAST ? fadeinBottom : fadeinTop
+function fadeInAnimation(type?: string): Keyframes | null {
+  return type === AlertTypes.TOAST ? fadeinBottom : null
 }
 
 /* istanbul ignore next */
-function fadeOutAnimation(type?: string): Keyframes {
-  return type === AlertTypes.TOAST ? fadeoutBottom : fadeoutTop
+function fadeOutAnimation(type?: string): Keyframes | null {
+  return type === AlertTypes.TOAST ? fadeoutBottom : null
 }
 
 /**

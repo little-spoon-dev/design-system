@@ -2,16 +2,18 @@ import CheckIcon from '@littlespoon/icons/lib/CheckIcon'
 import CloseIcon from '@littlespoon/icons/lib/CloseIcon'
 import ExclamationIcon from '@littlespoon/icons/lib/ExclamationIcon'
 import InfoIcon from '@littlespoon/icons/lib/InfoIcon'
+import Link from '@littlespoon/link'
+import breakpoints from '@littlespoon/theme/lib/breakpoints'
 import colors from '@littlespoon/theme/lib/colors'
-import React, { useEffect } from 'react'
+import Typography from '@littlespoon/typography'
+import React, { useEffect, useState } from 'react'
 
 import {
-  AlertActionLink,
   AlertCloseButton,
   AlertDescription,
   AlertMessages,
-  AlertTitle,
   AlertWrapper,
+  IconWrapper,
   VisuallyHidden,
 } from './AlertBase'
 
@@ -114,7 +116,8 @@ export default function Alert({
   type = AlertTypes.RELATIVE,
   variant = 'success',
   ...other
-}: AlertProps): React.ReactElement<AlertProps> {
+}: AlertProps): React.ReactElement<AlertProps> | null {
+  const [isAlertOpen, setIsAlertOpen] = useState(isOpen)
   const Icon = icons[variant]
 
   useEffect(() => {
@@ -129,29 +132,44 @@ export default function Alert({
     }
   }, [type])
 
+  const handleClose = () => {
+    setIsAlertOpen(false)
+    onClose?.()
+  }
+
+  if (!isAlertOpen) {
+    return null
+  }
+
   return (
     <AlertWrapper
       role="alert"
       variant={variant}
       type={type}
-      isOpen={isOpen}
+      isOpen={isAlertOpen}
       stackIndex={stackIndex}
       description={description}
       data-testid="alertWrapper"
       {...other}
     >
-      {Icon}
+      <IconWrapper>{Icon}</IconWrapper>
       <AlertMessages>
-        {title && <AlertTitle>{title}</AlertTitle>}
+        {title && (
+          <Typography bold noMargin variant={{ 0: 'p3', [breakpoints.lg]: 'p2' }}>
+            {title}
+          </Typography>
+        )}
         <AlertDescription>{description}</AlertDescription>
         {actionLinkText && actionLinkUrl && (
-          <AlertActionLink href={actionLinkUrl} underline="always">
-            {actionLinkText}
-          </AlertActionLink>
+          <Link href={actionLinkUrl} underline="always">
+            <Typography bold noMargin variant={{ 0: 'p4', [breakpoints.lg]: 'p3' }}>
+              {actionLinkText}
+            </Typography>
+          </Link>
         )}
       </AlertMessages>
       {showCloseButton && (
-        <AlertCloseButton data-testid="btnClose" onClick={onClose}>
+        <AlertCloseButton data-testid="btnClose" onClick={handleClose}>
           <VisuallyHidden>close</VisuallyHidden>
           <CloseIcon fill="transparent" aria-hidden />
         </AlertCloseButton>

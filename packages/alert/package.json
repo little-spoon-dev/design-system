@@ -16,7 +16,8 @@
   "dependencies": {
     "@littlespoon/icons": "2.1.0",
     "@littlespoon/link": "1.2.3",
-    "@littlespoon/theme": "1.14.0"
+    "@littlespoon/theme": "1.14.0",
+    "@littlespoon/typography": "1.6.0"
   },
   "repository": {
     "type": "git",

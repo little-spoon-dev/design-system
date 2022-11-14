@@ -17,7 +17,7 @@
     "@littlespoon/button": "1.7.3",
     "@littlespoon/icons": "2.1.0",
     "@littlespoon/theme": "1.14.0",
-    "react-focus-on": "3.6.0"
+    "react-focus-on": "3.7.0"
   },
   "peerDependencies": {
     "react": "17 || 18",

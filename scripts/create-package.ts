@@ -111,11 +111,11 @@ const DEFAULT_COMPONENT_NAME = 'Component'
   if (!hideBinArgv.length) {
     input = await inquirer.prompt(prompts)
   } else {
-    input = await yargs(hideBinArgv)
+    input = (await yargs(hideBinArgv)
       .usage('Usage: yarn $0')
       .options(options)
       .check((argv) => validatePackageName(argv['package-name']))
-      .parse()
+      .parse()) as Input
   }
 
   const addToStorybook = input['add-to-storybook']

@@ -14,7 +14,7 @@ describe('no props', () => {
 })
 
 describe('onClose called on close button click', () => {
-  it('renders alert with className', () => {
+  it('renders alert', () => {
     render(<Alert onClose={onCloseMock}>{alertDescription}</Alert>)
     const btnClose = screen.getByTestId('btnClose')
     act(() => {
@@ -26,7 +26,7 @@ describe('onClose called on close button click', () => {
 })
 
 describe('alert closes when onClose handler is not provided', () => {
-  it('renders alert with className', () => {
+  it('renders alert', () => {
     render(<Alert showCloseButton>{alertDescription}</Alert>)
     const btnClose = screen.getByTestId('btnClose')
     act(() => {
@@ -37,7 +37,7 @@ describe('alert closes when onClose handler is not provided', () => {
 })
 
 describe('onClose called after 1000ms', () => {
-  it('renders alert with className', () => {
+  it('renders alert', () => {
     render(
       <Alert onClose={onCloseMock} delay={1000}>
         {alertDescription}

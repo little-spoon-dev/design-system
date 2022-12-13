@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, PropsWithChildren, useContext, useState } from 'react'
 
 import Alert, { AlertProps } from './Alert'
 
@@ -23,16 +23,14 @@ type Toast = AlertProps & {
   alertId: number
 }
 
-export interface AlertProviderProps {
+export type AlertProviderProps = PropsWithChildren<{
   /**
-   * The content of the component.
-   */
-  children?: React.ReactNode
-  /**
-   * Maximum count of stacked notifications
+   * Maximum count of stacked notifications. Defaults to 3.
+   * @defaultValue 3
    */
   maxStack?: number
-}
+}>
+
 export function AlertProvider({
   maxStack = 3,
   children,
@@ -57,9 +55,9 @@ export function AlertProvider({
   }
 
   return (
-    <AlertContext.Provider value={{ addToast: addToast }}>
+    <AlertContext.Provider value={{ addToast }}>
       {children}
-      {toasts.map(({ alertId, onClose, ...addToast }, index) => (
+      {toasts.map(({ alertId, children: alertChildren, onClose, ...remainingProps }, index) => (
         <Alert
           key={alertId}
           stackIndex={index}
@@ -67,8 +65,10 @@ export function AlertProvider({
             removeToast(alertId)
             onClose?.()
           }}
-          {...addToast}
-        />
+          {...remainingProps}
+        >
+          {alertChildren}
+        </Alert>
       ))}
     </AlertContext.Provider>
   )

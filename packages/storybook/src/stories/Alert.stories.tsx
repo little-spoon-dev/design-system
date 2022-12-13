@@ -1,18 +1,19 @@
-import Alert, {
+import LittleSpoonAlert, {
   AlertProps,
-  AlertProvider,
+  AlertProvider as LittleSpoonAlertProvider,
   AlertProviderProps,
   AlertTypes,
+  AlertVariant,
   useAlertProvider,
 } from '@littlespoon/alert/src/Alert'
 import Button from '@littlespoon/button'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { useState } from 'react'
 
-const AlertStory = (args: AlertProps) => {
+const Alert = (args: AlertProps) => {
   const [isOpen, setIsOpen] = useState(true)
   const handleClose = () => setIsOpen(false)
-  return <Alert isOpen={isOpen} onClose={handleClose} {...args} />
+  return <LittleSpoonAlert isOpen={isOpen} onClose={handleClose} {...args} />
 }
 
 const AlertToastStack = () => {
@@ -25,7 +26,7 @@ const AlertToastStack = () => {
       title: 'Test Toast',
       type: AlertTypes.TOAST,
       showCloseButton: false,
-      description: `This is a test toast ${Math.ceil(Math.random() * 1000)}`,
+      children: `This is a test toast ${Math.ceil(Math.random() * 1000)}`,
       onClose: handleClose,
     })
   }
@@ -33,123 +34,115 @@ const AlertToastStack = () => {
   return <Button onClick={handleAddToast}>Add Toast</Button>
 }
 
-const AlertProviderStory = (args: AlertProviderProps) => {
+const AlertProvider = (args: AlertProviderProps) => {
   return (
-    <AlertProvider {...args}>
+    <LittleSpoonAlertProvider {...args}>
       <AlertToastStack />
-    </AlertProvider>
+    </LittleSpoonAlertProvider>
   )
 }
 
 export default {
   title: 'Design System/Alert',
-  component: AlertStory,
-} as ComponentMeta<typeof AlertStory>
+  component: Alert,
+  argTypes: { onClose: { action: 'onClose' } },
+} as ComponentMeta<typeof Alert>
 
-const Template: ComponentStory<typeof AlertStory> = (args) => <AlertStory {...args} />
+const Template: ComponentStory<typeof Alert> = (args) => <Alert {...args} />
 
-const ProviderTemplate: ComponentStory<typeof AlertProviderStory> = (args) => (
-  <AlertProviderStory {...args} />
-)
-
-export const ToastStack = ProviderTemplate.bind({})
-ToastStack.args = {
-  maxStack: 3,
-}
+const ProviderTemplate: ComponentStory<typeof AlertProvider> = (args) => <AlertProvider {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
   title: 'Alert Title',
-  description: 'Description Copy goes here',
-  variant: 'success',
+  children: 'Description Copy goes here',
+  variant: AlertVariant.SUCCESS,
 }
 
-export const AlertWithoutClose = Template.bind({})
-AlertWithoutClose.args = {
+export const WithoutCloseButton = Template.bind({})
+WithoutCloseButton.args = {
   title: 'Alert Title',
-  description: 'Description Copy goes here',
-  variant: 'success',
+  children: 'Description Copy goes here',
+  variant: AlertVariant.SUCCESS,
   showCloseButton: false,
 }
 
-export const AlertWithClose = Template.bind({})
-AlertWithClose.args = {
+export const WithoutTitle = Template.bind({})
+WithoutTitle.args = {
+  children: 'Description Copy goes here',
+  variant: AlertVariant.SUCCESS,
+}
+
+export const WithoutTitleAndWithoutCloseButton = Template.bind({})
+WithoutTitleAndWithoutCloseButton.args = {
+  children: 'Description Copy goes here',
+  variant: AlertVariant.SUCCESS,
+  showCloseButton: false,
+}
+
+const alertChildren = (
+  <>
+    {'Description Copy goes here'}
+    <br />
+    <a href="https://www.littlespoon.com" target="_blank">
+      Little Spoon
+    </a>
+  </>
+)
+export const WithLink = Template.bind({})
+WithLink.args = {
   title: 'Alert Title',
-  description: 'Description Copy goes here',
-  variant: 'success',
-}
-
-export const NoTitleNotDismissableNoAction = Template.bind({})
-NoTitleNotDismissableNoAction.args = {
-  description: 'Description Copy goes here',
-  variant: 'success',
+  children: alertChildren,
+  variant: AlertVariant.SUCCESS,
   showCloseButton: false,
-}
-
-export const NoTitleDismissibleNoAction = Template.bind({})
-NoTitleDismissibleNoAction.args = {
-  description: 'Description Copy goes here',
-  variant: 'success',
-}
-
-export const NoTitleNotDismissibleAction = Template.bind({})
-NoTitleNotDismissibleAction.args = {
-  description: 'Description Copy goes here',
-  variant: 'success',
-  actionLinkUrl: 'https://example.com/',
-  actionLinkText: 'Action link',
-  showCloseButton: false,
-}
-
-export const NoTitleDismissibleAction = Template.bind({})
-NoTitleDismissibleAction.args = {
-  description: 'Description Copy goes here',
-  variant: 'success',
-  actionLinkUrl: 'https://example.com/',
-  actionLinkText: 'Action link',
 }
 
 export const Success = Template.bind({})
 Success.args = {
   title: 'Alert Title',
-  description: 'Description Copy goes here',
-  variant: 'success',
+  children: 'Description Copy goes here',
+  variant: AlertVariant.SUCCESS,
 }
 
 export const Warning = Template.bind({})
 Warning.args = {
   title: 'Alert Title',
-  description: 'Description Copy goes here',
-  variant: 'warning',
+  children: 'Description Copy goes here',
+  variant: AlertVariant.WARNING,
 }
 
 export const Critical = Template.bind({})
 Critical.args = {
   title: 'Alert Title',
-  description: 'Description Copy goes here',
-  variant: 'critical',
+  children: 'Description Copy goes here',
+  variant: AlertVariant.CRITICAL,
 }
 
 export const Informative = Template.bind({})
 Informative.args = {
   title: 'Alert Title',
-  description: 'Description Copy goes here',
-  variant: 'informative',
-}
-
-export const Toast = Template.bind({})
-Toast.args = {
-  title: 'Alert Title',
-  description: 'Description Copy goes here',
-  variant: 'success',
-  type: AlertTypes.TOAST,
-  showCloseButton: false,
+  children: 'Description Copy goes here',
+  variant: AlertVariant.INFORMATIVE,
 }
 
 export const Banner = Template.bind({})
 Banner.args = {
   title: 'Alert Title',
-  description: 'Description Copy goes here',
-  variant: 'success',
+  children: 'Description Copy goes here',
+  variant: AlertVariant.SUCCESS,
   type: AlertTypes.BANNER,
+}
+
+export const Toast = Template.bind({})
+Toast.args = {
+  title: 'Alert Title',
+  children: 'Description Copy goes here',
+  variant: AlertVariant.SUCCESS,
+  type: AlertTypes.TOAST,
+  showCloseButton: false,
+}
+
+export const ToastStack = ProviderTemplate.bind({})
+ToastStack.args = {
+  maxStack: 3,
 }

@@ -56,27 +56,23 @@ export const Default = Template.bind({})
 Default.args = {
   title: 'Alert Title',
   children: 'Description Copy goes here',
-  variant: AlertVariant.SUCCESS,
 }
 
 export const WithoutCloseButton = Template.bind({})
 WithoutCloseButton.args = {
   title: 'Alert Title',
   children: 'Description Copy goes here',
-  variant: AlertVariant.SUCCESS,
   showCloseButton: false,
 }
 
 export const WithoutTitle = Template.bind({})
 WithoutTitle.args = {
   children: 'Description Copy goes here',
-  variant: AlertVariant.SUCCESS,
 }
 
 export const WithoutTitleAndWithoutCloseButton = Template.bind({})
 WithoutTitleAndWithoutCloseButton.args = {
   children: 'Description Copy goes here',
-  variant: AlertVariant.SUCCESS,
   showCloseButton: false,
 }
 
@@ -93,7 +89,6 @@ export const WithLink = Template.bind({})
 WithLink.args = {
   title: 'Alert Title',
   children: alertChildren,
-  variant: AlertVariant.SUCCESS,
   showCloseButton: false,
 }
 
@@ -129,7 +124,6 @@ export const Banner = Template.bind({})
 Banner.args = {
   title: 'Alert Title',
   children: 'Description Copy goes here',
-  variant: AlertVariant.SUCCESS,
   type: AlertTypes.BANNER,
 }
 
@@ -137,7 +131,6 @@ export const Toast = Template.bind({})
 Toast.args = {
   title: 'Alert Title',
   children: 'Description Copy goes here',
-  variant: AlertVariant.SUCCESS,
   type: AlertTypes.TOAST,
   showCloseButton: false,
 }

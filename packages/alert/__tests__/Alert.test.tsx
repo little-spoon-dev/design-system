@@ -51,18 +51,14 @@ describe('onClose called after 1000ms', () => {
 
 describe('with props.title', () => {
   it('renders title', () => {
-    render(
-      <Alert title="alert title" onClose={onCloseMock}>
-        {alertDescription}
-      </Alert>,
-    )
+    render(<Alert title="alert title">{alertDescription}</Alert>)
     expect(screen.getByText('alert title')).toBeInTheDocument()
   })
 })
 
-describe('with props.description', () => {
-  it('renders description', () => {
-    render(<Alert onClose={onCloseMock}>{alertDescription}</Alert>)
+describe('with props.children', () => {
+  it('renders children', () => {
+    render(<Alert>{alertDescription}</Alert>)
     expect(screen.getByText(alertDescription)).toBeInTheDocument()
   })
 })
@@ -82,7 +78,7 @@ describe('with props.variant', () => {
     }
     if (variant) {
       render(
-        <Alert variant={variant} onClose={onCloseMock}>
+        <Alert variant={variant}>
           {alertDescription} {variant}
         </Alert>,
       )
@@ -97,13 +93,7 @@ describe('with props.type', () => {
     (type) => {
       if (type) {
         render(
-          <Alert
-            type={type}
-            showCloseButton={false}
-            isOpen={true}
-            onClose={onCloseMock}
-            stackIndex={0}
-          >
+          <Alert type={type} showCloseButton={false} isOpen onClose={onCloseMock} stackIndex={0}>
             {alertDescription}
           </Alert>,
         )

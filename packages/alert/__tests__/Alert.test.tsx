@@ -1,21 +1,21 @@
 import colors from '@littlespoon/theme/src/colors'
 import { act, fireEvent, render, screen } from '@testing-library/react'
 
-import Alert, { AlertProps, AlertProvider, AlertTypes } from '../src/'
+import Alert, { AlertProps, AlertProvider, AlertTypes, AlertVariant } from '../src/'
 
 const onCloseMock = jest.fn()
 const alertDescription = 'test alert'
 
 describe('no props', () => {
   it('renders alert with className', () => {
-    render(<Alert className="alert" description={alertDescription}></Alert>)
+    render(<Alert className="alert">{alertDescription}</Alert>)
     expect(document.getElementsByClassName('alert')).toHaveLength(1)
   })
 })
 
 describe('onClose called on close button click', () => {
-  it('renders alert with className', () => {
-    render(<Alert onClose={onCloseMock} description={alertDescription}></Alert>)
+  it('renders alert', () => {
+    render(<Alert onClose={onCloseMock}>{alertDescription}</Alert>)
     const btnClose = screen.getByTestId('btnClose')
     act(() => {
       fireEvent.click(btnClose)
@@ -26,8 +26,8 @@ describe('onClose called on close button click', () => {
 })
 
 describe('alert closes when onClose handler is not provided', () => {
-  it('renders alert with className', () => {
-    render(<Alert description={alertDescription} showCloseButton></Alert>)
+  it('renders alert', () => {
+    render(<Alert showCloseButton>{alertDescription}</Alert>)
     const btnClose = screen.getByTestId('btnClose')
     act(() => {
       fireEvent.click(btnClose)
@@ -37,8 +37,12 @@ describe('alert closes when onClose handler is not provided', () => {
 })
 
 describe('onClose called after 1000ms', () => {
-  it('renders alert with className', () => {
-    render(<Alert onClose={onCloseMock} delay={1000} description={alertDescription}></Alert>)
+  it('renders alert', () => {
+    render(
+      <Alert onClose={onCloseMock} delay={1000}>
+        {alertDescription}
+      </Alert>,
+    )
     setTimeout(() => {
       expect(onCloseMock).toHaveBeenCalledTimes(1)
     }, 1000)
@@ -47,52 +51,40 @@ describe('onClose called after 1000ms', () => {
 
 describe('with props.title', () => {
   it('renders title', () => {
-    render(<Alert title="alert title" description={alertDescription} onClose={onCloseMock} />)
+    render(<Alert title="alert title">{alertDescription}</Alert>)
     expect(screen.getByText('alert title')).toBeInTheDocument()
   })
 })
 
-describe('with props.description', () => {
-  it('renders description', () => {
-    render(<Alert description={alertDescription} onClose={onCloseMock} />)
+describe('with props.children', () => {
+  it('renders children', () => {
+    render(<Alert>{alertDescription}</Alert>)
     expect(screen.getByText(alertDescription)).toBeInTheDocument()
   })
 })
 
-describe('with props.link', () => {
-  it('renders alert with link', () => {
-    render(
-      <Alert
-        description={alertDescription}
-        actionLinkText="Action Link"
-        actionLinkUrl="https://littlespoon.com"
-        onClose={onCloseMock}
-      />,
-    )
-    expect(document.querySelector('a')).toBeInTheDocument()
-  })
-})
-
 describe('with props.variant', () => {
-  it.each<AlertProps['variant']>(['success', 'critical', 'informative', 'warning'])(
-    'renders alert with variant',
-    (variant) => {
-      const colorMapping = {
-        success: colors.success50(),
-        warning: colors.warning50(),
-        critical: colors.critical50(),
-        informative: colors.informative50(),
-      }
-      if (variant) {
-        render(
-          <Alert description={alertDescription} variant={variant} onClose={onCloseMock}>
-            {variant}
-          </Alert>,
-        )
-        expect(document.querySelectorAll(`[fill="${colorMapping[variant]}"`)).toHaveLength(1)
-      }
-    },
-  )
+  it.each<AlertProps['variant']>([
+    AlertVariant.CRITICAL,
+    AlertVariant.INFORMATIVE,
+    AlertVariant.SUCCESS,
+    AlertVariant.WARNING,
+  ])('renders alert with variant', (variant) => {
+    const colorMapping = {
+      [AlertVariant.SUCCESS]: colors.success50(),
+      [AlertVariant.WARNING]: colors.warning50(),
+      [AlertVariant.CRITICAL]: colors.critical50(),
+      [AlertVariant.INFORMATIVE]: colors.informative50(),
+    }
+    if (variant) {
+      render(
+        <Alert variant={variant}>
+          {alertDescription} {variant}
+        </Alert>,
+      )
+      expect(document.querySelectorAll(`[fill="${colorMapping[variant]}"`)).toHaveLength(1)
+    }
+  })
 })
 
 describe('with props.type', () => {
@@ -101,14 +93,9 @@ describe('with props.type', () => {
     (type) => {
       if (type) {
         render(
-          <Alert
-            description={alertDescription}
-            type={type}
-            showCloseButton={false}
-            isOpen={true}
-            onClose={onCloseMock}
-            stackIndex={0}
-          />,
+          <Alert type={type} showCloseButton={false} isOpen onClose={onCloseMock} stackIndex={0}>
+            {alertDescription}
+          </Alert>,
         )
         expect(document.querySelectorAll('p')).toHaveLength(1)
       }
@@ -117,10 +104,21 @@ describe('with props.type', () => {
 })
 
 describe('with props.onClose', () => {
-  const onClose = jest.fn()
-  it('renders icons', () => {
-    render(<Alert description={alertDescription} onClose={onClose} />)
+  it('renders close button', () => {
+    render(<Alert onClose={onCloseMock}>{alertDescription}</Alert>)
     expect(document.querySelector('button')).toBeInTheDocument()
+  })
+})
+
+describe('with props.closeButtonTitle', () => {
+  it('renders close button', () => {
+    const closeButtonTitle = 'Hello'
+    render(
+      <Alert closeButtonTitle={closeButtonTitle} showCloseButton>
+        {alertDescription}
+      </Alert>,
+    )
+    expect(screen.getByLabelText(closeButtonTitle)).toBeInTheDocument()
   })
 })
 

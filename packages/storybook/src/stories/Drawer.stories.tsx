@@ -9,7 +9,7 @@ import styled from 'styled-components'
 export default {
   title: 'Design System/Drawer',
   component: Drawer,
-  argTypes: { onClose: { action: 'drawer-close' } },
+  argTypes: { onClose: { action: 'onClose' } },
 } as ComponentMeta<typeof Drawer>
 
 const ButtonsContainer = styled.div`
@@ -74,15 +74,15 @@ Default.args = {
   open: false,
 }
 
-export const DrawerWithCloseButton = Template.bind({})
-DrawerWithCloseButton.args = {
+export const WithCloseButton = Template.bind({})
+WithCloseButton.args = {
   children: drawerChildren,
   open: false,
   showCloseButton: true,
 }
 
-export const DrawerWithDisabledEscapeKeyDownAndDisabledBackdropClick = Template.bind({})
-DrawerWithDisabledEscapeKeyDownAndDisabledBackdropClick.args = {
+export const WithDisabledEscapeKeyDownAndDisabledBackdropClick = Template.bind({})
+WithDisabledEscapeKeyDownAndDisabledBackdropClick.args = {
   children: drawerChildren,
   disableBackdropClick: true,
   disableEscapeKeyDown: true,
@@ -107,8 +107,8 @@ const TemplateWithCustomStyles: ComponentStory<typeof Drawer> = (args) => {
     </>
   )
 }
-export const DrawerWithCustomStyles = TemplateWithCustomStyles.bind({})
-DrawerWithCustomStyles.args = {
+export const WithCustomStyles = TemplateWithCustomStyles.bind({})
+WithCustomStyles.args = {
   children: drawerChildren,
   className: 'styled-drawer',
   open: false,

@@ -1,12 +1,8 @@
-import CheckIcon from '@littlespoon/icons/lib/CheckIcon'
-import CloseIcon from '@littlespoon/icons/lib/CloseIcon'
-import ExclamationIcon from '@littlespoon/icons/lib/ExclamationIcon'
-import InfoIcon from '@littlespoon/icons/lib/InfoIcon'
-import Link from '@littlespoon/link'
+import { CheckIcon, CloseIcon, ExclamationIcon, InfoIcon } from '@littlespoon/icons'
 import breakpoints from '@littlespoon/theme/lib/breakpoints'
 import colors from '@littlespoon/theme/lib/colors'
 import Typography from '@littlespoon/typography'
-import React, { useEffect, useState } from 'react'
+import React, { PropsWithChildren, useEffect, useState } from 'react'
 
 import {
   AlertCloseButton,
@@ -14,7 +10,6 @@ import {
   AlertMessages,
   AlertWrapper,
   IconWrapper,
-  VisuallyHidden,
 } from './AlertBase'
 
 export * from './AlertProvider'
@@ -25,57 +20,61 @@ export enum AlertTypes {
   BANNER = 'banner',
 }
 
-export type BaseAlertProps = {
-  /**
-   * The description of the component.
-   */
-  description: string
+export enum AlertVariant {
+  CRITICAL = 'critical',
+  INFORMATIVE = 'informative',
+  SUCCESS = 'success',
+  WARNING = 'warning',
+}
 
+export type BaseAlertProps = PropsWithChildren<{
   /**
    * The title of the component.
    */
   title?: string
 
   /**
-   * The action link of the component.
+   * The variant to use. Defaults to 'success'.
+   * @defaultValue 'success'
    */
-  actionLinkUrl?: string
+  variant?: AlertVariant
 
   /**
-   * The action link text of the component.
-   */
-  actionLinkText?: string
-
-  /**
-   * The variant to use. Defaults to "success".
-   */
-  variant?: 'success' | 'warning' | 'critical' | 'informative'
-
-  /**
-   * The variant to use. Defaults to "relative".
+   * The variant to use. Defaults to 'relative'.
+   * @defaultValue 'relative'
    */
   type?: AlertTypes
 
   /**
-   * Show / Hide close button
+   * Show / Hide close button. Defaults to true.
+   * @defaultValue true
    */
   showCloseButton?: boolean
 
   /**
-   * Show / Hide Alert
+   * Close button title. Defaults to 'Close'.
+   * @defaultValue 'Close'
+   */
+  closeButtonTitle?: string
+
+  /**
+   * Show / Hide Alert. Defaults to true.
+   * @defaultValue true
    */
   isOpen?: boolean
 
   /**
-   * Show alert delay (in milliseconds)
+   * Show alert delay (in milliseconds). Defaults to 6000.
+   * @defaultValue 6000
    */
   delay?: number
 
   /**
-   * Offset Index
+   * Stack index. Defaults to 0.
+   * @defaultValue 0
    */
   stackIndex?: number
-}
+}>
 
 type TypeProps =
   | {
@@ -97,24 +96,31 @@ type TypeProps =
 export type AlertProps = BaseAlertProps & TypeProps & React.HTMLAttributes<HTMLElement>
 
 const icons = {
-  success: <CheckIcon stroke={colors.shadeWhite} fill={colors.success50()} />,
-  warning: <ExclamationIcon stroke={colors.shadeWhite} fill={colors.warning50()} />,
-  critical: <ExclamationIcon stroke={colors.shadeWhite} fill={colors.critical50()} />,
-  informative: <InfoIcon stroke={colors.shadeWhite} fill={colors.informative50()} />,
+  [AlertVariant.SUCCESS]: (
+    <CheckIcon aria-hidden stroke={colors.shadeWhite} fill={colors.success50()} />
+  ),
+  [AlertVariant.WARNING]: (
+    <ExclamationIcon aria-hidden stroke={colors.shadeWhite} fill={colors.warning50()} />
+  ),
+  [AlertVariant.CRITICAL]: (
+    <ExclamationIcon aria-hidden stroke={colors.shadeWhite} fill={colors.critical50()} />
+  ),
+  [AlertVariant.INFORMATIVE]: (
+    <InfoIcon aria-hidden stroke={colors.shadeWhite} fill={colors.informative50()} />
+  ),
 }
 
 export default function Alert({
-  actionLinkText,
-  actionLinkUrl,
+  children,
+  closeButtonTitle = 'Close',
   delay = 6000,
-  description,
   isOpen = true,
   stackIndex = 0,
   onClose,
   showCloseButton = true,
   title,
   type = AlertTypes.RELATIVE,
-  variant = 'success',
+  variant = AlertVariant.SUCCESS,
   ...other
 }: AlertProps): React.ReactElement<AlertProps> | null {
   const [isAlertOpen, setIsAlertOpen] = useState(isOpen)
@@ -148,7 +154,6 @@ export default function Alert({
       type={type}
       isOpen={isAlertOpen}
       stackIndex={stackIndex}
-      description={description}
       data-testid="alertWrapper"
       {...other}
     >
@@ -159,19 +164,16 @@ export default function Alert({
             {title}
           </Typography>
         )}
-        <AlertDescription>{description}</AlertDescription>
-        {actionLinkText && actionLinkUrl && (
-          <Link href={actionLinkUrl} underline="always">
-            <Typography bold noMargin variant={{ 0: 'p4', [breakpoints.lg]: 'p3' }}>
-              {actionLinkText}
-            </Typography>
-          </Link>
-        )}
+        <AlertDescription>{children}</AlertDescription>
       </AlertMessages>
       {showCloseButton && (
-        <AlertCloseButton data-testid="btnClose" onClick={handleClose}>
-          <VisuallyHidden>close</VisuallyHidden>
-          <CloseIcon fill="transparent" aria-hidden />
+        <AlertCloseButton
+          aria-label={closeButtonTitle}
+          data-testid="btnClose"
+          onClick={handleClose}
+          title={closeButtonTitle}
+        >
+          <CloseIcon aria-hidden fill="transparent" stroke={colors.shadeBlack} />
         </AlertCloseButton>
       )}
     </AlertWrapper>

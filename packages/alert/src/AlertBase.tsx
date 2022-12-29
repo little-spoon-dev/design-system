@@ -1,13 +1,12 @@
 import Button from '@littlespoon/button'
-import breakpoints from '@littlespoon/theme/lib/breakpoints'
-import { lg, up } from '@littlespoon/theme/lib/breakpoints'
+import breakpoints, { lg, up } from '@littlespoon/theme/lib/breakpoints'
 import colors from '@littlespoon/theme/lib/colors'
 import { rem } from '@littlespoon/theme/lib/utils'
 import Typography from '@littlespoon/ui/Typography'
 import styled, { css, Keyframes, keyframes } from 'styled-components'
 
 import type { AlertProps } from './Alert'
-import { AlertTypes, BaseAlertProps } from './Alert'
+import { AlertTypes, AlertVariant, BaseAlertProps } from './Alert'
 
 const fadeinBottom = keyframes`
   from {transform: translateY(${rem(3)}); opacity: 0;}
@@ -61,11 +60,6 @@ export const AlertDescription = styled(Typography).attrs({
   `,
 )
 
-export const VisuallyHidden = styled.span`
-  clip: rect(0 0 0 0);
-  position: absolute;
-`
-
 export const IconWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -117,19 +111,19 @@ function getBackgroundColor(props: BaseAlertProps): string {
   let backgroundColor = colors.success20()
 
   switch (props.variant) {
-    case 'success':
+    case AlertVariant.SUCCESS:
       backgroundColor = colors.success20()
       break
 
-    case 'warning':
+    case AlertVariant.WARNING:
       backgroundColor = colors.warning20()
       break
 
-    case 'critical':
+    case AlertVariant.CRITICAL:
       backgroundColor = colors.critical20()
       break
 
-    case 'informative':
+    case AlertVariant.INFORMATIVE:
       backgroundColor = colors.informative20()
       break
   }

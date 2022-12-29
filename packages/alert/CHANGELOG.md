@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/alert@1.3.0...@littlespoon/alert@1.4.0) (2022-12-29)
+
+### Features
+
+- **alert:** improve Alert component ([941a7b8](https://github.com/little-spoon-dev/design-system/commit/941a7b87c867ef894b0f836e251ce9eb281a61fd))
+
 # [1.3.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/alert@1.2.0...@littlespoon/alert@1.3.0) (2022-11-08)
 
 ### Bug Fixes

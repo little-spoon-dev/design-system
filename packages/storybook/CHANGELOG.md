@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.8.0](https://github.com/little-spoon-dev/design-system/compare/storybook@2.7.1...storybook@2.8.0) (2022-12-29)
+
+### Features
+
+- **alert:** improve Alert component ([941a7b8](https://github.com/little-spoon-dev/design-system/commit/941a7b87c867ef894b0f836e251ce9eb281a61fd))
+- **alert:** remove some properties from stories ([501b585](https://github.com/little-spoon-dev/design-system/commit/501b585606e402c092b84fe3c746cc55476d7029))
+- **drawer:** rename some stories ([258a1fb](https://github.com/little-spoon-dev/design-system/commit/258a1fb1b94a08db8c5b505bf41c12b89b91597f))
+
 ## [2.7.1](https://github.com/little-spoon-dev/design-system/compare/storybook@2.7.0...storybook@2.7.1) (2022-11-14)
 
 **Note:** Version bump only for package storybook

@@ -1,6 +1,7 @@
 import { PropsWithChildren, useEffect, useState } from 'react'
 
 import { BackdropBase } from './BackdropBase'
+import { ANIMATION_DURATION } from './Drawer'
 
 export type BackdropProps = PropsWithChildren<{
   /**
@@ -13,9 +14,14 @@ export type BackdropProps = PropsWithChildren<{
    * @defaultValue `false`
    */
   open?: boolean
+
+  /**
+   * Opacity
+   */
+  opacity: number
 }>
 
-export default function Backdrop({ children, onClick, open = false }: BackdropProps) {
+export default function Backdrop({ children, onClick, open = false, opacity }: BackdropProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
@@ -26,8 +32,10 @@ export default function Backdrop({ children, onClick, open = false }: BackdropPr
     if (!onClick) {
       return
     }
-    setIsOpen(false)
     onClick()
+    setTimeout(() => {
+      setIsOpen(false)
+    }, ANIMATION_DURATION)
   }
 
   if (!isOpen) {
@@ -35,7 +43,7 @@ export default function Backdrop({ children, onClick, open = false }: BackdropPr
   }
 
   return (
-    <BackdropBase aria-hidden data-testid="backdrop" onClick={handleClick}>
+    <BackdropBase opacity={opacity} aria-hidden data-testid="backdrop" onClick={handleClick}>
       {children}
     </BackdropBase>
   )

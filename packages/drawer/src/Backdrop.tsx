@@ -17,11 +17,12 @@ export type BackdropProps = PropsWithChildren<{
 
   /**
    * Opacity
+   * @defaultValue `1`
    */
-  opacity: number
+  opacity?: number
 }>
 
-export default function Backdrop({ children, onClick, open = false, opacity }: BackdropProps) {
+export default function Backdrop({ children, onClick, open = false, opacity = 1 }: BackdropProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {

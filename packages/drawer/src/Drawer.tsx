@@ -59,6 +59,8 @@ export type DrawerProps = PropsWithChildren<{
   showCloseButton?: boolean
 }>
 
+export const ANIMATION_DURATION = 300
+
 export default function Drawer({
   'aria-label': ariaLabel,
   children,
@@ -70,11 +72,38 @@ export default function Drawer({
   open = false,
   showCloseButton = false,
 }: DrawerProps) {
+  const drawerHiddenStateMargin = -1000
   const [isOpen, setIsOpen] = useState(false)
+  const [drawerHiddenMargin, setDrawerHiddenMargin] = useState(drawerHiddenStateMargin)
+  const [backdropOpacity, setBackdropOpacity] = useState(0)
+
+  const playShowDrawerAnimation = () => {
+    // We want to execute it after the rerender
+    setTimeout(() => {
+      setDrawerHiddenMargin(0)
+      setBackdropOpacity(1)
+    }, 1)
+  }
+
+  const playHideDrawerAnimation = () => {
+    // We want to execute it after the rerender
+    setTimeout(() => {
+      setBackdropOpacity(0)
+      setDrawerHiddenMargin(drawerHiddenStateMargin)
+    }, 1)
+  }
 
   useEffect(() => {
     setIsOpen(open)
   }, [open])
+
+  useEffect(() => {
+    if (isOpen) {
+      playShowDrawerAnimation()
+    } else {
+      playHideDrawerAnimation()
+    }
+  }, [isOpen])
 
   if (!isOpen) {
     return null
@@ -84,8 +113,12 @@ export default function Drawer({
     if (!onClose) {
       return
     }
-    setIsOpen(false)
-    onClose()
+
+    playHideDrawerAnimation()
+    setTimeout(() => {
+      setIsOpen(false)
+      onClose()
+    }, ANIMATION_DURATION)
   }
 
   const onEscapeKey = disableEscapeKeyDown ? undefined : handleClose
@@ -94,8 +127,14 @@ export default function Drawer({
   return (
     <Portal>
       <FocusOn onEscapeKey={onEscapeKey}>
-        <Backdrop onClick={onBackdropClick} open={isOpen} />
-        <DrawerBase aria-label={ariaLabel} aria-modal className={className} role="dialog">
+        <Backdrop onClick={onBackdropClick} open={isOpen} opacity={backdropOpacity} />
+        <DrawerBase
+          hiddenMargin={drawerHiddenMargin}
+          aria-label={ariaLabel}
+          aria-modal
+          className={className}
+          role="dialog"
+        >
           {showCloseButton && (
             <DrawerCloseButtonContainer>
               <DrawerCloseButton

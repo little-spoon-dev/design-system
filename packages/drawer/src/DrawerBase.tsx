@@ -5,7 +5,7 @@ import { rem } from '@littlespoon/theme/lib/utils'
 import zIndex from '@littlespoon/theme/lib/z-index'
 import styled, { css } from 'styled-components'
 
-import { ANIMATION_DURATION, DrawerProps } from './Drawer'
+import { DrawerProps, SHOW_HIDE_ANIMATION_DURATION } from './Drawer'
 
 export const DrawerBase = styled.div<Partial<DrawerProps> & { hiddenMargin: number }>(
   (props) => css`
@@ -29,7 +29,7 @@ export const DrawerBase = styled.div<Partial<DrawerProps> & { hiddenMargin: numb
     right: 0;
     z-index: ${zIndex.drawer};
     margin-bottom: ${props.hiddenMargin}px;
-    transition: margin-bottom ${ANIMATION_DURATION}ms ease-in-out;
+    transition: margin-bottom ${SHOW_HIDE_ANIMATION_DURATION}ms ease-in-out;
 
     ${up(
       md,
@@ -44,7 +44,7 @@ export const DrawerBase = styled.div<Partial<DrawerProps> & { hiddenMargin: numb
         width: ${rem(48)};
         margin-bottom: 0;
         margin-right: ${props.hiddenMargin}px;
-        transition: margin-right ${ANIMATION_DURATION}ms ease-in-out;
+        transition: margin-right ${SHOW_HIDE_ANIMATION_DURATION}ms ease-in-out;
     `,
     )}
   `,

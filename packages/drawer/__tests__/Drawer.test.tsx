@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react'
 import { axe } from 'jest-axe'
 import styled from 'styled-components'
 
-import Drawer, { ANIMATION_DURATION } from '../src/'
+import Drawer, { SHOW_HIDE_ANIMATION_DURATION } from '../src/'
 
 const backdropTestId = 'backdrop'
 const closeButtonTitle = 'Close'
@@ -98,7 +98,7 @@ describe('with props.disableBackdropClick', () => {
     expect(drawer).toBeInTheDocument()
     fireEvent.click(backdrop)
     // Make sure the animation is finished
-    await new Promise((r) => setTimeout(r, ANIMATION_DURATION * 2))
+    await new Promise((r) => setTimeout(r, SHOW_HIDE_ANIMATION_DURATION * 2))
     expect(handleClose).toHaveBeenCalledTimes(1)
     expect(backdrop).not.toBeInTheDocument()
     expect(drawer).not.toBeInTheDocument()
@@ -128,7 +128,7 @@ describe('with props.disableEscapeKeyDown', () => {
     expect(drawer).toBeInTheDocument()
     fireEvent.keyDown(drawer, keyDownEventProperties)
     // Make sure the animation is finished
-    await new Promise((r) => setTimeout(r, ANIMATION_DURATION * 2))
+    await new Promise((r) => setTimeout(r, SHOW_HIDE_ANIMATION_DURATION * 2))
     expect(handleClose).toHaveBeenCalledTimes(1)
     expect(drawer).not.toBeInTheDocument()
   })
@@ -174,7 +174,7 @@ describe('with props.onClose', () => {
     expect(closeButton).toBeInTheDocument()
     fireEvent.click(closeButton)
     // Make sure the animation is finished
-    await new Promise((r) => setTimeout(r, ANIMATION_DURATION * 2))
+    await new Promise((r) => setTimeout(r, SHOW_HIDE_ANIMATION_DURATION * 2))
     expect(handleClose).toHaveBeenCalledTimes(1)
     expect(drawer).not.toBeInTheDocument()
     expect(closeButton).not.toBeInTheDocument()

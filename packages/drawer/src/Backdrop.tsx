@@ -1,7 +1,7 @@
 import { PropsWithChildren, useEffect, useState } from 'react'
 
 import { BackdropBase } from './BackdropBase'
-import { ANIMATION_DURATION } from './Drawer'
+import { SHOW_HIDE_ANIMATION_DURATION } from './Drawer'
 
 export type BackdropProps = PropsWithChildren<{
   /**
@@ -36,7 +36,7 @@ export default function Backdrop({ children, onClick, open = false, opacity = 1 
     onClick()
     setTimeout(() => {
       setIsOpen(false)
-    }, ANIMATION_DURATION)
+    }, SHOW_HIDE_ANIMATION_DURATION)
   }
 
   if (!isOpen) {

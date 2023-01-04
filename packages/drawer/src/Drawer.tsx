@@ -59,7 +59,8 @@ export type DrawerProps = PropsWithChildren<{
   showCloseButton?: boolean
 }>
 
-export const ANIMATION_DURATION = 300
+// Show/Hide animation duration in milliseconds
+export const SHOW_HIDE_ANIMATION_DURATION = 300
 
 export default function Drawer({
   'aria-label': ariaLabel,
@@ -72,24 +73,28 @@ export default function Drawer({
   open = false,
   showCloseButton = false,
 }: DrawerProps) {
-  const drawerHiddenStateMargin = -1000
+  const initialBackdropOpacity = 0
+  const initialDrawerMargin = -1000
+  const finalBackdropOpacity = 1
+  const finalDrawerMargin = 0
+
   const [isOpen, setIsOpen] = useState(false)
-  const [drawerHiddenMargin, setDrawerHiddenMargin] = useState(drawerHiddenStateMargin)
-  const [backdropOpacity, setBackdropOpacity] = useState(0)
+  const [drawerMargin, setDrawerMargin] = useState(initialDrawerMargin)
+  const [backdropOpacity, setBackdropOpacity] = useState(initialBackdropOpacity)
 
   const playShowDrawerAnimation = () => {
     // We want to execute it after the rerender
     setTimeout(() => {
-      setDrawerHiddenMargin(0)
-      setBackdropOpacity(1)
+      setDrawerMargin(finalDrawerMargin)
+      setBackdropOpacity(finalBackdropOpacity)
     }, 1)
   }
 
   const playHideDrawerAnimation = () => {
     // We want to execute it after the rerender
     setTimeout(() => {
-      setBackdropOpacity(0)
-      setDrawerHiddenMargin(drawerHiddenStateMargin)
+      setBackdropOpacity(initialBackdropOpacity)
+      setDrawerMargin(initialDrawerMargin)
     }, 1)
   }
 
@@ -118,7 +123,7 @@ export default function Drawer({
     setTimeout(() => {
       setIsOpen(false)
       onClose()
-    }, ANIMATION_DURATION)
+    }, SHOW_HIDE_ANIMATION_DURATION)
   }
 
   const onEscapeKey = disableEscapeKeyDown ? undefined : handleClose
@@ -129,7 +134,7 @@ export default function Drawer({
       <FocusOn onEscapeKey={onEscapeKey}>
         <Backdrop onClick={onBackdropClick} open={isOpen} opacity={backdropOpacity} />
         <DrawerBase
-          hiddenMargin={drawerHiddenMargin}
+          hiddenMargin={drawerMargin}
           aria-label={ariaLabel}
           aria-modal
           className={className}

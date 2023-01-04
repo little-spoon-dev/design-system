@@ -2,7 +2,7 @@ import { surfaceOverlay60 } from '@littlespoon/theme/lib/colors/token'
 import zIndex from '@littlespoon/theme/lib/z-index'
 import styled, { css } from 'styled-components'
 
-import { ANIMATION_DURATION } from './Drawer'
+import { SHOW_HIDE_ANIMATION_DURATION } from './Drawer'
 
 export const BackdropBase = styled.div<{ opacity: number }>(
   (props) => css`
@@ -17,7 +17,7 @@ export const BackdropBase = styled.div<{ opacity: number }>(
     top: 0;
     z-index: ${zIndex.backdrop};
     -webkit-tap-highlight-color: transparent;
-    transition: opacity ${ANIMATION_DURATION}ms ease-in-out;
+    transition: opacity ${SHOW_HIDE_ANIMATION_DURATION}ms ease-in-out;
     opacity: ${props.opacity};
   `,
 )

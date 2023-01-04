@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react'
 import { axe } from 'jest-axe'
 import styled from 'styled-components'
 
-import Drawer from '../src/'
+import Drawer, { SHOW_HIDE_ANIMATION_DURATION } from '../src/'
 
 const backdropTestId = 'backdrop'
 const closeButtonTitle = 'Close'
@@ -89,7 +89,7 @@ describe('with props.className', () => {
 })
 
 describe('with props.disableBackdropClick', () => {
-  it('fires the onClose event', () => {
+  it('fires the onClose event', async () => {
     const handleClose = jest.fn()
     render(<Drawer disableBackdropClick={false} onClose={handleClose} open />)
     const backdrop = screen.getByTestId(backdropTestId)
@@ -97,6 +97,8 @@ describe('with props.disableBackdropClick', () => {
     expect(backdrop).toBeInTheDocument()
     expect(drawer).toBeInTheDocument()
     fireEvent.click(backdrop)
+    // Make sure the animation is finished
+    await new Promise((r) => setTimeout(r, SHOW_HIDE_ANIMATION_DURATION * 2))
     expect(handleClose).toHaveBeenCalledTimes(1)
     expect(backdrop).not.toBeInTheDocument()
     expect(drawer).not.toBeInTheDocument()
@@ -119,12 +121,14 @@ describe('with props.disableBackdropClick', () => {
 describe('with props.disableEscapeKeyDown', () => {
   const keyDownEventProperties = { charCode: 27, code: 'Escape', key: 'Escape' }
 
-  it('fires the onClose event', () => {
+  it('fires the onClose event', async () => {
     const handleClose = jest.fn()
     render(<Drawer disableEscapeKeyDown={false} onClose={handleClose} open />)
     const drawer = screen.getByRole(drawerRole)
     expect(drawer).toBeInTheDocument()
     fireEvent.keyDown(drawer, keyDownEventProperties)
+    // Make sure the animation is finished
+    await new Promise((r) => setTimeout(r, SHOW_HIDE_ANIMATION_DURATION * 2))
     expect(handleClose).toHaveBeenCalledTimes(1)
     expect(drawer).not.toBeInTheDocument()
   })
@@ -161,7 +165,7 @@ describe('with props.closeButtonTitle', () => {
 })
 
 describe('with props.onClose', () => {
-  it('fires the onClose event', () => {
+  it('fires the onClose event', async () => {
     const handleClose = jest.fn()
     render(<Drawer onClose={handleClose} open showCloseButton />)
     const drawer = screen.getByRole(drawerRole)
@@ -169,6 +173,8 @@ describe('with props.onClose', () => {
     expect(drawer).toBeInTheDocument()
     expect(closeButton).toBeInTheDocument()
     fireEvent.click(closeButton)
+    // Make sure the animation is finished
+    await new Promise((r) => setTimeout(r, SHOW_HIDE_ANIMATION_DURATION * 2))
     expect(handleClose).toHaveBeenCalledTimes(1)
     expect(drawer).not.toBeInTheDocument()
     expect(closeButton).not.toBeInTheDocument()

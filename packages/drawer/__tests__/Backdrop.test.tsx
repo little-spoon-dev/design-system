@@ -2,6 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react'
 import { axe } from 'jest-axe'
 
 import Backdrop from '../src/Backdrop'
+import { SHOW_HIDE_ANIMATION_DURATION } from '../src/Drawer'
 
 const backdropTestId = 'backdrop'
 
@@ -40,12 +41,14 @@ describe('with props.open', () => {
 })
 
 describe('with props.onClick', () => {
-  it('fires the onClick event', () => {
+  it('fires the onClick event', async () => {
     const handleClick = jest.fn()
     render(<Backdrop onClick={handleClick} open />)
     const backdrop = screen.getByTestId(backdropTestId)
     expect(backdrop).toBeInTheDocument()
     fireEvent.click(backdrop)
+    // Make sure the animation is finished
+    await new Promise((r) => setTimeout(r, SHOW_HIDE_ANIMATION_DURATION * 2))
     expect(handleClick).toHaveBeenCalledTimes(1)
     expect(backdrop).not.toBeInTheDocument()
   })

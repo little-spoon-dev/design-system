@@ -59,6 +59,9 @@ export type DrawerProps = PropsWithChildren<{
   showCloseButton?: boolean
 }>
 
+// Show/Hide animation duration in milliseconds
+export const SHOW_HIDE_ANIMATION_DURATION = 300
+
 export default function Drawer({
   'aria-label': ariaLabel,
   children,
@@ -70,11 +73,42 @@ export default function Drawer({
   open = false,
   showCloseButton = false,
 }: DrawerProps) {
+  const initialBackdropOpacity = 0
+  const initialDrawerMargin = -1000
+  const finalBackdropOpacity = 1
+  const finalDrawerMargin = 0
+
   const [isOpen, setIsOpen] = useState(false)
+  const [drawerMargin, setDrawerMargin] = useState(initialDrawerMargin)
+  const [backdropOpacity, setBackdropOpacity] = useState(initialBackdropOpacity)
+
+  const playShowDrawerAnimation = () => {
+    // We want to execute it after the rerender
+    setTimeout(() => {
+      setDrawerMargin(finalDrawerMargin)
+      setBackdropOpacity(finalBackdropOpacity)
+    }, 1)
+  }
+
+  const playHideDrawerAnimation = () => {
+    // We want to execute it after the rerender
+    setTimeout(() => {
+      setBackdropOpacity(initialBackdropOpacity)
+      setDrawerMargin(initialDrawerMargin)
+    }, 1)
+  }
 
   useEffect(() => {
     setIsOpen(open)
   }, [open])
+
+  useEffect(() => {
+    if (isOpen) {
+      playShowDrawerAnimation()
+    } else {
+      playHideDrawerAnimation()
+    }
+  }, [isOpen])
 
   if (!isOpen) {
     return null
@@ -84,8 +118,12 @@ export default function Drawer({
     if (!onClose) {
       return
     }
-    setIsOpen(false)
-    onClose()
+
+    playHideDrawerAnimation()
+    setTimeout(() => {
+      setIsOpen(false)
+      onClose()
+    }, SHOW_HIDE_ANIMATION_DURATION)
   }
 
   const onEscapeKey = disableEscapeKeyDown ? undefined : handleClose
@@ -94,8 +132,14 @@ export default function Drawer({
   return (
     <Portal>
       <FocusOn onEscapeKey={onEscapeKey}>
-        <Backdrop onClick={onBackdropClick} open={isOpen} />
-        <DrawerBase aria-label={ariaLabel} aria-modal className={className} role="dialog">
+        <Backdrop onClick={onBackdropClick} open={isOpen} opacity={backdropOpacity} />
+        <DrawerBase
+          hiddenMargin={drawerMargin}
+          aria-label={ariaLabel}
+          aria-modal
+          className={className}
+          role="dialog"
+        >
           {showCloseButton && (
             <DrawerCloseButtonContainer>
               <DrawerCloseButton

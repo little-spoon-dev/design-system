@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/drawer@1.3.3...@littlespoon/drawer@1.4.0) (2023-01-04)
+
+### Bug Fixes
+
+- drawer tests PCH-352 ([63894e6](https://github.com/little-spoon-dev/design-system/commit/63894e6e7a14e5e11d202efe83b1c22b357f1f92))
+
+### Features
+
+- add animation to drawer backdrop PCH-352 ([e122b5a](https://github.com/little-spoon-dev/design-system/commit/e122b5a9ccab4b0c5d9adc2fccd80463d4bec17e))
+- add animation to drawer PCH-352 ([ec46f4b](https://github.com/little-spoon-dev/design-system/commit/ec46f4bb985557a3bc4a59701dbec0291c81dda3))
+
 ## [1.3.3](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/drawer@1.3.2...@littlespoon/drawer@1.3.3) (2022-11-14)
 
 **Note:** Version bump only for package @littlespoon/drawer

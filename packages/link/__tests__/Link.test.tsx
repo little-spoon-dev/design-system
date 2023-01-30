@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { axe } from 'jest-axe'
 
-import Link, { LinkProps } from '../src'
+import Link, { LinkProps, LinkUnderline } from '../src'
 
 const children = 'children'
 const href = '#'
@@ -26,12 +26,21 @@ it('renders link with href', () => {
 
 describe('with props.underline', () => {
   it.each<[Required<LinkProps>['underline'], string]>([
-    ['always', 'text-decoration: underline'],
-    ['hover', 'text-decoration: none'],
-    ['none', 'text-decoration: none'],
+    [LinkUnderline.ALWAYS, 'text-decoration: underline'],
+    [LinkUnderline.HOVER, 'text-decoration: none'],
+    [LinkUnderline.NONE, 'text-decoration: none'],
   ])('renders link with underline=%j', (underline, style) => {
     render(<Link underline={underline}>{underline}</Link>)
     expect(screen.getByText(underline)).toHaveStyle(style)
+  })
+})
+
+describe('with props.disabled', () => {
+  it('renders a disabled link', () => {
+    render(<Link disabled>{children}</Link>)
+    const link = screen.getByText(children)
+    expect(link).toHaveAttribute('aria-disabled', 'true')
+    expect(link).toHaveStyle('cursor: not-allowed')
   })
 })
 

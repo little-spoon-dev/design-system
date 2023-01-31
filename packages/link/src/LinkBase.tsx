@@ -1,6 +1,6 @@
 import { informative50 } from '@littlespoon/theme/lib/colors/alert'
 import { brand80 } from '@littlespoon/theme/lib/colors/primary'
-import { grey40, grey70 } from '@littlespoon/theme/lib/colors/secondary'
+import { grey20, grey70 } from '@littlespoon/theme/lib/colors/secondary'
 import { shadeBlack } from '@littlespoon/theme/lib/colors/token'
 import { family } from '@littlespoon/theme/lib/fonts/primary'
 import styled from 'styled-components'
@@ -32,8 +32,9 @@ export const LinkBase = styled.a<LinkProps>`
 `
 
 export const LinkDisabled = styled.span`
+  color: ${grey20()};
   cursor: not-allowed;
-  color: ${grey40()};
+  font-family: ${family};
   ${getUnderlineCss}
 `
 

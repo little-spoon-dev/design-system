@@ -1,7 +1,7 @@
 {
   "name": "storybook",
   "private": true,
-  "version": "2.8.1",
+  "version": "2.9.0",
   "description": "Little Spoon Storybook",
   "scripts": {
     "build": "yarn copy-changelog && NODE_OPTIONS=--openssl-legacy-provider build-storybook",
@@ -13,7 +13,7 @@
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006"
   },
   "dependencies": {
-    "@littlespoon/alert": "1.4.0",
+    "@littlespoon/alert": "1.4.1",
     "@littlespoon/breadcrumbs": "1.3.4",
     "@littlespoon/button": "1.7.3",
     "@littlespoon/checkbox": "1.3.3",

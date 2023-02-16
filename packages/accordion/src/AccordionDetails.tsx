@@ -20,7 +20,7 @@ export function AccordionDetails({
   /* istanbul ignore next */
   useEffect(() => {
     // for OS that lack ResizeObserver support use fallback when undefined
-    if (typeof ResizeObserver !== 'undefined') {
+    if ('ResizeObserver' in window) {
       // create the observer only once
       resizeObserver.current = new ResizeObserver(() => {
         if (contentRef.current) {

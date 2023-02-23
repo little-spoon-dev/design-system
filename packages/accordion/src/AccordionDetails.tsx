@@ -19,18 +19,25 @@ export function AccordionDetails({
 
   /* istanbul ignore next */
   useEffect(() => {
-    // create the observer only once
-    resizeObserver.current = new ResizeObserver(() => {
-      if (contentRef.current) {
-        setInnerContentHeight(contentRef.current.scrollHeight)
-      }
-    })
+    // for OS that lack ResizeObserver support use fallback when undefined
+    if ('ResizeObserver' in window) {
+      // create the observer only once
+      resizeObserver.current = new ResizeObserver(() => {
+        if (contentRef.current) {
+          setInnerContentHeight(contentRef.current.scrollHeight)
+        }
+      })
 
-    if (contentRef.current) {
-      resizeObserver.current.observe(contentRef.current)
-    }
-    return () => {
-      resizeObserver.current?.disconnect()
+      if (contentRef.current) {
+        resizeObserver.current.observe(contentRef.current)
+      }
+      return () => {
+        resizeObserver.current?.disconnect()
+      }
+    } else {
+      if (contentRef?.current?.scrollHeight) {
+        setInnerContentHeight(contentRef?.current?.scrollHeight)
+      }
     }
   }, [])
 

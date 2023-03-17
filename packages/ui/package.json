@@ -1,6 +1,6 @@
 {
   "name": "@littlespoon/ui",
-  "version": "1.20.12",
+  "version": "1.20.13",
   "description": "Little Spoon UI",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,7 @@
     "@littlespoon/button": "1.7.3",
     "@littlespoon/checkbox": "1.3.3",
     "@littlespoon/divider": "1.2.1",
-    "@littlespoon/drawer": "1.4.0",
+    "@littlespoon/drawer": "1.4.1",
     "@littlespoon/icons": "2.1.0",
     "@littlespoon/label": "1.1.3",
     "@littlespoon/link": "1.3.0",

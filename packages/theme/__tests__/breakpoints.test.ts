@@ -20,6 +20,8 @@ describe('breakpoints', () => {
         "sm": 550,
         "tablet": 768,
         "up": [Function],
+        "minWidth": [Function],
+        "maxWidth": [Function],
         "xl": 1200,
         "xs": 375,
         "xxl": 1440,

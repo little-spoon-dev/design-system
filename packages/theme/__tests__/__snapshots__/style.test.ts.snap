@@ -24,9 +24,25 @@ exports[`getStyle returns style for "lg" 1`] = `
 }
 `;
 
+exports[`getStyle returns style for "maxWidth" 1`] = `
+{
+  "maxWidth": {
+    "color": "blue",
+  },
+}
+`;
+
 exports[`getStyle returns style for "md" 1`] = `
 {
   "@media (min-width: 768px)": {
+    "color": "blue",
+  },
+}
+`;
+
+exports[`getStyle returns style for "minWidth" 1`] = `
+{
+  "minWidth": {
     "color": "blue",
   },
 }

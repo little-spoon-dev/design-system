@@ -1,4 +1,12 @@
-import breakpoints, { desktop, down, mobile, tablet, up } from '../src/breakpoints'
+import breakpoints, {
+  desktop,
+  down,
+  maxWidth,
+  minWidth,
+  mobile,
+  tablet,
+  up,
+} from '../src/breakpoints'
 
 describe('breakpoints', () => {
   it('returns breakpoints', () => {

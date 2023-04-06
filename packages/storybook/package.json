@@ -1,7 +1,7 @@
 {
   "name": "storybook",
   "private": true,
-  "version": "2.9.1",
+  "version": "2.9.2",
   "description": "Little Spoon Storybook",
   "scripts": {
     "build": "yarn copy-changelog && NODE_OPTIONS=--openssl-legacy-provider build-storybook",
@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.19.0",
-    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-actions": "^7.0.2",
     "@storybook/addon-essentials": "^6.5.10",
     "@storybook/addon-links": "^6.5.10",
     "@storybook/react": "^6.5.10",

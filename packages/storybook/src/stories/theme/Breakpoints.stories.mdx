@@ -1,4 +1,5 @@
 import breakpoints from '@littlespoon/theme/src/breakpoints'
+
 import { Canvas, Meta } from '@storybook/addon-docs'
 
 <Meta title="Design System/Theme/Breakpoints" />
@@ -13,32 +14,22 @@ import { Canvas, Meta } from '@storybook/addon-docs'
   <code>{JSON.stringify(breakpoints, null, 2)}</code>
 </pre>
 
-Example of `breakpoints` usage to get media queries.
-Generates media query that matches screen widths <strong>smaller</strong> than the screen size given by the breakpoint (inclusive).
+Example of `breakpoints` usage to get media queries: '@media (max-width: 1000px)'.
 You can use `down` or `maxWidth` aliases.
 
 <Canvas>
-  breakpoints.down(breakpoints.desktop)
-  // '@media (max-width: 1000px)'
-
-or
+  breakpoints.down(breakpoints.desktop) or
 
 breakpoints.maxWidth(breakpoints.desktop)
-// '@media (max-width: 1000px)'
 
 </Canvas>
 
-Example of `breakpoints` usage to get media queries.
-Generates media query that matches screen widths <strong>greater</strong> than the screen size given by the breakpoint (inclusive).
+Example of `breakpoints` usage to get media queries: '@media (min-width: 1000px)'.
 You can use `up` or `minWidth` aliases.
 
 <Canvas>
-  breakpoints.up(breakpoints.desktop)
-  // '@media (min-width: 1000px)'
-
-or
+  breakpoints.up(breakpoints.desktop) or
 
 breakpoints.minWidth(breakpoints.desktop)
-// '@media (min-width: 1000px)'
 
 </Canvas>

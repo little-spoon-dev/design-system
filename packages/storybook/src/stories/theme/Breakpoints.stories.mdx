@@ -1,6 +1,5 @@
 import breakpoints from '@littlespoon/theme/src/breakpoints'
-
-import { Canvas, Meta } from '@storybook/addon-docs'
+import { Meta } from '@storybook/addon-docs'
 
 <Meta title="Design System/Theme/Breakpoints" />
 
@@ -14,22 +13,24 @@ import { Canvas, Meta } from '@storybook/addon-docs'
   <code>{JSON.stringify(breakpoints, null, 2)}</code>
 </pre>
 
+\
 Example of `breakpoints` usage to get media queries: '@media (max-width: 1000px)'.
 You can use `down` or `maxWidth` aliases.
 
-<Canvas>
-  breakpoints.down(breakpoints.desktop) or
+<pre>
+breakpoints.down(breakpoints.desktop) or
 
 breakpoints.maxWidth(breakpoints.desktop)
 
-</Canvas>
+</pre>
 
+\
 Example of `breakpoints` usage to get media queries: '@media (min-width: 1000px)'.
 You can use `up` or `minWidth` aliases.
 
-<Canvas>
-  breakpoints.up(breakpoints.desktop) or
+<pre>
+breakpoints.up(breakpoints.desktop) or
 
 breakpoints.minWidth(breakpoints.desktop)
 
-</Canvas>
+</pre>

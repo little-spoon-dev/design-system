@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.14.1](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.14.0...@littlespoon/theme@1.14.1) (2023-04-12)
+
+### Bug Fixes
+
+- add imports ([6640000](https://github.com/little-spoon-dev/design-system/commit/6640000b7c0587de6b80a61b26680dfc94f1f891))
+- revert fix update style snapshot, regression ([903e8c3](https://github.com/little-spoon-dev/design-system/commit/903e8c3a23a768e85f15a997da74acf48a7e181b))
+- test snapshots ([4b115c8](https://github.com/little-spoon-dev/design-system/commit/4b115c8a06fea569686ae6f13169ce9bfa1a7625))
+- update breakpoints snapshot ([13bdf46](https://github.com/little-spoon-dev/design-system/commit/13bdf46f7560b539b7f37a42b59769f5c4561c5c))
+- update breakpoints test ([afaf864](https://github.com/little-spoon-dev/design-system/commit/afaf86481149fc2c5d7470f0d74223d9a719d6d0))
+- update breakpoints test ([44c414b](https://github.com/little-spoon-dev/design-system/commit/44c414b0dd4a8e0b9ca360c8359d6733138dfd82))
+- update style snapshot ([21dc686](https://github.com/little-spoon-dev/design-system/commit/21dc686a29c8239597b37a632ab548e3755a20e9))
+
 # [1.14.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.13.1...@littlespoon/theme@1.14.0) (2022-09-01)
 
 ### Features

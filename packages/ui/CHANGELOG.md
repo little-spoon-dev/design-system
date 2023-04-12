@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.20.14](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.20.13...@littlespoon/ui@1.20.14) (2023-04-12)
+
+### Bug Fixes
+
+- revert fix update style snapshot, regression ([903e8c3](https://github.com/little-spoon-dev/design-system/commit/903e8c3a23a768e85f15a997da74acf48a7e181b))
+- test snapshots ([8e583e4](https://github.com/little-spoon-dev/design-system/commit/8e583e4995ca7939008cfff180cc05842089b816))
+- update style snapshot ([21dc686](https://github.com/little-spoon-dev/design-system/commit/21dc686a29c8239597b37a632ab548e3755a20e9))
+
 ## [1.20.13](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.20.12...@littlespoon/ui@1.20.13) (2023-03-17)
 
 **Note:** Version bump only for package @littlespoon/ui

@@ -1,6 +1,6 @@
 {
   "name": "@littlespoon/theme",
-  "version": "1.14.0",
+  "version": "1.14.1",
   "description": "Little Spoon theme",
   "main": "lib/index.js",
   "scripts": {

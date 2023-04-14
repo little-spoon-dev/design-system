@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.10.0](https://github.com/little-spoon-dev/design-system/compare/storybook@2.9.2...storybook@2.10.0) (2023-04-12)
+
+### Bug Fixes
+
+- update storybook ([6212275](https://github.com/little-spoon-dev/design-system/commit/62122758c56df937b821c32248158862948210e4))
+- update storybook and remove canvas ([b3e5203](https://github.com/little-spoon-dev/design-system/commit/b3e52035aab9c605c6854a96ae96f9a08006bf4c))
+
+### Features
+
+- update breakpoints storybook ([b2ec332](https://github.com/little-spoon-dev/design-system/commit/b2ec3327a0dce352e5812e24c32cf9ad4ec9f8b5))
+
+## [2.9.2](https://github.com/little-spoon-dev/design-system/compare/storybook@2.9.1...storybook@2.9.2) (2023-04-04)
+
+**Note:** Version bump only for package storybook
+
+## [2.9.1](https://github.com/little-spoon-dev/design-system/compare/storybook@2.9.0...storybook@2.9.1) (2023-03-17)
+
+**Note:** Version bump only for package storybook
+
+# [2.9.0](https://github.com/little-spoon-dev/design-system/compare/storybook@2.8.1...storybook@2.9.0) (2023-02-01)
+
+### Features
+
+- **link:** add disable prop. create LinkUnderline enum ([9d36a76](https://github.com/little-spoon-dev/design-system/commit/9d36a7610e06d51f4a4d4f35c049cab11b9dc3f1))
+
 ## [2.8.1](https://github.com/little-spoon-dev/design-system/compare/storybook@2.8.0...storybook@2.8.1) (2023-01-04)
 
 **Note:** Version bump only for package storybook

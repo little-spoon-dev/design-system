@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/link@1.3.0...@littlespoon/link@1.3.1) (2023-04-12)
+
+**Note:** Version bump only for package @littlespoon/link
+
+# [1.3.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/link@1.2.3...@littlespoon/link@1.3.0) (2023-02-01)
+
+### Bug Fixes
+
+- **link:** fix UI issues ([0a6eaa7](https://github.com/little-spoon-dev/design-system/commit/0a6eaa7771755ecf282dd3a884fc0d365c5a1a58))
+
+### Features
+
+- **link:** add disable prop. create LinkUnderline enum ([9d36a76](https://github.com/little-spoon-dev/design-system/commit/9d36a7610e06d51f4a4d4f35c049cab11b9dc3f1))
+
 ## [1.2.3](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/link@1.2.2...@littlespoon/link@1.2.3) (2022-09-01)
 
 **Note:** Version bump only for package @littlespoon/link

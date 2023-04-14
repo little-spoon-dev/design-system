@@ -12,3 +12,27 @@ import { Meta } from '@storybook/addon-docs'
 <pre>
   <code>{JSON.stringify(breakpoints, null, 2)}</code>
 </pre>
+
+
+Example of `breakpoints` usage to get media queries: '@media (max-width: 1000px)'.
+You can use `down` or `maxWidth` aliases.
+
+<pre>
+  <code>
+  breakpoints.down(breakpoints.desktop)
+  // or
+  breakpoints.maxWidth(breakpoints.desktop)
+  </code>
+</pre>
+
+
+Example of `breakpoints` usage to get media queries: '@media (min-width: 1000px)'.
+You can use `up` or `minWidth` aliases.
+
+<pre>
+  <code>
+  breakpoints.up(breakpoints.desktop)
+  // or
+  breakpoints.minWidth(breakpoints.desktop)
+  </code>
+</pre>

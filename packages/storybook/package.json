@@ -1,7 +1,7 @@
 {
   "name": "storybook",
   "private": true,
-  "version": "2.8.1",
+  "version": "2.10.0",
   "description": "Little Spoon Storybook",
   "scripts": {
     "build": "yarn copy-changelog && NODE_OPTIONS=--openssl-legacy-provider build-storybook",
@@ -13,18 +13,18 @@
     "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006"
   },
   "dependencies": {
-    "@littlespoon/alert": "1.4.0",
-    "@littlespoon/breadcrumbs": "1.3.4",
-    "@littlespoon/button": "1.7.3",
-    "@littlespoon/checkbox": "1.3.3",
+    "@littlespoon/alert": "1.4.2",
+    "@littlespoon/breadcrumbs": "1.3.5",
+    "@littlespoon/button": "1.7.4",
+    "@littlespoon/checkbox": "1.3.4",
     "@littlespoon/divider": "1.2.1",
-    "@littlespoon/drawer": "1.4.0",
-    "@littlespoon/icons": "2.1.0",
-    "@littlespoon/theme": "1.14.0"
+    "@littlespoon/drawer": "1.4.2",
+    "@littlespoon/icons": "2.1.1",
+    "@littlespoon/theme": "1.14.1"
   },
   "devDependencies": {
     "@babel/core": "^7.19.0",
-    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-actions": "^7.0.2",
     "@storybook/addon-essentials": "^6.5.10",
     "@storybook/addon-links": "^6.5.10",
     "@storybook/react": "^6.5.10",

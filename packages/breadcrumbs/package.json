@@ -1,6 +1,6 @@
 {
   "name": "@littlespoon/breadcrumbs",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "Little Spoon breadcrumbs",
   "main": "lib/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@littlespoon/theme": "1.14.0"
+    "@littlespoon/theme": "1.14.1"
   },
   "peerDependencies": {
     "react": "17 || 18",

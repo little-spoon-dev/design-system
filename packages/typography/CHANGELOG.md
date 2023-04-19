@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.2](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/typography@1.6.1...@littlespoon/typography@1.6.2) (2023-04-19)
+
+### Bug Fixes
+
+- update script in build flowtypes ([7d7ca56](https://github.com/little-spoon-dev/design-system/commit/7d7ca56155fd445a52d834ab95829cfccb2aca59))
+
 ## [1.6.1](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/typography@1.6.0...@littlespoon/typography@1.6.1) (2023-04-12)
 
 **Note:** Version bump only for package @littlespoon/typography

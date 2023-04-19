@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/accordion@1.1.5...@littlespoon/accordion@1.1.6) (2023-04-19)
+
+### Bug Fixes
+
+- update script in build flowtypes ([7d7ca56](https://github.com/little-spoon-dev/design-system/commit/7d7ca56155fd445a52d834ab95829cfccb2aca59))
+
 ## [1.1.5](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/accordion@1.1.4...@littlespoon/accordion@1.1.5) (2023-04-12)
 
 **Note:** Version bump only for package @littlespoon/accordion

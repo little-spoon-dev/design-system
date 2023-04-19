@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/divider@1.2.1...@littlespoon/divider@1.2.2) (2023-04-19)
+
+### Bug Fixes
+
+- update script in build flowtypes ([7d7ca56](https://github.com/little-spoon-dev/design-system/commit/7d7ca56155fd445a52d834ab95829cfccb2aca59))
+
 ## [1.2.1](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/divider@1.2.0...@littlespoon/divider@1.2.1) (2022-08-08)
 
 **Note:** Version bump only for package @littlespoon/divider

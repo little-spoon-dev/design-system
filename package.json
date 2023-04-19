@@ -30,7 +30,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-tsdoc": "^0.2.16",
-    "flowgen": "1.17.0",
+    "flowgen": "1.21.0",
     "husky": "^8.0.1",
     "inquirer": "^8.2.2",
     "jest": "^29.0.2",

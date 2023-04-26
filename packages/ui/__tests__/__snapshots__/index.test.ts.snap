@@ -6,9 +6,9 @@ exports[`exports ui 1`] = `
     "$$typeof": Symbol(react.forward_ref),
     "attrs": [],
     "componentStyle": e {
-      "baseHash": 2053189920,
+      "baseHash": -502868429,
       "baseStyle": undefined,
-      "componentId": "sc-cyRfQX",
+      "componentId": "sc-ccVCaX",
       "isStatic": false,
       "rules": [
         "
@@ -22,7 +22,7 @@ exports[`exports ui 1`] = `
     "foldedComponentIds": [],
     "render": [Function],
     "shouldForwardProp": undefined,
-    "styledComponentId": "sc-cyRfQX",
+    "styledComponentId": "sc-ccVCaX",
     "target": "dl",
     "warnTooManyClasses": [Function],
     "withComponent": [Function],
@@ -45,9 +45,7 @@ exports[`exports ui 1`] = `
       "desktop": 1000,
       "down": [Function],
       "lg": 1000,
-      "maxWidth": [Function],
       "md": 768,
-      "minWidth": [Function],
       "mobile": 0,
       "sm": 550,
       "tablet": 768,

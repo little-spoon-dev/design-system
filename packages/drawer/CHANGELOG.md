@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.4](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/drawer@1.4.3...@littlespoon/drawer@1.4.4) (2023-05-01)
+
+**Note:** Version bump only for package @littlespoon/drawer
+
 ## [1.4.3](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/drawer@1.4.2...@littlespoon/drawer@1.4.3) (2023-04-19)
 
 ### Bug Fixes

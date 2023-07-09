@@ -27,7 +27,7 @@
     "@storybook/addon-actions": "^7.0.2",
     "@storybook/addon-essentials": "^6.5.10",
     "@storybook/addon-links": "^6.5.10",
-    "@storybook/react": "^6.5.10",
+    "@storybook/react": "^7.0.26",
     "babel-loader": "^9.0.0",
     "rgb2hex": "^0.2.5"
   }

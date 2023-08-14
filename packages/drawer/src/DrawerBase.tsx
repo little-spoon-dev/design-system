@@ -75,14 +75,14 @@ export const DrawerCloseButton = styled(Button)`
 export const DrawerContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: ${rem(1.6)};
   outline: none;
   overflow: auto;
 
   ${up(
     md,
     `
-    gap: 3.2rem;
+    gap: ${rem(3.2)};
     `,
   )}
 `

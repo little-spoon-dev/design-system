@@ -30,6 +30,12 @@ export type DrawerProps = PropsWithChildren<{
   closeButtonTitle?: string
 
   /**
+   * Test identifier.
+   * @defaultValue `'@modal:drawer'`
+   */
+  dataTest?: string
+
+  /**
    * If `true`, clicking the Backdrop will not fire the `onClose` callback.
    * @defaultValue `false`
    */
@@ -67,6 +73,7 @@ export default function Drawer({
   children,
   className,
   closeButtonTitle = 'Close',
+  dataTest = '@modal:drawer',
   disableBackdropClick = false,
   disableEscapeKeyDown = false,
   onClose,
@@ -138,6 +145,7 @@ export default function Drawer({
           aria-label={ariaLabel}
           aria-modal
           className={className}
+          data-test={dataTest}
           role="dialog"
         >
           {showCloseButton && (

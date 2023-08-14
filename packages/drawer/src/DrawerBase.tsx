@@ -24,7 +24,7 @@ export const DrawerBase = styled.div<Partial<DrawerProps> & { hiddenMargin: numb
     max-width: none;
     outline: none;
     overflow: hidden;
-    padding: ${rem(2)};
+    padding: ${rem(props.showCloseButton ? 6.8 : 2)} ${rem(2)} ${rem(2)};
     position: fixed;
     right: 0;
     z-index: ${zIndex.drawer};
@@ -39,7 +39,7 @@ export const DrawerBase = styled.div<Partial<DrawerProps> & { hiddenMargin: numb
         left: auto;
         max-height: none;
         max-width: ${rem(48)};
-        padding: ${rem(4)};
+        padding: ${rem(props.showCloseButton ? 10.4 : 4)} ${rem(4)} ${rem(4)};
         top: 0;
         width: ${rem(48)};
         margin-bottom: 0;
@@ -50,13 +50,6 @@ export const DrawerBase = styled.div<Partial<DrawerProps> & { hiddenMargin: numb
   `,
 )
 
-export const DrawerCloseButtonContainer = styled.div`
-  display: flex;
-  align-items: flex-start;
-  flex-grow: 1;
-  justify-content: flex-end;
-`
-
 export const DrawerCloseButton = styled(Button)`
   align-items: center;
   background-color: transparent;
@@ -64,12 +57,23 @@ export const DrawerCloseButton = styled(Button)`
   display: flex;
   height: ${rem(3.2)};
   justify-content: center;
+  position: absolute;
   padding: 0;
+  right: ${rem(2)};
+  top: ${rem(2)};
   width: ${rem(3.2)};
 
   &:hover {
     background-color: transparent;
   }
+
+  ${up(
+    md,
+    `
+    right: ${rem(4)};
+    top: ${rem(4)};
+    `,
+  )}
 `
 
 export const DrawerContent = styled.div`

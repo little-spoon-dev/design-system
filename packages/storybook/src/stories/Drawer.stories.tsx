@@ -26,11 +26,7 @@ const drawerChildren = (
     <Typography center noMargin variant="p4">
       Donec faucibus euismod sagittis. Etiam maximus tortor vel ullamcorper pharetra. Nam blandit
       suscipit tortor a cursus. Phasellus sit amet vestibulum dolor. Ut nec venenatis ante. Maecenas
-      molestie massa ante, non tempus mauris luctus sed. Cras pellentesque enim a ipsum posuere
-      dignissim. Suspendisse non tortor et justo pretium facilisis. Vestibulum ante ipsum primis in
-      faucibus orci luctus et ultrices posuere cubilia curae; Maecenas magna leo, elementum quis
-      dignissim commodo, bibendum et nibh. Sed varius feugiat dui non euismod. Quisque rutrum risus
-      eget tincidunt pretium. Etiam gravida hendrerit dui, in vestibulum velit feugiat ultrices.
+      molestie massa ante, non tempus mauris luctus sed.
     </Typography>
     <ButtonsContainer>
       <Button>Lorem</Button>
@@ -95,15 +91,47 @@ const TemplateWithCustomStyles: ComponentStory<typeof Drawer> = (args) => {
 
   const StyledDrawer = styled(Drawer)`
     background-color: #95efc3;
+    padding: 0;
+    padding-bottom: 2rem;
+
+    @media (min-width: 768px) {
+      padding-bottom: 4rem;
+    }
+
     &.styled-drawer {
       color: #f10a86;
+    }
+  `
+
+  const Body = styled.div`
+    padding: 0 2rem;
+
+    @media (min-width: 768px) {
+      padding: 0 4rem;
+    }
+  `
+
+  const Image = styled.img`
+    max-height: 32rem;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+      max-height: 76rem;
     }
   `
 
   return (
     <>
       <Button onClick={handleButtonClick}>Open Drawer</Button>
-      <StyledDrawer {...args} onClose={handleDrawerClose} />
+      <StyledDrawer
+        className={args.className}
+        open={args.open}
+        onClose={handleDrawerClose}
+        showCloseButton
+      >
+        <Image src={require('./assets/cover-image.jpg')} />
+        <Body>{args.children}</Body>
+      </StyledDrawer>
     </>
   )
 }

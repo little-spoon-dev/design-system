@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/drawer@1.4.4...@littlespoon/drawer@1.5.0) (2023-08-15)
+
+### Features
+
+- add dataTest prop ([99e6b3e](https://github.com/little-spoon-dev/design-system/commit/99e6b3ec59ae4ad5725dde34d32f1431474db443))
+- display close button in an absolute position ([f06eff2](https://github.com/little-spoon-dev/design-system/commit/f06eff227705bf85aa03889dbe2e104c4286939d))
+- rename prop from dataTest to data-test ([f84afe7](https://github.com/little-spoon-dev/design-system/commit/f84afe77e981aae2ccbbe8411c8c808e251c3df7))
+- use rem function ([93724e9](https://github.com/little-spoon-dev/design-system/commit/93724e90e89664e3d99f2a620d56b55d997acf91))
+
 ## [1.4.4](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/drawer@1.4.3...@littlespoon/drawer@1.4.4) (2023-05-01)
 
 **Note:** Version bump only for package @littlespoon/drawer

@@ -66,6 +66,21 @@ describe('with props.aria-label', () => {
   })
 })
 
+describe('with props.data-test', () => {
+  it('sets the default test identifier', () => {
+    render(<Drawer open />)
+    expect(screen.getByRole(drawerRole)).toBeInTheDocument()
+    expect(screen.getByRole(drawerRole).getAttribute('data-test')).toBe('@modal:drawer')
+  })
+
+  it('sets a custom test identifier', () => {
+    const testId = '@modal:myDrawer'
+    render(<Drawer data-test={testId} open />)
+    expect(screen.getByRole(drawerRole)).toBeInTheDocument()
+    expect(screen.getByRole(drawerRole).getAttribute('data-test')).toBe(testId)
+  })
+})
+
 describe('with props.className', () => {
   it('renders a styled drawer', () => {
     const className = 'styled-drawer'
@@ -152,7 +167,9 @@ describe('with props.showCloseButton', () => {
 
   it('renders close button', () => {
     render(<Drawer open showCloseButton={true} />)
-    expect(screen.getByLabelText(closeButtonTitle)).toBeInTheDocument()
+    const closeButton = screen.getByLabelText(closeButtonTitle)
+    expect(closeButton).toBeInTheDocument()
+    expect(closeButton.getAttribute('data-test')).toBe('@button:closeDrawer')
   })
 })
 

@@ -4,12 +4,7 @@ import React, { PropsWithChildren, useEffect, useState } from 'react'
 import { FocusOn } from 'react-focus-on'
 
 import Backdrop from './Backdrop'
-import {
-  DrawerBase,
-  DrawerCloseButton,
-  DrawerCloseButtonContainer,
-  DrawerContent,
-} from './DrawerBase'
+import { DrawerBase, DrawerCloseButton, DrawerContent } from './DrawerBase'
 import Portal from './Portal'
 
 export type DrawerProps = PropsWithChildren<{
@@ -28,6 +23,12 @@ export type DrawerProps = PropsWithChildren<{
    * @defaultValue `'Close'`
    */
   closeButtonTitle?: string
+
+  /**
+   * Test identifier of the component.
+   * @defaultValue `'@modal:drawer'`
+   */
+  'data-test'?: string
 
   /**
    * If `true`, clicking the Backdrop will not fire the `onClose` callback.
@@ -67,6 +68,7 @@ export default function Drawer({
   children,
   className,
   closeButtonTitle = 'Close',
+  'data-test': dataTest = '@modal:drawer',
   disableBackdropClick = false,
   disableEscapeKeyDown = false,
   onClose,
@@ -138,20 +140,21 @@ export default function Drawer({
           aria-label={ariaLabel}
           aria-modal
           className={className}
+          data-test={dataTest}
           role="dialog"
+          showCloseButton={showCloseButton}
         >
-          {showCloseButton && (
-            <DrawerCloseButtonContainer>
-              <DrawerCloseButton
-                aria-label={closeButtonTitle}
-                onClick={handleClose}
-                title={closeButtonTitle}
-              >
-                <CloseIcon aria-hidden fill={shadeBlack} stroke={shadeWhite} />
-              </DrawerCloseButton>
-            </DrawerCloseButtonContainer>
-          )}
           <DrawerContent tabIndex={-1}>{children}</DrawerContent>
+          {showCloseButton && (
+            <DrawerCloseButton
+              aria-label={closeButtonTitle}
+              data-test="@button:closeDrawer"
+              onClick={handleClose}
+              title={closeButtonTitle}
+            >
+              <CloseIcon aria-hidden fill={shadeBlack} stroke={shadeWhite} />
+            </DrawerCloseButton>
+          )}
         </DrawerBase>
       </FocusOn>
     </Portal>

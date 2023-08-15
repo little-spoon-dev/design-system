@@ -25,10 +25,10 @@ export type DrawerProps = PropsWithChildren<{
   closeButtonTitle?: string
 
   /**
-   * Test identifier.
+   * Test identifier of the component.
    * @defaultValue `'@modal:drawer'`
    */
-  dataTest?: string
+  'data-test'?: string
 
   /**
    * If `true`, clicking the Backdrop will not fire the `onClose` callback.
@@ -68,7 +68,7 @@ export default function Drawer({
   children,
   className,
   closeButtonTitle = 'Close',
-  dataTest = '@modal:drawer',
+  'data-test': dataTest = '@modal:drawer',
   disableBackdropClick = false,
   disableEscapeKeyDown = false,
   onClose,

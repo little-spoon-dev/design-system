@@ -57,8 +57,8 @@ export const DrawerCloseButton = styled(Button)`
   display: flex;
   height: ${rem(3.2)};
   justify-content: center;
-  position: absolute;
   padding: 0;
+  position: absolute;
   right: ${rem(2)};
   top: ${rem(2)};
   width: ${rem(3.2)};

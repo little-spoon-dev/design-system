@@ -1,5 +1,5 @@
 import { CloseIcon } from '@littlespoon/icons'
-import { colors } from '@littlespoon/theme'
+import { colors } from '@littlespoon/theme/lib'
 import { ReactNode, useEffect, useState } from 'react'
 import { FocusOn } from 'react-focus-on'
 

@@ -1,7 +1,7 @@
-import { breakpoints, colors } from '@littlespoon/theme'
+import Button from '@littlespoon/button'
+import { breakpoints, colors } from '@littlespoon/theme/lib'
 import { rem } from '@littlespoon/theme/lib/utils'
 import zIndex from '@littlespoon/theme/lib/z-index'
-import { Button } from '@littlespoon/ui'
 import styled, { css } from 'styled-components'
 
 import { DrawerProps, SHOW_HIDE_ANIMATION_DURATION } from './Drawer'

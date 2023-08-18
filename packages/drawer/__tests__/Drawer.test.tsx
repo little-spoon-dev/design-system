@@ -220,7 +220,11 @@ describe('with props.showCloseButton', () => {
   })
 
   it('renders close button', () => {
-    render(<Drawer open showCloseButton={true} />)
+    render(
+      <Drawer open showCloseButton={true}>
+        <DrawerContent />
+      </Drawer>,
+    )
     const closeButton = screen.getByLabelText(closeButtonTitle)
     expect(closeButton).toBeInTheDocument()
     expect(closeButton.getAttribute('data-test')).toBe('@button:closeDrawer')

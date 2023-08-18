@@ -1,17 +1,22 @@
 import { CloseIcon } from '@littlespoon/icons'
-import { shadeBlack, shadeWhite } from '@littlespoon/theme/lib/colors/token'
-import React, { PropsWithChildren, useEffect, useState } from 'react'
+import { colors } from '@littlespoon/theme'
+import { ReactNode, useEffect, useState } from 'react'
 import { FocusOn } from 'react-focus-on'
 
 import Backdrop from './Backdrop'
-import { DrawerBase, DrawerCloseButton, DrawerContent } from './DrawerBase'
+import { DrawerBase, DrawerCloseButton } from './DrawerBase'
 import Portal from './Portal'
 
-export type DrawerProps = PropsWithChildren<{
+export type DrawerProps = {
   /**
    * ARIA label of the component.
    */
   'aria-label'?: string
+
+  /**
+   * The content of the component.
+   */
+  children: ReactNode
 
   /**
    * A space-separated list of CSS classes.
@@ -58,7 +63,7 @@ export type DrawerProps = PropsWithChildren<{
    * @defaultValue `false`
    */
   showCloseButton?: boolean
-}>
+}
 
 // Show/Hide animation duration in milliseconds
 export const SHOW_HIDE_ANIMATION_DURATION = 300
@@ -144,7 +149,7 @@ export default function Drawer({
           role="dialog"
           showCloseButton={showCloseButton}
         >
-          <DrawerContent tabIndex={-1}>{children}</DrawerContent>
+          {children}
           {showCloseButton && (
             <DrawerCloseButton
               aria-label={closeButtonTitle}
@@ -152,7 +157,11 @@ export default function Drawer({
               onClick={handleClose}
               title={closeButtonTitle}
             >
-              <CloseIcon aria-hidden fill={shadeBlack} stroke={shadeWhite} />
+              <CloseIcon
+                aria-hidden
+                fill={colors.token.shadeBlack}
+                stroke={colors.token.shadeWhite}
+              />
             </DrawerCloseButton>
           )}
         </DrawerBase>

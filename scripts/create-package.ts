@@ -196,7 +196,8 @@ const DEFAULT_COMPONENT_NAME = 'Component'
    */
   if (dependencies) {
     dependencies.forEach((dependency) =>
-      exec(`yarn lerna add ${dependency} --exact --scope=${packageName}`),
+      //exec(`yarn lerna add ${dependency} --exact --scope=${packageName}`),
+      exec(`yarn --cwd ${packageName} add ${dependency} --exact`),
     )
   }
 
@@ -294,7 +295,8 @@ function validatePackageName(packageName: string) {
  * @param componentName - Component name.
  */
 function addPackageToUi(packageName: string, directory: string, componentName?: string) {
-  exec(`yarn lerna add ${packageName} --exact --scope=@littlespoon/ui`)
+  //exec(`yarn lerna add ${packageName} --exact --scope=@littlespoon/ui`)
+  exec(`yarn --cwd @littlespoon/ui add ${packageName} --exact`)
 
   const componentOrDirectory = componentName || directory
   const uiDirectory = resolve(path.packages, 'ui')

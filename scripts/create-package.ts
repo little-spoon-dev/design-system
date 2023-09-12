@@ -195,10 +195,10 @@ const DEFAULT_COMPONENT_NAME = 'Component'
    * Add package to dependencies.
    */
   if (dependencies) {
-    dependencies.forEach((dependency) =>
-      //exec(`yarn lerna add ${dependency} --exact --scope=${packageName}`),
-      exec(`yarn workspace ${packageName} add ${dependency} --exact`),
-    )
+    /*dependencies.forEach((dependency) =>
+      exec(`yarn lerna add ${dependency} --exact --scope=${packageName}`),
+    )*/
+    exec(`yarn workspace ${packageName} add ${dependencies.join(' ')} --exact`)
   }
 
   /**

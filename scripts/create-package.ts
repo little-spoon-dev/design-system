@@ -296,7 +296,8 @@ function validatePackageName(packageName: string) {
  */
 function addPackageToUi(packageName: string, directory: string, componentName?: string) {
   //exec(`yarn lerna add ${packageName} --exact --scope=@littlespoon/ui`)
-  exec(`yarn workspace @littlespoon/ui add ${packageName} --exact`)
+  const packagePath = resolve(path.packages, directory)
+  exec(`yarn workspace @littlespoon/ui add file:${packagePath} --exact`)
 
   const componentOrDirectory = componentName || directory
   const uiDirectory = resolve(path.packages, 'ui')

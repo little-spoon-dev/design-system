@@ -3719,9 +3719,9 @@
     "@types/istanbul-lib-report" "*"
 
 "@types/jest-axe@^3.5.4":
-  version "3.5.6"
-  resolved "https://registry.yarnpkg.com/@types/jest-axe/-/jest-axe-3.5.6.tgz#ae4df83897ed29ec9bd6a99eb7b02965c703bd0d"
-  integrity sha512-dQyD3XWfB+wUqVqWwGDyW4j7NmLyWWOdFeNIGXl01HR8/n8LeP3BtQTFdygHtInDm/EYKizaNprhgjSr8sPxHA==
+  version "3.5.8"
+  resolved "https://registry.yarnpkg.com/@types/jest-axe/-/jest-axe-3.5.8.tgz#f8474c8e6296470b7239a144c12659d3aaabb5f7"
+  integrity sha512-KlwSkM932uxMevwx3YHtZYXkhs2wXgw9GxmsDVcuetPC4D5sUrSP2pCjS8524vwsOfZvFZpY+1USCgZCzlT+cA==
   dependencies:
     "@types/jest" "*"
     axe-core "^3.5.5"

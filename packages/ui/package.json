@@ -13,6 +13,9 @@
     "test": "jest",
     "test:watch": "jest --watch"
   },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.36.2"
+  },
   "dependencies": {
     "@littlespoon/accordion": "1.1.6",
     "@littlespoon/alert": "1.4.3",

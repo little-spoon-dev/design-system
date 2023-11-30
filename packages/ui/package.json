@@ -13,6 +13,9 @@
     "test": "jest",
     "test:watch": "jest --watch"
   },
+  "devDependencies": {
+    "eslint-plugin-prettier": "^5.0.1"
+  },
   "dependencies": {
     "@littlespoon/accordion": "1.1.6",
     "@littlespoon/alert": "1.4.3",

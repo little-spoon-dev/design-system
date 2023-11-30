@@ -1,6 +1,6 @@
 {
   "name": "@littlespoon/ui",
-  "version": "1.20.17",
+  "version": "1.21.0",
   "description": "Little Spoon UI",
   "main": "index.js",
   "scripts": {

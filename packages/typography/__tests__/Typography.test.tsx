@@ -108,7 +108,7 @@ describe('with props.variant as string', () => {
 })
 
 describe('with props.variant as object', () => {
-  it('have proper styles for variant with breakpoints', async () => {
+  it('have proper styles for variant with breakpoints', () => {
     const text = 'Variant by breakpoint test desktop'
     render(
       <Typography

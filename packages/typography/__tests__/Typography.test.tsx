@@ -69,12 +69,12 @@ describe('with props.as', () => {
 describe('with props.noMargin', () => {
   it('renders paragraph with margin-bottom', () => {
     render(<Typography>{children}</Typography>)
-    expect(screen.getByText(children)).toHaveStyle('margin-bottom: 0.8rem')
+    expect(screen.getByText(children)).toHaveStyle({ marginBottom: '0.8rem' })
   })
 
   it('renders paragraph with no margin-bottom', () => {
     render(<Typography noMargin>{children}</Typography>)
-    expect(screen.getByText(children)).toHaveStyle('margin: 0 0 0 0')
+    expect(screen.getByText(children)).toHaveStyle({ margin: '0 0 0 0' })
   })
 })
 
@@ -122,9 +122,11 @@ describe('with props.variant as object', () => {
     )
 
     expect(document.querySelectorAll('p').length).toBe(1)
-    expect(screen.getByText(text)).toHaveStyle(
-      'font-family: Lato,sans-serif; font-size: 1.4rem; line-height: 2rem;',
-    )
+    expect(screen.getByText(text)).toHaveStyle({
+      fontFamily: 'Lato,sans-serif',
+      fontSize: '1.4rem',
+      lineHeight: '2rem',
+    })
   })
 })
 
@@ -144,7 +146,7 @@ describe('with props.bold', () => {
     render(<Typography bold>{children}</Typography>)
     const element = screen.getByText(children)
     expect(element.tagName).toBe('STRONG')
-    expect(element).toHaveStyle('font-weight: 700')
+    expect(element).toHaveStyle({ fontWeight: 700 })
     expect(element.parentElement!.tagName).toBe('P')
   })
 })
@@ -158,7 +160,7 @@ describe('with props.extraBold', () => {
     )
     const element = screen.getByText(children)
     expect(element.tagName).toBe('STRONG')
-    expect(element).toHaveStyle('font-weight: 800')
+    expect(element).toHaveStyle({ fontWeight: 800 })
     expect(element.parentElement!.tagName).toBe('H1')
   })
 })
@@ -172,7 +174,7 @@ describe('with props.black', () => {
     )
     const element = screen.getByText(children)
     expect(element.tagName).toBe('STRONG')
-    expect(element).toHaveStyle('font-weight: 900')
+    expect(element).toHaveStyle({ fontWeight: 900 })
     expect(element.parentElement!.tagName).toBe('H2')
   })
 })
@@ -186,7 +188,7 @@ describe('with props.bold, props.extraBold, props.black', () => {
     )
     const element = screen.getByText(children)
     expect(element.tagName).toBe('STRONG')
-    expect(element).toHaveStyle('font-weight: 900')
+    expect(element).toHaveStyle({ fontWeight: 900 })
     expect(element.parentElement!.tagName).toBe('P')
   })
 })
@@ -194,13 +196,13 @@ describe('with props.bold, props.extraBold, props.black', () => {
 describe('with props.uppercase', () => {
   it('transforms text into uppercase', () => {
     render(<Typography uppercase>{children}</Typography>)
-    expect(screen.getByText(children)).toHaveStyle('text-transform: uppercase')
+    expect(screen.getByText(children)).toHaveStyle({ textTransform: 'uppercase' })
   })
 })
 
 describe('with props.center', () => {
   it('aligns text to center', () => {
     render(<Typography center>{children}</Typography>)
-    expect(screen.getByText(children)).toHaveStyle('text-align: center')
+    expect(screen.getByText(children)).toHaveStyle({ textAlign: 'center' })
   })
 })

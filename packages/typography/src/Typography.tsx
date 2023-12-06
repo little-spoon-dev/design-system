@@ -2,15 +2,22 @@ import type { StyleProps } from '@littlespoon/theme/lib/style'
 import type React from 'react'
 
 import { Bold } from './Bold'
+import { CaptionType, DisplayType, HeadingType, Paragraph, ParagraphType } from './constants'
 import { TypographyBase } from './TypographyBase'
 
-type ElementType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p'
+export type As = (typeof HeadingType)[keyof typeof HeadingType] | typeof Paragraph
 
-type DisplayType = ElementType | 'p1' | 'p2' | 'p3' | 'p4' | 'display1' | 'display2' | 'caption1'
+export type VariantString =
+  | As
+  | (typeof CaptionType)[keyof typeof CaptionType]
+  | (typeof DisplayType)[keyof typeof DisplayType]
+  | (typeof ParagraphType)[keyof typeof ParagraphType]
 
-export interface StyleByBreakpoint {
-  [key: number]: DisplayType
+export interface VariantStyleByBreakpoint {
+  [key: number]: VariantString
 }
+
+export type Variant = VariantString | VariantStyleByBreakpoint
 
 export interface TypographyProps extends StyleProps {
   /**
@@ -21,12 +28,12 @@ export interface TypographyProps extends StyleProps {
   /**
    * The root node component. Use a string for an HTML element. Defaults to "p".
    */
-  as?: ElementType
+  as?: As
 
   /**
    * The variant to use. Defaults to `as`.
    */
-  variant?: DisplayType | StyleByBreakpoint
+  variant?: Variant
 
   /**
    * Whether the content is bold. Defaults to false.
@@ -72,7 +79,13 @@ export default function Typography({
   return (
     <TypographyBase {...other} variant={other.variant || other.as}>
       {bold || extraBold || black ? (
-        <Bold bold={bold} extraBold={extraBold} black={black}>
+        <Bold
+          bold={bold}
+          extraBold={extraBold}
+          black={black}
+          uppercase={other.uppercase}
+          variant={other.variant}
+        >
           {children}
         </Bold>
       ) : (

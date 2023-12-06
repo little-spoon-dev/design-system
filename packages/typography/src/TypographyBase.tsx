@@ -15,7 +15,14 @@ import { getStyle } from '@littlespoon/theme/lib/style'
 import { rem } from '@littlespoon/theme/lib/utils'
 import styled from 'styled-components'
 
-import type { TypographyProps } from './Typography'
+import { CaptionType, DisplayType, HeadingType, Paragraph, ParagraphType } from './constants'
+import type { TypographyProps, Variant } from './Typography'
+import { getLetterSpacingCssValue } from './util'
+
+type CaptionTypeType = (typeof CaptionType)[keyof typeof CaptionType]
+type DisplayTypeType = (typeof DisplayType)[keyof typeof DisplayType]
+type HeadingTypeType = (typeof HeadingType)[keyof typeof HeadingType]
+type ParagraphTypeType = (typeof ParagraphType)[keyof typeof ParagraphType]
 
 export const TypographyBase = styled.p<TypographyProps>`
   border: 0;
@@ -23,7 +30,6 @@ export const TypographyBase = styled.p<TypographyProps>`
   padding: 0;
   text-align: ${(props) => props.center && 'center'};
   text-transform: ${(props) => props.uppercase && 'uppercase'};
-  letter-spacing: 0.006rem;
   ${getVariantCss}
   ${getResponsiveCss}
   ${getStyle}
@@ -35,81 +41,57 @@ export const TypographyBase = styled.p<TypographyProps>`
 function getVariantCss(props: TypographyProps) {
   let font: string
   let lineHeight: string
+  let letterSpacing = ''
 
   if (typeof props.variant === 'string') {
-    switch (props.variant) {
-      /**
-       * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/348dfa}
-       */
-      case 'display1':
-      case 'display2': {
-        const { fontSize, lineHeight: displayLineHeight } = display[props.variant]
-        font = `${secondaryWeight.bold} ${fontSize} ${secondaryFamily}`
-        lineHeight = displayLineHeight
-        break
-      }
-
-      /**
-       * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/440937}
-       */
-      case 'h1':
-      case 'h2':
-      case 'h3':
-      case 'h4':
-      case 'h5':
-      case 'h6': {
-        const { fontSize, lineHeight: headingLineHeight } = heading[props.variant]
-        font = `${secondaryWeight.bold} ${fontSize} ${secondaryFamily}`
-        lineHeight = headingLineHeight
-        break
-      }
-
-      /**
-       * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/4725bd}
-       */
-      case 'caption1': {
-        const { fontSize, lineHeight: captionLineHeight } = caption[props.variant]
-        font = `${primaryWeight.normal} ${fontSize} ${primaryFamily}`
-        lineHeight = captionLineHeight
-        break
-      }
-
-      /**
-       * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/294b11}
-       */
-      case 'p1':
-      case 'p2':
-      case 'p3':
-      case 'p4': {
-        const { fontSize, lineHeight: paragraphLineHeight } = paragraph[props.variant]
-        font = `${primaryWeight.normal} ${fontSize} ${primaryFamily}`
-        lineHeight = paragraphLineHeight
-        break
-      }
-
-      /**
-       * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/48491c}
-       */
-      case 'p':
-      default: {
-        const { fontSize, lineHeight: paragraphLineHeight } = paragraph.p3
-        font = `${primaryWeight.normal} ${fontSize} ${primaryFamily}`
-        lineHeight = paragraphLineHeight
-        break
-      }
+    if (Object.values(DisplayType).includes(props.variant as DisplayTypeType)) {
+      // See https://zeroheight.com/3ddd0f892/p/211297-typography/t/348dfa
+      const { fontSize, lineHeight: displayLineHeight } = display[props.variant as DisplayTypeType]
+      font = `${secondaryWeight.bold} ${fontSize} ${secondaryFamily}`
+      lineHeight = displayLineHeight
+    } else if (Object.values(HeadingType).includes(props.variant as HeadingTypeType)) {
+      // See https://zeroheight.com/3ddd0f892/p/211297-typography/t/440937
+      const { fontSize, lineHeight: headingLineHeight } = heading[props.variant as HeadingTypeType]
+      font = `${secondaryWeight.bold} ${fontSize} ${secondaryFamily}`
+      lineHeight = headingLineHeight
+    } else if (Object.values(CaptionType).includes(props.variant as CaptionTypeType)) {
+      // See https://zeroheight.com/3ddd0f892/p/211297-typography/t/4725bd
+      const { fontSize, lineHeight: captionLineHeight } = caption[props.variant as CaptionTypeType]
+      font = `${primaryWeight.normal} ${fontSize} ${primaryFamily}`
+      lineHeight = captionLineHeight
+    } else if (Object.values(ParagraphType).includes(props.variant as ParagraphTypeType)) {
+      // See https://zeroheight.com/3ddd0f892/p/211297-typography/t/294b11
+      const { fontSize, lineHeight: paragraphLineHeight } =
+        paragraph[props.variant as ParagraphTypeType]
+      font = `${primaryWeight.normal} ${fontSize} ${primaryFamily}`
+      lineHeight = paragraphLineHeight
+      letterSpacing = getLetterSpacingCssValue({
+        bold: props.bold,
+        uppercase: props.uppercase,
+        variant: props.variant,
+      })
+    } else {
+      // See https://zeroheight.com/3ddd0f892/p/211297-typography/t/48491c
+      const { fontSize, lineHeight: paragraphLineHeight } = paragraph.p3
+      font = `${primaryWeight.normal} ${fontSize} ${primaryFamily}`
+      lineHeight = paragraphLineHeight
     }
 
-    return `font: ${font}; line-height: ${lineHeight};`
+    return `
+      font: ${font};
+      letter-spacing: ${letterSpacing};
+      line-height: ${lineHeight};
+    `
   } else if (typeof props.variant === 'object') {
     const breakpoints = Object.entries(props.variant)
     let mediaStyles = ''
 
     for (const [breakpoint, variant] of breakpoints) {
       if (+breakpoint === 0) {
-        mediaStyles += getVariantCss({ variant: variant })
+        mediaStyles += getVariantCss({ variant })
       } else {
         mediaStyles += `@media screen and (min-width: ${breakpoint}px) { ${getVariantCss({
-          variant: variant,
+          variant,
         })} }`
       }
     }
@@ -124,20 +106,20 @@ function getVariantCss(props: TypographyProps) {
  * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/37ada3}
  */
 const responsiveStyles = {
-  display1: 'h1',
-  display2: 'h1',
-  h1: 'h2',
-  h2: 'h3',
-  h3: 'h4',
-  h4: 'h5',
-  h5: 'h6',
-  h6: '',
-  p: '',
-  p1: 'p2',
-  p2: 'p3',
-  p3: '',
-  p4: '',
-  caption1: '',
+  [DisplayType.DISPLAY1]: HeadingType.H1,
+  [DisplayType.DISPLAY2]: HeadingType.H1,
+  [HeadingType.H1]: HeadingType.H2,
+  [HeadingType.H2]: HeadingType.H3,
+  [HeadingType.H3]: HeadingType.H4,
+  [HeadingType.H4]: HeadingType.H5,
+  [HeadingType.H5]: HeadingType.H6,
+  [HeadingType.H6]: '',
+  [Paragraph]: '',
+  [ParagraphType.P1]: ParagraphType.P2,
+  [ParagraphType.P2]: ParagraphType.P3,
+  [ParagraphType.P3]: '',
+  [ParagraphType.P4]: '',
+  [CaptionType.CAPTION1]: '',
 } as const
 
 /**
@@ -153,6 +135,6 @@ function getResponsiveCss(props: TypographyProps) {
     return ''
   }
 
-  const css = getVariantCss({ variant })
+  const css = getVariantCss({ variant: variant as Variant })
   return down(desktop, css)
 }

@@ -3,34 +3,35 @@ import { weight } from '@littlespoon/theme/lib/fonts/secondary'
 import styled from 'styled-components'
 
 import type { TypographyProps } from './Typography'
+import { getLetterSpacingCssValue } from './util'
 
-export const Bold = styled.strong<TypographyProps>`
+type Props = Pick<TypographyProps, 'black' | 'bold' | 'extraBold' | 'uppercase' | 'variant'>
+
+export const Bold = styled.strong<Props>`
   ${getCss}
 `
 
 /**
  * Gets styles.
  */
-function getCss(props: TypographyProps) {
-  let fontWeight: number
-
-  switch (true) {
-    case props.black:
-      fontWeight = weight.black
-      break
-
-    case props.extraBold:
-      fontWeight = weight.extraBold
-      break
-
-    case props.bold:
-      fontWeight = weight.bold
-      break
-
-    /* istanbul ignore next */
-    default:
-      return ''
+function getCss(props: Props) {
+  let fontWeight = ''
+  if (props.black) {
+    fontWeight = weight.black.toString()
+  } else if (props.extraBold) {
+    fontWeight = weight.extraBold.toString()
+  } else if (props.bold) {
+    fontWeight = weight.bold.toString()
   }
 
-  return `font-weight: ${fontWeight};`
+  const letterSpacing: string = getLetterSpacingCssValue({
+    bold: props.bold,
+    uppercase: props.uppercase,
+    variant: props.variant,
+  })
+
+  return `
+    font-weight: ${fontWeight};
+    letter-spacing: ${letterSpacing};
+  `
 }

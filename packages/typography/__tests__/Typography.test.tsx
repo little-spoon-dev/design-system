@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react'
 import { axe } from 'jest-axe'
 
-import type { TypographyProps } from '../src/'
-import Typography from '../src/'
+import Typography, { type TypographyProps } from '../src'
+import { CaptionType, DisplayType, HeadingType, Paragraph, ParagraphType } from '../src/constants'
 
 const children = 'children'
 const label = 'label'
@@ -46,7 +46,7 @@ describe('with props.aria-label', () => {
 })
 
 describe('with props.as', () => {
-  it.each<Required<TypographyProps>['as']>(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'])(
+  it.each<Required<TypographyProps>['as']>([Paragraph, ...Object.values(HeadingType)])(
     'renders as %j',
     (element) => {
       render(<Typography as={element}>{element}</Typography>)
@@ -80,20 +80,20 @@ describe('with props.noMargin', () => {
 
 describe('with props.variant as string', () => {
   it.each<[Required<TypographyProps>['variant'], string]>([
-    ['display1', 'font: Mulish,sans-serif 7.4rem 700 7.4rem'],
-    ['display2', 'font: Mulish,sans-serif 6.6rem 700 6.6rem'],
-    ['h1', 'font: Mulish,sans-serif 5.2rem 700 5.2rem'],
-    ['h2', 'font: Mulish,sans-serif 4.6rem 700 4.6rem'],
-    ['h3', 'font: Mulish,sans-serif 3.6rem 700 3.6rem'],
-    ['h4', 'font: Mulish,sans-serif 2.9rem 700 2.9rem'],
-    ['h5', 'font: Mulish,sans-serif 2.6rem 700 2.6rem'],
-    ['h6', 'font: Mulish,sans-serif 2rem 700 2rem'],
-    ['p', 'font: Lato,sans-serif 1.6rem 400 1.6rem'],
-    ['p1', 'font: Lato,sans-serif 2rem 400 2rem'],
-    ['p2', 'font: Lato,sans-serif 1.8rem 400 1.8rem'],
-    ['p3', 'font: Lato,sans-serif 1.6rem 400 1.6rem'],
-    ['p4', 'font: Lato,sans-serif 1.4rem 400 1.4rem'],
-    ['caption1', 'font: Lato,sans-serif 1.2rem 400 1.2rem'],
+    [DisplayType.DISPLAY1, 'font: Mulish,sans-serif 7.4rem 700 7.4rem'],
+    [DisplayType.DISPLAY2, 'font: Mulish,sans-serif 6.6rem 700 6.6rem'],
+    [HeadingType.H1, 'font: Mulish,sans-serif 5.2rem 700 5.2rem'],
+    [HeadingType.H2, 'font: Mulish,sans-serif 4.6rem 700 4.6rem'],
+    [HeadingType.H3, 'font: Mulish,sans-serif 3.6rem 700 3.6rem'],
+    [HeadingType.H4, 'font: Mulish,sans-serif 2.9rem 700 2.9rem'],
+    [HeadingType.H5, 'font: Mulish,sans-serif 2.6rem 700 2.6rem'],
+    [HeadingType.H6, 'font: Mulish,sans-serif 2rem 700 2rem'],
+    [Paragraph, 'font: Lato,sans-serif 1.6rem 400 1.6rem'],
+    [ParagraphType.P1, 'font: Lato,sans-serif 2rem 400 2rem'],
+    [ParagraphType.P2, 'font: Lato,sans-serif 1.8rem 400 1.8rem'],
+    [ParagraphType.P3, 'font: Lato,sans-serif 1.6rem 400 1.6rem'],
+    [ParagraphType.P4, 'font: Lato,sans-serif 1.4rem 400 1.4rem'],
+    [CaptionType.CAPTION1, 'font: Lato,sans-serif 1.2rem 400 1.2rem'],
   ])('renders p with variant=%j', (variant, style) => {
     const variantText = typeof variant === 'string' ? variant : variant[0]
     render(<Typography variant={variant}>{variantText}</Typography>)
@@ -113,8 +113,8 @@ describe('with props.variant as object', () => {
     render(
       <Typography
         variant={{
-          0: 'p4',
-          1500: 'p2',
+          0: ParagraphType.P4,
+          1500: ParagraphType.P2,
         }}
       >
         {text}
@@ -133,7 +133,7 @@ describe('with props.variant as object', () => {
 describe('with props.as and props.variant', () => {
   it('renders as h1 but styled using variant h6', () => {
     render(
-      <Typography as="h1" variant="h6">
+      <Typography as={HeadingType.H1} variant={HeadingType.H6}>
         {children}
       </Typography>,
     )
@@ -154,7 +154,7 @@ describe('with props.bold', () => {
 describe('with props.extraBold', () => {
   it('renders strong with font-weight', () => {
     render(
-      <Typography as="h1" extraBold>
+      <Typography as={HeadingType.H1} extraBold>
         {children}
       </Typography>,
     )
@@ -168,7 +168,7 @@ describe('with props.extraBold', () => {
 describe('with props.black', () => {
   it('renders strong with font-weight', () => {
     render(
-      <Typography as="h2" variant="display1" black>
+      <Typography as={HeadingType.H2} variant={DisplayType.DISPLAY1} black>
         {children}
       </Typography>,
     )

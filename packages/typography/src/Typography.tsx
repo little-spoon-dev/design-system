@@ -2,16 +2,16 @@ import type { StyleProps } from '@littlespoon/theme/lib/style'
 import type React from 'react'
 
 import { Bold } from './Bold'
-import { CaptionType, DisplayType, HeadingType, Paragraph, ParagraphType } from './constants'
+import { CAPTION_TYPE, DISPLAY_TYPE, HEADING_TYPE, PARAGRAPH, PARAGRAPH_TYPE } from './constants'
 import { TypographyBase } from './TypographyBase'
 
-export type As = (typeof HeadingType)[keyof typeof HeadingType] | typeof Paragraph
+export type As = (typeof HEADING_TYPE)[keyof typeof HEADING_TYPE] | typeof PARAGRAPH
 
 export type VariantString =
   | As
-  | (typeof CaptionType)[keyof typeof CaptionType]
-  | (typeof DisplayType)[keyof typeof DisplayType]
-  | (typeof ParagraphType)[keyof typeof ParagraphType]
+  | (typeof CAPTION_TYPE)[keyof typeof CAPTION_TYPE]
+  | (typeof DISPLAY_TYPE)[keyof typeof DISPLAY_TYPE]
+  | (typeof PARAGRAPH_TYPE)[keyof typeof PARAGRAPH_TYPE]
 
 export interface VariantStyleByBreakpoint {
   [key: number]: VariantString

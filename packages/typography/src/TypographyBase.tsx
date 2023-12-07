@@ -15,13 +15,13 @@ import { getStyle } from '@littlespoon/theme/lib/style'
 import { rem } from '@littlespoon/theme/lib/utils'
 import styled, { css } from 'styled-components'
 
-import { CaptionType, DisplayType, HeadingType, Paragraph, ParagraphType } from './constants'
+import { CAPTION_TYPE, DISPLAY_TYPE, HEADING_TYPE, PARAGRAPH, PARAGRAPH_TYPE } from './constants'
 import type { TypographyProps, VariantString } from './Typography'
 
-type CaptionTypeType = (typeof CaptionType)[keyof typeof CaptionType]
-type DisplayTypeType = (typeof DisplayType)[keyof typeof DisplayType]
-type HeadingTypeType = (typeof HeadingType)[keyof typeof HeadingType]
-type ParagraphTypeType = (typeof ParagraphType)[keyof typeof ParagraphType]
+type CaptionType = (typeof CAPTION_TYPE)[keyof typeof CAPTION_TYPE]
+type DisplayType = (typeof DISPLAY_TYPE)[keyof typeof DISPLAY_TYPE]
+type HeadingType = (typeof HEADING_TYPE)[keyof typeof HEADING_TYPE]
+type ParagraphType = (typeof PARAGRAPH_TYPE)[keyof typeof PARAGRAPH_TYPE]
 
 export const TypographyBase = styled.p<TypographyProps>(
   (props: TypographyProps) => css`
@@ -43,28 +43,25 @@ function getVariantCss(options: TypographyProps) {
   if (typeof options.variant === 'string') {
     let font = ''
     let lineHeight = ''
-    if (Object.values(DisplayType).includes(options.variant as DisplayTypeType)) {
+    if (Object.values(DISPLAY_TYPE).includes(options.variant as DisplayType)) {
       // See https://zeroheight.com/3ddd0f892/p/211297-typography/t/348dfa
-      const { fontSize, lineHeight: displayLineHeight } =
-        display[options.variant as DisplayTypeType]
+      const { fontSize, lineHeight: displayLineHeight } = display[options.variant as DisplayType]
       font = `${secondaryWeight.bold} ${fontSize} ${secondaryFamily}`
       lineHeight = displayLineHeight
-    } else if (Object.values(HeadingType).includes(options.variant as HeadingTypeType)) {
+    } else if (Object.values(HEADING_TYPE).includes(options.variant as HeadingType)) {
       // See https://zeroheight.com/3ddd0f892/p/211297-typography/t/440937
-      const { fontSize, lineHeight: headingLineHeight } =
-        heading[options.variant as HeadingTypeType]
+      const { fontSize, lineHeight: headingLineHeight } = heading[options.variant as HeadingType]
       font = `${secondaryWeight.bold} ${fontSize} ${secondaryFamily}`
       lineHeight = headingLineHeight
-    } else if (Object.values(CaptionType).includes(options.variant as CaptionTypeType)) {
+    } else if (Object.values(CAPTION_TYPE).includes(options.variant as CaptionType)) {
       // See https://zeroheight.com/3ddd0f892/p/211297-typography/t/4725bd
-      const { fontSize, lineHeight: captionLineHeight } =
-        caption[options.variant as CaptionTypeType]
+      const { fontSize, lineHeight: captionLineHeight } = caption[options.variant as CaptionType]
       font = `${primaryWeight.normal} ${fontSize} ${primaryFamily}`
       lineHeight = captionLineHeight
-    } else if (Object.values(ParagraphType).includes(options.variant as ParagraphTypeType)) {
+    } else if (Object.values(PARAGRAPH_TYPE).includes(options.variant as ParagraphType)) {
       // See https://zeroheight.com/3ddd0f892/p/211297-typography/t/294b11
       const { fontSize, lineHeight: paragraphLineHeight } =
-        paragraph[options.variant as ParagraphTypeType]
+        paragraph[options.variant as ParagraphType]
       font = `${primaryWeight.normal} ${fontSize} ${primaryFamily}`
       lineHeight = paragraphLineHeight
     } else {
@@ -113,20 +110,20 @@ function getResponsiveCss(props: TypographyProps) {
 
   // See https://zeroheight.com/3ddd0f892/p/211297-typography/t/37ada3
   const responsiveVariant = {
-    [DisplayType.DISPLAY1]: HeadingType.H1,
-    [DisplayType.DISPLAY2]: HeadingType.H1,
-    [HeadingType.H1]: HeadingType.H2,
-    [HeadingType.H2]: HeadingType.H3,
-    [HeadingType.H3]: HeadingType.H4,
-    [HeadingType.H4]: HeadingType.H5,
-    [HeadingType.H5]: HeadingType.H6,
-    [HeadingType.H6]: '',
-    [Paragraph]: '',
-    [ParagraphType.P1]: ParagraphType.P2,
-    [ParagraphType.P2]: ParagraphType.P3,
-    [ParagraphType.P3]: '',
-    [ParagraphType.P4]: '',
-    [CaptionType.CAPTION1]: '',
+    [DISPLAY_TYPE.DISPLAY1]: HEADING_TYPE.H1,
+    [DISPLAY_TYPE.DISPLAY2]: HEADING_TYPE.H1,
+    [HEADING_TYPE.H1]: HEADING_TYPE.H2,
+    [HEADING_TYPE.H2]: HEADING_TYPE.H3,
+    [HEADING_TYPE.H3]: HEADING_TYPE.H4,
+    [HEADING_TYPE.H4]: HEADING_TYPE.H5,
+    [HEADING_TYPE.H5]: HEADING_TYPE.H6,
+    [HEADING_TYPE.H6]: '',
+    [PARAGRAPH]: '',
+    [PARAGRAPH_TYPE.P1]: PARAGRAPH_TYPE.P2,
+    [PARAGRAPH_TYPE.P2]: PARAGRAPH_TYPE.P3,
+    [PARAGRAPH_TYPE.P3]: '',
+    [PARAGRAPH_TYPE.P4]: '',
+    [CAPTION_TYPE.CAPTION1]: '',
   }[props.variant]
   if (!responsiveVariant) {
     return ''
@@ -154,10 +151,10 @@ function getLetterSpacing({
   // property must be overriden
   let letterSpacing = 'normal'
   if (uppercase) {
-    if (Object.values(ParagraphType).includes(variant as ParagraphTypeType)) {
+    if (Object.values(PARAGRAPH_TYPE).includes(variant as ParagraphType)) {
       // See https://zeroheight.com/3ddd0f892/p/211297-typography/t/294b11
       letterSpacing = bold ? rem(0.1) : rem(0.05)
-    } else if (Object.values(CaptionType).includes(variant as CaptionTypeType)) {
+    } else if (Object.values(CAPTION_TYPE).includes(variant as CaptionType)) {
       // See https://zeroheight.com/3ddd0f892/p/211297-typography/t/36c339
       letterSpacing = bold ? rem(0.05) : 'normal'
     }

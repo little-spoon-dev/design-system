@@ -77,15 +77,9 @@ export default function Typography({
   ...other
 }: TypographyProps): React.ReactElement<TypographyProps> {
   return (
-    <TypographyBase {...other} variant={other.variant || other.as}>
+    <TypographyBase {...other} bold={bold} variant={other.variant || other.as}>
       {bold || extraBold || black ? (
-        <Bold
-          bold={bold}
-          extraBold={extraBold}
-          black={black}
-          uppercase={other.uppercase}
-          variant={other.variant}
-        >
+        <Bold bold={bold} extraBold={extraBold} black={black}>
           {children}
         </Bold>
       ) : (

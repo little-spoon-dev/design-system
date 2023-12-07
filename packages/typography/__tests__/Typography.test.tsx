@@ -1,11 +1,12 @@
 import { render, screen } from '@testing-library/react'
 import { axe } from 'jest-axe'
 
-import Typography, { type TypographyProps } from '../src'
+import Typography, { type TypographyProps, type VariantString } from '../src'
 import { CaptionType, DisplayType, HeadingType, Paragraph, ParagraphType } from '../src/constants'
 
 const children = 'children'
 const label = 'label'
+const testId = 'typography'
 
 describe('accessibility', () => {
   it('is accessible', async () => {
@@ -105,6 +106,52 @@ describe('with props.variant as string', () => {
     render(<Typography variant={'' as 'p'}>{children}</Typography>)
     expect(screen.getByText(children)).toBeInTheDocument()
   })
+})
+
+describe('with props.variant as string, props.uppercase and props.bold', () => {
+  it.each<
+    [
+      variant: VariantString,
+      bold: boolean | undefined,
+      uppercase: boolean | undefined,
+      expectedStyle: string,
+    ]
+  >([
+    [ParagraphType.P1, undefined, undefined, 'letter-spacing: normal'],
+    [ParagraphType.P1, false, false, 'letter-spacing: normal'],
+    [ParagraphType.P1, true, false, 'letter-spacing: normal'],
+    [ParagraphType.P1, true, undefined, 'letter-spacing: normal'],
+    [ParagraphType.P1, false, true, 'letter-spacing: 0.05rem'],
+    [ParagraphType.P1, undefined, true, 'letter-spacing: 0.05rem'],
+    [ParagraphType.P1, true, true, 'letter-spacing: 0.1rem'],
+
+    [CaptionType.CAPTION1, undefined, undefined, 'letter-spacing: normal'],
+    [CaptionType.CAPTION1, false, false, 'letter-spacing: normal'],
+    [CaptionType.CAPTION1, true, false, 'letter-spacing: normal'],
+    [CaptionType.CAPTION1, true, undefined, 'letter-spacing: normal'],
+    [CaptionType.CAPTION1, false, true, 'letter-spacing: normal'],
+    [CaptionType.CAPTION1, undefined, true, 'letter-spacing: normal'],
+    [CaptionType.CAPTION1, true, true, 'letter-spacing: 0.05rem'],
+
+    [HeadingType.H1, undefined, undefined, 'letter-spacing: normal'],
+    [HeadingType.H1, false, false, 'letter-spacing: normal'],
+    [HeadingType.H1, true, false, 'letter-spacing: normal'],
+    [HeadingType.H1, true, undefined, 'letter-spacing: normal'],
+    [HeadingType.H1, false, true, 'letter-spacing: normal'],
+    [HeadingType.H1, undefined, true, 'letter-spacing: normal'],
+    [HeadingType.H1, true, true, 'letter-spacing: normal'],
+  ])(
+    'have proper letter-spacing with variant=%j bold=%j uppercase=%j',
+    (variant, bold, uppercase, expectedStyle) => {
+      render(
+        <Typography data-testid={testId} bold={bold} uppercase={uppercase} variant={variant}>
+          {children}
+        </Typography>,
+      )
+      expect(document.querySelectorAll('p').length).toBe(1)
+      expect(screen.getByTestId(testId)).toHaveStyle(expectedStyle)
+    },
+  )
 })
 
 describe('with props.variant as object', () => {

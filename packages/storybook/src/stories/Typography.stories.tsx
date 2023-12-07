@@ -1,5 +1,14 @@
+import {
+  CaptionType,
+  DisplayType,
+  HeadingType,
+  Paragraph as P,
+  ParagraphType,
+} from '@littlespoon/typography/src/constants'
 import Typography from '@littlespoon/typography/src/Typography'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+
+import { STORYBOOK_BREAKPOINT } from '../constants'
 
 export default {
   title: 'Design System/Typography',
@@ -10,129 +19,181 @@ const Template: ComponentStory<typeof Typography> = (args) => <Typography {...ar
 
 const TemplateAll: ComponentStory<typeof Typography> = (args) => (
   <>
-    <Typography as="p" {...args}>
-      Paragraph
-    </Typography>
-
-    <Typography variant="caption1" {...args}>
-      Caption 1
-    </Typography>
-
-    <Typography as="h1" variant="display1" {...args}>
+    <Typography as={HeadingType.H1} variant={DisplayType.DISPLAY1} {...args}>
       Display 1
     </Typography>
 
-    <Typography as="h2" variant="display2" {...args}>
+    <Typography as={HeadingType.H2} variant={DisplayType.DISPLAY2} {...args}>
       Display 2
     </Typography>
 
-    <Typography as="h1" {...args}>
+    <Typography as={HeadingType.H1} {...args}>
       Heading 1
     </Typography>
 
-    <Typography as="h2" {...args}>
+    <Typography as={HeadingType.H2} {...args}>
       Heading 2
     </Typography>
 
-    <Typography as="h3" {...args}>
+    <Typography as={HeadingType.H3} {...args}>
       Heading 3
     </Typography>
 
-    <Typography as="h4" {...args}>
+    <Typography as={HeadingType.H4} {...args}>
       Heading 4
     </Typography>
 
-    <Typography as="h5" {...args}>
+    <Typography as={HeadingType.H5} {...args}>
       Heading 5
     </Typography>
 
-    <Typography as="h6" {...args}>
+    <Typography as={HeadingType.H6} {...args}>
       Heading 6
+    </Typography>
+
+    <Typography as={P} {...args}>
+      Paragraph
+    </Typography>
+
+    <Typography variant={ParagraphType.P1} {...args}>
+      Paragraph 1
+    </Typography>
+
+    <Typography variant={ParagraphType.P2} {...args}>
+      Paragraph 2
+    </Typography>
+
+    <Typography variant={ParagraphType.P3} {...args}>
+      Paragraph 3
+    </Typography>
+
+    <Typography variant={ParagraphType.P4} {...args}>
+      Paragraph 4
+    </Typography>
+
+    <Typography variant={CaptionType.CAPTION1} {...args}>
+      Caption 1
     </Typography>
   </>
 )
 
 export const Default = Template.bind({})
 Default.args = {
-  children: 'Defaults to paragraph.',
+  children: 'Defaults to Paragraph',
 }
 
 export const Paragraph = Template.bind({})
 Paragraph.args = {
-  as: 'p',
+  as: P,
   children: 'Paragraph',
 }
 
 export const Caption1 = Template.bind({})
 Caption1.args = {
-  variant: 'caption1',
   children: 'Caption 1',
+  variant: CaptionType.CAPTION1,
 }
 
 export const Display1 = Template.bind({})
 Display1.args = {
   children: 'Display 1',
-  variant: 'display1',
+  variant: DisplayType.DISPLAY1,
 }
 
 export const Display2 = Template.bind({})
 Display2.args = {
   children: 'Display 2',
-  variant: 'display2',
+  variant: DisplayType.DISPLAY2,
 }
 
 export const Heading1 = Template.bind({})
 Heading1.args = {
-  as: 'h1',
+  as: HeadingType.H1,
   children: 'Heading 1',
+}
+
+export const Heading1Uppercase = Template.bind({})
+Heading1Uppercase.args = {
+  as: HeadingType.H1,
+  children: 'Heading 1',
+  uppercase: true,
+}
+
+export const Heading1UppercaseBold = Template.bind({})
+Heading1UppercaseBold.args = {
+  as: HeadingType.H1,
+  bold: true,
+  children: 'Heading 1',
+  uppercase: true,
 }
 
 export const Heading2 = Template.bind({})
 Heading2.args = {
-  as: 'h2',
+  as: HeadingType.H2,
   children: 'Heading 2',
 }
 
 export const Heading3 = Template.bind({})
 Heading3.args = {
-  as: 'h3',
+  as: HeadingType.H3,
   children: 'Heading 3',
 }
 
 export const Heading4 = Template.bind({})
 Heading4.args = {
-  as: 'h4',
+  as: HeadingType.H4,
   children: 'Heading 4',
 }
 
 export const Heading5 = Template.bind({})
 Heading5.args = {
-  as: 'h5',
+  as: HeadingType.H5,
   children: 'Heading 5',
 }
 
 export const Heading6 = Template.bind({})
 Heading6.args = {
-  as: 'h6',
+  as: HeadingType.H6,
   children: 'Heading 6',
+}
+
+export const Paragraph1 = Template.bind({})
+Paragraph1.args = {
+  children: 'Paragraph 1',
+  variant: ParagraphType.P1,
+}
+
+export const Paragraph1Uppercase = Template.bind({})
+Paragraph1Uppercase.args = {
+  children: 'Paragraph 1',
+  uppercase: true,
+  variant: ParagraphType.P1,
+}
+
+export const Paragraph1UppercaseBold = Template.bind({})
+Paragraph1UppercaseBold.args = {
+  bold: true,
+  children: 'Paragraph 1',
+  uppercase: true,
+  variant: ParagraphType.P1,
 }
 
 export const Variant = Template.bind({})
 Variant.args = {
-  as: 'h1',
-  children: 'h1 styled as h6',
-  variant: 'h6',
+  as: HeadingType.H1,
+  children: `${HeadingType.H1} styled as ${HeadingType.H6}`,
+  variant: HeadingType.H6,
 }
 
 export const Center = Template.bind({})
 Center.args = {
-  children: 'Centered text',
   center: true,
+  children: 'Centered',
 }
 
 export const Style = Template.bind({})
 Style.args = {
-  children: 'Styled text',
+  children: 'Styled (resize viewport to change my size)',
   sx: {
     mobile: {
       fontSize: '1rem',
@@ -175,12 +236,41 @@ Uppercase.args = {
   uppercase: true,
 }
 
-export const WithBreakpoints = Template.bind({})
-WithBreakpoints.args = {
+export const UppercaseBold = TemplateAll.bind({})
+UppercaseBold.args = {
+  bold: true,
+  uppercase: true,
+}
+
+export const VariantByBreakpoint = Template.bind({})
+VariantByBreakpoint.args = {
+  children: 'Variant by breakpoint (resize viewport to change my size)',
   variant: {
-    0: 'p4',
-    1000: 'p3',
-    1500: 'p2',
+    0: ParagraphType.P4,
+    [STORYBOOK_BREAKPOINT.LARGE_MOBILE]: ParagraphType.P3,
+    [STORYBOOK_BREAKPOINT.TABLET]: ParagraphType.P2,
   },
-  children: 'Variant by breakpoint test (resize your screen to change my size)',
+}
+
+export const VariantByBreakpointUppercase = Template.bind({})
+VariantByBreakpointUppercase.args = {
+  children: 'Variant by breakpoint (resize viewport to change my size)',
+  uppercase: true,
+  variant: {
+    0: ParagraphType.P1,
+    [STORYBOOK_BREAKPOINT.LARGE_MOBILE]: HeadingType.H3,
+    [STORYBOOK_BREAKPOINT.TABLET]: HeadingType.H1,
+  },
+}
+
+export const VariantByBreakpointUppercaseBold = Template.bind({})
+VariantByBreakpointUppercaseBold.args = {
+  bold: true,
+  children: 'Variant by breakpoint (resize viewport to change my size)',
+  uppercase: true,
+  variant: {
+    0: ParagraphType.P1,
+    [STORYBOOK_BREAKPOINT.LARGE_MOBILE]: HeadingType.H3,
+    [STORYBOOK_BREAKPOINT.TABLET]: HeadingType.H1,
+  },
 }

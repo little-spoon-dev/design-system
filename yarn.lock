@@ -7,7 +7,7 @@
   resolved "https://registry.yarnpkg.com/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz#bd9154aec9983f77b3a034ecaa015c2e4201f6cf"
   integrity sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==
 
-"@adobe/css-tools@^4.0.1":
+"@adobe/css-tools@^4.3.1":
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/@adobe/css-tools/-/css-tools-4.3.2.tgz#a6abc715fb6884851fca9dad37fc34739a04fd11"
   integrity sha512-DA5a1C0gD/pLOvhv33YMrbf2FK3oUzwNl9oOJqE4XVjuEtt6XIakRcsd7eLiOSPkp1kTRQGICTA8cKra/vFbjw==
@@ -3363,14 +3363,13 @@
     lz-string "^1.5.0"
     pretty-format "^27.0.2"
 
-"@testing-library/jest-dom@^5.16.5":
-  version "5.16.5"
-  resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-5.16.5.tgz#3912846af19a29b2dbf32a6ae9c31ef52580074e"
-  integrity sha512-N5ixQ2qKpi5OLYfwQmUb/5mSV9LneAcaUfp32pn4yCnpb8r/Yz0pXFPck21dIicKmi+ta5WRAknkZCfA8refMA==
+"@testing-library/jest-dom@^6.1.5":
+  version "6.1.5"
+  resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-6.1.5.tgz#0a635d0ad4a1a880089d967299d94e9cfc81fbe1"
+  integrity sha512-3y04JLW+EceVPy2Em3VwNr95dOKqA8DhR0RJHhHKDZNYXcVXnEK7WIrpj4eYU8SVt/qYZ2aRWt/WgQ+grNES8g==
   dependencies:
-    "@adobe/css-tools" "^4.0.1"
+    "@adobe/css-tools" "^4.3.1"
     "@babel/runtime" "^7.9.2"
-    "@types/testing-library__jest-dom" "^5.9.1"
     aria-query "^5.0.0"
     chalk "^3.0.0"
     css.escape "^1.5.1"
@@ -3710,13 +3709,6 @@
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-1.0.8.tgz#b94a4391c85666c7b73299fd3ad79d4faa435310"
   integrity sha512-ipixuVrh2OdNmauvtT51o3d8z12p6LtFW9in7U79der/kwejjdNchQC5UMn5u/KxNoM7VHHOs/l8KS8uHxhODQ==
-
-"@types/testing-library__jest-dom@^5.9.1":
-  version "5.14.1"
-  resolved "https://registry.yarnpkg.com/@types/testing-library__jest-dom/-/testing-library__jest-dom-5.14.1.tgz#014162a5cee6571819d48e999980694e2f657c3c"
-  integrity sha512-Gk9vaXfbzc5zCXI9eYE9BI5BNHEp4D3FWjgqBE/ePGYElLAP+KvxBcsdkwfIVvezs605oiyd/VrpiHe3Oeg+Aw==
-  dependencies:
-    "@types/jest" "*"
 
 "@types/through@*":
   version "0.0.30"

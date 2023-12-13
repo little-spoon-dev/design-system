@@ -74,7 +74,7 @@ const TemplateAll: ComponentStory<typeof Typography> = (args) => (
 
 export const Default = Template.bind({})
 Default.args = {
-  children: 'Defaults to Paragraph',
+  children: 'Defaults to p',
 }
 
 export const Display = (args: TypographyProps) => (

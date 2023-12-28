@@ -1,3 +1,5 @@
+import '@testing-library/jest-dom'
+
 import { Accordion, AccordionItem } from '@littlespoon/accordion/src/Accordion'
 import { AccordionDetails } from '@littlespoon/accordion/src/AccordionDetails'
 import { AccordionSummary } from '@littlespoon/accordion/src/AccordionSummary'

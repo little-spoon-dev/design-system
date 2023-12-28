@@ -1,3 +1,5 @@
+import '@testing-library/jest-dom'
+
 import colors from '@littlespoon/theme/src/colors'
 import { act, fireEvent, render, screen } from '@testing-library/react'
 

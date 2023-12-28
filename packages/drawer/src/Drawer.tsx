@@ -58,6 +58,11 @@ export type DrawerProps = PropsWithChildren<{
    * @defaultValue `false`
    */
   showCloseButton?: boolean
+
+  /**
+   * If 'true', content of the drawer will be strechted to the full height of a drawer
+   */
+  useFullHeight?: boolean
 }>
 
 // Show/Hide animation duration in milliseconds
@@ -74,6 +79,7 @@ export default function Drawer({
   onClose,
   open = false,
   showCloseButton = false,
+  useFullHeight = false,
 }: DrawerProps) {
   const initialBackdropOpacity = 0
   const initialDrawerMargin = -1000
@@ -144,7 +150,9 @@ export default function Drawer({
           role="dialog"
           showCloseButton={showCloseButton}
         >
-          <DrawerContent tabIndex={-1}>{children}</DrawerContent>
+          <DrawerContent tabIndex={-1} useFullHeight={useFullHeight}>
+            {children}
+          </DrawerContent>
           {showCloseButton && (
             <DrawerCloseButton
               aria-label={closeButtonTitle}

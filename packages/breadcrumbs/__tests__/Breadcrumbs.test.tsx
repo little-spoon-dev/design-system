@@ -1,3 +1,5 @@
+import '@testing-library/jest-dom'
+
 import { paragraph } from '@littlespoon/theme/lib/fonts/primary'
 import { render, screen } from '@testing-library/react'
 import { axe } from 'jest-axe'

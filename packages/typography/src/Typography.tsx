@@ -2,15 +2,22 @@ import type { StyleProps } from '@littlespoon/theme/lib/style'
 import type React from 'react'
 
 import { Bold } from './Bold'
+import { CAPTION_TYPE, DISPLAY_TYPE, HEADING_TYPE, PARAGRAPH, PARAGRAPH_TYPE } from './constants'
 import { TypographyBase } from './TypographyBase'
 
-type ElementType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p'
+export type As = (typeof HEADING_TYPE)[keyof typeof HEADING_TYPE] | typeof PARAGRAPH
 
-type DisplayType = ElementType | 'p1' | 'p2' | 'p3' | 'p4' | 'display1' | 'display2' | 'caption1'
+export type VariantString =
+  | As
+  | (typeof CAPTION_TYPE)[keyof typeof CAPTION_TYPE]
+  | (typeof DISPLAY_TYPE)[keyof typeof DISPLAY_TYPE]
+  | (typeof PARAGRAPH_TYPE)[keyof typeof PARAGRAPH_TYPE]
 
-export interface StyleByBreakpoint {
-  [key: number]: DisplayType
+export interface VariantStyleByBreakpoint {
+  [key: number]: VariantString
 }
+
+export type Variant = VariantString | VariantStyleByBreakpoint
 
 export interface TypographyProps extends StyleProps {
   /**
@@ -21,12 +28,12 @@ export interface TypographyProps extends StyleProps {
   /**
    * The root node component. Use a string for an HTML element. Defaults to "p".
    */
-  as?: ElementType
+  as?: As
 
   /**
    * The variant to use. Defaults to `as`.
    */
-  variant?: DisplayType | StyleByBreakpoint
+  variant?: Variant
 
   /**
    * Whether the content is bold. Defaults to false.
@@ -70,7 +77,7 @@ export default function Typography({
   ...other
 }: TypographyProps): React.ReactElement<TypographyProps> {
   return (
-    <TypographyBase {...other} variant={other.variant || other.as}>
+    <TypographyBase {...other} bold={bold} variant={other.variant || other.as}>
       {bold || extraBold || black ? (
         <Bold bold={bold} extraBold={extraBold} black={black}>
           {children}

@@ -150,7 +150,11 @@ export default function Drawer({
           role="dialog"
           showCloseButton={showCloseButton}
         >
-          <DrawerContent tabIndex={-1} useFullHeight={useFullHeight}>
+          <DrawerContent
+            tabIndex={-1}
+            useFullHeight={useFullHeight}
+            data-testid={`${dataTest}:content`}
+          >
             {children}
           </DrawerContent>
           {showCloseButton && (

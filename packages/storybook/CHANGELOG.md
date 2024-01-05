@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.12.0](https://github.com/little-spoon-dev/design-system/compare/storybook@2.11.0...storybook@2.12.0) (2024-01-04)
+
+### Features
+
+- simplify story ([42279ff](https://github.com/little-spoon-dev/design-system/commit/42279fff66b3de8a566e30fb6e78084b3e3be551))
+- update stories ([09e8757](https://github.com/little-spoon-dev/design-system/commit/09e8757a95b240291a3a067a4903a54da9bf9ce1))
+- update text ([e475943](https://github.com/little-spoon-dev/design-system/commit/e47594353293ef4d4790c965d35d466fe397aaf4))
+
 # [2.11.0](https://github.com/little-spoon-dev/design-system/compare/storybook@2.10.2...storybook@2.11.0) (2023-08-15)
 
 ### Features

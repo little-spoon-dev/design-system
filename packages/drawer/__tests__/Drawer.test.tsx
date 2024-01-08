@@ -106,14 +106,14 @@ describe('with props.className', () => {
 })
 
 describe('with props.useFullHeight', () => {
-  it('renders a drawer withou useFullHeight prop', () => {
+  it('renders a drawer without props.useFullHeight', () => {
     render(<Drawer open />)
     const drawerContent = screen.getByTestId('@modal:drawer:content')
     expect(drawerContent).toBeInTheDocument()
     const drawerContentStyle = getComputedStyle(drawerContent)
     expect(drawerContentStyle.flexGrow).toBe('0')
   })
-  it('renders a drawer with useFullHeight prop', () => {
+  it('renders a drawer with props.useFullHeight', () => {
     render(<Drawer useFullHeight open />)
     const drawerContent = screen.getByTestId('@modal:drawer:content')
     expect(drawerContent).toBeInTheDocument()

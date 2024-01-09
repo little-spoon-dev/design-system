@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/typography@1.6.2...@littlespoon/typography@1.7.0) (2024-01-04)
+
+### Bug Fixes
+
+- correctly set letter-spacing in certain situations ([97a5df3](https://github.com/little-spoon-dev/design-system/commit/97a5df3e149e4b684a190e8fd1f30cf790b154d6))
+
+### Features
+
+- set correct letter spacing value ([194dd1c](https://github.com/little-spoon-dev/design-system/commit/194dd1c21a7b493dd12874623e7010f355dbecb2))
+
 ## [1.6.2](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/typography@1.6.1...@littlespoon/typography@1.6.2) (2023-04-19)
 
 ### Bug Fixes

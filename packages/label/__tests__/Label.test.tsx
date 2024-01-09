@@ -1,3 +1,5 @@
+import '@testing-library/jest-dom'
+
 import colors, { Color } from '@littlespoon/theme/lib/colors'
 import { render, screen } from '@testing-library/react'
 import { axe } from 'jest-axe'

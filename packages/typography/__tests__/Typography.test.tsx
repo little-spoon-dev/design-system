@@ -1,11 +1,20 @@
+import '@testing-library/jest-dom'
+
 import { render, screen } from '@testing-library/react'
 import { axe } from 'jest-axe'
 
-import type { TypographyProps } from '../src/'
-import Typography from '../src/'
+import Typography, { type TypographyProps, type VariantString } from '../src'
+import {
+  CAPTION_TYPE,
+  DISPLAY_TYPE,
+  HEADING_TYPE,
+  PARAGRAPH,
+  PARAGRAPH_TYPE,
+} from '../src/constants'
 
 const children = 'children'
 const label = 'label'
+const testId = 'typography'
 
 describe('accessibility', () => {
   it('is accessible', async () => {
@@ -46,7 +55,7 @@ describe('with props.aria-label', () => {
 })
 
 describe('with props.as', () => {
-  it.each<Required<TypographyProps>['as']>(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'])(
+  it.each<Required<TypographyProps>['as']>([PARAGRAPH, ...Object.values(HEADING_TYPE)])(
     'renders as %j',
     (element) => {
       render(<Typography as={element}>{element}</Typography>)
@@ -69,31 +78,31 @@ describe('with props.as', () => {
 describe('with props.noMargin', () => {
   it('renders paragraph with margin-bottom', () => {
     render(<Typography>{children}</Typography>)
-    expect(screen.getByText(children)).toHaveStyle('margin-bottom: 0.8rem')
+    expect(screen.getByText(children)).toHaveStyle({ marginBottom: '0.8rem' })
   })
 
   it('renders paragraph with no margin-bottom', () => {
     render(<Typography noMargin>{children}</Typography>)
-    expect(screen.getByText(children)).toHaveStyle('margin: 0 0 0 0')
+    expect(screen.getByText(children)).toHaveStyle({ margin: '0 0 0 0' })
   })
 })
 
 describe('with props.variant as string', () => {
   it.each<[Required<TypographyProps>['variant'], string]>([
-    ['display1', 'font: Mulish,sans-serif 7.4rem 700 7.4rem'],
-    ['display2', 'font: Mulish,sans-serif 6.6rem 700 6.6rem'],
-    ['h1', 'font: Mulish,sans-serif 5.2rem 700 5.2rem'],
-    ['h2', 'font: Mulish,sans-serif 4.6rem 700 4.6rem'],
-    ['h3', 'font: Mulish,sans-serif 3.6rem 700 3.6rem'],
-    ['h4', 'font: Mulish,sans-serif 2.9rem 700 2.9rem'],
-    ['h5', 'font: Mulish,sans-serif 2.6rem 700 2.6rem'],
-    ['h6', 'font: Mulish,sans-serif 2rem 700 2rem'],
-    ['p', 'font: Lato,sans-serif 1.6rem 400 1.6rem'],
-    ['p1', 'font: Lato,sans-serif 2rem 400 2rem'],
-    ['p2', 'font: Lato,sans-serif 1.8rem 400 1.8rem'],
-    ['p3', 'font: Lato,sans-serif 1.6rem 400 1.6rem'],
-    ['p4', 'font: Lato,sans-serif 1.4rem 400 1.4rem'],
-    ['caption1', 'font: Lato,sans-serif 1.2rem 400 1.2rem'],
+    [DISPLAY_TYPE.DISPLAY1, 'font: Mulish,sans-serif 7.4rem 700 7.4rem'],
+    [DISPLAY_TYPE.DISPLAY2, 'font: Mulish,sans-serif 6.6rem 700 6.6rem'],
+    [HEADING_TYPE.H1, 'font: Mulish,sans-serif 5.2rem 700 5.2rem'],
+    [HEADING_TYPE.H2, 'font: Mulish,sans-serif 4.6rem 700 4.6rem'],
+    [HEADING_TYPE.H3, 'font: Mulish,sans-serif 3.6rem 700 3.6rem'],
+    [HEADING_TYPE.H4, 'font: Mulish,sans-serif 2.9rem 700 2.9rem'],
+    [HEADING_TYPE.H5, 'font: Mulish,sans-serif 2.6rem 700 2.6rem'],
+    [HEADING_TYPE.H6, 'font: Mulish,sans-serif 2rem 700 2rem'],
+    [PARAGRAPH, 'font: Lato,sans-serif 1.6rem 400 1.6rem'],
+    [PARAGRAPH_TYPE.P1, 'font: Lato,sans-serif 2rem 400 2rem'],
+    [PARAGRAPH_TYPE.P2, 'font: Lato,sans-serif 1.8rem 400 1.8rem'],
+    [PARAGRAPH_TYPE.P3, 'font: Lato,sans-serif 1.6rem 400 1.6rem'],
+    [PARAGRAPH_TYPE.P4, 'font: Lato,sans-serif 1.4rem 400 1.4rem'],
+    [CAPTION_TYPE.CAPTION1, 'font: Lato,sans-serif 1.2rem 400 1.2rem'],
   ])('renders p with variant=%j', (variant, style) => {
     const variantText = typeof variant === 'string' ? variant : variant[0]
     render(<Typography variant={variant}>{variantText}</Typography>)
@@ -107,14 +116,60 @@ describe('with props.variant as string', () => {
   })
 })
 
+describe('with props.variant as string, props.uppercase and props.bold', () => {
+  it.each<
+    [
+      variant: VariantString,
+      bold: boolean | undefined,
+      uppercase: boolean | undefined,
+      expectedStyle: string,
+    ]
+  >([
+    [PARAGRAPH_TYPE.P1, undefined, undefined, 'letter-spacing: normal'],
+    [PARAGRAPH_TYPE.P1, false, false, 'letter-spacing: normal'],
+    [PARAGRAPH_TYPE.P1, true, false, 'letter-spacing: normal'],
+    [PARAGRAPH_TYPE.P1, true, undefined, 'letter-spacing: normal'],
+    [PARAGRAPH_TYPE.P1, false, true, 'letter-spacing: 0.05rem'],
+    [PARAGRAPH_TYPE.P1, undefined, true, 'letter-spacing: 0.05rem'],
+    [PARAGRAPH_TYPE.P1, true, true, 'letter-spacing: 0.1rem'],
+
+    [CAPTION_TYPE.CAPTION1, undefined, undefined, 'letter-spacing: normal'],
+    [CAPTION_TYPE.CAPTION1, false, false, 'letter-spacing: normal'],
+    [CAPTION_TYPE.CAPTION1, true, false, 'letter-spacing: normal'],
+    [CAPTION_TYPE.CAPTION1, true, undefined, 'letter-spacing: normal'],
+    [CAPTION_TYPE.CAPTION1, false, true, 'letter-spacing: normal'],
+    [CAPTION_TYPE.CAPTION1, undefined, true, 'letter-spacing: normal'],
+    [CAPTION_TYPE.CAPTION1, true, true, 'letter-spacing: 0.05rem'],
+
+    [HEADING_TYPE.H1, undefined, undefined, 'letter-spacing: normal'],
+    [HEADING_TYPE.H1, false, false, 'letter-spacing: normal'],
+    [HEADING_TYPE.H1, true, false, 'letter-spacing: normal'],
+    [HEADING_TYPE.H1, true, undefined, 'letter-spacing: normal'],
+    [HEADING_TYPE.H1, false, true, 'letter-spacing: normal'],
+    [HEADING_TYPE.H1, undefined, true, 'letter-spacing: normal'],
+    [HEADING_TYPE.H1, true, true, 'letter-spacing: normal'],
+  ])(
+    'have proper letter-spacing with variant=%j bold=%j uppercase=%j',
+    (variant, bold, uppercase, expectedStyle) => {
+      render(
+        <Typography data-testid={testId} bold={bold} uppercase={uppercase} variant={variant}>
+          {children}
+        </Typography>,
+      )
+      expect(document.querySelectorAll('p').length).toBe(1)
+      expect(screen.getByTestId(testId)).toHaveStyle(expectedStyle)
+    },
+  )
+})
+
 describe('with props.variant as object', () => {
-  it('have proper styles for variant with breakpoints', async () => {
+  it('have proper styles for variant with breakpoints', () => {
     const text = 'Variant by breakpoint test desktop'
     render(
       <Typography
         variant={{
-          0: 'p4',
-          1500: 'p2',
+          0: PARAGRAPH_TYPE.P4,
+          1500: PARAGRAPH_TYPE.P2,
         }}
       >
         {text}
@@ -122,16 +177,18 @@ describe('with props.variant as object', () => {
     )
 
     expect(document.querySelectorAll('p').length).toBe(1)
-    expect(screen.getByText(text)).toHaveStyle(
-      'font-family: Lato,sans-serif; font-size: 1.4rem; line-height: 2rem;',
-    )
+    expect(screen.getByText(text)).toHaveStyle({
+      fontFamily: 'Lato,sans-serif',
+      fontSize: '1.4rem',
+      lineHeight: '2rem',
+    })
   })
 })
 
 describe('with props.as and props.variant', () => {
   it('renders as h1 but styled using variant h6', () => {
     render(
-      <Typography as="h1" variant="h6">
+      <Typography as={HEADING_TYPE.H1} variant={HEADING_TYPE.H6}>
         {children}
       </Typography>,
     )
@@ -144,7 +201,7 @@ describe('with props.bold', () => {
     render(<Typography bold>{children}</Typography>)
     const element = screen.getByText(children)
     expect(element.tagName).toBe('STRONG')
-    expect(element).toHaveStyle('font-weight: 700')
+    expect(element).toHaveStyle({ fontWeight: 700 })
     expect(element.parentElement!.tagName).toBe('P')
   })
 })
@@ -152,13 +209,13 @@ describe('with props.bold', () => {
 describe('with props.extraBold', () => {
   it('renders strong with font-weight', () => {
     render(
-      <Typography as="h1" extraBold>
+      <Typography as={HEADING_TYPE.H1} extraBold>
         {children}
       </Typography>,
     )
     const element = screen.getByText(children)
     expect(element.tagName).toBe('STRONG')
-    expect(element).toHaveStyle('font-weight: 800')
+    expect(element).toHaveStyle({ fontWeight: 800 })
     expect(element.parentElement!.tagName).toBe('H1')
   })
 })
@@ -166,13 +223,13 @@ describe('with props.extraBold', () => {
 describe('with props.black', () => {
   it('renders strong with font-weight', () => {
     render(
-      <Typography as="h2" variant="display1" black>
+      <Typography as={HEADING_TYPE.H2} variant={DISPLAY_TYPE.DISPLAY1} black>
         {children}
       </Typography>,
     )
     const element = screen.getByText(children)
     expect(element.tagName).toBe('STRONG')
-    expect(element).toHaveStyle('font-weight: 900')
+    expect(element).toHaveStyle({ fontWeight: 900 })
     expect(element.parentElement!.tagName).toBe('H2')
   })
 })
@@ -186,7 +243,7 @@ describe('with props.bold, props.extraBold, props.black', () => {
     )
     const element = screen.getByText(children)
     expect(element.tagName).toBe('STRONG')
-    expect(element).toHaveStyle('font-weight: 900')
+    expect(element).toHaveStyle({ fontWeight: 900 })
     expect(element.parentElement!.tagName).toBe('P')
   })
 })
@@ -194,13 +251,13 @@ describe('with props.bold, props.extraBold, props.black', () => {
 describe('with props.uppercase', () => {
   it('transforms text into uppercase', () => {
     render(<Typography uppercase>{children}</Typography>)
-    expect(screen.getByText(children)).toHaveStyle('text-transform: uppercase')
+    expect(screen.getByText(children)).toHaveStyle({ textTransform: 'uppercase' })
   })
 })
 
 describe('with props.center', () => {
   it('aligns text to center', () => {
     render(<Typography center>{children}</Typography>)
-    expect(screen.getByText(children)).toHaveStyle('text-align: center')
+    expect(screen.getByText(children)).toHaveStyle({ textAlign: 'center' })
   })
 })

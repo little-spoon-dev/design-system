@@ -76,17 +76,20 @@ export const DrawerCloseButton = styled(Button)`
   )}
 `
 
-export const DrawerContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${rem(1.6)};
-  outline: none;
-  overflow: auto;
+export const DrawerContent = styled.div<Partial<DrawerProps>>(
+  (props) => css`
+    display: flex;
+    flex-grow: ${props.useFullHeight ? 1 : 0};
+    flex-direction: column;
+    gap: ${rem(1.6)};
+    outline: none;
+    overflow: auto;
 
-  ${up(
-    md,
-    `
-    gap: ${rem(3.2)};
-    `,
-  )}
-`
+    ${up(
+      md,
+      `
+  gap: ${rem(3.2)};
+  `,
+    )}
+  `,
+)

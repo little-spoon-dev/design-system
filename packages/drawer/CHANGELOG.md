@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/drawer@1.5.0...@littlespoon/drawer@1.6.0) (2024-01-19)
+
+### Bug Fixes
+
+- adding test to cover new prop WEN-181 ([be7578b](https://github.com/little-spoon-dev/design-system/commit/be7578b6950479b506f9ff7a763aaf4202d44b8f))
+- addressing revieww fixes WEB-181 ([fa66018](https://github.com/little-spoon-dev/design-system/commit/fa66018210580f90e92dfba05523dbf16c7c66d5))
+
+### Features
+
+- allow images to fill full space of a drawer WEB-181 ([480d497](https://github.com/little-spoon-dev/design-system/commit/480d49703da8e7e18ef347946966f2b44cd54e1e))
+
 # [1.5.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/drawer@1.4.4...@littlespoon/drawer@1.5.0) (2023-08-15)
 
 ### Features

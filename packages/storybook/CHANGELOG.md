@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.13.0](https://github.com/little-spoon-dev/design-system/compare/storybook@2.12.1...storybook@2.13.0) (2024-08-06)
+
+### Features
+
+- **button:** add size by breakpoint support for button WEB-1332 ([4031e5c](https://github.com/little-spoon-dev/design-system/commit/4031e5c99269deb616084fe022b4bf9e1762da58))
+
 ## [2.12.1](https://github.com/little-spoon-dev/design-system/compare/storybook@2.12.0...storybook@2.12.1) (2024-01-19)
 
 **Note:** Version bump only for package storybook

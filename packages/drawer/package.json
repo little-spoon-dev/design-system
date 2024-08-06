@@ -1,6 +1,6 @@
 {
   "name": "@littlespoon/drawer",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "Little Spoon drawer",
   "main": "lib/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@littlespoon/button": "1.7.5",
+    "@littlespoon/button": "1.8.0",
     "@littlespoon/icons": "2.1.2",
     "@littlespoon/theme": "1.14.2",
     "react-focus-on": "3.8.1"

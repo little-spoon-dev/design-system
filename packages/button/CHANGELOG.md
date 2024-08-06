@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/button@1.7.5...@littlespoon/button@1.8.0) (2024-08-06)
+
+### Bug Fixes
+
+- tests ([2b7b168](https://github.com/little-spoon-dev/design-system/commit/2b7b168692f87d75a2e9a65e56253434058d712c))
+
+### Features
+
+- **button:** add size by breakpoint support for button WEB-1332 ([4031e5c](https://github.com/little-spoon-dev/design-system/commit/4031e5c99269deb616084fe022b4bf9e1762da58))
+
 ## [1.7.5](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/button@1.7.4...@littlespoon/button@1.7.5) (2023-04-19)
 
 ### Bug Fixes

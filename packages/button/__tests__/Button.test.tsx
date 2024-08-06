@@ -3,7 +3,7 @@ import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
 import { axe } from 'jest-axe'
 
-import type { ButtonProps } from '../src/'
+import type { ButtonProps, Size } from '../src/'
 import Button from '../src/'
 
 const children = 'children'
@@ -78,7 +78,7 @@ describe('with props.size', () => {
     'renders button with size=%j',
     (size) => {
       render(<Button size={size}>{size}</Button>)
-      expect(screen.getByText(size)).toBeInTheDocument()
+      expect(screen.getByText(size as Size)).toBeInTheDocument()
     },
   )
 })
@@ -160,5 +160,27 @@ describe('with props.as', () => {
     const Component = () => <>{children}</>
     render(<Button as={Component} />)
     expect(screen.getByText(children)).toBeInTheDocument()
+  })
+})
+
+describe('with props.size as object', () => {
+  it('have proper styles for size with breakpoints', () => {
+    const text = 'Size by breakpoint test desktop'
+    render(
+      <Button
+        size={{
+          0: 'small',
+          1500: 'large',
+        }}
+      >
+        {text}
+      </Button>,
+    )
+
+    expect(document.querySelectorAll('button').length).toBe(1)
+    expect(screen.getByText(text)).toHaveStyle({
+      height: '3.2rem',
+      padding: '0.6rem 1.6rem',
+    })
   })
 })

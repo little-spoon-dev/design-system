@@ -6,7 +6,7 @@ import { button, family, weight } from '@littlespoon/theme/lib/fonts/primary'
 import { rem } from '@littlespoon/theme/lib/utils'
 import styled from 'styled-components'
 
-import type { ButtonProps } from './Button'
+import type { ButtonProps, Size } from './Button'
 
 export const ButtonBase = styled.button<ButtonProps<'button'>>`
   align-items: center;
@@ -20,15 +20,42 @@ export const ButtonBase = styled.button<ButtonProps<'button'>>`
   text-decoration: none;
   text-transform: uppercase;
   width: fit-content;
-  ${getSizeCss}
-  ${getVariantCss}
+  ${getCss}
 `
+
+/**
+ * Returns the CSS for the button.
+ */
+function getCss(options: ButtonProps<'button'>): string {
+  if (typeof options.size === 'object') {
+    const breakpoints = Object.entries(options.size)
+    return breakpoints.reduce((css, [breakpoint, size]) => {
+      if (+breakpoint === 0) {
+        css += getSizeCss({ ...options, size })
+        css += getVariantCss({ ...options, size })
+      } else {
+        css += `
+          @media screen and (min-width: ${breakpoint}px) {
+            ${getSizeCss({ ...options, size })} 
+            ${getVariantCss({ ...options, size })} 
+          }
+        `
+      }
+      return css
+    }, '')
+  }
+
+  return `
+    ${getSizeCss(options)}
+    ${getVariantCss(options)}
+  `
+}
 
 /**
  * Gets size styles.
  */
 function getSizeCss(props: ButtonProps<'button'>): string {
-  const { size } = props
+  const size = props.size as Size
   if (!size) {
     return ''
   }

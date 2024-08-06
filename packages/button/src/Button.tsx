@@ -2,6 +2,12 @@ import type React from 'react'
 
 import { ButtonBase } from './ButtonBase'
 
+export type Size = 'small' | 'medium' | 'large' | 'xlarge'
+
+export interface SizeByBreakpoint {
+  [key: number]: Size
+}
+
 export interface Props<C extends React.ElementType> {
   /**
    * The root node component. Use a string for an HTML element or a component. Defaults to "button".
@@ -16,7 +22,7 @@ export interface Props<C extends React.ElementType> {
   /**
    * The size of the component. Defaults to "medium".
    */
-  size?: 'small' | 'medium' | 'large' | 'xlarge'
+  size?: Size | SizeByBreakpoint
 
   /**
    * The variant to use. Defaults to "primary".

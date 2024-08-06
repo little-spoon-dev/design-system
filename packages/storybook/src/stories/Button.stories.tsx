@@ -1,6 +1,8 @@
 import Button from '@littlespoon/button/src/Button'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
+import { STORYBOOK_BREAKPOINT } from '../constants'
+
 export default {
   title: 'Design System/Button',
   component: Button,
@@ -80,5 +82,15 @@ Click.args = {
   onClick: () => {
     console.log('Clicked!') // eslint-disable-line no-console
     alert('Clicked!')
+  },
+}
+
+export const SizeByBreakpoint = Template.bind({})
+SizeByBreakpoint.args = {
+  children: 'Size by breakpoint',
+  size: {
+    0: 'small',
+    [STORYBOOK_BREAKPOINT.LARGE_MOBILE]: 'medium',
+    [STORYBOOK_BREAKPOINT.TABLET]: 'large',
   },
 }

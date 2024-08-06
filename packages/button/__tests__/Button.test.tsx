@@ -162,3 +162,25 @@ describe('with props.as', () => {
     expect(screen.getByText(children)).toBeInTheDocument()
   })
 })
+
+describe('with props.size as object', () => {
+  it('have proper styles for size with breakpoints', () => {
+    const text = 'Size by breakpoint test desktop'
+    render(
+      <Button
+        size={{
+          0: 'small',
+          1500: 'medium',
+        }}
+      >
+        {text}
+      </Button>,
+    )
+
+    expect(document.querySelectorAll('button').length).toBe(1)
+    expect(screen.getByText(text)).toHaveStyle({
+      height: '4rem',
+      padding: '0.8rem 1.8rem',
+    })
+  })
+})

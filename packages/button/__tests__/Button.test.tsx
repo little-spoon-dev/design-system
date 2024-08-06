@@ -3,7 +3,7 @@ import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
 import { axe } from 'jest-axe'
 
-import type { ButtonProps } from '../src/'
+import type { ButtonProps, Size } from '../src/'
 import Button from '../src/'
 
 const children = 'children'
@@ -78,7 +78,7 @@ describe('with props.size', () => {
     'renders button with size=%j',
     (size) => {
       render(<Button size={size}>{size}</Button>)
-      expect(screen.getByText(size)).toBeInTheDocument()
+      expect(screen.getByText(size as Size)).toBeInTheDocument()
     },
   )
 })
@@ -170,7 +170,7 @@ describe('with props.size as object', () => {
       <Button
         size={{
           0: 'small',
-          1500: 'medium',
+          1500: 'large',
         }}
       >
         {text}
@@ -179,8 +179,8 @@ describe('with props.size as object', () => {
 
     expect(document.querySelectorAll('button').length).toBe(1)
     expect(screen.getByText(text)).toHaveStyle({
-      height: '4rem',
-      padding: '0.8rem 1.8rem',
+      height: '3.2rem',
+      padding: '0.6rem 1.6rem',
     })
   })
 })

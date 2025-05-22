@@ -239,6 +239,7 @@ export const secondaryMintGreen = {
  *
  * {@link https://zeroheight.com/3ddd0f892/p/028ae9-colors/t/69d367}
  */
+export const grey5 = rgb(249, 250, 251)
 export const grey10 = rgb(241, 241, 241)
 export const grey20 = rgb(224, 224, 224)
 export const grey30 = rgb(205, 205, 205)
@@ -251,6 +252,7 @@ export const grey90 = rgb(46, 46, 46)
 export const grey100 = rgb(20, 20, 20)
 
 export const secondaryNeutralGrey = {
+  grey5,
   grey10,
   grey20,
   grey30,

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.14.2...@littlespoon/theme@1.15.0) (2025-05-22)
+
+### Features
+
+- add grey5 color ([735f032](https://github.com/little-spoon-dev/design-system/commit/735f03216791296b6f83c387be3d37267098f67e))
+- update ([300266f](https://github.com/little-spoon-dev/design-system/commit/300266fe72be973b073b4b44d28ee24c9ffa8afa))
+- update snapshot ([8c8d534](https://github.com/little-spoon-dev/design-system/commit/8c8d53493cd8f1665499aa944d269454821d13a2))
+- update snapshots ([8aadc35](https://github.com/little-spoon-dev/design-system/commit/8aadc35c78603797e87ddb97e0ccba6f8fae6410))
+
 ## [1.14.2](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/theme@1.14.1...@littlespoon/theme@1.14.2) (2023-04-19)
 
 ### Bug Fixes

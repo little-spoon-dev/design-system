@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.1](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/typography@1.7.0...@littlespoon/typography@1.7.1) (2025-05-22)
+
+**Note:** Version bump only for package @littlespoon/typography
+
 # [1.7.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/typography@1.6.2...@littlespoon/typography@1.7.0) (2024-01-04)
 
 ### Bug Fixes

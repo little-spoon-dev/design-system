@@ -65,6 +65,7 @@ export const secondaryPurple = {
  *
  * {@link https://zeroheight.com/3ddd0f892/p/028ae9-colors/t/65e259}
  */
+export const gold5 = rgb(255, 251, 245)
 export const gold10 = rgb(255, 249, 237)
 export const gold20 = rgb(254, 237, 204)
 export const gold30 = rgb(254, 226, 172)
@@ -77,6 +78,7 @@ export const gold90 = rgb(116, 88, 34)
 export const gold100 = rgb(71, 53, 21)
 
 export const secondaryGold = {
+  gold5,
   gold10,
   gold20,
   gold30,
@@ -239,6 +241,7 @@ export const secondaryMintGreen = {
  *
  * {@link https://zeroheight.com/3ddd0f892/p/028ae9-colors/t/69d367}
  */
+export const grey5 = rgb(249, 250, 251)
 export const grey10 = rgb(241, 241, 241)
 export const grey20 = rgb(224, 224, 224)
 export const grey30 = rgb(205, 205, 205)
@@ -251,6 +254,7 @@ export const grey90 = rgb(46, 46, 46)
 export const grey100 = rgb(20, 20, 20)
 
 export const secondaryNeutralGrey = {
+  grey5,
   grey10,
   grey20,
   grey30,

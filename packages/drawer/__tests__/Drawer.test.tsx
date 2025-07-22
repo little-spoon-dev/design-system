@@ -2,6 +2,7 @@ import '@testing-library/jest-dom'
 
 import { fireEvent, render, screen } from '@testing-library/react'
 import { axe } from 'jest-axe'
+import React from 'react'
 import styled from 'styled-components'
 
 import Drawer, { SHOW_HIDE_ANIMATION_DURATION } from '../src/'
@@ -44,6 +45,29 @@ describe('with props.open', () => {
     render(<Drawer open={false} />)
     expect(screen.queryByRole(drawerRole)).not.toBeInTheDocument()
     expect(screen.queryByTestId(backdropTestId)).not.toBeInTheDocument()
+  })
+
+  it('closes drawer when open changes from true to false', async () => {
+    const TestComponent = () => {
+      const [open, setOpen] = React.useState(true)
+      return (
+        <div>
+          <button onClick={() => setOpen(false)}>Close</button>
+          <Drawer open={open} />
+        </div>
+      )
+    }
+
+    render(<TestComponent />)
+
+    expect(screen.getByRole(drawerRole)).toBeInTheDocument()
+
+    fireEvent.click(screen.getByText('Close'))
+
+    // Wait for hide animation to finish
+    await new Promise((r) => setTimeout(r, SHOW_HIDE_ANIMATION_DURATION * 2))
+
+    expect(screen.queryByRole(drawerRole)).not.toBeInTheDocument()
   })
 })
 

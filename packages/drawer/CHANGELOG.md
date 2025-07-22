@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.3](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/drawer@1.6.2...@littlespoon/drawer@1.6.3) (2025-07-22)
+
+### Bug Fixes
+
+- added unit test ([0ac39af](https://github.com/little-spoon-dev/design-system/commit/0ac39af73fb4b0940449df03704d7493df913f8d))
+- clear timeout ([4dbd4a2](https://github.com/little-spoon-dev/design-system/commit/4dbd4a2a38dbc522e5da1b6acd27a09a4968c443))
+- show closing animation on drawer with open props EWG-577 ([e18c78d](https://github.com/little-spoon-dev/design-system/commit/e18c78d2b11d44c22046647c9e50cb1c11778c26))
+
 ## [1.6.2](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/drawer@1.6.1...@littlespoon/drawer@1.6.2) (2025-05-22)
 
 **Note:** Version bump only for package @littlespoon/drawer

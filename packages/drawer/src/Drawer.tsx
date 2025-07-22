@@ -107,14 +107,20 @@ export default function Drawer({
   }
 
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout | null = null
     if (isOpen && !open) {
       // If the drawer is already open and we want to close it by updating the `open` prop, then play the hide animation
       playHideDrawerAnimation()
-      setTimeout(() => {
+      timeoutId = setTimeout(() => {
         setIsOpen(false)
       }, SHOW_HIDE_ANIMATION_DURATION)
     } else {
       setIsOpen(open)
+    }
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+      }
     }
   }, [open])
 

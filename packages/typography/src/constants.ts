@@ -5,7 +5,6 @@ export const CAPTION_TYPE = {
 export const PARAGRAPH = 'p'
 
 export const PARAGRAPH_TYPE = {
-  P0: 'p0',
   P1: 'p1',
   P2: 'p2',
   P3: 'p3',
@@ -24,5 +23,4 @@ export const HEADING_TYPE = {
   H4: 'h4',
   H5: 'h5',
   H6: 'h6',
-  H7: 'h7',
 } as const

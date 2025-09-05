@@ -114,11 +114,19 @@ export const Heading = (args: TypographyProps) => (
     <Typography {...args} variant={HEADING_TYPE.H6}>
       Heading 6
     </Typography>
+
+    <Typography {...args} variant={HEADING_TYPE.H7}>
+      Heading 7
+    </Typography>
   </>
 )
 
 export const Paragraph = (args: TypographyProps) => (
   <>
+    <Typography {...args} variant={PARAGRAPH_TYPE.P0}>
+      Paragraph 0
+    </Typography>
+
     <Typography {...args} variant={PARAGRAPH_TYPE.P1}>
       Paragraph 1
     </Typography>

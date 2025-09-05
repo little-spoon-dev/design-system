@@ -62,6 +62,10 @@ export const heading = {
     fontSize: rem(2),
     lineHeight: rem(2.5),
   },
+  h7: {
+    fontSize: rem(1.8),
+    lineHeight: rem(2.2),
+  },
 } as const
 
 /**

@@ -1,6 +1,16 @@
 import { rem } from '../utils'
 
 /**
+ * Paragraph 0
+ *
+ * {@link https://www.figma.com/design/nA4qwDxm2VGkCUCWx3RaW7/Design-System---Working?node-id=1023-36721&m=dev}
+ */
+export const p0 = {
+  fontSize: rem(2.4),
+  lineHeight: rem(3.2),
+} as const
+
+/**
  * Paragraph 1
  *
  * {@link https://zeroheight.com/3ddd0f892/p/211297-typography/t/9540b4}
@@ -49,6 +59,7 @@ export const p4 = {
 export const small = p4
 
 export default {
+  p0,
   p1,
   xlarge,
   p2,

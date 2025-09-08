@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.7](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/label@1.1.6...@littlespoon/label@1.1.7) (2025-09-08)
+
+**Note:** Version bump only for package @littlespoon/label
+
 ## [1.1.6](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/label@1.1.5...@littlespoon/label@1.1.6) (2025-05-22)
 
 **Note:** Version bump only for package @littlespoon/label

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.14.0](https://github.com/little-spoon-dev/design-system/compare/storybook@2.13.2...storybook@2.14.0) (2025-09-08)
+
+### Features
+
+- adding new variants for paragraph and heading WEB-3607 ([2f619df](https://github.com/little-spoon-dev/design-system/commit/2f619df08336a02cfbc89e2701d451c7bb652a90))
+
 ## [2.13.2](https://github.com/little-spoon-dev/design-system/compare/storybook@2.13.1...storybook@2.13.2) (2025-07-22)
 
 **Note:** Version bump only for package storybook

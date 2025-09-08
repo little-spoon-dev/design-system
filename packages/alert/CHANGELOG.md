@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.6](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/alert@1.4.5...@littlespoon/alert@1.4.6) (2025-09-08)
+
+**Note:** Version bump only for package @littlespoon/alert
+
 ## [1.4.5](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/alert@1.4.4...@littlespoon/alert@1.4.5) (2025-05-22)
 
 **Note:** Version bump only for package @littlespoon/alert

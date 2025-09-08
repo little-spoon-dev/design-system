@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.4](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@2.1.3...@littlespoon/icons@2.1.4) (2025-09-08)
+
+**Note:** Version bump only for package @littlespoon/icons
+
 ## [2.1.3](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/icons@2.1.2...@littlespoon/icons@2.1.3) (2025-05-22)
 
 **Note:** Version bump only for package @littlespoon/icons

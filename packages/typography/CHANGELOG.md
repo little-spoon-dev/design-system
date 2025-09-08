@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/typography@1.7.1...@littlespoon/typography@1.8.0) (2025-09-08)
+
+### Features
+
+- adding new variants for paragraph and heading WEB-3607 ([07300dd](https://github.com/little-spoon-dev/design-system/commit/07300dd21fae1f3da8dfb1ba8b8c04bd2915d4bf))
+- adding new variants for paragraph and heading WEB-3607 ([2f619df](https://github.com/little-spoon-dev/design-system/commit/2f619df08336a02cfbc89e2701d451c7bb652a90))
+
 ## [1.7.1](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/typography@1.7.0...@littlespoon/typography@1.7.1) (2025-05-22)
 
 **Note:** Version bump only for package @littlespoon/typography

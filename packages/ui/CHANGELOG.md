@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.23.0](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.22.1...@littlespoon/ui@1.23.0) (2025-09-08)
+
+### Features
+
+- adding new variants for paragraph and heading WEB-3607 ([37738a4](https://github.com/little-spoon-dev/design-system/commit/37738a4609dc1e28b5a050e4096fe9c99dbe539e))
+
 ## [1.22.1](https://github.com/little-spoon-dev/design-system/compare/@littlespoon/ui@1.22.0...@littlespoon/ui@1.22.1) (2025-07-22)
 
 **Note:** Version bump only for package @littlespoon/ui

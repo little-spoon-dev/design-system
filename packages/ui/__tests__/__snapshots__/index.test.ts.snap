@@ -429,6 +429,10 @@ exports[`exports ui 1`] = `
             "fontSize": "1.6rem",
             "lineHeight": "2.4rem",
           },
+          "p0": {
+            "fontSize": "2.4rem",
+            "lineHeight": "3.2rem",
+          },
           "p1": {
             "fontSize": "2rem",
             "lineHeight": "3rem",
@@ -495,6 +499,10 @@ exports[`exports ui 1`] = `
           "h6": {
             "fontSize": "2rem",
             "lineHeight": "2.5rem",
+          },
+          "h7": {
+            "fontSize": "1.8rem",
+            "lineHeight": "2.2rem",
           },
         },
         "weight": {

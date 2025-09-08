@@ -59,7 +59,7 @@ describe('with props.as', () => {
     'renders as %j',
     (element) => {
       render(<Typography as={element}>{element}</Typography>)
-      if (element[0] === 'h') {
+      if (element[0] === 'h' && Number(element[1]) <= 6) {
         expect(
           screen.getByRole('heading', { level: Number(element[1]), name: element }),
         ).toBeInTheDocument()
@@ -97,7 +97,9 @@ describe('with props.variant as string', () => {
     [HEADING_TYPE.H4, 'font: Mulish,sans-serif 2.9rem 700 2.9rem'],
     [HEADING_TYPE.H5, 'font: Mulish,sans-serif 2.6rem 700 2.6rem'],
     [HEADING_TYPE.H6, 'font: Mulish,sans-serif 2rem 700 2rem'],
+    [HEADING_TYPE.H7, 'font: Mulish,sans-serif 1.8rem 700 1.8rem'],
     [PARAGRAPH, 'font: Lato,sans-serif 1.6rem 400 1.6rem'],
+    [PARAGRAPH_TYPE.P0, 'font: Lato,sans-serif 2.4rem 400 2.4rem'],
     [PARAGRAPH_TYPE.P1, 'font: Lato,sans-serif 2rem 400 2rem'],
     [PARAGRAPH_TYPE.P2, 'font: Lato,sans-serif 1.8rem 400 1.8rem'],
     [PARAGRAPH_TYPE.P3, 'font: Lato,sans-serif 1.6rem 400 1.6rem'],
